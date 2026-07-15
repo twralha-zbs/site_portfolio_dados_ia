@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Portfólio — Dados, Automação e IA
 
-## Getting Started
+Site portfólio de consultoria em dados, automação e IA aplicada (Power BI, Power Platform, Python), com estudos de caso demonstrativos baseados em empresas fictícias e dados sintéticos.
 
-First, run the development server:
+## Stack
+
+- [Next.js 15](https://nextjs.org) (App Router) + React 19 + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- Conteúdo dos cases em MDX (`content/cases/`)
+- Deploy na [Vercel](https://vercel.com) + Vercel Analytics
+
+## Rodando localmente
+
+Pré-requisito: Node.js 20+.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Estrutura
 
-To learn more about Next.js, take a look at the following resources:
+| Pasta | Conteúdo |
+|---|---|
+| `app/` | Rotas e layouts (App Router) |
+| `components/` | Componentes reutilizáveis |
+| `content/cases/` | Estudos de caso em MDX |
+| `public/` | Assets estáticos (og-images, screenshots, llms.txt) |
+| `lab/` | Scripts Python, datasets sintéticos e specs dos cases — **excluída do deploy** via `.vercelignore` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- O deploy é automático via integração GitHub → Vercel (push na `main` publica em produção).
+- Todos os estudos de caso usam empresas fictícias e dados sintéticos, sempre rotulados como tal.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Plano completo do projeto: [PLANO_PROJETO.md](PLANO_PROJETO.md).
