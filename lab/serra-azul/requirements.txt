@@ -2,3 +2,6 @@
 pandas==2.3.0
 numpy==2.3.1
 Faker==40.31.0
+
+# Camada de IA (resumo_ia.py) — SDK do Gemini; exige GEMINI_API_KEY no ambiente
+google-genai==2.11.0

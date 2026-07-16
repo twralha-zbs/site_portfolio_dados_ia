@@ -88,7 +88,7 @@ Período coberto: **jan/2024 a jun/2026 (30 meses — 2024 completo, permitindo 
 
 1. **O problema** — a dor descrita acima, com números ("3 dias para fechar o relatório", "8% de pedidos com ruptura").
 2. **O diagnóstico** — entendimento do processo, mapeamento das fontes de dados (ERP fictício exportando CSVs).
-3. **A solução em 4 camadas** — (a) **Python**: pipeline de tratamento e modelagem dos dados; (b) **Power BI**: dashboard com 4 páginas — *Visão Executiva*, *Vendas & Clientes*, *Estoque & Ruptura*, *Metas & Vendedores*; (c) **Power Automate**: alerta diário de risco de ruptura por e-mail/Teams para o comprador; (d) **IA**: script que gera resumo executivo semanal em linguagem natural a partir dos KPIs (via API da Anthropic), enviado junto ao alerta.
+3. **A solução em 4 camadas** — (a) **Python**: pipeline de tratamento e modelagem dos dados; (b) **Power BI**: dashboard com 4 páginas — *Visão Executiva*, *Vendas & Clientes*, *Estoque & Ruptura*, *Metas & Vendedores*; (c) **Power Automate**: alerta diário de risco de ruptura por e-mail/Teams para o comprador; (d) **IA**: script que gera resumo executivo semanal em linguagem natural a partir dos KPIs (via API do Gemini, com fallback offline por template quando não há `GEMINI_API_KEY`), enviado junto ao alerta.
 4. **O resultado (simulado e rotulado como tal)** — tabela antes/depois: relatório gerencial de 3 dias → 20 min; ruptura nos top-50 SKUs de 8,4% → 2,1% (projeção); capital parado −18%; 87 clientes em risco de churn identificados e priorizados para os vendedores.
 5. **CTA** — "Sua operação tem uma dor parecida? Vamos conversar."
 
