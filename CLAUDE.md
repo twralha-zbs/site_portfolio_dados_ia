@@ -39,6 +39,8 @@ junto com o trabalho da sessão.
 | Build de produção | `npm run build` |
 | Lint | `npm run lint` |
 | Regenerar dataset do case | `python lab/serra-azul/gerar_dados.py` |
+| Resumo executivo com IA | `python lab/serra-azul/resumo_ia.py` (grava `resumo_exemplo.md`) |
+| CSV de alerta de ruptura | `python lab/serra-azul/automacao/gerar_alerta_ruptura.py` |
 
 Regenerar o dataset exige as versões pinadas em
 `lab/serra-azul/requirements.txt` (seed 42 → saída byte-idêntica; o script se
@@ -57,3 +59,7 @@ autovalida com asserts). Os CSVs gerados são commitados no repo.
 - Fases 2b (montagem do .pbix) e o fluxo Power Automate são executados
   manualmente pelo usuário — as specs produzidas aqui precisam ser completas o
   bastante para isso.
+- A camada de IA do case usa a **API do Gemini** (`google-genai`, variável
+  `GEMINI_API_KEY`), não a da Anthropic — decisão do usuário (Fase 2). O
+  `resumo_ia.py` tem fallback offline e nunca deve exigir a chave para rodar
+  sem erro. **Nunca gravar a chave em arquivo ou commit.**
