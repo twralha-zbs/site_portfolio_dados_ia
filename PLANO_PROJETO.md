@@ -70,17 +70,17 @@ site_thi/
 
 ### 3.2 Base de dados sintética (gerada por `gerar_dados.py`)
 
-Período coberto: **jul/2024 a jun/2026 (24 meses)**. Seed fixa (`random_state=42`) para reprodutibilidade.
+Período coberto: **jan/2024 a jun/2026 (30 meses — 2024 completo, permitindo comparação de ano fechado)**. Seed fixa (`random_state=42`) para reprodutibilidade.
 
 | Tabela | Colunas principais | Volume |
 |---|---|---|
 | `clientes.csv` | id, nome_fantasia, tipo_pdv, cidade/UF, data_cadastro, vendedor_id | 1.200 |
 | `produtos.csv` | sku, descricao, categoria, marca, preco_tabela, custo, fornecedor | 250 |
 | `vendedores.csv` | id, nome, regiao, data_admissao | 12 |
-| `pedidos.csv` | id, cliente_id, vendedor_id, data, status | ~40.000 |
-| `itens_pedido.csv` | pedido_id, sku, qtd, preco_unit, desconto, flag_ruptura | ~180.000 |
-| `estoque_movimentos.csv` | data, sku, tipo (entrada/saida/ajuste), qtd, saldo | ~60.000 |
-| `metas.csv` | vendedor_id, mes, meta_valor | 288 |
+| `pedidos.csv` | id, cliente_id, vendedor_id, data, status | ~55.000 |
+| `itens_pedido.csv` | pedido_id, sku, qtd, preco_unit, desconto, flag_ruptura | ~207.000 |
+| `estoque_movimentos.csv` | data, sku, tipo (entrada/saida/ajuste), qtd, saldo | ~93.000 |
+| `metas.csv` | vendedor_id, mes, meta_valor | 360 |
 
 **Padrões plantados nos dados** (para o dashboard "descobrir"): sazonalidade forte no verão e em datas festivas; curva ABC realista (20% dos SKUs = 78% da receita); rupturas concentradas nos top-50 SKUs; ~90 clientes com padrão de churn (queda progressiva de frequência nos últimos 4 meses); 2 vendedores consistentemente abaixo da meta.
 
@@ -222,7 +222,7 @@ Regra geral: cada fase termina com commit + deploy (quando aplicável). Placehol
 | Fase | Entregável | Critério de "pronto" (verificação binária) |
 |---|---|---|
 | **0 — Fundação** | Repo GitHub + Next.js 15 + TS + Tailwind v4 + deploy Vercel de página placeholder; `.vercelignore` excluindo `lab/`; Vercel Analytics instalado | ① URL de produção Vercel responde HTTP 200; ② `npm run build` conclui sem erro; ③ repo contém README com instruções de run local |
-| **1 — Dataset sintético** | `lab/serra-azul/gerar_dados.py` + 7 CSVs + README com dicionário de dados | ① Script roda sem erro com `python gerar_dados.py`; ② gera exatamente os 7 CSVs da seção 3.2; ③ `pedidos.csv` ≥ 35.000 linhas e `itens_pedido.csv` ≥ 150.000 linhas; ④ datas cobrem jul/2024–jun/2026; ⑤ zero nulos em colunas de chave (validado por bloco `assert` no fim do próprio script); ⑥ duas execuções produzem arquivos idênticos (seed fixa) |
+| **1 — Dataset sintético** | `lab/serra-azul/gerar_dados.py` + 7 CSVs + README com dicionário de dados | ① Script roda sem erro com `python gerar_dados.py`; ② gera exatamente os 7 CSVs da seção 3.2; ③ `pedidos.csv` ≥ 35.000 linhas e `itens_pedido.csv` ≥ 150.000 linhas; ④ datas cobrem jan/2024–jun/2026; ⑤ zero nulos em colunas de chave (validado por bloco `assert` no fim do próprio script); ⑥ duas execuções produzem arquivos idênticos (seed fixa) |
 | **2 — Especificação Power BI + IA + automação** | `especificacao_powerbi.md` (modelo estrela, ≥ 15 medidas DAX escritas, layout das 4 páginas); `resumo_ia.py` funcional; doc do fluxo Power Automate (passo a passo + diagrama) | ① Spec lista as 4 páginas nomeadas na seção 3.3 com os visuais de cada uma; ② todas as medidas DAX têm código completo (não pseudocódigo); ③ `resumo_ia.py` roda contra os CSVs e imprime um resumo em PT-BR sem erro; ④ doc da automação tem gatilho, condição e ação definidos |
 | **2b — Montagem do .pbix** *(manual, usuário)* | `.pbix` seguindo a spec, publicado via Publish to web; screenshots das 4 páginas salvos em `public/` | ① `[URL_PUBLISH_TO_WEB]` carrega em navegador anônimo; ② as 4 páginas existem com os nomes da spec; ③ 4 screenshots PNG presentes em `public/` |
 | **3 — Site core** | Layout global (Header/Footer), Home, `/sobre`, `/contato` com Formspree, componentes `CTASection` e `SubstackFeed` (com fallback estático se o RSS falhar) | ① Rotas `/`, `/sobre`, `/contato` respondem 200 em produção; ② envio de teste no formulário chega ao e-mail configurado; ③ build passa sem warnings de tipo; ④ Lighthouse mobile (produção): Performance ≥ 85 e SEO ≥ 90 na Home; ⑤ nenhuma página exibe texto lorem ipsum |

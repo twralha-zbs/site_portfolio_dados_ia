@@ -1,0 +1,251 @@
+sku,categoria,marca,descricao,preco_tabela,custo,fornecedor
+SKU-0001,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,59.08,39.20,Distribuidora Vale Verde
+SKU-0002,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,52.00,34.46,Comercial Pedra Branca
+SKU-0003,Água,Cristal da Serra,"Cristal da Serra Água Garrafa 1,5L cx6",24.99,20.15,Comercial Pedra Branca
+SKU-0004,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,101.62,75.62,Bebidas Mantiqueira S.A.
+SKU-0005,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,98.97,71.78,Fábrica Alto da Serra
+SKU-0006,Suco,Serra Verde,Serra Verde Suco Garrafa 300ml cx12,77.04,58.23,Bebidas Mantiqueira S.A.
+SKU-0007,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,59.88,42.15,Comercial Pedra Branca
+SKU-0008,Refrigerante,Refrix,Refrix Refrigerante Lata 350ml cx12,69.63,53.53,Grupo Serrano Bebidas
+SKU-0009,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,41.68,29.31,Envasadora Minas Sul
+SKU-0010,Suco,Frutta Viva,Frutta Viva Suco Garrafa 300ml cx12,73.58,49.51,Bebidas Mantiqueira S.A.
+SKU-0011,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 2L cx6,61.97,43.46,Comercial Pedra Branca
+SKU-0012,Energético,Voltz,Voltz Energético Lata 473ml cx6,125.80,89.59,Bebidas Mantiqueira S.A.
+SKU-0013,Suco,Serra Verde,Serra Verde Suco Caixa 1L cx12,41.18,27.75,Distribuidora Vale Verde
+SKU-0014,Energético,Trovão,Trovão Energético Lata 473ml cx6,110.61,73.83,Fábrica Alto da Serra
+SKU-0015,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Long Neck 355ml cx24,119.36,84.81,Grupo Serrano Bebidas
+SKU-0016,Refrigerante,Refrix,Refrix Refrigerante Lata 350ml cx12,36.08,23.57,Fábrica Alto da Serra
+SKU-0017,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Garrafa 600ml cx12,72.42,47.65,Fábrica Alto da Serra
+SKU-0018,Cerveja,Alpina,Alpina Cerveja Long Neck 355ml cx24,56.36,39.77,Bebidas Mantiqueira S.A.
+SKU-0019,Suco,Pomar Real,"Pomar Real Suco PET 1,5L cx6",47.94,39.16,Bebidas Mantiqueira S.A.
+SKU-0020,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,65.91,48.10,Envasadora Minas Sul
+SKU-0021,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,50.37,37.84,Comercial Pedra Branca
+SKU-0022,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 473ml cx12,76.77,61.72,Fábrica Alto da Serra
+SKU-0023,Água,Minas Pura,Minas Pura Água Garrafa 500ml cx12,30.53,22.97,Bebidas Mantiqueira S.A.
+SKU-0024,Água,Fonte Azul,Fonte Azul Água Galão 20L un,24.86,17.68,Grupo Serrano Bebidas
+SKU-0025,Suco,Pomar Real,Pomar Real Suco Garrafa 300ml cx12,44.57,36.16,Grupo Serrano Bebidas
+SKU-0026,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,51.46,38.39,Comercial Pedra Branca
+SKU-0027,Água,Fonte Azul,"Fonte Azul Água Garrafa 1,5L cx6",19.36,15.79,Fábrica Alto da Serra
+SKU-0028,Refrigerante,Refrix,Refrix Refrigerante PET 600ml cx12,56.00,40.47,Envasadora Minas Sul
+SKU-0029,Cerveja,Imperial Minas,Imperial Minas Cerveja Garrafa 600ml cx12,51.35,40.52,Comercial Pedra Branca
+SKU-0030,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,31.66,25.01,Comercial Pedra Branca
+SKU-0031,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 473ml cx12,106.41,74.24,Comercial Pedra Branca
+SKU-0032,Água,Minas Pura,Minas Pura Água Garrafa 500ml cx12,37.81,28.81,Fábrica Alto da Serra
+SKU-0033,Cerveja,Serra Dourada,Serra Dourada Cerveja Garrafa 600ml cx12,99.19,69.45,Envasadora Minas Sul
+SKU-0034,Cerveja,Alpina,Alpina Cerveja Long Neck 355ml cx24,101.46,73.17,Grupo Serrano Bebidas
+SKU-0035,Refrigerante,Tuiuiú,Tuiuiú Refrigerante Lata 350ml cx12,42.68,28.48,Envasadora Minas Sul
+SKU-0036,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,54.12,37.18,Comercial Pedra Branca
+SKU-0037,Refrigerante,Refrix,Refrix Refrigerante PET 600ml cx12,49.74,39.81,Comercial Pedra Branca
+SKU-0038,Água,Fonte Azul,Fonte Azul Água Galão 20L un,32.96,26.86,Fábrica Alto da Serra
+SKU-0039,Água,Minas Pura,Minas Pura Água Garrafa 500ml cx12,31.41,21.17,Grupo Serrano Bebidas
+SKU-0040,Água,Minas Pura,Minas Pura Água Galão 20L un,35.00,26.64,Bebidas Mantiqueira S.A.
+SKU-0041,Água,Cristal da Serra,"Cristal da Serra Água Garrafa 1,5L cx6",28.88,23.17,Bebidas Mantiqueira S.A.
+SKU-0042,Refrigerante,Horizonte,Horizonte Refrigerante Lata 350ml cx12,67.47,54.99,Distribuidora Vale Verde
+SKU-0043,Água,Cristal da Serra,Cristal da Serra Água Garrafa 500ml cx12,41.73,33.21,Comercial Pedra Branca
+SKU-0044,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 2L cx6,39.15,28.18,Comercial Pedra Branca
+SKU-0045,Refrigerante,Refrix,Refrix Refrigerante Lata 350ml cx12,33.90,26.20,Bebidas Mantiqueira S.A.
+SKU-0046,Energético,Voltz,Voltz Energético Lata 473ml cx6,155.54,115.95,Comercial Pedra Branca
+SKU-0047,Cerveja,Serra Dourada,Serra Dourada Cerveja Garrafa 600ml cx12,75.30,49.32,Grupo Serrano Bebidas
+SKU-0048,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,32.18,22.42,Fábrica Alto da Serra
+SKU-0049,Energético,Voltz,Voltz Energético Lata 473ml cx6,174.78,122.49,Envasadora Minas Sul
+SKU-0050,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 2L cx6,32.87,21.38,Envasadora Minas Sul
+SKU-0051,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,37.65,27.78,Grupo Serrano Bebidas
+SKU-0052,Cerveja,Imperial Minas,Imperial Minas Cerveja Long Neck 355ml cx24,68.52,54.56,Grupo Serrano Bebidas
+SKU-0053,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,55.54,42.14,Comercial Pedra Branca
+SKU-0054,Cerveja,Serra Dourada,Serra Dourada Cerveja Garrafa 600ml cx12,101.92,78.16,Envasadora Minas Sul
+SKU-0055,Água,Fonte Azul,Fonte Azul Água Garrafa 500ml cx12,15.36,12.31,Grupo Serrano Bebidas
+SKU-0056,Energético,Kraft Energy,Kraft Energy Energético Lata 473ml cx6,160.71,124.67,Distribuidora Vale Verde
+SKU-0057,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,87.95,67.40,Bebidas Mantiqueira S.A.
+SKU-0058,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,85.47,62.96,Grupo Serrano Bebidas
+SKU-0059,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,76.56,51.98,Fábrica Alto da Serra
+SKU-0060,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 2L cx6,39.90,30.25,Fábrica Alto da Serra
+SKU-0061,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 2L cx6,29.77,23.39,Bebidas Mantiqueira S.A.
+SKU-0062,Energético,Kraft Energy,Kraft Energy Energético Lata 473ml cx6,85.43,57.66,Comercial Pedra Branca
+SKU-0063,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,34.05,22.37,Comercial Pedra Branca
+SKU-0064,Suco,Pomar Real,"Pomar Real Suco PET 1,5L cx6",65.63,45.08,Comercial Pedra Branca
+SKU-0065,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,76.77,56.12,Comercial Pedra Branca
+SKU-0066,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,61.14,40.52,Fábrica Alto da Serra
+SKU-0067,Água,Fonte Azul,Fonte Azul Água Galão 20L un,28.70,22.74,Distribuidora Vale Verde
+SKU-0068,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Garrafa 600ml cx12,83.64,63.11,Comercial Pedra Branca
+SKU-0069,Água,Minas Pura,Minas Pura Água Galão 20L un,22.61,16.24,Grupo Serrano Bebidas
+SKU-0070,Energético,Voltz,Voltz Energético Lata 250ml cx6,122.49,100.41,Grupo Serrano Bebidas
+SKU-0071,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,167.38,123.11,Grupo Serrano Bebidas
+SKU-0072,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Long Neck 355ml cx24,62.99,46.65,Envasadora Minas Sul
+SKU-0073,Suco,Serra Verde,"Serra Verde Suco PET 1,5L cx6",72.94,52.45,Distribuidora Vale Verde
+SKU-0074,Cerveja,Imperial Minas,Imperial Minas Cerveja Garrafa 600ml cx12,58.36,42.54,Distribuidora Vale Verde
+SKU-0075,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,59.24,38.71,Distribuidora Vale Verde
+SKU-0076,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,114.28,76.05,Distribuidora Vale Verde
+SKU-0077,Suco,Pomar Real,Pomar Real Suco Caixa 1L cx12,51.05,39.10,Envasadora Minas Sul
+SKU-0078,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,91.98,68.91,Distribuidora Vale Verde
+SKU-0079,Suco,Frutta Viva,Frutta Viva Suco Garrafa 300ml cx12,63.17,44.01,Envasadora Minas Sul
+SKU-0080,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,60.79,43.34,Fábrica Alto da Serra
+SKU-0081,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 350ml cx12,112.96,75.29,Distribuidora Vale Verde
+SKU-0082,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,59.22,46.82,Comercial Pedra Branca
+SKU-0083,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 350ml cx12,71.56,51.63,Fábrica Alto da Serra
+SKU-0084,Energético,Trovão,Trovão Energético Lata 473ml cx6,106.75,77.21,Distribuidora Vale Verde
+SKU-0085,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,62.18,48.89,Bebidas Mantiqueira S.A.
+SKU-0086,Água,Minas Pura,"Minas Pura Água Garrafa 1,5L cx6",34.09,23.27,Fábrica Alto da Serra
+SKU-0087,Energético,Voltz,Voltz Energético Lata 473ml cx6,87.82,70.36,Distribuidora Vale Verde
+SKU-0088,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,28.65,19.46,Envasadora Minas Sul
+SKU-0089,Refrigerante,Horizonte,Horizonte Refrigerante PET 600ml cx12,30.40,21.74,Bebidas Mantiqueira S.A.
+SKU-0090,Refrigerante,Refrix,Refrix Refrigerante PET 600ml cx12,37.93,27.41,Grupo Serrano Bebidas
+SKU-0091,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 350ml cx12,121.06,80.41,Distribuidora Vale Verde
+SKU-0092,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,34.83,24.21,Bebidas Mantiqueira S.A.
+SKU-0093,Cerveja,Imperial Minas,Imperial Minas Cerveja Garrafa 600ml cx12,79.29,54.05,Fábrica Alto da Serra
+SKU-0094,Refrigerante,Horizonte,Horizonte Refrigerante PET 600ml cx12,62.65,45.52,Distribuidora Vale Verde
+SKU-0095,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 473ml cx12,107.86,70.63,Distribuidora Vale Verde
+SKU-0096,Refrigerante,Refrix,Refrix Refrigerante PET 600ml cx12,58.89,41.80,Fábrica Alto da Serra
+SKU-0097,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,65.91,49.93,Grupo Serrano Bebidas
+SKU-0098,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,46.83,33.54,Grupo Serrano Bebidas
+SKU-0099,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 473ml cx12,99.58,74.26,Distribuidora Vale Verde
+SKU-0100,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,52.49,40.53,Distribuidora Vale Verde
+SKU-0101,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,114.98,85.85,Grupo Serrano Bebidas
+SKU-0102,Cerveja,Alpina,Alpina Cerveja Long Neck 355ml cx24,58.76,46.19,Envasadora Minas Sul
+SKU-0103,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,125.96,92.24,Envasadora Minas Sul
+SKU-0104,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Garrafa 600ml cx12,82.95,64.52,Distribuidora Vale Verde
+SKU-0105,Suco,Serra Verde,Serra Verde Suco Caixa 1L cx12,65.36,45.73,Distribuidora Vale Verde
+SKU-0106,Refrigerante,Horizonte,Horizonte Refrigerante Lata 350ml cx12,48.50,35.46,Fábrica Alto da Serra
+SKU-0107,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 473ml cx12,117.00,93.15,Envasadora Minas Sul
+SKU-0108,Suco,Serra Verde,Serra Verde Suco Caixa 1L cx12,77.68,55.98,Grupo Serrano Bebidas
+SKU-0109,Água,Minas Pura,Minas Pura Água Galão 20L un,39.29,27.40,Distribuidora Vale Verde
+SKU-0110,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,108.02,76.78,Envasadora Minas Sul
+SKU-0111,Água,Minas Pura,Minas Pura Água Galão 20L un,32.18,22.72,Fábrica Alto da Serra
+SKU-0112,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,117.50,87.25,Bebidas Mantiqueira S.A.
+SKU-0113,Cerveja,Serra Dourada,Serra Dourada Cerveja Long Neck 355ml cx24,96.82,77.65,Fábrica Alto da Serra
+SKU-0114,Refrigerante,Horizonte,Horizonte Refrigerante Lata 350ml cx12,33.27,26.62,Comercial Pedra Branca
+SKU-0115,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,97.44,64.68,Bebidas Mantiqueira S.A.
+SKU-0116,Água,Minas Pura,"Minas Pura Água Garrafa 1,5L cx6",38.27,30.64,Envasadora Minas Sul
+SKU-0117,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,65.42,46.56,Bebidas Mantiqueira S.A.
+SKU-0118,Energético,Kraft Energy,Kraft Energy Energético Lata 473ml cx6,145.71,99.30,Comercial Pedra Branca
+SKU-0119,Suco,Frutta Viva,Frutta Viva Suco Caixa 1L cx12,62.53,42.39,Distribuidora Vale Verde
+SKU-0120,Energético,Trovão,Trovão Energético Lata 473ml cx6,88.70,69.02,Bebidas Mantiqueira S.A.
+SKU-0121,Cerveja,Imperial Minas,Imperial Minas Cerveja Long Neck 355ml cx24,60.42,44.40,Grupo Serrano Bebidas
+SKU-0122,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,57.09,37.48,Grupo Serrano Bebidas
+SKU-0123,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,80.79,57.29,Grupo Serrano Bebidas
+SKU-0124,Água,Minas Pura,"Minas Pura Água Garrafa 1,5L cx6",16.36,12.74,Comercial Pedra Branca
+SKU-0125,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,71.41,49.84,Comercial Pedra Branca
+SKU-0126,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,57.53,38.10,Bebidas Mantiqueira S.A.
+SKU-0127,Água,Minas Pura,"Minas Pura Água Garrafa 1,5L cx6",25.42,20.25,Distribuidora Vale Verde
+SKU-0128,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,56.88,46.29,Bebidas Mantiqueira S.A.
+SKU-0129,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,26.32,19.11,Comercial Pedra Branca
+SKU-0130,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,54.66,37.37,Bebidas Mantiqueira S.A.
+SKU-0131,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,49.75,40.03,Envasadora Minas Sul
+SKU-0132,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,88.09,65.66,Distribuidora Vale Verde
+SKU-0133,Cerveja,Serra Dourada,Serra Dourada Cerveja Long Neck 355ml cx24,52.27,41.31,Bebidas Mantiqueira S.A.
+SKU-0134,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,77.84,60.01,Envasadora Minas Sul
+SKU-0135,Suco,Serra Verde,Serra Verde Suco Caixa 1L cx12,68.76,49.36,Distribuidora Vale Verde
+SKU-0136,Suco,Serra Verde,"Serra Verde Suco PET 1,5L cx6",36.59,28.73,Grupo Serrano Bebidas
+SKU-0137,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,117.88,95.32,Grupo Serrano Bebidas
+SKU-0138,Água,Minas Pura,Minas Pura Água Galão 20L un,36.42,29.56,Envasadora Minas Sul
+SKU-0139,Refrigerante,Refrix,Refrix Refrigerante Lata 350ml cx12,34.50,22.80,Bebidas Mantiqueira S.A.
+SKU-0140,Suco,Serra Verde,Serra Verde Suco Caixa 1L cx12,74.26,55.16,Distribuidora Vale Verde
+SKU-0141,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 473ml cx12,73.09,55.33,Comercial Pedra Branca
+SKU-0142,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 2L cx6,40.49,27.44,Bebidas Mantiqueira S.A.
+SKU-0143,Suco,Pomar Real,Pomar Real Suco Garrafa 300ml cx12,58.73,44.07,Fábrica Alto da Serra
+SKU-0144,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,47.46,36.48,Fábrica Alto da Serra
+SKU-0145,Água,Minas Pura,Minas Pura Água Galão 20L un,33.97,23.39,Bebidas Mantiqueira S.A.
+SKU-0146,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,57.29,40.65,Comercial Pedra Branca
+SKU-0147,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,71.40,58.17,Fábrica Alto da Serra
+SKU-0148,Energético,Voltz,Voltz Energético Lata 250ml cx6,149.04,118.40,Grupo Serrano Bebidas
+SKU-0149,Refrigerante,Horizonte,Horizonte Refrigerante PET 600ml cx12,56.57,37.34,Envasadora Minas Sul
+SKU-0150,Água,Minas Pura,"Minas Pura Água Garrafa 1,5L cx6",39.08,27.58,Distribuidora Vale Verde
+SKU-0151,Cerveja,Imperial Minas,Imperial Minas Cerveja Long Neck 355ml cx24,114.82,82.38,Distribuidora Vale Verde
+SKU-0152,Energético,Trovão,Trovão Energético Lata 250ml cx6,147.84,116.03,Comercial Pedra Branca
+SKU-0153,Refrigerante,Horizonte,Horizonte Refrigerante PET 2L cx6,62.33,46.03,Comercial Pedra Branca
+SKU-0154,Refrigerante,Horizonte,Horizonte Refrigerante PET 2L cx6,67.00,44.45,Envasadora Minas Sul
+SKU-0155,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,83.34,60.28,Bebidas Mantiqueira S.A.
+SKU-0156,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,53.88,37.90,Fábrica Alto da Serra
+SKU-0157,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,41.95,34.14,Distribuidora Vale Verde
+SKU-0158,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,55.11,43.59,Bebidas Mantiqueira S.A.
+SKU-0159,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,69.92,55.51,Grupo Serrano Bebidas
+SKU-0160,Energético,Voltz,Voltz Energético Lata 250ml cx6,110.49,80.06,Comercial Pedra Branca
+SKU-0161,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 473ml cx12,96.30,69.40,Bebidas Mantiqueira S.A.
+SKU-0162,Água,Cristal da Serra,Cristal da Serra Água Garrafa 500ml cx12,16.37,11.88,Envasadora Minas Sul
+SKU-0163,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,42.45,30.95,Comercial Pedra Branca
+SKU-0164,Cerveja,Alpina,Alpina Cerveja Long Neck 355ml cx24,67.71,44.75,Fábrica Alto da Serra
+SKU-0165,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,50.89,34.81,Distribuidora Vale Verde
+SKU-0166,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,143.76,94.54,Bebidas Mantiqueira S.A.
+SKU-0167,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,93.77,74.56,Distribuidora Vale Verde
+SKU-0168,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante PET 600ml cx12,65.87,52.53,Envasadora Minas Sul
+SKU-0169,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,31.37,23.18,Comercial Pedra Branca
+SKU-0170,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,105.64,70.63,Comercial Pedra Branca
+SKU-0171,Cerveja,Imperial Minas,Imperial Minas Cerveja Garrafa 600ml cx12,108.53,86.63,Comercial Pedra Branca
+SKU-0172,Cerveja,Imperial Minas,Imperial Minas Cerveja Long Neck 355ml cx24,68.21,45.07,Comercial Pedra Branca
+SKU-0173,Água,Minas Pura,Minas Pura Água Garrafa 500ml cx12,27.14,21.56,Grupo Serrano Bebidas
+SKU-0174,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,63.39,46.24,Fábrica Alto da Serra
+SKU-0175,Água,Minas Pura,Minas Pura Água Galão 20L un,27.02,17.66,Distribuidora Vale Verde
+SKU-0176,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 350ml cx12,109.94,81.42,Comercial Pedra Branca
+SKU-0177,Refrigerante,Tuiuiú,Tuiuiú Refrigerante Lata 350ml cx12,65.37,52.97,Envasadora Minas Sul
+SKU-0178,Suco,Serra Verde,"Serra Verde Suco PET 1,5L cx6",60.10,43.63,Distribuidora Vale Verde
+SKU-0179,Energético,Trovão,Trovão Energético Lata 473ml cx6,123.97,100.90,Comercial Pedra Branca
+SKU-0180,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,37.86,27.80,Grupo Serrano Bebidas
+SKU-0181,Suco,Pomar Real,Pomar Real Suco Caixa 1L cx12,59.40,46.37,Comercial Pedra Branca
+SKU-0182,Suco,Frutta Viva,Frutta Viva Suco Garrafa 300ml cx12,63.40,50.38,Grupo Serrano Bebidas
+SKU-0183,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,64.32,49.51,Grupo Serrano Bebidas
+SKU-0184,Suco,Pomar Real,Pomar Real Suco Caixa 1L cx12,38.61,27.11,Bebidas Mantiqueira S.A.
+SKU-0185,Água,Cristal da Serra,"Cristal da Serra Água Garrafa 1,5L cx6",41.57,32.05,Comercial Pedra Branca
+SKU-0186,Refrigerante,Guaraná Serrano,Guaraná Serrano Refrigerante Lata 350ml cx12,65.05,52.73,Bebidas Mantiqueira S.A.
+SKU-0187,Água,Cristal da Serra,Cristal da Serra Água Galão 20L un,39.89,27.13,Distribuidora Vale Verde
+SKU-0188,Energético,Voltz,Voltz Energético Lata 250ml cx6,162.65,133.34,Bebidas Mantiqueira S.A.
+SKU-0189,Água,Fonte Azul,Fonte Azul Água Garrafa 500ml cx12,35.77,26.35,Bebidas Mantiqueira S.A.
+SKU-0190,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 473ml cx12,62.59,49.94,Envasadora Minas Sul
+SKU-0191,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,40.68,28.28,Bebidas Mantiqueira S.A.
+SKU-0192,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,112.00,88.92,Bebidas Mantiqueira S.A.
+SKU-0193,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,70.06,46.43,Grupo Serrano Bebidas
+SKU-0194,Cerveja,Imperial Minas,Imperial Minas Cerveja Long Neck 355ml cx24,80.02,65.05,Bebidas Mantiqueira S.A.
+SKU-0195,Energético,Voltz,Voltz Energético Lata 473ml cx6,128.19,90.23,Distribuidora Vale Verde
+SKU-0196,Refrigerante,Horizonte,Horizonte Refrigerante PET 600ml cx12,44.87,31.23,Distribuidora Vale Verde
+SKU-0197,Energético,Trovão,Trovão Energético Lata 250ml cx6,122.83,80.69,Comercial Pedra Branca
+SKU-0198,Refrigerante,Horizonte,Horizonte Refrigerante Lata 350ml cx12,56.95,42.65,Comercial Pedra Branca
+SKU-0199,Suco,Serra Verde,Serra Verde Suco Garrafa 300ml cx12,77.29,58.63,Envasadora Minas Sul
+SKU-0200,Suco,Pomar Real,Pomar Real Suco Garrafa 300ml cx12,72.50,52.84,Comercial Pedra Branca
+SKU-0201,Energético,Kraft Energy,Kraft Energy Energético Lata 250ml cx6,114.77,75.96,Grupo Serrano Bebidas
+SKU-0202,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,118.53,92.56,Distribuidora Vale Verde
+SKU-0203,Suco,Serra Verde,"Serra Verde Suco PET 1,5L cx6",41.76,30.91,Comercial Pedra Branca
+SKU-0204,Suco,Serra Verde,Serra Verde Suco Garrafa 300ml cx12,49.44,36.20,Comercial Pedra Branca
+SKU-0205,Água,Fonte Azul,"Fonte Azul Água Garrafa 1,5L cx6",23.74,16.02,Comercial Pedra Branca
+SKU-0206,Refrigerante,Tuiuiú,Tuiuiú Refrigerante PET 600ml cx12,34.76,24.95,Grupo Serrano Bebidas
+SKU-0207,Suco,Serra Verde,Serra Verde Suco Garrafa 300ml cx12,32.57,22.30,Grupo Serrano Bebidas
+SKU-0208,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Garrafa 600ml cx12,111.73,79.62,Bebidas Mantiqueira S.A.
+SKU-0209,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,85.62,60.56,Distribuidora Vale Verde
+SKU-0210,Suco,Pomar Real,"Pomar Real Suco PET 1,5L cx6",77.62,63.60,Fábrica Alto da Serra
+SKU-0211,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,93.52,65.86,Envasadora Minas Sul
+SKU-0212,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Long Neck 355ml cx24,74.71,53.76,Distribuidora Vale Verde
+SKU-0213,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 473ml cx12,68.47,44.86,Envasadora Minas Sul
+SKU-0214,Cerveja,Serra Dourada,Serra Dourada Cerveja Garrafa 600ml cx12,103.09,71.58,Envasadora Minas Sul
+SKU-0215,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,99.47,73.60,Bebidas Mantiqueira S.A.
+SKU-0216,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,103.98,71.68,Fábrica Alto da Serra
+SKU-0217,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,103.20,76.74,Envasadora Minas Sul
+SKU-0218,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 473ml cx12,73.40,58.38,Envasadora Minas Sul
+SKU-0219,Refrigerante,Refrix,Refrix Refrigerante PET 600ml cx12,35.61,27.30,Grupo Serrano Bebidas
+SKU-0220,Água,Fonte Azul,"Fonte Azul Água Garrafa 1,5L cx6",19.25,15.51,Comercial Pedra Branca
+SKU-0221,Refrigerante,Horizonte,Horizonte Refrigerante PET 2L cx6,63.17,46.51,Distribuidora Vale Verde
+SKU-0222,Suco,Frutta Viva,Frutta Viva Suco Caixa 1L cx12,77.24,57.83,Envasadora Minas Sul
+SKU-0223,Cerveja,Serra Dourada,Serra Dourada Cerveja Lata 350ml cx12,85.14,58.49,Comercial Pedra Branca
+SKU-0224,Água,Fonte Azul,Fonte Azul Água Garrafa 500ml cx12,27.73,19.97,Distribuidora Vale Verde
+SKU-0225,Energético,Voltz,Voltz Energético Lata 250ml cx6,95.04,71.72,Bebidas Mantiqueira S.A.
+SKU-0226,Energético,Voltz,Voltz Energético Lata 250ml cx6,106.72,81.66,Distribuidora Vale Verde
+SKU-0227,Energético,Trovão,Trovão Energético Lata 473ml cx6,155.88,122.91,Distribuidora Vale Verde
+SKU-0228,Suco,Frutta Viva,Frutta Viva Suco Garrafa 300ml cx12,36.33,24.30,Grupo Serrano Bebidas
+SKU-0229,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 350ml cx12,94.15,63.21,Bebidas Mantiqueira S.A.
+SKU-0230,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Long Neck 355ml cx24,59.08,48.31,Distribuidora Vale Verde
+SKU-0231,Refrigerante,Horizonte,Horizonte Refrigerante Lata 350ml cx12,44.06,28.95,Bebidas Mantiqueira S.A.
+SKU-0232,Cerveja,Alpina,Alpina Cerveja Lata 473ml cx12,100.18,80.07,Bebidas Mantiqueira S.A.
+SKU-0233,Água,Fonte Azul,Fonte Azul Água Garrafa 500ml cx12,39.40,32.01,Fábrica Alto da Serra
+SKU-0234,Energético,Kraft Energy,Kraft Energy Energético Lata 473ml cx6,138.17,97.95,Envasadora Minas Sul
+SKU-0235,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Lata 350ml cx12,84.46,65.42,Fábrica Alto da Serra
+SKU-0236,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Lata 473ml cx12,73.22,55.32,Distribuidora Vale Verde
+SKU-0237,Cerveja,Imperial Minas,Imperial Minas Cerveja Garrafa 600ml cx12,49.37,39.57,Distribuidora Vale Verde
+SKU-0238,Suco,Frutta Viva,Frutta Viva Suco Garrafa 300ml cx12,39.49,27.19,Comercial Pedra Branca
+SKU-0239,Cerveja,Vale do Ouro,Vale do Ouro Cerveja Garrafa 600ml cx12,82.14,64.18,Bebidas Mantiqueira S.A.
+SKU-0240,Água,Cristal da Serra,Cristal da Serra Água Garrafa 500ml cx12,21.78,15.26,Fábrica Alto da Serra
+SKU-0241,Cerveja,Imperial Minas,Imperial Minas Cerveja Lata 350ml cx12,80.27,52.64,Bebidas Mantiqueira S.A.
+SKU-0242,Água,Minas Pura,Minas Pura Água Galão 20L un,15.63,11.84,Envasadora Minas Sul
+SKU-0243,Suco,Serra Verde,"Serra Verde Suco PET 1,5L cx6",72.83,54.83,Fábrica Alto da Serra
+SKU-0244,Refrigerante,Horizonte,Horizonte Refrigerante PET 2L cx6,45.99,36.01,Grupo Serrano Bebidas
+SKU-0245,Água,Minas Pura,Minas Pura Água Garrafa 500ml cx12,37.42,24.39,Comercial Pedra Branca
+SKU-0246,Cerveja,Alpina,Alpina Cerveja Lata 473ml cx12,64.52,48.43,Comercial Pedra Branca
+SKU-0247,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,110.88,88.94,Envasadora Minas Sul
+SKU-0248,Cerveja,Alpina,Alpina Cerveja Lata 350ml cx12,96.53,73.22,Distribuidora Vale Verde
+SKU-0249,Cerveja,Boêmia Mineira,Boêmia Mineira Cerveja Long Neck 355ml cx24,106.90,76.12,Fábrica Alto da Serra
+SKU-0250,Cerveja,Alpina,Alpina Cerveja Garrafa 600ml cx12,86.85,58.30,Distribuidora Vale Verde

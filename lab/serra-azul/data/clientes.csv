@@ -1,0 +1,1201 @@
+id,nome_fantasia,tipo_pdv,cidade,uf,data_cadastro,vendedor_id
+1,Mercado Teixeira,Mercado,Coronel Fabriciano,MG,2024-05-24,10
+2,Mercado Fernandes,Mercado,Lavras,MG,2023-06-10,6
+3,Restaurante Caldeira,Restaurante,Viçosa,MG,2021-06-22,7
+4,Bar do Francisco,Bar,Timóteo,MG,2023-11-06,12
+5,Padaria Garcia,Padaria,Caratinga,MG,2022-05-07,12
+6,Mercado Brito,Mercado,Timóteo,MG,2020-08-24,11
+7,Restaurante Fogaça,Restaurante,Sabará,MG,2024-05-17,2
+8,Bar do Catarina,Bar,Juiz de Fora,MG,2021-01-23,7
+9,Bar do Vinícius,Bar,Santana do Paraíso,MG,2022-04-20,11
+10,Mercado Aparecida,Mercado,Pouso Alegre,MG,2023-04-04,5
+11,Mercado Siqueira,Mercado,Nova Lima,MG,2019-03-15,2
+12,Mercado Marques,Mercado,Ipatinga,MG,2021-01-25,11
+13,Bar do Stella,Bar,Poços de Caldas,MG,2022-07-04,6
+14,Bar do Josué,Bar,Muriaé,MG,2020-01-23,7
+15,Mercado Garcia,Mercado,Coronel Fabriciano,MG,2024-07-22,12
+16,Bar do Emanuel,Bar,Ubá,MG,2024-04-30,8
+17,Padaria Novaes,Padaria,Poços de Caldas,MG,2019-12-17,6
+18,Bar do Ana Beatriz,Bar,Pouso Alegre,MG,2019-06-29,5
+19,Bar do Eloá,Bar,Poços de Caldas,MG,2022-09-27,6
+20,Bar do Matheus,Bar,Contagem,MG,2020-01-09,2
+21,Mercado Santos,Mercado,Coronel Fabriciano,MG,2025-04-05,10
+22,Mercado Azevedo,Mercado,Caratinga,MG,2023-10-07,11
+23,Mercado Aparecida,Mercado,Poços de Caldas,MG,2022-11-27,4
+24,Padaria Ribeiro,Padaria,Lavras,MG,2020-12-11,4
+25,Bar do Rafael,Bar,Ipatinga,MG,2018-06-21,11
+26,Restaurante Vargas,Restaurante,Betim,MG,2023-10-08,1
+27,Bar do Amanda,Bar,Ubá,MG,2025-09-02,7
+28,Bar do Emanuel,Bar,Lavras,MG,2019-05-11,6
+29,Mercado da Conceição,Mercado,Ubá,MG,2025-11-08,9
+30,Bar do Guilherme,Bar,Nova Lima,MG,2018-10-08,2
+31,Mercado Garcia,Mercado,Viçosa,MG,2022-03-09,9
+32,Restaurante da Mota,Restaurante,Três Corações,MG,2019-12-13,5
+33,Restaurante Marques,Restaurante,Juiz de Fora,MG,2018-12-03,8
+34,Mercado Porto,Mercado,Betim,MG,2021-12-01,1
+35,Mercado Fonseca,Mercado,Varginha,MG,2022-09-01,6
+36,Bar do Luan,Bar,Muriaé,MG,2019-08-22,7
+37,Bar do Ester,Bar,Betim,MG,2019-03-29,3
+38,Bar do Daniela,Bar,Belo Horizonte,MG,2019-01-26,2
+39,Restaurante Costela,Restaurante,Nova Lima,MG,2018-12-11,2
+40,Padaria Rios,Padaria,Poços de Caldas,MG,2025-04-04,4
+41,Bar do Vitor,Bar,Sabará,MG,2022-10-14,2
+42,Mercado Sampaio,Mercado,Coronel Fabriciano,MG,2018-10-29,12
+43,Restaurante Rodrigues,Restaurante,Poços de Caldas,MG,2018-05-15,5
+44,Restaurante Ramos,Restaurante,Ipatinga,MG,2020-05-04,11
+45,Mercado Barbosa,Mercado,Santana do Paraíso,MG,2019-09-05,12
+46,Mercado Pereira,Mercado,Betim,MG,2023-01-16,1
+47,Restaurante Porto,Restaurante,Ubá,MG,2021-10-06,8
+48,Conveniência Cavalcante 24h,Conveniência,Coronel Fabriciano,MG,2018-03-10,11
+49,Bar do Sophie,Bar,Juiz de Fora,MG,2021-04-08,8
+50,Conveniência Siqueira 24h,Conveniência,Lavras,MG,2024-08-27,6
+51,Bar do Samuel,Bar,Pouso Alegre,MG,2021-09-29,6
+52,Restaurante Castro,Restaurante,Betim,MG,2021-09-21,1
+53,Bar do Maria Eduarda,Bar,Juiz de Fora,MG,2020-10-26,7
+54,Bar do Gabrielly,Bar,Santana do Paraíso,MG,2020-08-21,12
+55,Bar do Vitor Hugo,Bar,Timóteo,MG,2018-03-29,12
+56,Mercado Porto,Mercado,Sabará,MG,2019-09-12,1
+57,Bar do Pedro Lucas,Bar,Juiz de Fora,MG,2021-11-08,9
+58,Bar do Aylla,Bar,Três Corações,MG,2025-03-19,4
+59,Mercado Vargas,Mercado,Caratinga,MG,2021-01-18,11
+60,Mercado Vasconcelos,Mercado,Belo Horizonte,MG,2022-03-25,1
+61,Restaurante Araújo,Restaurante,Timóteo,MG,2019-09-13,12
+62,Conveniência da Conceição 24h,Conveniência,Santana do Paraíso,MG,2019-09-01,11
+63,Restaurante Andrade,Restaurante,Contagem,MG,2020-05-06,2
+64,Bar do Ana Vitória,Bar,Belo Horizonte,MG,2019-04-27,1
+65,Bar do Isadora,Bar,Timóteo,MG,2020-08-16,11
+66,Conveniência da Mata 24h,Conveniência,Sabará,MG,2018-06-28,2
+67,Bar do Davi Lucca,Bar,Juiz de Fora,MG,2018-03-03,7
+68,Mercado Cunha,Mercado,Timóteo,MG,2024-09-07,11
+69,Conveniência Nunes 24h,Conveniência,Juiz de Fora,MG,2019-12-11,7
+70,Padaria Silva,Padaria,Lavras,MG,2019-07-18,5
+71,Mercado Dias,Mercado,Três Corações,MG,2020-10-19,6
+72,Restaurante Cunha,Restaurante,Sabará,MG,2019-03-23,1
+73,Mercado Rezende,Mercado,Caratinga,MG,2024-03-28,12
+74,Restaurante Monteiro,Restaurante,Varginha,MG,2020-06-21,4
+75,Bar do Isabela,Bar,Sabará,MG,2023-09-18,2
+76,Bar do Maria Cecília,Bar,Pouso Alegre,MG,2020-07-05,4
+77,Mercado Casa Grande,Mercado,Santana do Paraíso,MG,2023-06-26,12
+78,Bar do Vinícius,Bar,Contagem,MG,2024-12-04,2
+79,Restaurante Carvalho,Restaurante,Ipatinga,MG,2024-01-29,11
+80,Bar do Thales,Bar,Ubá,MG,2025-09-12,9
+81,Conveniência Souza 24h,Conveniência,Santana do Paraíso,MG,2019-07-12,11
+82,Restaurante Novais,Restaurante,Caratinga,MG,2021-12-23,12
+83,Mercado Nascimento,Mercado,Santana do Paraíso,MG,2025-01-16,11
+84,Restaurante da Luz,Restaurante,Ipatinga,MG,2021-09-19,12
+85,Bar do Liz,Bar,Betim,MG,2020-05-26,2
+86,Mercado Pacheco,Mercado,Caratinga,MG,2019-02-26,10
+87,Bar do Isabelly,Bar,Muriaé,MG,2022-11-10,7
+88,Conveniência Fonseca 24h,Conveniência,Ubá,MG,2021-03-07,7
+89,Restaurante Câmara,Restaurante,Timóteo,MG,2022-01-04,11
+90,Conveniência Carvalho 24h,Conveniência,Caratinga,MG,2023-04-14,12
+91,Conveniência Moraes 24h,Conveniência,Juiz de Fora,MG,2022-12-01,9
+92,Padaria Monteiro,Padaria,Poços de Caldas,MG,2024-12-12,6
+93,Bar do Fernando,Bar,Varginha,MG,2020-04-26,6
+94,Conveniência Sá 24h,Conveniência,Três Corações,MG,2019-10-30,5
+95,Mercado Aragão,Mercado,Lavras,MG,2021-04-08,5
+96,Mercado Camargo,Mercado,Três Corações,MG,2020-07-31,5
+97,Mercado Cassiano,Mercado,Contagem,MG,2023-03-14,1
+98,Bar do Liam,Bar,Contagem,MG,2023-07-15,1
+99,Bar do Lavínia,Bar,Caratinga,MG,2021-05-11,10
+100,Bar do Davi Lucas,Bar,Varginha,MG,2022-12-20,6
+101,Bar do Helena,Bar,Caratinga,MG,2023-06-16,12
+102,Mercado Garcia,Mercado,Viçosa,MG,2021-07-07,8
+103,Conveniência Peixoto 24h,Conveniência,Belo Horizonte,MG,2018-03-20,1
+104,Mercado Martins,Mercado,Contagem,MG,2019-08-01,2
+105,Mercado Moura,Mercado,Nova Lima,MG,2021-11-22,3
+106,Mercado da Cunha,Mercado,Santana do Paraíso,MG,2018-07-24,12
+107,Mercado Novaes,Mercado,Contagem,MG,2019-02-11,3
+108,Bar do Antônio,Bar,Muriaé,MG,2021-08-25,7
+109,Restaurante Rodrigues,Restaurante,Caratinga,MG,2023-04-15,12
+110,Bar do Ian,Bar,Santana do Paraíso,MG,2024-03-07,12
+111,Restaurante Rodrigues,Restaurante,Contagem,MG,2019-10-09,3
+112,Restaurante Nascimento,Restaurante,Nova Lima,MG,2025-12-01,1
+113,Mercado Sá,Mercado,Belo Horizonte,MG,2022-04-15,2
+114,Conveniência da Mata 24h,Conveniência,Belo Horizonte,MG,2025-03-09,1
+115,Bar do Carolina,Bar,Belo Horizonte,MG,2023-09-05,2
+116,Conveniência Camargo 24h,Conveniência,Ubá,MG,2020-05-17,7
+117,Restaurante da Rocha,Restaurante,Santana do Paraíso,MG,2018-10-12,11
+118,Restaurante Lopes,Restaurante,Muriaé,MG,2019-08-23,7
+119,Restaurante Castro,Restaurante,Viçosa,MG,2018-07-17,8
+120,Restaurante Marques,Restaurante,Belo Horizonte,MG,2018-12-13,3
+121,Padaria Abreu,Padaria,Timóteo,MG,2024-04-14,10
+122,Mercado Silveira,Mercado,Viçosa,MG,2018-11-14,8
+123,Restaurante Silveira,Restaurante,Caratinga,MG,2019-03-08,11
+124,Restaurante da Luz,Restaurante,Caratinga,MG,2019-03-20,12
+125,Mercado Montenegro,Mercado,Três Corações,MG,2018-11-02,5
+126,Conveniência Teixeira 24h,Conveniência,Betim,MG,2021-11-28,1
+127,Bar do Luiz Henrique,Bar,Contagem,MG,2020-08-23,3
+128,Mercado Montenegro,Mercado,Poços de Caldas,MG,2019-05-28,6
+129,Bar do Heitor,Bar,Ipatinga,MG,2018-06-07,12
+130,Bar do Ana Cecília,Bar,Pouso Alegre,MG,2024-12-06,5
+131,Restaurante Porto,Restaurante,Timóteo,MG,2025-12-28,10
+132,Bar do Natália,Bar,Cataguases,MG,2020-07-15,7
+133,Bar do Miguel,Bar,Contagem,MG,2019-12-10,2
+134,Bar do Leandro,Bar,Três Corações,MG,2018-01-31,4
+135,Mercado Freitas,Mercado,Juiz de Fora,MG,2020-09-19,8
+136,Restaurante Teixeira,Restaurante,Muriaé,MG,2019-01-30,9
+137,Conveniência Castro 24h,Conveniência,Pouso Alegre,MG,2024-09-17,6
+138,Bar do Valentina,Bar,Betim,MG,2019-06-12,3
+139,Mercado Vasconcelos,Mercado,Viçosa,MG,2019-02-08,9
+140,Mercado Moura,Mercado,Contagem,MG,2018-11-30,2
+141,Mercado Abreu,Mercado,Santana do Paraíso,MG,2021-09-02,12
+142,Mercado Peixoto,Mercado,Betim,MG,2024-05-05,2
+143,Bar do Ayla,Bar,Contagem,MG,2018-04-05,2
+144,Mercado Mendonça,Mercado,Três Corações,MG,2021-04-15,6
+145,Mercado Almeida,Mercado,Muriaé,MG,2020-09-18,7
+146,Mercado Camargo,Mercado,Cataguases,MG,2022-04-29,7
+147,Mercado Fonseca,Mercado,Pouso Alegre,MG,2019-02-28,6
+148,Restaurante das Neves,Restaurante,Coronel Fabriciano,MG,2023-05-31,12
+149,Restaurante da Costa,Restaurante,Lavras,MG,2023-09-05,6
+150,Bar do Danilo,Bar,Lavras,MG,2021-12-22,6
+151,Restaurante da Costa,Restaurante,Varginha,MG,2023-06-06,6
+152,Conveniência Nunes 24h,Conveniência,Contagem,MG,2020-02-17,1
+153,Bar do Emanuel,Bar,Juiz de Fora,MG,2021-04-11,7
+154,Mercado Barros,Mercado,Sabará,MG,2020-05-10,3
+155,Bar do Maria Vitória,Bar,Juiz de Fora,MG,2023-01-29,8
+156,Restaurante Azevedo,Restaurante,Betim,MG,2022-12-05,1
+157,Bar do Sophia,Bar,Caratinga,MG,2022-07-09,12
+158,Restaurante Vargas,Restaurante,Pouso Alegre,MG,2023-07-18,6
+159,Bar do José,Bar,Coronel Fabriciano,MG,2019-07-23,11
+160,Mercado Cardoso,Mercado,Varginha,MG,2019-08-04,6
+161,Conveniência Ribeiro 24h,Conveniência,Belo Horizonte,MG,2025-06-07,1
+162,Bar do Maria Laura,Bar,Timóteo,MG,2022-01-05,11
+163,Conveniência Novaes 24h,Conveniência,Muriaé,MG,2020-09-09,8
+164,Padaria Cavalcante,Padaria,Coronel Fabriciano,MG,2023-02-04,10
+165,Conveniência da Luz 24h,Conveniência,Pouso Alegre,MG,2023-09-19,6
+166,Bar do Sarah,Bar,Viçosa,MG,2025-08-07,8
+167,Restaurante Pereira,Restaurante,Timóteo,MG,2022-03-22,11
+168,Bar do Lavínia,Bar,Juiz de Fora,MG,2021-07-07,8
+169,Bar do Otávio,Bar,Lavras,MG,2022-09-25,5
+170,Conveniência Nogueira 24h,Conveniência,Cataguases,MG,2025-05-22,9
+171,Restaurante Sá,Restaurante,Ubá,MG,2019-02-01,9
+172,Mercado Siqueira,Mercado,Santana do Paraíso,MG,2021-11-18,12
+173,Bar do Murilo,Bar,Três Corações,MG,2019-01-18,5
+174,Restaurante Silva,Restaurante,Pouso Alegre,MG,2020-06-09,6
+175,Restaurante das Neves,Restaurante,Santana do Paraíso,MG,2021-06-11,11
+176,Mercado Guerra,Mercado,Muriaé,MG,2020-09-14,7
+177,Conveniência Rios 24h,Conveniência,Juiz de Fora,MG,2019-08-24,9
+178,Bar do Evelyn,Bar,Três Corações,MG,2019-11-10,6
+179,Bar do Luna,Bar,Belo Horizonte,MG,2023-07-15,3
+180,Mercado Moreira,Mercado,Caratinga,MG,2021-09-13,10
+181,Padaria Machado,Padaria,Nova Lima,MG,2019-01-26,2
+182,Bar do Isaque,Bar,Betim,MG,2022-08-02,3
+183,Bar do Thales,Bar,Muriaé,MG,2019-02-13,8
+184,Bar do Rael,Bar,Ipatinga,MG,2019-12-09,10
+185,Conveniência Azevedo 24h,Conveniência,Timóteo,MG,2021-09-23,11
+186,Bar do Camila,Bar,Pouso Alegre,MG,2023-06-06,4
+187,Mercado Almeida,Mercado,Betim,MG,2021-12-13,2
+188,Padaria Pastor,Padaria,Caratinga,MG,2024-08-11,12
+189,Bar do Raul,Bar,Belo Horizonte,MG,2018-07-29,2
+190,Mercado Pastor,Mercado,Betim,MG,2025-06-15,3
+191,Mercado Câmara,Mercado,Lavras,MG,2021-02-09,4
+192,Restaurante Abreu,Restaurante,Viçosa,MG,2022-12-18,7
+193,Bar do Diego,Bar,Coronel Fabriciano,MG,2020-12-31,11
+194,Mercado Santos,Mercado,Coronel Fabriciano,MG,2019-08-10,10
+195,Bar do Dante,Bar,Ubá,MG,2023-03-10,9
+196,Restaurante da Conceição,Restaurante,Betim,MG,2024-12-18,2
+197,Restaurante Azevedo,Restaurante,Pouso Alegre,MG,2025-08-05,5
+198,Bar do Benício,Bar,Lavras,MG,2024-10-08,6
+199,Bar do Bianca,Bar,Sabará,MG,2018-12-01,2
+200,Conveniência Barbosa 24h,Conveniência,Pouso Alegre,MG,2020-11-15,4
+201,Bar do Olívia,Bar,Lavras,MG,2023-06-13,4
+202,Bar do Renan,Bar,Belo Horizonte,MG,2021-10-04,2
+203,Mercado da Mota,Mercado,Muriaé,MG,2021-01-22,7
+204,Bar do Maria Vitória,Bar,Juiz de Fora,MG,2018-02-14,9
+205,Bar do Paulo,Bar,Belo Horizonte,MG,2023-02-18,1
+206,Mercado Nogueira,Mercado,Varginha,MG,2022-10-09,6
+207,Bar do João,Bar,Ipatinga,MG,2021-03-04,10
+208,Mercado Silveira,Mercado,Timóteo,MG,2020-04-18,10
+209,Restaurante Oliveira,Restaurante,Ipatinga,MG,2019-07-13,11
+210,Mercado Oliveira,Mercado,Varginha,MG,2022-02-20,6
+211,Bar do Maria Júlia,Bar,Timóteo,MG,2020-06-29,11
+212,Restaurante da Cruz,Restaurante,Betim,MG,2021-03-23,3
+213,Bar do Maria Júlia,Bar,Varginha,MG,2020-11-04,5
+214,Restaurante Jesus,Restaurante,Belo Horizonte,MG,2024-01-05,2
+215,Bar do Mateus,Bar,Poços de Caldas,MG,2018-06-05,6
+216,Restaurante Brito,Restaurante,Lavras,MG,2019-03-31,5
+217,Bar do Gael,Bar,Contagem,MG,2024-07-23,3
+218,Bar do Lorena,Bar,Ipatinga,MG,2020-05-18,10
+219,Mercado Fogaça,Mercado,Três Corações,MG,2019-06-30,4
+220,Bar do Lavínia,Bar,Lavras,MG,2020-06-04,4
+221,Bar do Juliana,Bar,Contagem,MG,2024-12-01,2
+222,Restaurante Martins,Restaurante,Poços de Caldas,MG,2025-05-30,6
+223,Restaurante Siqueira,Restaurante,Varginha,MG,2019-10-09,4
+224,Bar do Cauê,Bar,Pouso Alegre,MG,2021-05-01,5
+225,Conveniência Rocha 24h,Conveniência,Nova Lima,MG,2023-11-30,3
+226,Restaurante Rezende,Restaurante,Caratinga,MG,2023-05-23,10
+227,Conveniência Ramos 24h,Conveniência,Coronel Fabriciano,MG,2018-10-06,12
+228,Restaurante Brito,Restaurante,Três Corações,MG,2024-12-19,6
+229,Restaurante Araújo,Restaurante,Cataguases,MG,2022-11-02,8
+230,Mercado Guerra,Mercado,Santana do Paraíso,MG,2018-10-21,11
+231,Restaurante Siqueira,Restaurante,Timóteo,MG,2020-12-16,12
+232,Conveniência Fernandes 24h,Conveniência,Viçosa,MG,2022-05-04,8
+233,Bar do Henrique,Bar,Santana do Paraíso,MG,2023-01-05,11
+234,Bar do Theo,Bar,Ipatinga,MG,2021-02-10,11
+235,Bar do Matheus,Bar,Santana do Paraíso,MG,2023-04-22,10
+236,Conveniência Correia 24h,Conveniência,Varginha,MG,2018-08-13,6
+237,Mercado Nascimento,Mercado,Belo Horizonte,MG,2022-11-01,1
+238,Restaurante Machado,Restaurante,Sabará,MG,2021-09-07,1
+239,Restaurante Carvalho,Restaurante,Lavras,MG,2022-07-03,6
+240,Padaria Lima,Padaria,Lavras,MG,2018-05-15,6
+241,Bar do Luiz Otávio,Bar,Poços de Caldas,MG,2019-03-20,5
+242,Restaurante da Mota,Restaurante,Muriaé,MG,2020-02-21,7
+243,Conveniência Martins 24h,Conveniência,Juiz de Fora,MG,2018-09-06,7
+244,Bar do Theo,Bar,Coronel Fabriciano,MG,2019-02-11,11
+245,Restaurante Barbosa,Restaurante,Contagem,MG,2024-02-21,2
+246,Bar do Luísa,Bar,Contagem,MG,2022-02-08,3
+247,Mercado Novaes,Mercado,Timóteo,MG,2018-01-31,10
+248,Mercado Brito,Mercado,Timóteo,MG,2018-12-01,11
+249,Bar do Carlos Eduardo,Bar,Santana do Paraíso,MG,2023-03-27,12
+250,Bar do Valentina,Bar,Timóteo,MG,2019-01-22,11
+251,Bar do Arthur,Bar,Caratinga,MG,2024-07-05,11
+252,Bar do Francisco,Bar,Poços de Caldas,MG,2018-03-13,4
+253,Mercado Sá,Mercado,Pouso Alegre,MG,2022-08-20,5
+254,Bar do Renan,Bar,Sabará,MG,2019-01-12,3
+255,Bar do Lucas Gabriel,Bar,Viçosa,MG,2023-03-17,8
+256,Restaurante Jesus,Restaurante,Santana do Paraíso,MG,2021-12-06,12
+257,Restaurante Mendonça,Restaurante,Pouso Alegre,MG,2022-12-19,5
+258,Mercado Mendes,Mercado,Ubá,MG,2021-01-19,7
+259,Conveniência Cunha 24h,Conveniência,Poços de Caldas,MG,2024-07-11,4
+260,Bar do Isadora,Bar,Nova Lima,MG,2018-02-15,2
+261,Restaurante Araújo,Restaurante,Contagem,MG,2022-10-19,2
+262,Bar do Lucas,Bar,Betim,MG,2018-11-25,1
+263,Restaurante Garcia,Restaurante,Caratinga,MG,2021-03-08,12
+264,Padaria Abreu,Padaria,Pouso Alegre,MG,2018-06-04,5
+265,Restaurante Gomes,Restaurante,Santana do Paraíso,MG,2024-12-05,11
+266,Mercado da Luz,Mercado,Viçosa,MG,2024-07-22,9
+267,Mercado Viana,Mercado,Betim,MG,2023-04-29,2
+268,Bar do Maria,Bar,Nova Lima,MG,2022-11-25,2
+269,Restaurante da Paz,Restaurante,Timóteo,MG,2021-01-25,11
+270,Restaurante Lima,Restaurante,Belo Horizonte,MG,2022-11-21,3
+271,Padaria Sampaio,Padaria,Timóteo,MG,2025-07-06,11
+272,Mercado Siqueira,Mercado,Nova Lima,MG,2020-11-13,2
+273,Bar do Mariah,Bar,Cataguases,MG,2023-03-04,9
+274,Mercado Cassiano,Mercado,Santana do Paraíso,MG,2018-04-03,11
+275,Bar do Mateus,Bar,Betim,MG,2023-02-20,3
+276,Bar do Ana Carolina,Bar,Três Corações,MG,2022-03-14,4
+277,Bar do Pedro Henrique,Bar,Caratinga,MG,2020-02-18,12
+278,Restaurante Araújo,Restaurante,Sabará,MG,2024-04-04,3
+279,Bar do Vitória,Bar,Três Corações,MG,2024-04-24,6
+280,Bar do Davi,Bar,Três Corações,MG,2024-06-06,6
+281,Bar do Ana Sophia,Bar,Contagem,MG,2021-08-17,3
+282,Conveniência Araújo 24h,Conveniência,Caratinga,MG,2018-05-23,10
+283,Restaurante Aragão,Restaurante,Timóteo,MG,2021-07-15,10
+284,Bar do Maria Liz,Bar,Varginha,MG,2020-06-01,5
+285,Bar do Milena,Bar,Coronel Fabriciano,MG,2021-07-14,11
+286,Mercado Moura,Mercado,Contagem,MG,2022-02-15,3
+287,Bar do Levi,Bar,Contagem,MG,2025-06-05,1
+288,Mercado Araújo,Mercado,Muriaé,MG,2020-02-07,7
+289,Mercado Moraes,Mercado,Ipatinga,MG,2018-10-03,12
+290,Conveniência Barros 24h,Conveniência,Belo Horizonte,MG,2024-09-08,1
+291,Bar do Marcelo,Bar,Sabará,MG,2021-10-06,3
+292,Restaurante Azevedo,Restaurante,Viçosa,MG,2022-10-14,7
+293,Bar do Davi Luiz,Bar,Timóteo,MG,2022-12-01,11
+294,Padaria Rocha,Padaria,Sabará,MG,2025-03-28,1
+295,Padaria da Costa,Padaria,Lavras,MG,2025-07-29,5
+296,Restaurante Guerra,Restaurante,Santana do Paraíso,MG,2020-05-19,10
+297,Mercado Campos,Mercado,Lavras,MG,2021-04-21,5
+298,Bar do Thales,Bar,Sabará,MG,2018-05-10,2
+299,Restaurante Pacheco,Restaurante,Belo Horizonte,MG,2021-04-21,2
+300,Restaurante Peixoto,Restaurante,Poços de Caldas,MG,2022-06-12,5
+301,Bar do Bruno,Bar,Lavras,MG,2023-07-09,6
+302,Mercado Pinto,Mercado,Santana do Paraíso,MG,2023-08-20,11
+303,Mercado Barros,Mercado,Viçosa,MG,2020-11-04,8
+304,Restaurante Leão,Restaurante,Cataguases,MG,2018-06-03,9
+305,Restaurante Ribeiro,Restaurante,Timóteo,MG,2018-02-24,12
+306,Mercado Pacheco,Mercado,Varginha,MG,2022-11-13,5
+307,Mercado Nunes,Mercado,Varginha,MG,2018-09-30,5
+308,Bar do Rebeca,Bar,Coronel Fabriciano,MG,2019-05-29,12
+309,Bar do Ana Vitória,Bar,Betim,MG,2023-09-11,3
+310,Bar do Vicente,Bar,Ubá,MG,2023-04-06,9
+311,Restaurante Costela,Restaurante,Santana do Paraíso,MG,2022-12-28,10
+312,Mercado Rios,Mercado,Betim,MG,2018-05-30,2
+313,Mercado Silva,Mercado,Poços de Caldas,MG,2024-02-07,6
+314,Bar do Ana Sophia,Bar,Betim,MG,2025-05-19,3
+315,Bar do Rhavi,Bar,Nova Lima,MG,2019-11-19,2
+316,Mercado da Luz,Mercado,Lavras,MG,2022-06-13,6
+317,Bar do Isabela,Bar,Três Corações,MG,2021-04-01,4
+318,Bar do João,Bar,Timóteo,MG,2023-11-14,10
+319,Restaurante Rios,Restaurante,Caratinga,MG,2018-09-16,11
+320,Bar do Ana Clara,Bar,Caratinga,MG,2021-07-13,11
+321,Bar do Maria Cecília,Bar,Sabará,MG,2020-08-04,3
+322,Mercado Dias,Mercado,Varginha,MG,2018-09-18,4
+323,Restaurante Sá,Restaurante,Contagem,MG,2018-12-29,3
+324,Bar do Diogo,Bar,Nova Lima,MG,2019-01-07,2
+325,Restaurante Albuquerque,Restaurante,Coronel Fabriciano,MG,2024-05-22,12
+326,Conveniência Marques 24h,Conveniência,Lavras,MG,2018-02-27,5
+327,Restaurante Pinto,Restaurante,Contagem,MG,2019-12-03,3
+328,Mercado Nunes,Mercado,Timóteo,MG,2020-10-29,11
+329,Restaurante Brito,Restaurante,Pouso Alegre,MG,2023-06-28,5
+330,Mercado Barbosa,Mercado,Belo Horizonte,MG,2018-12-04,1
+331,Mercado Nascimento,Mercado,Belo Horizonte,MG,2021-06-28,2
+332,Mercado Cunha,Mercado,Muriaé,MG,2022-07-24,8
+333,Bar do Natália,Bar,Timóteo,MG,2021-12-01,10
+334,Bar do Vinícius,Bar,Betim,MG,2020-08-19,3
+335,Mercado Cardoso,Mercado,Santana do Paraíso,MG,2022-07-15,12
+336,Bar do Cecília,Bar,Caratinga,MG,2022-09-01,11
+337,Mercado Azevedo,Mercado,Timóteo,MG,2022-06-24,11
+338,Mercado da Cruz,Mercado,Sabará,MG,2019-08-22,3
+339,Conveniência Freitas 24h,Conveniência,Betim,MG,2025-03-10,1
+340,Bar do Alice,Bar,Caratinga,MG,2024-10-01,11
+341,Mercado Castro,Mercado,Lavras,MG,2018-12-24,4
+342,Mercado Macedo,Mercado,Muriaé,MG,2018-04-25,8
+343,Bar do Yasmin,Bar,Santana do Paraíso,MG,2018-11-26,10
+344,Bar do Ana Julia,Bar,Sabará,MG,2022-08-25,2
+345,Bar do Sarah,Bar,Caratinga,MG,2018-01-31,10
+346,Bar do Antony,Bar,Caratinga,MG,2021-01-23,12
+347,Bar do Ana Clara,Bar,Muriaé,MG,2019-01-30,9
+348,Mercado Ribeiro,Mercado,Poços de Caldas,MG,2019-05-16,6
+349,Mercado Caldeira,Mercado,Timóteo,MG,2020-04-10,11
+350,Bar do João Felipe,Bar,Muriaé,MG,2018-10-30,7
+351,Bar do Vinícius,Bar,Santana do Paraíso,MG,2018-03-07,10
+352,Bar do Igor,Bar,Ipatinga,MG,2023-05-30,11
+353,Mercado Caldeira,Mercado,Ipatinga,MG,2020-03-25,10
+354,Bar do Leonardo,Bar,Poços de Caldas,MG,2021-05-27,4
+355,Mercado da Mata,Mercado,Contagem,MG,2019-06-02,2
+356,Bar do Alexia,Bar,Contagem,MG,2019-10-23,3
+357,Bar do Otto,Bar,Lavras,MG,2024-08-17,6
+358,Conveniência Silva 24h,Conveniência,Cataguases,MG,2023-06-21,7
+359,Bar do Caroline,Bar,Ubá,MG,2020-09-30,7
+360,Bar do Nicolas,Bar,Lavras,MG,2020-12-07,5
+361,Bar do Vinícius,Bar,Timóteo,MG,2018-02-14,10
+362,Padaria Montenegro,Padaria,Santana do Paraíso,MG,2023-11-03,11
+363,Mercado Mendonça,Mercado,Contagem,MG,2021-12-17,3
+364,Mercado da Cunha,Mercado,Viçosa,MG,2020-01-03,9
+365,Padaria Aragão,Padaria,Viçosa,MG,2021-07-03,9
+366,Bar do Francisco,Bar,Viçosa,MG,2022-12-11,7
+367,Padaria Porto,Padaria,Contagem,MG,2020-06-27,2
+368,Bar do Lavínia,Bar,Santana do Paraíso,MG,2023-10-24,10
+369,Mercado da Mota,Mercado,Coronel Fabriciano,MG,2018-11-28,12
+370,Mercado Aparecida,Mercado,Cataguases,MG,2025-04-25,9
+371,Bar do André,Bar,Santana do Paraíso,MG,2024-06-20,12
+372,Conveniência Farias 24h,Conveniência,Ipatinga,MG,2019-09-03,12
+373,Bar do José Pedro,Bar,Varginha,MG,2018-03-30,5
+374,Padaria Porto,Padaria,Cataguases,MG,2021-12-04,8
+375,Bar do Vinicius,Bar,Pouso Alegre,MG,2019-06-05,6
+376,Mercado Castro,Mercado,Santana do Paraíso,MG,2023-10-26,12
+377,Padaria Sousa,Padaria,Nova Lima,MG,2021-10-24,2
+378,Bar do Luísa,Bar,Lavras,MG,2024-06-25,5
+379,Conveniência Novaes 24h,Conveniência,Ipatinga,MG,2019-09-06,11
+380,Mercado Santos,Mercado,Lavras,MG,2018-09-03,4
+381,Restaurante Lima,Restaurante,Santana do Paraíso,MG,2021-03-14,10
+382,Bar do Antony,Bar,Lavras,MG,2025-09-12,5
+383,Mercado Camargo,Mercado,Ipatinga,MG,2018-08-23,12
+384,Restaurante Barbosa,Restaurante,Ipatinga,MG,2020-02-23,11
+385,Mercado Sales,Mercado,Varginha,MG,2024-12-26,4
+386,Bar do Kaique,Bar,Caratinga,MG,2022-08-15,10
+387,Bar do Zoe,Bar,Lavras,MG,2020-09-23,4
+388,Conveniência Andrade 24h,Conveniência,Ubá,MG,2020-10-05,8
+389,Bar do Ester,Bar,Cataguases,MG,2020-05-20,9
+390,Restaurante Pacheco,Restaurante,Ipatinga,MG,2019-02-16,11
+391,Padaria Novaes,Padaria,Nova Lima,MG,2019-12-05,1
+392,Bar do Juan,Bar,Sabará,MG,2025-01-11,3
+393,Bar do Lorena,Bar,Muriaé,MG,2018-09-25,9
+394,Restaurante Cardoso,Restaurante,Cataguases,MG,2019-10-20,7
+395,Bar do Bryan,Bar,Três Corações,MG,2019-10-16,6
+396,Mercado das Neves,Mercado,Betim,MG,2019-06-22,1
+397,Restaurante Fonseca,Restaurante,Três Corações,MG,2020-06-25,5
+398,Mercado Vieira,Mercado,Ipatinga,MG,2023-02-06,11
+399,Bar do Bruno,Bar,Sabará,MG,2021-05-06,1
+400,Restaurante Fogaça,Restaurante,Três Corações,MG,2022-02-01,5
+401,Mercado Costela,Mercado,Caratinga,MG,2021-04-21,12
+402,Bar do Theo,Bar,Sabará,MG,2019-11-26,1
+403,Mercado Rios,Mercado,Ipatinga,MG,2020-11-20,10
+404,Conveniência Caldeira 24h,Conveniência,Betim,MG,2018-07-17,3
+405,Restaurante Fogaça,Restaurante,Ipatinga,MG,2023-03-11,11
+406,Mercado Vasconcelos,Mercado,Ipatinga,MG,2020-03-12,10
+407,Bar do Joana,Bar,Caratinga,MG,2024-01-22,11
+408,Bar do Leonardo,Bar,Betim,MG,2020-12-16,3
+409,Bar do Renan,Bar,Muriaé,MG,2024-07-19,7
+410,Bar do Luan,Bar,Timóteo,MG,2019-07-07,10
+411,Padaria Cavalcanti,Padaria,Betim,MG,2019-09-14,3
+412,Bar do Júlia,Bar,Betim,MG,2022-02-05,3
+413,Restaurante Alves,Restaurante,Belo Horizonte,MG,2022-01-19,1
+414,Bar do Luiz Henrique,Bar,Timóteo,MG,2022-06-22,12
+415,Bar do Brenda,Bar,Muriaé,MG,2022-05-05,9
+416,Mercado Viana,Mercado,Cataguases,MG,2025-05-28,8
+417,Bar do Juliana,Bar,Santana do Paraíso,MG,2019-06-16,10
+418,Restaurante Rios,Restaurante,Ubá,MG,2022-11-17,7
+419,Padaria Sousa,Padaria,Poços de Caldas,MG,2021-12-17,6
+420,Conveniência da Cruz 24h,Conveniência,Três Corações,MG,2018-03-23,6
+421,Bar do Vitor,Bar,Juiz de Fora,MG,2021-06-15,8
+422,Restaurante Castro,Restaurante,Nova Lima,MG,2023-04-04,3
+423,Bar do Henrique,Bar,Santana do Paraíso,MG,2020-03-08,11
+424,Conveniência Garcia 24h,Conveniência,Santana do Paraíso,MG,2019-02-22,11
+425,Mercado Andrade,Mercado,Pouso Alegre,MG,2018-06-23,5
+426,Bar do Maria Isis,Bar,Viçosa,MG,2018-06-14,7
+427,Bar do Pedro Miguel,Bar,Nova Lima,MG,2022-09-28,2
+428,Bar do Murilo,Bar,Timóteo,MG,2023-11-19,12
+429,Bar do Maria Clara,Bar,Timóteo,MG,2022-08-12,11
+430,Conveniência Ferreira 24h,Conveniência,Ipatinga,MG,2023-06-22,12
+431,Restaurante das Neves,Restaurante,Três Corações,MG,2023-04-19,4
+432,Padaria Vieira,Padaria,Belo Horizonte,MG,2020-12-23,2
+433,Bar do Rafael,Bar,Belo Horizonte,MG,2019-03-20,3
+434,Mercado Câmara,Mercado,Contagem,MG,2023-11-12,1
+435,Bar do Benicio,Bar,Belo Horizonte,MG,2019-02-03,2
+436,Mercado Ribeiro,Mercado,Contagem,MG,2020-05-20,1
+437,Bar do Matheus,Bar,Coronel Fabriciano,MG,2025-11-04,12
+438,Bar do Isabelly,Bar,Nova Lima,MG,2021-11-28,1
+439,Mercado Farias,Mercado,Sabará,MG,2024-08-22,2
+440,Bar do Agatha,Bar,Ipatinga,MG,2019-04-22,11
+441,Mercado Azevedo,Mercado,Ubá,MG,2025-12-11,7
+442,Restaurante Vargas,Restaurante,Caratinga,MG,2019-10-27,10
+443,Bar do Agatha,Bar,Ubá,MG,2020-10-19,8
+444,Conveniência Ferreira 24h,Conveniência,Timóteo,MG,2019-09-21,11
+445,Mercado Ramos,Mercado,Viçosa,MG,2021-04-18,8
+446,Restaurante Moraes,Restaurante,Viçosa,MG,2021-01-26,7
+447,Restaurante Guerra,Restaurante,Cataguases,MG,2023-08-18,9
+448,Restaurante Rocha,Restaurante,Lavras,MG,2023-05-25,6
+449,Restaurante Nascimento,Restaurante,Três Corações,MG,2021-09-26,5
+450,Conveniência Farias 24h,Conveniência,Varginha,MG,2019-12-26,6
+451,Mercado Alves,Mercado,Belo Horizonte,MG,2019-08-04,2
+452,Bar do Igor,Bar,Timóteo,MG,2020-09-06,10
+453,Bar do Vicente,Bar,Sabará,MG,2019-08-18,3
+454,Mercado Cavalcanti,Mercado,Belo Horizonte,MG,2018-04-27,2
+455,Bar do Vinícius,Bar,Sabará,MG,2022-02-19,3
+456,Bar do Breno,Bar,Ipatinga,MG,2019-04-29,11
+457,Bar do Henrique,Bar,Pouso Alegre,MG,2018-01-03,4
+458,Mercado Peixoto,Mercado,Ubá,MG,2018-03-27,9
+459,Bar do Luara,Bar,Ipatinga,MG,2025-12-27,11
+460,Mercado Ferreira,Mercado,Sabará,MG,2019-04-17,1
+461,Restaurante Siqueira,Restaurante,Timóteo,MG,2020-10-12,10
+462,Restaurante Viana,Restaurante,Lavras,MG,2022-10-24,4
+463,Bar do Ana Sophia,Bar,Nova Lima,MG,2018-09-30,3
+464,Mercado Lopes,Mercado,Juiz de Fora,MG,2025-09-27,9
+465,Mercado Pereira,Mercado,Timóteo,MG,2018-08-24,11
+466,Mercado Moraes,Mercado,Três Corações,MG,2018-12-07,4
+467,Restaurante Camargo,Restaurante,Juiz de Fora,MG,2023-06-30,7
+468,Bar do Helena,Bar,Varginha,MG,2018-07-01,4
+469,Padaria Oliveira,Padaria,Cataguases,MG,2020-06-13,7
+470,Bar do Mateus,Bar,Viçosa,MG,2024-09-05,8
+471,Restaurante da Cunha,Restaurante,Ubá,MG,2019-08-23,8
+472,Mercado Aparecida,Mercado,Cataguases,MG,2019-11-03,8
+473,Bar do Luiza,Bar,Nova Lima,MG,2019-09-08,2
+474,Restaurante Abreu,Restaurante,Ubá,MG,2018-11-08,9
+475,Bar do Raquel,Bar,Viçosa,MG,2018-10-17,9
+476,Restaurante Nascimento,Restaurante,Cataguases,MG,2025-09-30,9
+477,Mercado Rodrigues,Mercado,Contagem,MG,2018-04-12,1
+478,Bar do Matteo,Bar,Poços de Caldas,MG,2025-06-22,6
+479,Bar do Emanuella,Bar,Poços de Caldas,MG,2020-02-01,5
+480,Restaurante Lopes,Restaurante,Nova Lima,MG,2024-11-26,1
+481,Bar do Davi Miguel,Bar,Nova Lima,MG,2022-05-15,3
+482,Conveniência Rios 24h,Conveniência,Lavras,MG,2019-06-20,6
+483,Restaurante Farias,Restaurante,Coronel Fabriciano,MG,2023-02-15,10
+484,Restaurante Pinto,Restaurante,Belo Horizonte,MG,2022-01-04,3
+485,Bar do Ana Sophia,Bar,Santana do Paraíso,MG,2020-11-13,11
+486,Restaurante Ribeiro,Restaurante,Cataguases,MG,2025-07-20,7
+487,Conveniência Campos 24h,Conveniência,Santana do Paraíso,MG,2020-08-31,10
+488,Bar do Ana Clara,Bar,Três Corações,MG,2020-03-29,6
+489,Bar do Natália,Bar,Pouso Alegre,MG,2019-10-13,6
+490,Bar do Ana Luiza,Bar,Juiz de Fora,MG,2020-07-26,8
+491,Bar do Julia,Bar,Timóteo,MG,2020-01-29,12
+492,Restaurante Duarte,Restaurante,Pouso Alegre,MG,2019-06-23,6
+493,Mercado Guerra,Mercado,Juiz de Fora,MG,2023-05-28,7
+494,Mercado Sampaio,Mercado,Ubá,MG,2019-03-01,7
+495,Bar do Ana Carolina,Bar,Muriaé,MG,2021-07-16,9
+496,Bar do José Miguel,Bar,Belo Horizonte,MG,2018-11-22,1
+497,Bar do Matheus,Bar,Cataguases,MG,2021-04-04,7
+498,Conveniência Leão 24h,Conveniência,Lavras,MG,2021-09-03,6
+499,Mercado Rios,Mercado,Coronel Fabriciano,MG,2020-01-08,12
+500,Bar do Gabrielly,Bar,Lavras,MG,2019-07-22,6
+501,Restaurante Rocha,Restaurante,Pouso Alegre,MG,2020-06-16,6
+502,Bar do Luiz Fernando,Bar,Caratinga,MG,2023-06-30,12
+503,Bar do Ana Julia,Bar,Poços de Caldas,MG,2024-06-21,6
+504,Bar do Jade,Bar,Belo Horizonte,MG,2022-06-22,2
+505,Padaria Novaes,Padaria,Contagem,MG,2018-04-19,3
+506,Restaurante Abreu,Restaurante,Belo Horizonte,MG,2021-10-29,2
+507,Mercado da Rosa,Mercado,Contagem,MG,2019-05-10,1
+508,Bar do Allana,Bar,Poços de Caldas,MG,2019-09-19,6
+509,Bar do Otto,Bar,Timóteo,MG,2018-03-21,10
+510,Mercado Lopes,Mercado,Cataguases,MG,2025-03-26,9
+511,Bar do Aurora,Bar,Contagem,MG,2018-08-31,1
+512,Conveniência Martins 24h,Conveniência,Juiz de Fora,MG,2021-03-06,7
+513,Restaurante Macedo,Restaurante,Contagem,MG,2024-12-18,2
+514,Mercado Macedo,Mercado,Caratinga,MG,2021-04-08,12
+515,Restaurante Rocha,Restaurante,Sabará,MG,2023-12-07,2
+516,Padaria Cunha,Padaria,Cataguases,MG,2023-08-04,8
+517,Mercado Moraes,Mercado,Três Corações,MG,2025-01-02,4
+518,Mercado Melo,Mercado,Viçosa,MG,2021-01-16,8
+519,Conveniência Vieira 24h,Conveniência,Varginha,MG,2019-08-20,5
+520,Bar do Lucca,Bar,Timóteo,MG,2021-06-01,10
+521,Conveniência Ribeiro 24h,Conveniência,Contagem,MG,2022-04-03,3
+522,Bar do Enzo Gabriel,Bar,Ipatinga,MG,2020-05-20,11
+523,Mercado da Paz,Mercado,Lavras,MG,2020-09-05,6
+524,Restaurante Moraes,Restaurante,Timóteo,MG,2018-06-14,10
+525,Mercado Ribeiro,Mercado,Caratinga,MG,2018-06-29,11
+526,Mercado Porto,Mercado,Caratinga,MG,2021-12-06,12
+527,Mercado Pinto,Mercado,Contagem,MG,2025-12-29,3
+528,Bar do Bruna,Bar,Três Corações,MG,2025-03-03,4
+529,Bar do Francisco,Bar,Nova Lima,MG,2023-03-16,3
+530,Bar do Ravy,Bar,Belo Horizonte,MG,2022-06-30,3
+531,Mercado Rocha,Mercado,Cataguases,MG,2022-02-08,7
+532,Mercado das Neves,Mercado,Santana do Paraíso,MG,2018-02-06,12
+533,Bar do Rael,Bar,Coronel Fabriciano,MG,2023-09-24,12
+534,Conveniência Costa 24h,Conveniência,Ubá,MG,2019-02-02,7
+535,Bar do Juan,Bar,Ubá,MG,2020-11-15,8
+536,Mercado Alves,Mercado,Ipatinga,MG,2022-07-19,11
+537,Mercado Aparecida,Mercado,Coronel Fabriciano,MG,2019-04-03,12
+538,Bar do Samuel,Bar,Sabará,MG,2020-10-10,3
+539,Restaurante Melo,Restaurante,Viçosa,MG,2022-05-18,7
+540,Mercado Pimenta,Mercado,Timóteo,MG,2021-07-26,11
+541,Bar do Diogo,Bar,Poços de Caldas,MG,2021-06-22,4
+542,Padaria Marques,Padaria,Poços de Caldas,MG,2022-01-31,6
+543,Restaurante Leão,Restaurante,Ipatinga,MG,2023-08-22,12
+544,Restaurante Pires,Restaurante,Caratinga,MG,2018-02-04,12
+545,Conveniência Oliveira 24h,Conveniência,Santana do Paraíso,MG,2021-01-01,11
+546,Conveniência Correia 24h,Conveniência,Timóteo,MG,2021-04-24,10
+547,Bar do Hadassa,Bar,Contagem,MG,2019-08-25,3
+548,Mercado Monteiro,Mercado,Poços de Caldas,MG,2022-03-22,4
+549,Mercado Guerra,Mercado,Cataguases,MG,2020-05-30,7
+550,Bar do Ryan,Bar,Viçosa,MG,2020-06-25,7
+551,Bar do Juan,Bar,Juiz de Fora,MG,2023-06-14,7
+552,Bar do Anthony,Bar,Viçosa,MG,2019-10-18,8
+553,Restaurante Sá,Restaurante,Lavras,MG,2022-06-09,5
+554,Restaurante Vargas,Restaurante,Timóteo,MG,2022-12-16,10
+555,Restaurante Caldeira,Restaurante,Três Corações,MG,2018-01-24,4
+556,Bar do Laís,Bar,Pouso Alegre,MG,2024-04-23,4
+557,Bar do Pedro Lucas,Bar,Nova Lima,MG,2020-07-19,2
+558,Mercado Cavalcanti,Mercado,Belo Horizonte,MG,2020-07-28,2
+559,Mercado Sampaio,Mercado,Ipatinga,MG,2019-10-23,11
+560,Conveniência Moreira 24h,Conveniência,Lavras,MG,2021-12-07,6
+561,Conveniência Martins 24h,Conveniência,Contagem,MG,2022-08-26,3
+562,Conveniência Aragão 24h,Conveniência,Coronel Fabriciano,MG,2022-05-21,10
+563,Conveniência Novais 24h,Conveniência,Juiz de Fora,MG,2018-10-02,7
+564,Padaria da Cruz,Padaria,Nova Lima,MG,2023-09-11,1
+565,Mercado Campos,Mercado,Pouso Alegre,MG,2021-10-12,4
+566,Bar do Maria Alice,Bar,Belo Horizonte,MG,2019-09-03,2
+567,Bar do João Felipe,Bar,Cataguases,MG,2023-04-25,8
+568,Bar do Maria Fernanda,Bar,Três Corações,MG,2022-08-25,4
+569,Bar do Sofia,Bar,Contagem,MG,2018-09-10,1
+570,Bar do Anna Liz,Bar,Sabará,MG,2019-06-05,1
+571,Padaria Sá,Padaria,Ubá,MG,2021-10-23,7
+572,Bar do Luísa,Bar,Contagem,MG,2019-06-20,1
+573,Padaria Pimenta,Padaria,Coronel Fabriciano,MG,2021-07-03,11
+574,Restaurante Silveira,Restaurante,Betim,MG,2021-04-29,2
+575,Mercado Montenegro,Mercado,Cataguases,MG,2022-01-30,8
+576,Restaurante Lima,Restaurante,Três Corações,MG,2020-03-06,6
+577,Bar do Ágatha,Bar,Poços de Caldas,MG,2021-07-31,6
+578,Mercado Machado,Mercado,Belo Horizonte,MG,2024-09-05,1
+579,Bar do Liam,Bar,Ipatinga,MG,2023-01-26,11
+580,Conveniência Souza 24h,Conveniência,Caratinga,MG,2022-03-03,11
+581,Bar do Maria Laura,Bar,Sabará,MG,2023-12-30,1
+582,Bar do Manuella,Bar,Betim,MG,2019-09-07,2
+583,Restaurante da Luz,Restaurante,Coronel Fabriciano,MG,2019-08-12,11
+584,Restaurante Sá,Restaurante,Cataguases,MG,2020-11-19,7
+585,Mercado da Cruz,Mercado,Nova Lima,MG,2025-01-04,2
+586,Mercado Porto,Mercado,Nova Lima,MG,2022-10-02,3
+587,Bar do Yuri,Bar,Cataguases,MG,2019-09-24,9
+588,Restaurante Vargas,Restaurante,Cataguases,MG,2023-04-08,9
+589,Bar do Raquel,Bar,Ubá,MG,2025-02-21,7
+590,Bar do Maria Vitória,Bar,Timóteo,MG,2018-09-24,12
+591,Bar do Rhavi,Bar,Poços de Caldas,MG,2019-04-20,6
+592,Bar do Yan,Bar,Três Corações,MG,2020-10-16,4
+593,Bar do Lunna,Bar,Varginha,MG,2023-08-24,6
+594,Mercado Barbosa,Mercado,Varginha,MG,2022-11-20,5
+595,Bar do Allana,Bar,Belo Horizonte,MG,2025-05-02,3
+596,Bar do Ravy,Bar,Nova Lima,MG,2020-06-12,1
+597,Mercado da Mata,Mercado,Pouso Alegre,MG,2018-12-19,5
+598,Bar do Bruna,Bar,Juiz de Fora,MG,2023-04-11,9
+599,Restaurante Dias,Restaurante,Nova Lima,MG,2020-01-18,1
+600,Conveniência Nogueira 24h,Conveniência,Poços de Caldas,MG,2020-11-28,6
+601,Mercado Barros,Mercado,Cataguases,MG,2019-09-20,8
+602,Conveniência Carvalho 24h,Conveniência,Muriaé,MG,2021-10-11,8
+603,Bar do Kevin,Bar,Caratinga,MG,2019-07-04,10
+604,Bar do Ravi,Bar,Santana do Paraíso,MG,2018-12-03,11
+605,Restaurante Gomes,Restaurante,Ubá,MG,2022-05-06,9
+606,Restaurante Sales,Restaurante,Contagem,MG,2024-05-17,2
+607,Restaurante Cassiano,Restaurante,Lavras,MG,2018-04-27,6
+608,Bar do Paulo,Bar,Ubá,MG,2023-11-25,8
+609,Restaurante Azevedo,Restaurante,Betim,MG,2022-10-20,3
+610,Bar do Kamilly,Bar,Nova Lima,MG,2022-09-11,1
+611,Bar do Joana,Bar,Contagem,MG,2022-02-22,3
+612,Bar do Bianca,Bar,Três Corações,MG,2022-06-13,6
+613,Padaria Nogueira,Padaria,Três Corações,MG,2023-11-18,5
+614,Bar do Maria Flor,Bar,Betim,MG,2024-06-21,2
+615,Restaurante Leão,Restaurante,Caratinga,MG,2019-06-17,11
+616,Mercado Araújo,Mercado,Caratinga,MG,2022-04-15,12
+617,Restaurante Costela,Restaurante,Betim,MG,2018-12-15,3
+618,Restaurante Leão,Restaurante,Coronel Fabriciano,MG,2019-06-18,12
+619,Conveniência Gomes 24h,Conveniência,Belo Horizonte,MG,2018-01-21,1
+620,Bar do Asafe,Bar,Caratinga,MG,2019-11-28,12
+621,Bar do Gabrielly,Bar,Santana do Paraíso,MG,2021-09-22,12
+622,Mercado Mendes,Mercado,Nova Lima,MG,2018-06-05,1
+623,Bar do Anthony Gabriel,Bar,Timóteo,MG,2023-03-27,10
+624,Bar do Clarice,Bar,Timóteo,MG,2020-06-21,12
+625,Bar do Ana Cecília,Bar,Coronel Fabriciano,MG,2019-04-02,11
+626,Bar do Heloisa,Bar,Caratinga,MG,2025-10-29,12
+627,Bar do Larissa,Bar,Viçosa,MG,2019-05-06,7
+628,Bar do Stephany,Bar,Belo Horizonte,MG,2018-12-18,1
+629,Conveniência Souza 24h,Conveniência,Timóteo,MG,2019-12-30,11
+630,Bar do Zoe,Bar,Muriaé,MG,2024-05-18,8
+631,Padaria Pereira,Padaria,Muriaé,MG,2018-08-14,8
+632,Padaria Câmara,Padaria,Pouso Alegre,MG,2023-02-16,6
+633,Bar do Mariah,Bar,Muriaé,MG,2020-02-18,7
+634,Restaurante Câmara,Restaurante,Sabará,MG,2019-05-05,2
+635,Mercado da Mata,Mercado,Timóteo,MG,2020-10-28,10
+636,Restaurante Lopes,Restaurante,Betim,MG,2021-09-09,1
+637,Bar do Maria Vitória,Bar,Viçosa,MG,2021-12-22,9
+638,Bar do Benjamin,Bar,Caratinga,MG,2018-12-31,11
+639,Bar do Heloisa,Bar,Lavras,MG,2020-08-20,6
+640,Mercado Fernandes,Mercado,Cataguases,MG,2021-11-26,7
+641,Padaria Rios,Padaria,Lavras,MG,2020-06-01,4
+642,Restaurante Rocha,Restaurante,Santana do Paraíso,MG,2021-03-10,12
+643,Restaurante Guerra,Restaurante,Juiz de Fora,MG,2022-05-10,9
+644,Padaria Silveira,Padaria,Lavras,MG,2019-09-30,5
+645,Restaurante Cavalcante,Restaurante,Sabará,MG,2020-12-01,2
+646,Bar do Maria Helena,Bar,Contagem,MG,2024-11-15,3
+647,Conveniência Cardoso 24h,Conveniência,Pouso Alegre,MG,2025-09-05,6
+648,Bar do Sophie,Bar,Coronel Fabriciano,MG,2021-10-10,12
+649,Bar do Benjamim,Bar,Ubá,MG,2021-08-27,9
+650,Mercado Gonçalves,Mercado,Betim,MG,2019-12-07,3
+651,Conveniência Pastor 24h,Conveniência,Santana do Paraíso,MG,2018-02-25,11
+652,Bar do Benjamim,Bar,Lavras,MG,2023-02-09,5
+653,Mercado Barros,Mercado,Coronel Fabriciano,MG,2021-02-23,11
+654,Bar do Liz,Bar,Nova Lima,MG,2024-05-24,3
+655,Bar do João Gabriel,Bar,Cataguases,MG,2024-05-18,8
+656,Bar do Maria Eduarda,Bar,Coronel Fabriciano,MG,2022-07-29,12
+657,Restaurante Cirino,Restaurante,Betim,MG,2018-11-27,3
+658,Conveniência Aragão 24h,Conveniência,Juiz de Fora,MG,2020-05-21,9
+659,Bar do Vicente,Bar,Santana do Paraíso,MG,2023-12-28,12
+660,Bar do Gabrielly,Bar,Nova Lima,MG,2022-12-25,2
+661,Bar do Beatriz,Bar,Sabará,MG,2023-11-17,1
+662,Bar do Otávio,Bar,Viçosa,MG,2020-07-12,9
+663,Mercado Marques,Mercado,Pouso Alegre,MG,2018-09-21,4
+664,Restaurante Duarte,Restaurante,Nova Lima,MG,2019-08-25,1
+665,Mercado Fernandes,Mercado,Pouso Alegre,MG,2021-04-18,6
+666,Bar do Gabrielly,Bar,Caratinga,MG,2018-05-02,10
+667,Mercado da Mota,Mercado,Pouso Alegre,MG,2018-12-20,4
+668,Bar do Laura,Bar,Poços de Caldas,MG,2024-04-15,4
+669,Bar do Thiago,Bar,Ipatinga,MG,2021-01-28,11
+670,Conveniência Barros 24h,Conveniência,Muriaé,MG,2020-02-22,7
+671,Restaurante Melo,Restaurante,Timóteo,MG,2021-01-06,11
+672,Conveniência Almeida 24h,Conveniência,Três Corações,MG,2020-01-23,6
+673,Conveniência Souza 24h,Conveniência,Caratinga,MG,2025-01-04,12
+674,Mercado Nogueira,Mercado,Ubá,MG,2019-05-05,8
+675,Conveniência Aragão 24h,Conveniência,Sabará,MG,2018-11-24,2
+676,Mercado Ferreira,Mercado,Timóteo,MG,2022-04-20,11
+677,Bar do Pietro,Bar,Poços de Caldas,MG,2021-06-27,6
+678,Bar do Davi Miguel,Bar,Belo Horizonte,MG,2024-02-07,2
+679,Bar do Bruno,Bar,Sabará,MG,2020-06-24,2
+680,Bar do Bento,Bar,Cataguases,MG,2024-10-30,9
+681,Bar do Thales,Bar,Belo Horizonte,MG,2019-09-29,1
+682,Restaurante Costa,Restaurante,Pouso Alegre,MG,2022-07-20,4
+683,Restaurante Almeida,Restaurante,Belo Horizonte,MG,2024-09-22,2
+684,Mercado Pinto,Mercado,Três Corações,MG,2021-05-01,6
+685,Bar do Leandro,Bar,Três Corações,MG,2021-11-10,5
+686,Restaurante da Costa,Restaurante,Cataguases,MG,2023-03-03,7
+687,Bar do José,Bar,Três Corações,MG,2019-10-08,4
+688,Bar do Maria Júlia,Bar,Contagem,MG,2021-09-07,1
+689,Bar do Ian,Bar,Cataguases,MG,2020-09-13,8
+690,Bar do Pedro Henrique,Bar,Lavras,MG,2019-09-23,5
+691,Bar do Maria Flor,Bar,Ubá,MG,2023-01-07,8
+692,Restaurante Sampaio,Restaurante,Contagem,MG,2021-09-02,2
+693,Restaurante da Cunha,Restaurante,Belo Horizonte,MG,2023-08-12,1
+694,Restaurante Vargas,Restaurante,Sabará,MG,2023-07-22,3
+695,Bar do Emilly,Bar,Pouso Alegre,MG,2022-08-07,6
+696,Restaurante Cavalcante,Restaurante,Pouso Alegre,MG,2021-01-13,5
+697,Restaurante Pereira,Restaurante,Coronel Fabriciano,MG,2019-11-03,11
+698,Bar do Ian,Bar,Pouso Alegre,MG,2021-04-28,5
+699,Mercado Vasconcelos,Mercado,Juiz de Fora,MG,2018-04-02,7
+700,Mercado Castro,Mercado,Ubá,MG,2024-06-05,7
+701,Mercado das Neves,Mercado,Sabará,MG,2023-11-09,1
+702,Bar do Henrique,Bar,Muriaé,MG,2019-01-19,7
+703,Mercado Pacheco,Mercado,Três Corações,MG,2024-12-14,5
+704,Bar do Benjamim,Bar,Poços de Caldas,MG,2020-12-31,6
+705,Bar do Ana Lívia,Bar,Contagem,MG,2018-03-29,2
+706,Bar do Fernanda,Bar,Ipatinga,MG,2023-01-20,10
+707,Padaria Gonçalves,Padaria,Caratinga,MG,2021-05-17,12
+708,Bar do Miguel,Bar,Contagem,MG,2023-07-29,1
+709,Bar do Dom,Bar,Viçosa,MG,2025-09-01,7
+710,Bar do Ryan,Bar,Caratinga,MG,2024-12-18,10
+711,Conveniência Caldeira 24h,Conveniência,Varginha,MG,2019-08-30,4
+712,Mercado Sampaio,Mercado,Caratinga,MG,2018-07-12,10
+713,Conveniência Vargas 24h,Conveniência,Muriaé,MG,2019-04-21,8
+714,Bar do Ana Julia,Bar,Timóteo,MG,2018-01-09,12
+715,Bar do Isaque,Bar,Ipatinga,MG,2021-07-15,12
+716,Mercado Vieira,Mercado,Betim,MG,2024-08-08,1
+717,Bar do Bryan,Bar,Três Corações,MG,2023-08-20,6
+718,Restaurante Ferreira,Restaurante,Muriaé,MG,2020-06-28,7
+719,Conveniência Nascimento 24h,Conveniência,Contagem,MG,2022-05-26,2
+720,Mercado Lima,Mercado,Três Corações,MG,2022-06-23,4
+721,Padaria Ribeiro,Padaria,Santana do Paraíso,MG,2019-12-28,12
+722,Mercado Freitas,Mercado,Sabará,MG,2021-10-02,1
+723,Bar do Davi Miguel,Bar,Três Corações,MG,2018-04-13,6
+724,Mercado Montenegro,Mercado,Caratinga,MG,2018-04-17,11
+725,Bar do Carolina,Bar,Três Corações,MG,2018-01-10,4
+726,Restaurante Albuquerque,Restaurante,Pouso Alegre,MG,2021-03-03,6
+727,Bar do Laura,Bar,Coronel Fabriciano,MG,2020-04-22,12
+728,Bar do Mariana,Bar,Varginha,MG,2022-01-15,6
+729,Mercado Caldeira,Mercado,Nova Lima,MG,2023-03-12,2
+730,Bar do Luana,Bar,Contagem,MG,2025-01-22,1
+731,Bar do Eloá,Bar,Coronel Fabriciano,MG,2021-06-07,12
+732,Restaurante Porto,Restaurante,Belo Horizonte,MG,2022-02-01,3
+733,Bar do Maria Clara,Bar,Juiz de Fora,MG,2025-05-07,7
+734,Mercado Santos,Mercado,Contagem,MG,2023-11-04,1
+735,Bar do Leandro,Bar,Poços de Caldas,MG,2020-01-25,6
+736,Bar do Luara,Bar,Caratinga,MG,2021-04-03,12
+737,Bar do Luiz Gustavo,Bar,Poços de Caldas,MG,2019-01-13,6
+738,Restaurante Siqueira,Restaurante,Caratinga,MG,2020-10-02,12
+739,Padaria Moreira,Padaria,Contagem,MG,2018-02-13,3
+740,Bar do Vitor Hugo,Bar,Viçosa,MG,2023-07-30,7
+741,Padaria Pimenta,Padaria,Santana do Paraíso,MG,2018-06-10,11
+742,Mercado Nascimento,Mercado,Lavras,MG,2024-06-27,6
+743,Mercado Vasconcelos,Mercado,Pouso Alegre,MG,2023-06-19,4
+744,Restaurante Mendes,Restaurante,Caratinga,MG,2020-09-09,11
+745,Restaurante Martins,Restaurante,Varginha,MG,2018-03-24,5
+746,Restaurante Lopes,Restaurante,Muriaé,MG,2018-09-26,7
+747,Mercado Siqueira,Mercado,Timóteo,MG,2021-05-13,12
+748,Mercado Pastor,Mercado,Nova Lima,MG,2018-08-14,2
+749,Bar do Vitor Gabriel,Bar,Varginha,MG,2020-08-26,4
+750,Bar do Ayla,Bar,Belo Horizonte,MG,2018-01-10,1
+751,Restaurante da Cruz,Restaurante,Varginha,MG,2019-06-01,5
+752,Bar do Erick,Bar,Contagem,MG,2023-06-28,3
+753,Bar do Agatha,Bar,Ubá,MG,2020-06-06,9
+754,Bar do Manuella,Bar,Contagem,MG,2021-10-04,2
+755,Bar do Ryan,Bar,Viçosa,MG,2018-08-24,9
+756,Mercado Sá,Mercado,Sabará,MG,2021-05-21,3
+757,Mercado Martins,Mercado,Três Corações,MG,2019-10-05,5
+758,Mercado Nunes,Mercado,Três Corações,MG,2019-07-27,5
+759,Bar do Gabrielly,Bar,Ubá,MG,2021-12-01,9
+760,Mercado Fernandes,Mercado,Lavras,MG,2019-03-18,6
+761,Bar do Benjamin,Bar,Lavras,MG,2022-12-05,5
+762,Restaurante Monteiro,Restaurante,Ipatinga,MG,2018-05-17,11
+763,Mercado Duarte,Mercado,Ubá,MG,2022-10-27,7
+764,Mercado Cirino,Mercado,Contagem,MG,2023-04-03,3
+765,Mercado Mendonça,Mercado,Timóteo,MG,2020-07-15,11
+766,Padaria Cunha,Padaria,Poços de Caldas,MG,2019-03-01,4
+767,Restaurante Fogaça,Restaurante,Sabará,MG,2021-07-05,1
+768,Mercado da Luz,Mercado,Poços de Caldas,MG,2023-04-24,6
+769,Mercado Fernandes,Mercado,Sabará,MG,2018-04-19,2
+770,Bar do Alana,Bar,Belo Horizonte,MG,2025-09-26,3
+771,Conveniência Peixoto 24h,Conveniência,Caratinga,MG,2024-12-23,10
+772,Bar do Yuri,Bar,Sabará,MG,2023-04-01,2
+773,Bar do Antônio,Bar,Santana do Paraíso,MG,2023-02-26,11
+774,Padaria Moreira,Padaria,Santana do Paraíso,MG,2022-07-15,12
+775,Restaurante Correia,Restaurante,Ubá,MG,2022-04-26,8
+776,Bar do Enzo Gabriel,Bar,Muriaé,MG,2025-06-17,9
+777,Bar do Rodrigo,Bar,Juiz de Fora,MG,2024-08-08,9
+778,Bar do Joana,Bar,Caratinga,MG,2020-04-08,12
+779,Mercado Mendonça,Mercado,Lavras,MG,2018-09-03,4
+780,Bar do Rodrigo,Bar,Betim,MG,2021-04-30,2
+781,Conveniência Sales 24h,Conveniência,Viçosa,MG,2021-08-25,7
+782,Conveniência Melo 24h,Conveniência,Muriaé,MG,2024-11-23,7
+783,Mercado Ramos,Mercado,Sabará,MG,2022-01-03,2
+784,Mercado Silva,Mercado,Viçosa,MG,2025-03-01,8
+785,Bar do Mariane,Bar,Sabará,MG,2019-06-13,1
+786,Bar do Manuela,Bar,Ipatinga,MG,2018-07-22,12
+787,Restaurante Vieira,Restaurante,Betim,MG,2021-09-05,3
+788,Bar do Arthur Gabriel,Bar,Contagem,MG,2020-01-05,1
+789,Bar do Francisco,Bar,Betim,MG,2025-04-06,2
+790,Bar do Ana Beatriz,Bar,Sabará,MG,2019-10-08,3
+791,Bar do Pedro Miguel,Bar,Três Corações,MG,2019-09-10,4
+792,Mercado Guerra,Mercado,Contagem,MG,2019-07-04,1
+793,Restaurante Sales,Restaurante,Varginha,MG,2021-10-29,4
+794,Restaurante da Cruz,Restaurante,Belo Horizonte,MG,2020-05-17,2
+795,Mercado das Neves,Mercado,Lavras,MG,2023-07-04,5
+796,Restaurante Ribeiro,Restaurante,Lavras,MG,2019-12-20,5
+797,Mercado Pacheco,Mercado,Poços de Caldas,MG,2025-04-07,4
+798,Restaurante Freitas,Restaurante,Pouso Alegre,MG,2018-04-01,4
+799,Mercado Melo,Mercado,Contagem,MG,2018-11-17,1
+800,Bar do Sofia,Bar,Belo Horizonte,MG,2023-07-11,1
+801,Conveniência Ferreira 24h,Conveniência,Contagem,MG,2020-01-23,3
+802,Bar do Laís,Bar,Timóteo,MG,2022-06-15,10
+803,Bar do Ísis,Bar,Coronel Fabriciano,MG,2018-12-19,12
+804,Bar do Bianca,Bar,Caratinga,MG,2022-08-26,12
+805,Bar do Clarice,Bar,Muriaé,MG,2021-12-29,7
+806,Bar do Maria,Bar,Viçosa,MG,2019-08-30,7
+807,Mercado da Mata,Mercado,Lavras,MG,2024-01-31,4
+808,Conveniência das Neves 24h,Conveniência,Coronel Fabriciano,MG,2021-06-29,10
+809,Bar do Theodoro,Bar,Caratinga,MG,2018-06-02,10
+810,Mercado da Conceição,Mercado,Caratinga,MG,2022-06-28,11
+811,Bar do Isaque,Bar,Timóteo,MG,2024-05-28,11
+812,Restaurante Silveira,Restaurante,Lavras,MG,2022-07-08,6
+813,Bar do Matheus,Bar,Coronel Fabriciano,MG,2025-04-20,10
+814,Bar do Ana Vitória,Bar,Coronel Fabriciano,MG,2023-07-26,11
+815,Mercado Campos,Mercado,Poços de Caldas,MG,2020-07-01,4
+816,Restaurante Souza,Restaurante,Ipatinga,MG,2022-11-29,12
+817,Restaurante Nascimento,Restaurante,Nova Lima,MG,2018-06-19,2
+818,Mercado Teixeira,Mercado,Timóteo,MG,2025-10-19,12
+819,Restaurante Sales,Restaurante,Coronel Fabriciano,MG,2023-09-16,10
+820,Bar do Léo,Bar,Belo Horizonte,MG,2022-09-14,2
+821,Bar do Matheus,Bar,Ubá,MG,2019-11-23,8
+822,Bar do Pedro,Bar,Betim,MG,2023-12-24,1
+823,Bar do Maria Sophia,Bar,Timóteo,MG,2021-08-01,10
+824,Bar do Yuri,Bar,Caratinga,MG,2022-02-02,10
+825,Mercado Silveira,Mercado,Ubá,MG,2022-04-30,7
+826,Bar do Sabrina,Bar,Santana do Paraíso,MG,2022-12-21,11
+827,Mercado Peixoto,Mercado,Sabará,MG,2022-03-06,2
+828,Mercado da Paz,Mercado,Varginha,MG,2019-02-18,4
+829,Restaurante Brito,Restaurante,Varginha,MG,2022-09-03,5
+830,Restaurante Correia,Restaurante,Contagem,MG,2019-02-22,1
+831,Bar do Ana Carolina,Bar,Pouso Alegre,MG,2023-07-31,6
+832,Bar do Rafael,Bar,Belo Horizonte,MG,2024-10-10,3
+833,Mercado Fonseca,Mercado,Lavras,MG,2020-10-12,5
+834,Mercado Cavalcanti,Mercado,Poços de Caldas,MG,2020-06-20,6
+835,Bar do Ana Julia,Bar,Ipatinga,MG,2019-12-15,11
+836,Bar do Arthur,Bar,Contagem,MG,2018-03-31,3
+837,Restaurante Santos,Restaurante,Caratinga,MG,2019-03-17,11
+838,Mercado Nascimento,Mercado,Poços de Caldas,MG,2018-11-17,6
+839,Bar do José,Bar,Varginha,MG,2022-05-17,4
+840,Mercado da Mota,Mercado,Pouso Alegre,MG,2018-12-24,6
+841,Conveniência Aparecida 24h,Conveniência,Varginha,MG,2022-11-27,6
+842,Bar do Cauê,Bar,Betim,MG,2022-08-24,3
+843,Conveniência Novaes 24h,Conveniência,Poços de Caldas,MG,2019-02-18,6
+844,Bar do Ana,Bar,Belo Horizonte,MG,2020-10-23,2
+845,Mercado Sampaio,Mercado,Varginha,MG,2023-10-04,5
+846,Mercado Cardoso,Mercado,Cataguases,MG,2020-02-13,7
+847,Bar do Mariane,Bar,Varginha,MG,2020-12-07,5
+848,Conveniência Caldeira 24h,Conveniência,Ipatinga,MG,2024-01-05,11
+849,Mercado Albuquerque,Mercado,Contagem,MG,2025-04-16,3
+850,Padaria Oliveira,Padaria,Ipatinga,MG,2025-08-19,12
+851,Bar do Alice,Bar,Ipatinga,MG,2021-08-09,10
+852,Conveniência Melo 24h,Conveniência,Coronel Fabriciano,MG,2020-08-27,12
+853,Conveniência Mendes 24h,Conveniência,Coronel Fabriciano,MG,2020-07-23,11
+854,Mercado Macedo,Mercado,Betim,MG,2018-07-21,2
+855,Bar do Carolina,Bar,Viçosa,MG,2024-05-29,7
+856,Restaurante Cirino,Restaurante,Contagem,MG,2018-12-07,2
+857,Mercado Aragão,Mercado,Ipatinga,MG,2022-11-14,11
+858,Conveniência da Cunha 24h,Conveniência,Ubá,MG,2025-06-23,7
+859,Mercado Mendes,Mercado,Betim,MG,2019-08-16,3
+860,Bar do Ian,Bar,Caratinga,MG,2020-02-10,12
+861,Bar do Davi Lucca,Bar,Belo Horizonte,MG,2020-09-02,2
+862,Restaurante Guerra,Restaurante,Cataguases,MG,2021-06-12,7
+863,Padaria Mendonça,Padaria,Viçosa,MG,2024-05-07,9
+864,Bar do Diogo,Bar,Belo Horizonte,MG,2021-03-07,1
+865,Restaurante Oliveira,Restaurante,Juiz de Fora,MG,2021-11-15,7
+866,Conveniência Pires 24h,Conveniência,Caratinga,MG,2018-05-20,11
+867,Bar do Cauê,Bar,Nova Lima,MG,2018-08-31,1
+868,Bar do Kevin,Bar,Muriaé,MG,2022-06-09,7
+869,Restaurante Cassiano,Restaurante,Betim,MG,2022-11-09,3
+870,Mercado Nunes,Mercado,Viçosa,MG,2018-11-06,9
+871,Bar do Ana Júlia,Bar,Nova Lima,MG,2018-07-31,2
+872,Restaurante Barros,Restaurante,Caratinga,MG,2024-02-15,12
+873,Mercado da Cruz,Mercado,Ipatinga,MG,2019-03-31,11
+874,Conveniência Campos 24h,Conveniência,Belo Horizonte,MG,2018-10-08,2
+875,Conveniência Novais 24h,Conveniência,Lavras,MG,2020-09-14,4
+876,Restaurante Teixeira,Restaurante,Juiz de Fora,MG,2023-12-28,7
+877,Mercado Leão,Mercado,Cataguases,MG,2018-01-01,9
+878,Bar do Rael,Bar,Poços de Caldas,MG,2024-09-24,6
+879,Mercado Vasconcelos,Mercado,Sabará,MG,2025-10-28,2
+880,Bar do Rebeca,Bar,Nova Lima,MG,2018-11-10,2
+881,Restaurante Garcia,Restaurante,Santana do Paraíso,MG,2022-06-22,12
+882,Bar do Manuella,Bar,Três Corações,MG,2021-12-23,6
+883,Mercado Macedo,Mercado,Coronel Fabriciano,MG,2024-08-24,11
+884,Bar do Ana Cecília,Bar,Poços de Caldas,MG,2024-07-01,6
+885,Bar do Liz,Bar,Timóteo,MG,2019-11-02,12
+886,Bar do Ana Laura,Bar,Nova Lima,MG,2019-07-13,1
+887,Mercado Nunes,Mercado,Betim,MG,2021-01-14,2
+888,Restaurante Pinto,Restaurante,Timóteo,MG,2025-04-02,12
+889,Bar do Dante,Bar,Timóteo,MG,2020-03-04,12
+890,Conveniência Pimenta 24h,Conveniência,Varginha,MG,2020-05-26,4
+891,Conveniência Sousa 24h,Conveniência,Lavras,MG,2021-07-19,5
+892,Bar do Gael Henrique,Bar,Lavras,MG,2021-03-22,6
+893,Restaurante Teixeira,Restaurante,Poços de Caldas,MG,2019-12-18,5
+894,Mercado Costela,Mercado,Betim,MG,2023-11-19,2
+895,Bar do Otávio,Bar,Caratinga,MG,2019-02-27,11
+896,Mercado da Luz,Mercado,Contagem,MG,2021-06-02,3
+897,Bar do Enrico,Bar,Ubá,MG,2019-07-01,9
+898,Conveniência Castro 24h,Conveniência,Sabará,MG,2022-01-15,1
+899,Conveniência da Costa 24h,Conveniência,Belo Horizonte,MG,2023-06-28,1
+900,Restaurante Cavalcanti,Restaurante,Cataguases,MG,2024-05-24,8
+901,Mercado Novaes,Mercado,Pouso Alegre,MG,2022-11-11,4
+902,Mercado Barbosa,Mercado,Cataguases,MG,2023-01-17,8
+903,Padaria Castro,Padaria,Contagem,MG,2020-01-30,2
+904,Bar do André,Bar,Coronel Fabriciano,MG,2022-07-06,12
+905,Bar do Julia,Bar,Caratinga,MG,2021-08-21,10
+906,Mercado Machado,Mercado,Caratinga,MG,2024-01-01,11
+907,Bar do Maria Isis,Bar,Betim,MG,2021-04-18,2
+908,Bar do Ana,Bar,Pouso Alegre,MG,2021-08-06,4
+909,Bar do Benício,Bar,Lavras,MG,2024-07-30,5
+910,Mercado da Conceição,Mercado,Juiz de Fora,MG,2021-09-23,7
+911,Bar do Alícia,Bar,Três Corações,MG,2020-09-22,4
+912,Bar do Alexia,Bar,Nova Lima,MG,2018-05-21,1
+913,Bar do Maria,Bar,Poços de Caldas,MG,2019-01-21,5
+914,Bar do Diego,Bar,Betim,MG,2023-04-10,3
+915,Conveniência Rodrigues 24h,Conveniência,Poços de Caldas,MG,2019-12-31,5
+916,Bar do Ravi Lucca,Bar,Contagem,MG,2024-04-18,3
+917,Restaurante da Luz,Restaurante,Contagem,MG,2020-03-07,3
+918,Restaurante Viana,Restaurante,Viçosa,MG,2024-05-07,8
+919,Bar do Miguel,Bar,Três Corações,MG,2019-06-26,5
+920,Restaurante Lima,Restaurante,Pouso Alegre,MG,2018-12-09,5
+921,Restaurante Camargo,Restaurante,Cataguases,MG,2023-04-10,7
+922,Mercado Nogueira,Mercado,Coronel Fabriciano,MG,2018-02-11,10
+923,Bar do Rael,Bar,Varginha,MG,2023-03-05,5
+924,Bar do Kaique,Bar,Ubá,MG,2024-04-03,7
+925,Padaria da Mata,Padaria,Caratinga,MG,2025-05-09,12
+926,Restaurante Casa Grande,Restaurante,Ubá,MG,2022-07-06,7
+927,Conveniência Barbosa 24h,Conveniência,Santana do Paraíso,MG,2020-04-22,11
+928,Conveniência Araújo 24h,Conveniência,Timóteo,MG,2022-04-20,10
+929,Bar do Lucas,Bar,Belo Horizonte,MG,2023-09-13,1
+930,Restaurante Vieira,Restaurante,Três Corações,MG,2019-10-08,6
+931,Mercado das Neves,Mercado,Viçosa,MG,2021-09-06,9
+932,Restaurante Peixoto,Restaurante,Timóteo,MG,2022-09-29,12
+933,Bar do Alícia,Bar,Poços de Caldas,MG,2018-01-21,6
+934,Bar do Luna,Bar,Belo Horizonte,MG,2025-04-07,2
+935,Restaurante Campos,Restaurante,Ubá,MG,2020-06-25,7
+936,Restaurante Martins,Restaurante,Betim,MG,2020-11-06,2
+937,Mercado Sales,Mercado,Timóteo,MG,2024-02-19,10
+938,Bar do Ana Júlia,Bar,Ubá,MG,2023-06-17,7
+939,Bar do Isis,Bar,Ubá,MG,2021-05-03,9
+940,Padaria da Mata,Padaria,Coronel Fabriciano,MG,2021-08-02,11
+941,Mercado Montenegro,Mercado,Ubá,MG,2022-04-02,8
+942,Mercado Nogueira,Mercado,Cataguases,MG,2022-04-06,8
+943,Mercado Monteiro,Mercado,Santana do Paraíso,MG,2021-11-28,10
+944,Mercado Macedo,Mercado,Ipatinga,MG,2019-05-12,11
+945,Mercado Barros,Mercado,Santana do Paraíso,MG,2023-01-05,11
+946,Mercado Peixoto,Mercado,Contagem,MG,2018-05-31,1
+947,Restaurante Aparecida,Restaurante,Juiz de Fora,MG,2019-11-14,7
+948,Conveniência Lopes 24h,Conveniência,Sabará,MG,2021-09-07,3
+949,Conveniência Sousa 24h,Conveniência,Caratinga,MG,2021-08-23,11
+950,Mercado Duarte,Mercado,Viçosa,MG,2022-08-11,8
+951,Mercado Pereira,Mercado,Lavras,MG,2019-10-28,6
+952,Restaurante da Cunha,Restaurante,Belo Horizonte,MG,2019-01-29,2
+953,Restaurante Alves,Restaurante,Pouso Alegre,MG,2018-06-05,4
+954,Mercado Borges,Mercado,Juiz de Fora,MG,2022-01-04,9
+955,Restaurante da Conceição,Restaurante,Belo Horizonte,MG,2022-04-07,3
+956,Restaurante Rocha,Restaurante,Belo Horizonte,MG,2021-05-17,2
+957,Restaurante Oliveira,Restaurante,Ipatinga,MG,2022-10-12,11
+958,Restaurante Pastor,Restaurante,Santana do Paraíso,MG,2020-04-02,10
+959,Bar do Asafe,Bar,Sabará,MG,2019-05-14,3
+960,Mercado Teixeira,Mercado,Poços de Caldas,MG,2018-06-27,4
+961,Mercado Rocha,Mercado,Ipatinga,MG,2024-05-13,12
+962,Bar do Vitor Gabriel,Bar,Juiz de Fora,MG,2020-09-01,9
+963,Conveniência Oliveira 24h,Conveniência,Cataguases,MG,2020-02-29,8
+964,Mercado Aparecida,Mercado,Lavras,MG,2024-05-28,4
+965,Bar do Luiz Fernando,Bar,Lavras,MG,2022-10-17,4
+966,Restaurante Melo,Restaurante,Betim,MG,2022-06-24,1
+967,Restaurante Moreira,Restaurante,Juiz de Fora,MG,2018-02-03,9
+968,Restaurante Rezende,Restaurante,Sabará,MG,2018-10-12,1
+969,Bar do Luísa,Bar,Betim,MG,2022-03-05,1
+970,Conveniência da Mota 24h,Conveniência,Viçosa,MG,2023-05-08,9
+971,Mercado Cirino,Mercado,Timóteo,MG,2022-12-28,12
+972,Mercado Pacheco,Mercado,Caratinga,MG,2023-03-18,10
+973,Bar do Luiza,Bar,Lavras,MG,2021-04-17,6
+974,Mercado Porto,Mercado,Três Corações,MG,2023-06-03,6
+975,Restaurante Mendonça,Restaurante,Poços de Caldas,MG,2021-06-19,6
+976,Mercado Borges,Mercado,Pouso Alegre,MG,2024-09-27,4
+977,Mercado Melo,Mercado,Viçosa,MG,2020-03-27,7
+978,Restaurante Ferreira,Restaurante,Três Corações,MG,2021-07-03,6
+979,Restaurante Jesus,Restaurante,Viçosa,MG,2018-02-03,7
+980,Bar do Brenda,Bar,Ipatinga,MG,2019-03-04,11
+981,Padaria Duarte,Padaria,Ipatinga,MG,2023-05-08,12
+982,Restaurante Rios,Restaurante,Betim,MG,2018-08-20,1
+983,Padaria Caldeira,Padaria,Varginha,MG,2023-02-17,5
+984,Padaria Castro,Padaria,Betim,MG,2019-09-30,2
+985,Conveniência Farias 24h,Conveniência,Pouso Alegre,MG,2025-10-19,5
+986,Restaurante Jesus,Restaurante,Varginha,MG,2018-04-28,4
+987,Mercado Sales,Mercado,Sabará,MG,2018-08-01,2
+988,Bar do Maya,Bar,Ipatinga,MG,2022-07-20,10
+989,Mercado da Paz,Mercado,Pouso Alegre,MG,2024-10-29,6
+990,Restaurante Ribeiro,Restaurante,Caratinga,MG,2023-01-13,12
+991,Mercado Guerra,Mercado,Sabará,MG,2021-09-11,1
+992,Conveniência Teixeira 24h,Conveniência,Sabará,MG,2025-02-05,1
+993,Bar do Ísis,Bar,Pouso Alegre,MG,2022-02-11,5
+994,Bar do Brayan,Bar,Contagem,MG,2019-03-11,1
+995,Mercado Marques,Mercado,Sabará,MG,2023-12-23,3
+996,Mercado Borges,Mercado,Coronel Fabriciano,MG,2018-08-08,12
+997,Bar do Ana Vitória,Bar,Nova Lima,MG,2018-05-21,3
+998,Bar do Thiago,Bar,Nova Lima,MG,2023-05-01,3
+999,Restaurante Duarte,Restaurante,Cataguases,MG,2023-04-15,7
+1000,Mercado Camargo,Mercado,Poços de Caldas,MG,2024-08-23,6
+1001,Bar do Isis,Bar,Ubá,MG,2019-10-17,7
+1002,Bar do Olívia,Bar,Lavras,MG,2023-04-26,5
+1003,Mercado Abreu,Mercado,Timóteo,MG,2023-05-16,11
+1004,Bar do Vitória,Bar,Sabará,MG,2023-09-17,2
+1005,Restaurante Martins,Restaurante,Varginha,MG,2025-05-02,6
+1006,Restaurante Jesus,Restaurante,Juiz de Fora,MG,2020-04-13,9
+1007,Bar do Cauê,Bar,Coronel Fabriciano,MG,2021-11-03,11
+1008,Mercado Correia,Mercado,Pouso Alegre,MG,2023-05-19,5
+1009,Bar do Rafaela,Bar,Cataguases,MG,2018-05-29,7
+1010,Bar do Eloá,Bar,Belo Horizonte,MG,2025-11-27,1
+1011,Conveniência Pinto 24h,Conveniência,Nova Lima,MG,2023-10-20,2
+1012,Mercado Sá,Mercado,Contagem,MG,2020-04-17,1
+1013,Conveniência Monteiro 24h,Conveniência,Muriaé,MG,2022-07-07,9
+1014,Bar do Luísa,Bar,Lavras,MG,2021-08-27,4
+1015,Bar do Cauã,Bar,Juiz de Fora,MG,2020-12-16,9
+1016,Mercado Costela,Mercado,Contagem,MG,2018-04-27,1
+1017,Mercado da Mata,Mercado,Coronel Fabriciano,MG,2023-06-18,11
+1018,Padaria Novaes,Padaria,Caratinga,MG,2023-08-03,11
+1019,Bar do João,Bar,Sabará,MG,2020-06-24,1
+1020,Conveniência da Paz 24h,Conveniência,Sabará,MG,2021-09-11,1
+1021,Conveniência Macedo 24h,Conveniência,Belo Horizonte,MG,2022-06-23,1
+1022,Mercado Sampaio,Mercado,Santana do Paraíso,MG,2023-04-03,11
+1023,Bar do Maria Vitória,Bar,Contagem,MG,2021-02-28,3
+1024,Mercado Campos,Mercado,Viçosa,MG,2018-03-24,7
+1025,Bar do Benjamin,Bar,Três Corações,MG,2021-04-17,6
+1026,Restaurante Pires,Restaurante,Santana do Paraíso,MG,2024-03-04,10
+1027,Mercado Pereira,Mercado,Varginha,MG,2023-12-18,6
+1028,Conveniência da Costa 24h,Conveniência,Varginha,MG,2023-03-12,6
+1029,Mercado Santos,Mercado,Santana do Paraíso,MG,2025-06-22,12
+1030,Mercado Castro,Mercado,Sabará,MG,2022-11-20,2
+1031,Restaurante das Neves,Restaurante,Ipatinga,MG,2020-10-11,11
+1032,Mercado Novaes,Mercado,Belo Horizonte,MG,2022-02-21,1
+1033,Conveniência Albuquerque 24h,Conveniência,Varginha,MG,2018-09-08,6
+1034,Bar do Joana,Bar,Caratinga,MG,2021-10-01,11
+1035,Padaria Borges,Padaria,Ubá,MG,2023-06-10,9
+1036,Restaurante Câmara,Restaurante,Viçosa,MG,2020-05-17,9
+1037,Conveniência Camargo 24h,Conveniência,Nova Lima,MG,2021-08-18,3
+1038,Mercado Martins,Mercado,Poços de Caldas,MG,2021-05-20,6
+1039,Restaurante Campos,Restaurante,Lavras,MG,2022-05-11,5
+1040,Bar do Leandro,Bar,Muriaé,MG,2022-12-24,7
+1041,Restaurante Monteiro,Restaurante,Lavras,MG,2022-07-12,6
+1042,Bar do Ana,Bar,Pouso Alegre,MG,2018-06-13,4
+1043,Bar do Nicole,Bar,Lavras,MG,2022-04-19,4
+1044,Mercado Santos,Mercado,Betim,MG,2022-10-05,3
+1045,Bar do Yago,Bar,Poços de Caldas,MG,2019-03-19,5
+1046,Bar do Kamilly,Bar,Contagem,MG,2020-06-17,2
+1047,Restaurante Mendes,Restaurante,Ipatinga,MG,2023-01-26,11
+1048,Bar do Maria Julia,Bar,Ubá,MG,2019-01-17,7
+1049,Restaurante da Cruz,Restaurante,Nova Lima,MG,2018-12-13,2
+1050,Bar do Maria Alice,Bar,Ubá,MG,2019-06-28,9
+1051,Restaurante Novaes,Restaurante,Santana do Paraíso,MG,2022-10-01,11
+1052,Restaurante Casa Grande,Restaurante,Contagem,MG,2019-10-16,3
+1053,Mercado Gomes,Mercado,Contagem,MG,2021-12-01,2
+1054,Restaurante Correia,Restaurante,Sabará,MG,2024-03-11,1
+1055,Conveniência Peixoto 24h,Conveniência,Belo Horizonte,MG,2021-01-27,1
+1056,Restaurante Moraes,Restaurante,Santana do Paraíso,MG,2019-03-11,10
+1057,Bar do João Gabriel,Bar,Caratinga,MG,2019-12-30,12
+1058,Mercado Azevedo,Mercado,Belo Horizonte,MG,2021-05-27,1
+1059,Restaurante da Mota,Restaurante,Santana do Paraíso,MG,2025-10-11,10
+1060,Bar do Kamilly,Bar,Sabará,MG,2019-04-26,1
+1061,Restaurante Fernandes,Restaurante,Cataguases,MG,2025-07-27,7
+1062,Bar do Natália,Bar,Santana do Paraíso,MG,2023-03-07,10
+1063,Restaurante da Mata,Restaurante,Lavras,MG,2019-07-05,5
+1064,Bar do André,Bar,Nova Lima,MG,2022-12-03,1
+1065,Bar do Alexia,Bar,Cataguases,MG,2021-01-30,7
+1066,Padaria Silveira,Padaria,Timóteo,MG,2019-07-07,12
+1067,Conveniência da Rosa 24h,Conveniência,Nova Lima,MG,2018-03-09,3
+1068,Conveniência Pastor 24h,Conveniência,Betim,MG,2022-05-28,2
+1069,Padaria Pacheco,Padaria,Betim,MG,2019-12-29,2
+1070,Mercado Ribeiro,Mercado,Muriaé,MG,2022-04-17,7
+1071,Bar do Mariana,Bar,Ubá,MG,2019-03-04,7
+1072,Bar do Kaique,Bar,Timóteo,MG,2019-09-26,10
+1073,Mercado Machado,Mercado,Ipatinga,MG,2018-12-06,10
+1074,Bar do Stephany,Bar,Timóteo,MG,2020-11-12,11
+1075,Conveniência Mendes 24h,Conveniência,Santana do Paraíso,MG,2019-01-22,11
+1076,Bar do Catarina,Bar,Contagem,MG,2019-09-08,3
+1077,Bar do Brenda,Bar,Viçosa,MG,2019-05-05,7
+1078,Bar do Yasmin,Bar,Poços de Caldas,MG,2023-10-03,4
+1079,Bar do Gabriela,Bar,Pouso Alegre,MG,2018-04-03,4
+1080,Bar do Maria Alice,Bar,Santana do Paraíso,MG,2018-12-13,12
+1081,Restaurante Duarte,Restaurante,Cataguases,MG,2024-03-02,9
+1082,Bar do Marcos Vinicius,Bar,Timóteo,MG,2021-07-12,12
+1083,Mercado Sampaio,Mercado,Lavras,MG,2023-01-30,6
+1084,Conveniência da Costa 24h,Conveniência,Juiz de Fora,MG,2022-08-29,7
+1085,Mercado Oliveira,Mercado,Três Corações,MG,2023-01-16,6
+1086,Restaurante Gomes,Restaurante,Betim,MG,2018-05-14,2
+1087,Bar do Ravi Lucca,Bar,Nova Lima,MG,2018-03-01,3
+1088,Bar do Juliana,Bar,Muriaé,MG,2022-10-14,7
+1089,Bar do Caio,Bar,Belo Horizonte,MG,2023-04-15,1
+1090,Padaria Dias,Padaria,Caratinga,MG,2021-09-27,12
+1091,Mercado Souza,Mercado,Betim,MG,2024-04-07,2
+1092,Bar do Maria Júlia,Bar,Betim,MG,2018-08-18,3
+1093,Mercado Santos,Mercado,Timóteo,MG,2019-08-20,10
+1094,Restaurante Garcia,Restaurante,Sabará,MG,2021-07-26,2
+1095,Restaurante Gomes,Restaurante,Coronel Fabriciano,MG,2025-07-21,11
+1096,Mercado Ribeiro,Mercado,Viçosa,MG,2019-10-04,9
+1097,Conveniência Vieira 24h,Conveniência,Sabará,MG,2018-01-21,1
+1098,Restaurante Rezende,Restaurante,Ubá,MG,2019-10-25,9
+1099,Mercado Cassiano,Mercado,Viçosa,MG,2019-01-06,8
+1100,Bar do Maya,Bar,Coronel Fabriciano,MG,2025-08-19,10
+1101,Bar do Brayan,Bar,Caratinga,MG,2024-02-03,11
+1102,Padaria Cardoso,Padaria,Ubá,MG,2019-06-27,9
+1103,Mercado Montenegro,Mercado,Muriaé,MG,2019-07-01,7
+1104,Mercado Pastor,Mercado,Pouso Alegre,MG,2021-04-25,4
+1105,Mercado Farias,Mercado,Cataguases,MG,2020-05-12,9
+1106,Bar do Guilherme,Bar,Caratinga,MG,2023-01-05,12
+1107,Restaurante Macedo,Restaurante,Muriaé,MG,2021-07-25,7
+1108,Bar do Guilherme,Bar,Ubá,MG,2022-11-23,9
+1109,Restaurante Moura,Restaurante,Pouso Alegre,MG,2019-08-02,6
+1110,Mercado Marques,Mercado,Caratinga,MG,2022-01-01,10
+1111,Bar do Arthur,Bar,Coronel Fabriciano,MG,2021-11-28,12
+1112,Bar do João Pedro,Bar,Sabará,MG,2020-09-25,2
+1113,Restaurante Jesus,Restaurante,Contagem,MG,2018-04-10,3
+1114,Bar do Leonardo,Bar,Juiz de Fora,MG,2021-11-04,7
+1115,Bar do Dom,Bar,Poços de Caldas,MG,2018-06-14,6
+1116,Restaurante Melo,Restaurante,Juiz de Fora,MG,2019-11-08,7
+1117,Bar do Vinícius,Bar,Belo Horizonte,MG,2018-12-07,1
+1118,Bar do Camila,Bar,Poços de Caldas,MG,2019-11-11,5
+1119,Bar do Isabella,Bar,Juiz de Fora,MG,2019-06-12,7
+1120,Conveniência Rezende 24h,Conveniência,Viçosa,MG,2019-09-20,7
+1121,Bar do Enrico,Bar,Muriaé,MG,2022-10-17,8
+1122,Bar do Bella,Bar,Ubá,MG,2018-04-13,9
+1123,Bar do Sophie,Bar,Viçosa,MG,2025-12-27,8
+1124,Bar do Gabrielly,Bar,Coronel Fabriciano,MG,2019-04-30,10
+1125,Bar do Anna Liz,Bar,Juiz de Fora,MG,2020-01-26,8
+1126,Bar do Mariah,Bar,Juiz de Fora,MG,2021-12-29,7
+1127,Bar do Vitória,Bar,Viçosa,MG,2021-03-26,8
+1128,Mercado Andrade,Mercado,Nova Lima,MG,2020-01-08,2
+1129,Conveniência Pinto 24h,Conveniência,Pouso Alegre,MG,2020-03-12,4
+1130,Bar do Davi Miguel,Bar,Cataguases,MG,2024-10-02,7
+1131,Bar do Ravy,Bar,Timóteo,MG,2020-11-24,11
+1132,Conveniência Pires 24h,Conveniência,Ubá,MG,2025-05-17,9
+1133,Conveniência Rodrigues 24h,Conveniência,Belo Horizonte,MG,2023-06-12,1
+1134,Restaurante da Paz,Restaurante,Cataguases,MG,2020-04-04,7
+1135,Bar do Rafael,Bar,Contagem,MG,2025-08-18,3
+1136,Mercado Souza,Mercado,Juiz de Fora,MG,2022-11-29,9
+1137,Bar do Fernando,Bar,Timóteo,MG,2018-09-18,11
+1138,Bar do Luara,Bar,Juiz de Fora,MG,2018-12-09,7
+1139,Bar do Gael Henrique,Bar,Cataguases,MG,2020-12-28,7
+1140,Mercado Teixeira,Mercado,Varginha,MG,2023-02-14,4
+1141,Bar do Guilherme,Bar,Três Corações,MG,2023-02-21,6
+1142,Mercado Macedo,Mercado,Ipatinga,MG,2022-03-21,11
+1143,Bar do Lucas Gabriel,Bar,Viçosa,MG,2021-10-03,9
+1144,Bar do Ana Clara,Bar,Ubá,MG,2018-05-09,7
+1145,Restaurante Alves,Restaurante,Lavras,MG,2022-12-09,5
+1146,Conveniência Aparecida 24h,Conveniência,Betim,MG,2025-11-23,1
+1147,Bar do Aylla,Bar,Nova Lima,MG,2023-05-11,2
+1148,Mercado Vieira,Mercado,Belo Horizonte,MG,2023-04-08,2
+1149,Bar do Daniel,Bar,Lavras,MG,2023-03-23,5
+1150,Bar do Ana Beatriz,Bar,Coronel Fabriciano,MG,2024-03-26,12
+1151,Restaurante Fogaça,Restaurante,Juiz de Fora,MG,2019-01-16,7
+1152,Bar do Evelyn,Bar,Contagem,MG,2020-09-25,3
+1153,Mercado Lopes,Mercado,Contagem,MG,2024-01-16,2
+1154,Mercado Casa Grande,Mercado,Varginha,MG,2025-10-01,4
+1155,Bar do Samuel,Bar,Santana do Paraíso,MG,2019-09-16,11
+1156,Bar do Sofia,Bar,Lavras,MG,2020-07-21,5
+1157,Bar do Juliana,Bar,Santana do Paraíso,MG,2018-01-13,10
+1158,Padaria Nunes,Padaria,Timóteo,MG,2023-12-23,11
+1159,Mercado Rodrigues,Mercado,Betim,MG,2020-04-30,2
+1160,Bar do Luiz Miguel,Bar,Ubá,MG,2018-07-30,8
+1161,Bar do Luigi,Bar,Ipatinga,MG,2021-01-04,12
+1162,Mercado Cavalcanti,Mercado,Lavras,MG,2021-04-08,5
+1163,Bar do Emanuel,Bar,Contagem,MG,2019-05-09,1
+1164,Mercado Pimenta,Mercado,Caratinga,MG,2018-03-25,12
+1165,Restaurante Garcia,Restaurante,Ipatinga,MG,2021-06-03,11
+1166,Mercado Pinto,Mercado,Cataguases,MG,2023-04-27,7
+1167,Bar do Rodrigo,Bar,Cataguases,MG,2020-06-01,7
+1168,Bar do Maysa,Bar,Sabará,MG,2020-05-29,3
+1169,Bar do João Pedro,Bar,Caratinga,MG,2023-03-21,11
+1170,Mercado da Conceição,Mercado,Pouso Alegre,MG,2019-05-11,6
+1171,Conveniência Martins 24h,Conveniência,Belo Horizonte,MG,2024-04-09,1
+1172,Bar do Thomas,Bar,Juiz de Fora,MG,2018-04-21,9
+1173,Mercado Marques,Mercado,Ipatinga,MG,2019-02-05,12
+1174,Restaurante da Cunha,Restaurante,Caratinga,MG,2021-02-20,11
+1175,Bar do Antony,Bar,Varginha,MG,2020-02-23,4
+1176,Bar do Maria Flor,Bar,Belo Horizonte,MG,2023-02-18,1
+1177,Bar do Alícia,Bar,Caratinga,MG,2018-03-14,12
+1178,Restaurante Rocha,Restaurante,Caratinga,MG,2018-07-02,12
+1179,Mercado Nogueira,Mercado,Juiz de Fora,MG,2022-10-19,7
+1180,Restaurante Castro,Restaurante,Juiz de Fora,MG,2019-06-13,8
+1181,Conveniência Barbosa 24h,Conveniência,Varginha,MG,2022-05-17,6
+1182,Restaurante Macedo,Restaurante,Varginha,MG,2018-09-13,6
+1183,Padaria Ferreira,Padaria,Nova Lima,MG,2025-03-19,2
+1184,Restaurante Pastor,Restaurante,Belo Horizonte,MG,2020-03-31,2
+1185,Conveniência da Rosa 24h,Conveniência,Contagem,MG,2021-03-23,3
+1186,Restaurante Porto,Restaurante,Caratinga,MG,2018-11-02,11
+1187,Restaurante Lima,Restaurante,Contagem,MG,2019-03-10,2
+1188,Restaurante Sales,Restaurante,Sabará,MG,2023-01-04,3
+1189,Conveniência da Cunha 24h,Conveniência,Juiz de Fora,MG,2025-12-06,7
+1190,Mercado Marques,Mercado,Sabará,MG,2018-10-11,3
+1191,Mercado da Rosa,Mercado,Betim,MG,2021-08-07,2
+1192,Mercado Costa,Mercado,Muriaé,MG,2020-04-18,7
+1193,Conveniência Gomes 24h,Conveniência,Varginha,MG,2023-09-16,5
+1194,Mercado Mendes,Mercado,Viçosa,MG,2022-07-29,8
+1195,Restaurante Caldeira,Restaurante,Timóteo,MG,2024-04-06,11
+1196,Restaurante da Costa,Restaurante,Betim,MG,2018-01-01,2
+1197,Padaria Garcia,Padaria,Ipatinga,MG,2020-03-09,11
+1198,Bar do Elisa,Bar,Coronel Fabriciano,MG,2020-01-19,11
+1199,Restaurante Oliveira,Restaurante,Santana do Paraíso,MG,2019-11-28,11
+1200,Restaurante da Rocha,Restaurante,Juiz de Fora,MG,2018-01-12,8
