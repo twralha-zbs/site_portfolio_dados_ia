@@ -129,7 +129,8 @@ Commit `b99e14b`.
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
 a `especificacao_powerbi.md`, publicar via Publish to web e salvar os 4
-screenshots em `public/`. Pendências da Fase 3: usuário confirmar que o e-mail
-de teste do Formspree chegou em twralha@gmail.com (primeiro envio pode exigir
-ativação do form) e validar Lighthouse ≥ 85/90 em produção. Depois, **Fase 4**
-(página do case em MDX).
+screenshots em `public/`. Lighthouse mobile validado em produção (2026-07-17):
+Performance 98, SEO 100, Acessibilidade 100, Best Practices 100 (LCP 1,8 s,
+CLS 0). Pendência única da Fase 3: usuário confirmar que o e-mail de teste do
+Formspree chegou em twralha@gmail.com (primeiro envio pode exigir ativação do
+form). Depois, **Fase 4** (página do case em MDX).
