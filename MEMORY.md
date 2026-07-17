@@ -12,7 +12,7 @@ trabalho** (regra registrada no [CLAUDE.md](CLAUDE.md)).
 | 1 — Dataset sintético | `lab/serra-azul/` | ✅ concluída (2026-07-16) |
 | 2 — Spec Power BI + IA + automação | `especificacao_powerbi.md`, `resumo_ia.py`, doc Power Automate | ✅ concluída (2026-07-16) |
 | 2b — Montagem do .pbix (manual, usuário) | `.pbix` + Publish to web + screenshots | ⬜ próxima |
-| 3 — Site core | Layout, Home, Sobre, Contato | ⬜ |
+| 3 — Site core | Layout, Home, Sobre, Contato | ✅ concluída (2026-07-17) |
 | 4 — Página do case | MDX + componentes + /portfolio | ⬜ |
 | 5 — SEO/AEO e polish | schema, llms.txt, sitemap, OG | ⬜ |
 | 6 — Lançamento | domínio + placeholders + checklist | ⬜ |
@@ -86,9 +86,50 @@ Commit `b99e14b`.
   dias e o arquivo sairia vazio; a data de pico produz 8 SKUs reais para
   testar o ramo "Sim" do fluxo.
 
+## Fase 3 — Site core (2026-07-17)
+
+- **Dados reais aplicados** (fornecidos pelo usuário): Thiago Waldowski Ralha
+  (grafia correta; o currículo-fonte tem o typo "Waldowksi"), marca **TWR**,
+  LinkedIn/GitHub `twralha`, WhatsApp +55 11 98483-6740, Formspree `xjgnyzqk`,
+  agenda https://cal.com/twralha, Substack https://twralha.substack.com (URL
+  canônica, sem parâmetros de tracking). Tudo centralizado em **`lib/site.ts`**;
+  dos placeholders do projeto resta somente `[URL_PUBLISH_TO_WEB]` (Fase 2b).
+- **Design**: 3 variantes produzidas sob a skill `impeccable` (PRODUCT.md criado
+  na raiz com registro *brand*); usuário escolheu a **V3 "Prisma"** — grafite
+  escuro + blocos de azul comprometido, Bricolage Grotesque (display) + Onest
+  (texto), botões pílula. Tokens OKLCH em `app/globals.css` (`@theme`),
+  contrastes AA verificados; foco visível e `prefers-reduced-motion` no global.
+- **Entregue**: Header (menu mobile acessível, CTA → Cal.com), Footer com
+  disclaimer geral, `CTASection`, `SubstackFeed` + `lib/substack.ts` (RSS com
+  `revalidate: 3600`, parse sem dependências, fallback "em breve" — o feed
+  existe mas ainda tem 0 posts), Home completa (hero, faixa de serviços,
+  case Serra Azul com métricas antes/depois, artigos, CTA), `/sobre`
+  (narrativa em 1ª pessoa a partir do currículo base + projetos reais
+  verificáveis + foto em `public/thiago-ralha.jpg`), `/contato`
+  (`ContactForm` client com estados + canais diretos), `/portfolio`
+  provisório (evita 404; grid real é da Fase 4).
+- **Verificação**: lint e build limpos (8 rotas estáticas); QA visual via
+  navegador headless em 1280px e 375px; console sem erros (só o 404 do script
+  do Vercel Analytics, esperado fora da Vercel); **envio de teste do formulário
+  retornou 200 do Formspree** com estado "Mensagem enviada" na UI; zero
+  placeholders/lorem no código do site.
+
+**Decisões desta fase:**
+
+- Headline do hero é a da variante aprovada ("Dados dispersos, decisões
+  claras.") e não a frase literal do plano-mestre; a mensagem original segue
+  em `site.headline` para metadata.
+- Setas "↗" com variation selector U+FE0E (senão o Windows renderiza emoji).
+- `PRODUCT.md`/`DESIGN.md` (skill impeccable) vivem na raiz; DESIGN.md ainda
+  não gerado (rodar `/impeccable document` quando quiser).
+- SEO local para capitais do Brasil: registrado para a **Fase 5** (pedido do
+  usuário em 2026-07-17).
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
-a `especificacao_powerbi.md` (checklist na seção 5 da spec), publicar via
-Publish to web e salvar os 4 screenshots em `public/`. Em paralelo, o agente
-pode iniciar a **Fase 3** (site core), que não depende da 2b.
+a `especificacao_powerbi.md`, publicar via Publish to web e salvar os 4
+screenshots em `public/`. Pendências da Fase 3: usuário confirmar que o e-mail
+de teste do Formspree chegou em twralha@gmail.com (primeiro envio pode exigir
+ativação do form) e validar Lighthouse ≥ 85/90 em produção. Depois, **Fase 4**
+(página do case em MDX).

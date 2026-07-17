@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Design tokens da variante "Prisma": tema escuro grafite com blocos de azul
+   comprometido. Contrastes validados para WCAG AA sobre as superfícies em que
+   cada cor é usada. */
+@theme {
+  --color-fundo: oklch(20.5% 0.008 260);
+  --color-painel: oklch(24% 0.012 255);
+  --color-texto: oklch(93% 0.006 250);
+  --color-suave: oklch(72% 0.01 250);
+  --color-apagado: oklch(64% 0.01 250);
+  --color-linha: oklch(31% 0.01 255);
+  --color-azul: oklch(46% 0.105 242);
+  --color-azul-profundo: oklch(38% 0.09 244);
+  --color-azul-linha: oklch(55% 0.09 242);
+  --color-sobre-azul: oklch(96% 0.01 240);
+  --color-sobre-azul-suave: oklch(85% 0.035 238);
+  --color-acento: oklch(72% 0.12 238);
+  --color-acento-contraste: oklch(18% 0.03 245);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-onest), ui-sans-serif, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-fundo);
+  color: var(--color-texto);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

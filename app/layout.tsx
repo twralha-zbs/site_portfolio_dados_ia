@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Onest } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { site } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const onest = Onest({
+  variable: "--font-onest",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "[SEU_NOME] — Dados, Automação e IA para negócios",
-  description:
-    "Consultoria em dashboards Power BI, automações Power Platform e IA aplicada. Transformo dados dispersos em decisões.",
+  metadataBase: new URL(site.urlProducao),
+  title: {
+    default: `${site.nome} · Dados, Automação e IA para negócios`,
+    template: `%s · ${site.marca}`,
+  },
+  description: `${site.headline}. ${site.subheadline}`,
 };
 
 export default function RootLayout({
@@ -26,10 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${bricolage.variable} ${onest.variable} font-sans antialiased`}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
         <Analytics />
       </body>
     </html>
