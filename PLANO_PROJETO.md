@@ -188,7 +188,7 @@ Prioridade para prestador de serviços (conforme wiki: Organization → FAQPage 
 | **Organization** | Layout global | Nome, url, logo, `sameAs` → LinkedIn, GitHub, Substack (entity linking — fundação de tudo) |
 | **Person** | Layout global + `/sobre` | Nome, `jobTitle`, `knowsAbout` (Power BI, Power Automate, Python, IA), `sameAs` — 7x mais presente em páginas citadas por IA que Article; sinal direto de E-E-A-T |
 | **Article** | Cada case | `author` (→ Person), `datePublished`, `dateModified`, `headline` |
-| **FAQPage** | Seção FAQ de cada case | 5–8 perguntas; `Question.name` e `Answer.text` **idênticos** ao texto visível (regra técnica obrigatória); respostas de 40–300 palavras |
+| **FAQPage** | Seção FAQ da Home (`lib/faq.ts`) e de cada case | 5–8 perguntas; `Question.name` e `Answer.text` **idênticos** ao texto visível (regra técnica obrigatória); respostas de 40–300 palavras. A Home já expõe o FAQ desde a Fase 3.5 lendo `lib/faq.ts` — a Fase 5 apenas liga o JSON-LD à mesma fonte |
 | **BreadcrumbList** | Páginas de case | Home → Portfólio → Case |
 
 Validação: todo JSON-LD deve passar sem erros no **validator.schema.org** e no **Rich Results Test** do Google.

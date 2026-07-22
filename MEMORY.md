@@ -13,6 +13,7 @@ trabalho** (regra registrada no [CLAUDE.md](CLAUDE.md)).
 | 2 — Spec Power BI + IA + automação | `especificacao_powerbi.md`, `resumo_ia.py`, doc Power Automate | ✅ concluída (2026-07-16) |
 | 2b — Montagem do .pbix (manual, usuário) | `.pbix` + Publish to web + screenshots | ⬜ próxima |
 | 3 — Site core | Layout, Home, Sobre, Contato | ✅ concluída (2026-07-17) |
+| 3.5 — Melhorias pós-referências | Home: ofertas, método, FAQ, manifesto | ✅ concluída (2026-07-21) |
 | 4 — Página do case | MDX + componentes + /portfolio | ⬜ |
 | 5 — SEO/AEO e polish | schema, llms.txt, sitemap, OG | ⬜ |
 | 6 — Lançamento | domínio + placeholders + checklist | ⬜ |
@@ -124,6 +125,51 @@ Commit `b99e14b`.
   não gerado (rodar `/impeccable document` quando quiser).
 - SEO local para capitais do Brasil: registrado para a **Fase 5** (pedido do
   usuário em 2026-07-17).
+
+## Fase 3.5 — Melhorias pós-referências (2026-07-21)
+
+Origem: usuário adicionou `referencias.md` com dois sites (duncanboyne.co.uk —
+consultor de Power BI, concorrente direto; luccabuilds.com — dev indie "build
+in public"). Analisados ao vivo (texto + screenshots). Extraídas boas práticas
+**estruturais/de conversão**, sem redesign — o Prisma foi mantido. Do Lucca
+pegamos estrutura, não a estética terminal/verde (público-alvo diferente).
+
+Entregue na Home ([app/page.tsx](app/page.tsx)):
+
+- **Ofertas produtizadas** (substituem os 3 cards genéricos): 4 ofertas nomeadas
+  com escopo e CTA próprio por card — *Diagnóstico de Dados & BI* (oferta de
+  entrada → Cal.com), *Construção de dashboards & relatórios*, *Automação de
+  fluxos*, *IA aplicada* (→ /contato). Bloco azul, cards em grid 2×2.
+- **Seção de método** `components/ProcessoTrabalho.tsx`: fluxo de 5 passos
+  (diagnóstico → pipeline Python → modelo & dashboard Power BI → automação →
+  IA), setas → no desktop e ↓ no mobile. **Reutilizável no case (Fase 4)**.
+- **FAQ answer-first** `components/FaqSection.tsx` + `lib/faq.ts` (6 perguntas,
+  respostas ≤ 80 palavras, `<details>` nativo sem JS). `lib/faq.ts` é fonte
+  única a ser reaproveitada pelo JSON-LD FAQPage na Fase 5.
+- **"O problema" + "Para quem é"**: reframe ("Você não tem falta de relatórios.
+  Tem falta de relatórios em que dá pra confiar.") + 4 cards de verticais
+  (atacado/distribuição, varejo, indústria, serviços).
+- **Citação-manifesto do fundador** com a foto: "Minha missão é tornar seu
+  negócio mais eficiente com IA, análise de dados e automação de processos."
+
+Funil final da Home: hero → problema/para quem é → ofertas → método → case →
+manifesto → FAQ → artigos → CTA.
+
+**Decisões desta fase:**
+
+- **Ofertas SEM preço** ("valor sob consulta"): decisão do usuário — produtiza e
+  nomeia as ofertas (padrão Boyne), mas sem publicar valores.
+- **Não copiar** os contadores de clientes reais do Boyne ("19+ projetos"): os
+  números do site têm que ser verificáveis; a base do case é sintética e rotulada.
+- **FAQ com `<details>` nativo** (server component, sem JS): acessível e o texto
+  fica no HTML mesmo fechado (requisito de AEO).
+
+**Verificação:** `npm run lint` e `npm run build` limpos (8 rotas estáticas);
+QA visual no dev server em 1280px e 375px sem quebra; console sem erros; 6 itens
+de FAQ e o manifesto presentes no DOM renderizado.
+
+**Pendência para a Fase 5:** ligar o JSON-LD `FAQPage` da Home lendo `lib/faq.ts`
+(mesma fonte do texto visível).
 
 ## Próximo passo
 
