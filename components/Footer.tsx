@@ -20,6 +20,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/atendimento-whatsapp"
+                  className="text-suave hover:text-texto"
+                >
+                  Atendimento WhatsApp
+                </Link>
+              </li>
+              <li>
                 <Link href="/sobre" className="text-suave hover:text-texto">
                   Sobre
                 </Link>

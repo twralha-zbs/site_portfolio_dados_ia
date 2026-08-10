@@ -171,6 +171,65 @@ de FAQ e o manifesto presentes no DOM renderizado.
 **Pendência para a Fase 5:** ligar o JSON-LD `FAQPage` da Home lendo `lib/faq.ts`
 (mesma fonte do texto visível).
 
+## Sessão 2026-08-10 — domínio, hero, favicon, atendimento WhatsApp/CRM e portfólio
+
+Sessão fora do plano de fases original (PLANO_PROJETO.md), a partir de um plano
+próprio (`vamos-repensar-algumas-coisas-shiny-lagoon.md`). Seis mudanças, três
+delas estruturais.
+
+- **Domínio próprio**: `twralha.com` (Cloudflare → Vercel) virou a
+  `urlProducao` única em `lib/site.ts`, propagada a `metadataBase` e todo OG/
+  canonical. `CLAUDE.md` atualizado; a URL antiga `.vercel.app` segue existindo,
+  mas deixou de ser a canônica.
+- **Hero**: "Dados dispersos, decisões claras." → "De dados dispersos a
+  decisões claras.", explicitando a transformação. `site.headline` alinhado
+  (divergência herdada da Fase 3 corrigida).
+- **Favicon**: `app/favicon.ico` (padrão do Next) deletado; `app/icon.svg`
+  criado com quadrado arredondado azul + "T" geométrico nos tokens OKLCH do
+  projeto. `app/icon.png` e `app/apple-icon.png` ficam pendentes — o usuário
+  gera a arte a partir do prompt no plano e os arquivos entram depois sem
+  conflito com o SVG.
+- **Novo serviço — Atendimento, CRM e IA no WhatsApp**: plataforma white
+  label contratada pelo usuário, oferecida sob a marca TWR como **porta de
+  entrada em PMEs** (dor imediata de atendimento, depois expande para dados/
+  BI/IA). Conteúdo extraído de
+  `C:\Users\ZBS\Documents\projetos_claude\twr_crm\Proposta_de_Valor_Helena_CRM.md`.
+  Nova rota `/atendimento-whatsapp` (hero, problema, números do WhatsApp com
+  fontes citadas, 8 módulos, tabela de planos por porte sem preço, seção
+  "cunha" ligando de volta a dados/portfolio, FAQ própria, CTA). Card largo no
+  topo do bloco azul da Home; link no Footer; **sem item no menu** (D1: não
+  diluir o posicionamento de consultor de dados na primeira leitura).
+- **`lib/servicos.ts`** (novo) extrai as 4 ofertas antigas de `app/page.tsx`
+  e adiciona `ofertaEntrada` (WhatsApp/CRM) — fonte única, mesmo padrão de
+  `lib/faq.ts`.
+- **`lib/cases.ts`** (novo): `casesDemonstrativos` (Serra Azul, rede de
+  colégios em simulados, força de vendas — todos sintéticos) e
+  `projetosProprios` (ELAS JOGAM). Consumido pela Home (grade compacta,
+  aponta para `/portfolio`) e por `/portfolio` (dois blocos separados por
+  `border-t`, sem rota `/portfolio/[slug]` ainda — isso é Fase 4).
+- **ELAS JOGAM**: perfil de esporte feminino brasileiro (`@elasjogambr`)
+  descrito a partir de `C:\Users\ZBS\elas-jogam\README.md` e
+  `marca/identidade.md`; sem `href` no card (perfil ainda não está no ar).
+- **`lib/faq.ts`**: resposta de "O que faz um consultor de dados e BI?" ganhou
+  uma frase citando o atendimento/CRM como porta de entrada; novo array
+  `faqWhatsapp` (6 perguntas) para a página nova.
+
+**Decisões desta sessão (D1–D8, ver o plano para o texto completo):** página
+própria para o WhatsApp + card na Home · nome descritivo assinado TWR (sem
+virar nome de produto por ora) · case de força de vendas sintético · Elas
+Jogam em bloco "Projeto próprio" separado · favicon monograma "T" · grade
+compacta dos 4 projetos na Home · card largo do CRM no topo do bloco de
+ofertas · planos por porte sem preço.
+
+**Risco registrado, não resolvido**: as estatísticas do WhatsApp (Opinion Box/
+Hazlo/CNN Brasil) vêm do material comercial do fornecedor da plataforma — sem
+verificação na fonte primária. Entraram com atribuição visível; se o usuário
+preferir, a seção pode virar qualitativa.
+
+**Pendência para a Fase 5**: a página nova herda JSON-LD `FAQPage`, `Service`
+schema e entrada no `sitemap.xml` — ainda não implementados (Fase 5 como um
+todo segue pendente).
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo

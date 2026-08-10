@@ -4,7 +4,7 @@ export const site = {
   nome: "Thiago Waldowski Ralha",
   marca: "TWR",
   titulo: "Análise de Dados | Automação de Fluxos de Trabalho | IA aplicada a negócios",
-  headline: "Transformo dados dispersos em decisões",
+  headline: "De dados dispersos a decisões claras",
   subheadline:
     "Dashboards Power BI, automações Power Platform e IA aplicada para operações que não podem esperar.",
   email: "twralha@gmail.com",
@@ -19,5 +19,5 @@ export const site = {
       "https://wa.me/5511984836740?text=Ol%C3%A1%20Thiago%2C%20vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20dados.",
   },
   formspreeEndpoint: "https://formspree.io/f/xjgnyzqk",
-  urlProducao: "https://site-portfolio-dados-ia.vercel.app",
+  urlProducao: "https://twralha.com",
 } as const;

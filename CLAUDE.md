@@ -27,7 +27,8 @@ junto com o trabalho da sessão.
 
 - Repo GitHub: `twralha-zbs/site_portfolio_dados_ia` (branch `main`).
 - Vercel: projeto `twralha-zbs-projects/site-portfolio-dados-ia`; produção em
-  https://site-portfolio-dados-ia.vercel.app.
+  https://twralha.com (domínio próprio via Cloudflare → Vercel; a URL
+  `.vercel.app` continua existindo mas não é mais a canônica).
 - Deploy automático: push na `main` publica em produção (integração
   Git → Vercel conectada).
 

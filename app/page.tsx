@@ -6,46 +6,9 @@ import { ProcessoTrabalho } from "@/components/ProcessoTrabalho";
 import { FaqSection } from "@/components/FaqSection";
 import { faqHome } from "@/lib/faq";
 import { site } from "@/lib/site";
+import { ofertaEntrada, ofertas } from "@/lib/servicos";
+import { casesDemonstrativos, projetosProprios } from "@/lib/cases";
 import fotoThiago from "@/public/thiago-ralha.jpg";
-
-const ofertas = [
-  {
-    titulo: "Diagnóstico de Dados & BI",
-    formato: "Oferta de entrada · escopo fixo · valor sob consulta",
-    descricao:
-      "Um raio-x das suas fontes, indicadores e prioridades, com um plano do que construir primeiro. Poucos dias, e você já sai sabendo o caminho.",
-    ctaRotulo: "Agendar diagnóstico",
-    href: site.links.agenda,
-    externo: true,
-  },
-  {
-    titulo: "Construção de dashboards & relatórios",
-    formato: "Por projeto · valor sob consulta",
-    descricao:
-      "Do dado disperso a um painel Power BI que a diretoria abre e confia: modelagem de dados, DAX e design pensado para leitura executiva.",
-    ctaRotulo: "Conversar sobre um projeto",
-    href: "/contato",
-    externo: false,
-  },
-  {
-    titulo: "Automação de fluxos",
-    formato: "Por projeto · valor sob consulta",
-    descricao:
-      "Power Automate e Python eliminando o trabalho repetitivo entre sistemas, planilhas e e-mail. Rotinas e alertas que rodam sozinhos.",
-    ctaRotulo: "Conversar sobre um projeto",
-    href: "/contato",
-    externo: false,
-  },
-  {
-    titulo: "IA aplicada a negócios",
-    formato: "Por projeto · valor sob consulta",
-    descricao:
-      "Resumos executivos, alertas e análises em linguagem natural, gerados em cima dos seus dados reais e prontos para a decisão.",
-    ctaRotulo: "Conversar sobre um projeto",
-    href: "/contato",
-    externo: false,
-  },
-];
 
 const verticais = [
   {
@@ -69,24 +32,6 @@ const verticais = [
   },
 ];
 
-const resultadosCase = [
-  {
-    antes: "3 dias",
-    depois: "virou 20 min",
-    indicador: "relatório gerencial mensal",
-  },
-  {
-    antes: "8,4%",
-    depois: "caiu a 2,1%",
-    indicador: "ruptura nos top-50 SKUs",
-  },
-  {
-    antes: "",
-    depois: "87 clientes",
-    indicador: "em risco de churn, mapeados e priorizados",
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -94,8 +39,8 @@ export default function Home() {
         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
           {site.nome} · São Paulo
         </p>
-        <h1 className="font-display mt-6 max-w-[12ch] text-5xl font-extrabold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          Dados dispersos, <span className="text-acento">decisões claras.</span>
+        <h1 className="font-display mt-6 max-w-[14ch] text-5xl font-extrabold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
+          De dados dispersos a <span className="text-acento">decisões claras.</span>
         </h1>
         <p className="mt-8 max-w-[48ch] text-lg text-suave">{site.subheadline}</p>
         <div className="mt-10 flex flex-wrap gap-4">
@@ -154,6 +99,28 @@ export default function Home() {
             Como eu posso ajudar
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="flex flex-col rounded-2xl border border-azul-linha bg-azul-profundo p-6 md:col-span-2 md:flex-row md:items-center md:justify-between md:gap-8">
+              <div>
+                <p className="inline-block rounded-full bg-sobre-azul px-3 py-1 text-xs font-bold uppercase tracking-[0.09em] text-azul-profundo">
+                  Porta de entrada
+                </p>
+                <h3 className="font-display mt-4 text-2xl font-extrabold tracking-tight">
+                  {ofertaEntrada.titulo}
+                </h3>
+                <p className="mt-1 text-sm font-medium text-sobre-azul-suave">
+                  {ofertaEntrada.formato}
+                </p>
+                <p className="mt-4 max-w-[56ch] text-sobre-azul-suave">
+                  {ofertaEntrada.descricao}
+                </p>
+              </div>
+              <Link
+                href={ofertaEntrada.href}
+                className="mt-6 inline-block shrink-0 rounded-full bg-sobre-azul px-6 py-3 font-bold text-azul-profundo transition-[filter] hover:brightness-95 md:mt-0"
+              >
+                {ofertaEntrada.ctaRotulo} {"→"}
+              </Link>
+            </div>
             {ofertas.map((oferta) => (
               <div
                 key={oferta.titulo}
@@ -194,44 +161,43 @@ export default function Home() {
       <ProcessoTrabalho />
 
       <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
-        <p className="inline-block rounded-full border border-linha bg-painel px-4 py-1.5 text-xs font-medium uppercase tracking-[0.09em] text-suave">
-          Estudo de caso demonstrativo · empresa fictícia, dados sintéticos
+        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
+          Portfólio
         </p>
-        <h2 className="font-display mt-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Distribuidora Serra Azul
+        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+          Quatro casos, do diagnóstico ao dashboard.
         </h2>
-        <p className="mt-5 max-w-[54ch] text-lg text-suave">
-          Atacadista de bebidas com 1.200 pontos de venda: da reposição no feeling
-          a um cockpit de decisão em Power BI, com alerta diário de ruptura e
-          resumo executivo gerado por IA.
+        <p className="mt-5 max-w-[58ch] text-lg text-suave">
+          Estudos de caso demonstrativos com dados sintéticos e um projeto
+          próprio em produção — a mesma metodologia aplicada a operações
+          diferentes.
         </p>
 
-        <dl className="mt-11 grid border-t border-linha md:grid-cols-3">
-          {resultadosCase.map((resultado, i) => (
-            <div
-              key={resultado.indicador}
-              className={`pt-6 ${
-                i > 0
-                  ? "mt-6 border-t border-linha md:mt-0 md:border-t-0 md:border-l md:pl-6"
-                  : ""
-              } md:pr-6`}
+        <ul className="mt-11 grid gap-4 border-t border-linha pt-10 sm:grid-cols-2">
+          {[...casesDemonstrativos, ...projetosProprios].map((item) => (
+            <li
+              key={item.slug}
+              className="rounded-2xl border border-linha bg-painel p-6"
             >
-              <dd className="font-display text-2xl font-extrabold tracking-tight md:text-3xl">
-                {resultado.antes && <span>{resultado.antes} </span>}
-                <span className="text-acento">{resultado.depois}</span>
-              </dd>
-              <dt className="mt-2 text-sm text-apagado">{resultado.indicador}</dt>
-            </div>
+              <p className="inline-block rounded-full border border-linha px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.09em] text-apagado">
+                {item.selo === "demonstrativo"
+                  ? "Estudo de caso demonstrativo"
+                  : "Projeto próprio"}
+              </p>
+              <h3 className="font-display mt-4 text-xl font-extrabold tracking-tight">
+                {item.titulo}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-suave">
+                {item.resumo}
+              </p>
+            </li>
           ))}
-        </dl>
-        <p className="mt-7 text-xs text-apagado">
-          Resultados projetados em simulação; metodologia aberta no case.
-        </p>
+        </ul>
         <Link
           href="/portfolio"
           className="mt-8 inline-block text-lg font-bold text-acento hover:underline"
         >
-          Ler o estudo de caso completo →
+          Ver o portfólio completo →
         </Link>
       </section>
 
