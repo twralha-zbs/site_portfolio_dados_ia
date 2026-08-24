@@ -278,6 +278,40 @@ nome de produto próprio.
 - Registrar o domínio conectacentral.com.br, avaliar registro de marca no
   INPI e definir identidade visual (logotipo, paleta).
 
+## Sessão 2026-08-24 (cont.) — CNPJ, marca TWR Tech e aplicação do ConectaCentral
+
+Motivada pela aquisição futura de um número de WhatsApp comercial via API
+oficial da Meta, que exige verificação de negócio: site ativo com SSL
+(já atendido, `twralha.com`) e **CNPJ + Razão Social visíveis no rodapé**.
+Dados vieram de `C:\Users\ZBS\Documents\ConsultoriaTWR\Documentos\contatos_condicoes.md`.
+
+- **`lib/site.ts`**: `marca` passou de `"TWR"` para `"TWR Tech"` (nome
+  fantasia formal) — propaga sozinho para o logo do header, `aria-label` e o
+  template de título (`%s · TWR Tech`) em todas as páginas. Campos novos
+  `razaoSocial` ("THIAGO WALDOWSKI RALHA CONSULTORIA EM TECNOLOGIA DA
+  INFORMACAO LTDA") e `cnpj` ("68.666.679/0001-96").
+- **`components/Footer.tsx`**: linha discreta com razão social + CNPJ
+  abaixo do disclaimer de estudos de caso demonstrativos, confirmada no HTML
+  estático via `curl` (renderiza server-side, sem depender de JS).
+- **Naming ConectaCentral aplicado** (fechando a pendência da sessão
+  anterior, mesma data): `lib/servicos.ts` (`ofertaEntrada` — título,
+  formato com selo "by TWR Tech", descrição com a tagline, CTA), e
+  `app/atendimento-whatsapp/page.tsx` (metadata, H1 "ConectaCentral", selo
+  "by TWR Tech" no hero, tagline "De conversas dispersas a atendimento
+  organizado.", primeira menção de nome nas seções "O problema" e
+  "Organizado o atendimento...", CTA final). Link do footer "Atendimento
+  WhatsApp" → "ConectaCentral". FAQ (`lib/faq.ts`) e o restante do corpo da
+  página ficaram genéricos ("a plataforma"), por escopo combinado com o
+  usuário.
+- **Fora de escopo, deliberado**: rota continua `/atendimento-whatsapp` (sem
+  renomear para `/conectacentral`); sem identidade visual própria do
+  ConectaCentral ainda.
+
+**Verificação**: `npm run lint` e `npm run build` limpos (9 rotas
+estáticas); dev server + `curl` confirmaram CNPJ/razão social no HTML da
+Home, `<title>` com "TWR Tech" e "ConectaCentral", selo "by TWR Tech" e CTA
+"Conhecer o ConectaCentral" no card da Home.
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo

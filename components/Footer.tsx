@@ -24,7 +24,7 @@ export function Footer() {
                   href="/atendimento-whatsapp"
                   className="text-suave hover:text-texto"
                 >
-                  Atendimento WhatsApp
+                  ConectaCentral
                 </Link>
               </li>
               <li>
@@ -73,11 +73,16 @@ export function Footer() {
           </nav>
         </div>
 
-        <p className="border-t border-linha pt-6 text-xs leading-relaxed text-apagado">
-          Os estudos de caso deste site são demonstrativos: empresas fictícias com
-          dados sintéticos, sempre identificados como tal. © {new Date().getFullYear()}{" "}
-          {site.nome}.
-        </p>
+        <div className="border-t border-linha pt-6 text-xs leading-relaxed text-apagado">
+          <p>
+            Os estudos de caso deste site são demonstrativos: empresas fictícias com
+            dados sintéticos, sempre identificados como tal. © {new Date().getFullYear()}{" "}
+            {site.nome}.
+          </p>
+          <p className="mt-2">
+            {site.razaoSocial} · CNPJ {site.cnpj}
+          </p>
+        </div>
       </div>
     </footer>
   );

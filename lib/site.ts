@@ -2,7 +2,10 @@
 // endpoint vive aqui — páginas e componentes importam deste módulo.
 export const site = {
   nome: "Thiago Waldowski Ralha",
-  marca: "TWR",
+  marca: "TWR Tech",
+  razaoSocial:
+    "THIAGO WALDOWSKI RALHA CONSULTORIA EM TECNOLOGIA DA INFORMACAO LTDA",
+  cnpj: "68.666.679/0001-96",
   titulo: "Análise de Dados | Automação de Fluxos de Trabalho | IA aplicada a negócios",
   headline: "De dados dispersos a decisões claras",
   subheadline:

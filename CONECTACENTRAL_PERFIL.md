@@ -68,6 +68,9 @@ consultoria e o produto sem citar "TWR" no nome do produto.
 
 ## Pendências / próximos passos
 
+- ~~Aplicar o nome/tagline no site (`/atendimento-whatsapp`, Home).~~ Feito em
+  2026-08-24 (mesma data, sessão seguinte): título, H1, selo "by TWR Tech",
+  tagline e card da Home atualizados — ver `MEMORY.md`.
 - Registrar o domínio conectacentral.com.br e avaliar variantes (.com).
 - Avaliar registro de marca no INPI (nome composto por termos descritivos,
   proteção pode ser mais limitada do que a de um nome inventado).

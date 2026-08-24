@@ -14,11 +14,11 @@ export type Oferta = {
 };
 
 export const ofertaEntrada: Oferta = {
-  titulo: "Atendimento, CRM e IA no WhatsApp",
-  formato: "Porta de entrada · plataforma white label sob a marca TWR",
+  titulo: "ConectaCentral",
+  formato: "Porta de entrada · atendimento, CRM e IA no WhatsApp · by TWR Tech",
   descricao:
-    "Central de atendimento, funil de vendas em CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp. Eu implanto, configuro e opero para você.",
-  ctaRotulo: "Conhecer a plataforma",
+    "De conversas dispersas a atendimento organizado: central de atendimento, funil de vendas em CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp. Eu implanto, configuro e opero para você.",
+  ctaRotulo: "Conhecer o ConectaCentral",
   href: "/atendimento-whatsapp",
   externo: false,
   destaque: true,
