@@ -230,6 +230,54 @@ preferir, a seção pode virar qualitativa.
 schema e entrada no `sitemap.xml` — ainda não implementados (Fase 5 como um
 todo segue pendente).
 
+## Sessão 2026-08-24 — naming do produto de atendimento no WhatsApp/CRM
+
+Sessão fora do plano de fases, a partir do TWR_PERFIL.md (seção
+"Atendimento, CRM e IA no WhatsApp"). Objetivo: definir marca própria para a
+plataforma white label licenciada pelo usuário, hoje descrita no site sem
+nome de produto próprio.
+
+- Esclarecido antes do brainstorm: não é revenda white label para terceiros,
+  é marca própria da TWR sobre uma plataforma licenciada, vendida direto aos
+  clientes finais.
+- Brainstorm em rodadas (agnóstico de canal, referenciando WhatsApp,
+  referenciando TWR) até o usuário propor **"Conecta Central"**.
+- Verificação de mercado: sem concorrente relevante usando o nome no espaço
+  de CRM/atendimento via WhatsApp no Brasil (único achado próximo, "Central
+  Conecta" provedora de internet na Bahia, ordem invertida e mercado
+  diferente). Domínio conectacentral.com.br confirmado disponível pelo
+  usuário.
+- **Nome definido: ConectaCentral** (grafia oficial em uma palavra, estilo
+  CamelCase; "Conecta Central" com espaço aceitável em texto corrido).
+- **Tagline principal**: "De conversas dispersas a atendimento organizado."
+  (eco proposital do posicionamento da TWR, "De dados dispersos a decisões
+  claras.").
+- **Tagline secundária**: "Conecte com seus clientes. Centralize seu
+  atendimento."
+- **Selo de origem**: "by TWR Tech", assinatura discreta (rodapé/seção
+  "sobre"), mantendo o produto como marca independente na comunicação
+  principal com o cliente.
+- Tudo registrado em **[CONECTACENTRAL_PERFIL.md](CONECTACENTRAL_PERFIL.md)**
+  (novo, raiz do projeto, mesmo papel do TWR_PERFIL.md: fora do build,
+  material de apoio).
+
+**Decisões desta sessão:**
+
+- Nome descritivo (conectar + centralizar) escolhido deliberadamente pela
+  clareza imediata para o público de PME pouco digitalizada, mesmo sabendo
+  que termos descritivos têm proteção de marca mais limitada no INPI.
+- Nome não referencia WhatsApp nem IA de propósito: mantém a marca agnóstica
+  de canal (a plataforma já cobre Instagram Direct e pode crescer) e deixa a
+  IA a cargo do posicionamento, não do nome.
+
+**Pendências:**
+
+- Nenhuma alteração de código nesta sessão, só o documento de decisões.
+  Aplicar o nome/tagline no site (`/atendimento-whatsapp`, Home) e em
+  materiais comerciais é trabalho futuro, ainda não agendado em nenhuma fase.
+- Registrar o domínio conectacentral.com.br, avaliar registro de marca no
+  INPI e definir identidade visual (logotipo, paleta).
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
