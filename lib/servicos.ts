@@ -17,7 +17,7 @@ export const ofertaEntrada: Oferta = {
   titulo: "ConectaCentral",
   formato: "Porta de entrada · atendimento, CRM e IA no WhatsApp · by TWR Tech",
   descricao:
-    "De conversas dispersas a atendimento organizado: central de atendimento, funil de vendas em CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp. Eu implanto, configuro e opero para você.",
+    "De conversas dispersas a atendimento organizado: central de atendimento, funil de vendas em CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp.",
   ctaRotulo: "Conhecer o ConectaCentral",
   href: "/atendimento-whatsapp",
   externo: false,

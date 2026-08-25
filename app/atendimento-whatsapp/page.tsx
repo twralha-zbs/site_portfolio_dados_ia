@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ConectaCentral — Atendimento, CRM e IA no WhatsApp",
   description:
-    "ConectaCentral é a plataforma de atendimento, CRM e IA no WhatsApp que a TWR Tech implanta, configura e opera para você: central de atendimento, funil de vendas, automação e agentes de IA num único ambiente.",
+    "ConectaCentral é a plataforma de atendimento, CRM e IA no WhatsApp que organiza sua operação: central de atendimento, funil de vendas, automação e agentes de IA num único ambiente.",
 };
 
 const numeros = [
@@ -114,8 +114,7 @@ export default function AtendimentoWhatsapp() {
           De conversas dispersas a atendimento organizado.
         </p>
         <p className="mt-3 max-w-[52ch] text-suave">
-          Atendimento, CRM e IA no WhatsApp e Instagram — eu implanto,
-          configuro e opero para você.
+          Atendimento, CRM e IA no WhatsApp e Instagram, num único ambiente.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <a

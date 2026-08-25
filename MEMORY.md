@@ -312,6 +312,35 @@ estáticas); dev server + `curl` confirmaram CNPJ/razão social no HTML da
 Home, `<title>` com "TWR Tech" e "ConectaCentral", selo "by TWR Tech" e CTA
 "Conhecer o ConectaCentral" no card da Home.
 
+## Sessão 2026-08-24 (cont. 3) — correção de posicionamento: TWR Tech não opera o ConectaCentral pelo cliente
+
+O card do ConectaCentral na Home e a página `/atendimento-whatsapp` diziam
+"Eu implanto, configuro e opero para você" (hero, meta description e card
+da Home — 3 ocorrências da mesma frase, achadas por busca no repo, não só
+as 2 que o usuário tinha citado). Isso está errado: a TWR Tech não opera a
+plataforma no dia a dia pelo cliente.
+
+- **Frase removida** nos 3 lugares (`lib/servicos.ts` — `ofertaEntrada.descricao`;
+  `app/atendimento-whatsapp/page.tsx` — `metadata.description` e parágrafo do
+  hero), sem substituir por uma versão "corrigida" equivalente — decisão do
+  usuário.
+- **Novo item de FAQ** em `lib/faq.ts` (`faqWhatsapp`), "O que está incluso
+  ao contratar o ConectaCentral?", posicionado depois de "Minha equipe
+  precisa entender de tecnologia para usar?": explica que a contratação
+  inclui implantação completa, treinamento da equipe e suporte contínuo —
+  mas a operação diária (atender clientes, conduzir o funil) é da equipe do
+  cliente, não da TWR Tech.
+
+**Decisão de posicionamento por trás da correção:** TWR Tech **implanta,
+treina e dá suporte** — não opera a plataforma pelo cliente. Vale para
+qualquer copy futura do ConectaCentral (materiais comerciais, novas páginas,
+proposta comercial): não descrever a TWR Tech como operadora do dia a dia.
+
+**Verificação**: `npm run lint` e `npm run build` limpos (9 rotas estáticas);
+`curl` no dev server confirmou o texto novo no HTML de `/` e
+`/atendimento-whatsapp` (hero, card e FAQ), e grep por "opero/opera para
+você" não retorna mais nenhum resultado no código.
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
