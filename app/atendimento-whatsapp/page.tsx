@@ -6,9 +6,9 @@ import { faqWhatsapp } from "@/lib/faq";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ConectaCentral — Atendimento, CRM e IA no WhatsApp",
+  title: "NexIAtend — Atendimento, CRM e IA no WhatsApp",
   description:
-    "ConectaCentral é a plataforma de atendimento, CRM e IA no WhatsApp que organiza sua operação: central de atendimento, funil de vendas, automação e agentes de IA num único ambiente.",
+    "NexIAtend é a plataforma de atendimento, CRM e IA no WhatsApp que organiza sua operação: central de atendimento, funil de vendas, automação e agentes de IA num único ambiente.",
 };
 
 const numeros = [
@@ -105,13 +105,13 @@ export default function AtendimentoWhatsapp() {
           Porta de entrada
         </p>
         <h1 className="font-display mt-5 max-w-[18ch] text-4xl font-extrabold leading-[1.02] tracking-tight md:text-6xl">
-          ConectaCentral
+          NexIAtend
         </h1>
         <p className="mt-3 text-xs font-semibold uppercase tracking-[0.13em] text-apagado">
           by TWR Tech
         </p>
         <p className="mt-6 max-w-[52ch] text-lg text-suave">
-          De conversas dispersas a atendimento organizado.
+          O nexo entre atendimento e IA.
         </p>
         <p className="mt-3 max-w-[52ch] text-suave">
           Atendimento, CRM e IA no WhatsApp e Instagram, num único ambiente.
@@ -148,7 +148,7 @@ export default function AtendimentoWhatsapp() {
           Quem atende pelo WhatsApp de forma manual perde venda por demora na
           resposta, não tem histórico organizado de conversas, não consegue
           medir o que gera resultado e não escala sem contratar mais gente.
-          O ConectaCentral une atendimento, CRM, automação e IA num único
+          O NexIAtend une atendimento, CRM, automação e IA num único
           ambiente conectado ao WhatsApp e ao Instagram Direct.
         </p>
       </section>
@@ -275,7 +275,7 @@ export default function AtendimentoWhatsapp() {
             <span className="text-acento">os dados vêm depois.</span>
           </h2>
           <p className="mt-5 max-w-[58ch] text-sobre-azul-suave">
-            O ConectaCentral resolve a dor mais imediata: o atendimento
+            O NexIAtend resolve a dor mais imediata: o atendimento
             organizado, com histórico e métricas. A partir daí, o mesmo
             trabalho de dados, BI e automação que aplico em{" "}
             <Link href="/portfolio" className="font-bold text-sobre-azul hover:underline">
@@ -290,7 +290,7 @@ export default function AtendimentoWhatsapp() {
       <FaqSection titulo="Perguntas frequentes" itens={faqWhatsapp} />
 
       <CTASection
-        titulo="Quer ver o ConectaCentral no seu WhatsApp?"
+        titulo="Quer ver o NexIAtend no seu WhatsApp?"
         texto="Conto como funciona o onboarding e qual plano faz sentido para o seu porte."
       />
     </>

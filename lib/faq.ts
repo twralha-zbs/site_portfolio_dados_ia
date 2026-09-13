@@ -58,7 +58,7 @@ export const faqWhatsapp: ItemFaq[] = [
       "Não precisa. A interface é pensada para quem atende clientes no dia a dia, não para quem programa: central de conversas, funil kanban e disparo de campanhas funcionam como um WhatsApp organizado. Eu cuido da configuração inicial — chatbot, automações e agentes de IA — e faço o onboarding assistido da equipe antes de ir ao ar.",
   },
   {
-    pergunta: "O que está incluso ao contratar o ConectaCentral?",
+    pergunta: "O que está incluso ao contratar o NexIAtend?",
     resposta:
       "A implantação completa da plataforma — central de atendimento, CRM, automações e, quando contratado, agentes de IA —, o treinamento da equipe para usar o sistema no dia a dia e suporte contínuo para dúvidas e ajustes. A operação diária, atender clientes e conduzir o funil, fica com a sua equipe: eu deixo tudo configurado, capacito o time e sigo por perto depois do onboarding.",
   },

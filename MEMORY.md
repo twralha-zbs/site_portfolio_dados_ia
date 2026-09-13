@@ -374,6 +374,55 @@ mode; usuário conferiu o plano e ainda ajustou o resultado.
 reescrito — continua valendo como spec técnica para os itens ainda pendentes
 do escopo original; só deixou de ser o roteiro que toda sessão precisa ler.
 
+## Sessão 2026-09-13 (cont.) — rename ConectaCentral → NexIAtend
+
+Pedido do usuário: trocar o nome do ConectaCentral por um nome tecnológico
+que deixasse explícito o uso de IA/agentes de IA no atendimento — o naming
+anterior tratava "IA" só no posicionamento, não no nome em si. Feito em plan
+mode, com pesquisa de mercado antes de decidir.
+
+- **Pesquisa de concorrentes** (mercado BR de atendimento/CRM via WhatsApp
+  com IA): Zenvia, Take Blip, Octadesk, Digisac, Huggy, Umbler Talk, Kommo,
+  JivoChat, Zaia — preço, perfil de cliente e proposta de valor de cada um
+  registrados em `NEXIATEND_PERFIL.md`. Leitura: o NexIAtend compete melhor
+  na faixa de PME que quer atendimento organizado com implantação
+  acompanhada por um consultor, diferencial que as ferramentas self-service
+  (Zaia e correlatos) não oferecem.
+- **Candidatos testados e descartados por colisão de nome**: "AtendeIA"/
+  "ConectaIA" (padrão saturado por concorrentes diretos: AtendeIA,
+  Atendente.AI, AtendimentoIA, Atendaz, um app "ConectaIA"), "NexIA"
+  (colisão direta com pelo menos 3 empresas brasileiras no mesmo nome e
+  mercado) e "ConectAI" (padrão "Conecta/Connect + AI" ainda mais saturado,
+  incluindo um concorrente quase idêntico em posicionamento —
+  conectaai.app). Detalhes completos em `NEXIATEND_PERFIL.md`.
+- **Nome escolhido: NexIAtend** — proposto pelo usuário, sem colisão
+  encontrada em busca na web. Combina nexo (conexão lógica, eco do conceito
+  de marca original) + next (IA como próximo passo da evolução do
+  atendimento) + IA explícita + tend (atendimento).
+- **Rename aplicado**: `app/atendimento-whatsapp/page.tsx` (metadata, H1,
+  tagline, texto corrido, CTA), `lib/servicos.ts` (card da Home),
+  `components/Footer.tsx`, `lib/faq.ts` (pergunta de FAQ), `CLAUDE.md`
+  (pointer de documento). Tagline principal trocada de "De conversas
+  dispersas a atendimento organizado." para "O nexo entre atendimento e
+  IA." (a anterior dependia do jogo de palavras Conecta/Central).
+- **Documento de perfil**: `CONECTACENTRAL_PERFIL.md` foi removido e
+  recriado como `NEXIATEND_PERFIL.md`, com o nome atualizado, a pesquisa de
+  concorrentes e o histórico completo da decisão de rename (nomes testados,
+  por que cada um foi descartado).
+- **Fora de escopo, deliberado**: rota continua `/atendimento-whatsapp`
+  (sem renomear para `/nexiatend`); identidade visual não revisitada.
+
+**Pendências abertas**: verificar disponibilidade do domínio
+`nexiatend.com.br` (não é possível confirmar via busca — fica com o
+usuário); avaliar registro de marca no INPI; definir tagline secundária
+(a anterior, "Conecte com seus clientes. Centralize seu atendimento.", não
+se aplica mais).
+
+**Verificação**: `npm run build` limpo; grep por "ConectaCentral"/"Conecta
+Central" no repo não retorna nenhuma ocorrência fora de `NEXIATEND_PERFIL.md`
+(histórico do rename, intencional) e das entradas antigas deste próprio
+`MEMORY.md` (log, não reescrito).
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo

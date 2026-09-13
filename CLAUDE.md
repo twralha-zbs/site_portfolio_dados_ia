@@ -36,7 +36,7 @@ pedido maior precisa ser dividido em etapas.
   esses tópicos ou um dos itens do escopo original ainda pendente (fase 2b —
   montagem do .pbix; fase 4 — página do case; fase 5 — SEO/AEO; fase 6 —
   lançamento) — não é mais leitura obrigatória a cada sessão.
-- **[TWR_PERFIL.md](TWR_PERFIL.md)** e **[CONECTACENTRAL_PERFIL.md](CONECTACENTRAL_PERFIL.md)**
+- **[TWR_PERFIL.md](TWR_PERFIL.md)** e **[NEXIATEND_PERFIL.md](NEXIATEND_PERFIL.md)**
   — bases de conhecimento de marca/produto (fora do build, mesmo espírito do
   `lab/`). Consultar para manter consistência de posicionamento e copy em
   pedidos que tocam texto do site ou materiais comerciais.

@@ -24,7 +24,7 @@ export function Footer() {
                   href="/atendimento-whatsapp"
                   className="text-suave hover:text-texto"
                 >
-                  ConectaCentral
+                  NexIAtend
                 </Link>
               </li>
               <li>
