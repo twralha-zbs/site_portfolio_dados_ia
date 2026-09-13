@@ -341,6 +341,39 @@ proposta comercial): não descrever a TWR Tech como operadora do dia a dia.
 `/atendimento-whatsapp` (hero, card e FAQ), e grep por "opero/opera para
 você" não retorna mais nenhum resultado no código.
 
+## Sessão 2026-09-13 — revisão do CLAUDE.md para o estágio de manutenção evolutiva
+
+Pedido do usuário: o `CLAUDE.md` foi escrito na Fase 0 ("construir o site do
+zero" seguindo o `PLANO_PROJETO.md`), mas o projeto já mudou de estágio desde
+2026-08-10 (sessões pontuais fora do plano de fases). Revisão feita em plan
+mode; usuário conferiu o plano e ainda ajustou o resultado.
+
+- **Abertura do arquivo**: novo parágrafo de status ("site em produção",
+  manutenção evolutiva) substituindo o tom de "construção".
+- **Nova seção "Modo de trabalho"**: pedido pontual → executa e fecha com
+  entrada datada no MEMORY.md; pedido em várias etapas → planeja antes
+  (plan mode/plano leve), sem forçar o formato de 7 fases do
+  `PLANO_PROJETO.md`.
+- **"Documentos-guia" reenquadrado**: `PLANO_PROJETO.md` deixa de ser leitura
+  obrigatória a cada sessão e vira referência histórica/técnica (consultar
+  para os itens do escopo original ainda pendentes — fases 2b, 4, 5, 6 — e
+  para as regras de AEO/GEO da seção 6). Adicionados pointers para
+  `TWR_PERFIL.md` e `CONECTACENTRAL_PERFIL.md` (bases de marca/produto que já
+  existiam mas não estavam referenciadas no CLAUDE.md).
+- **Regra de placeholders generalizada**: em vez de listar os tokens de
+  2026-07 (a maioria já resolvida), a regra agora é durável — nenhum valor
+  real de contato/marca/link entra no código sem o usuário fornecer o dado.
+- **Regra de encerramento de sessão ampliada pelo usuário** (ajuste feito
+  depois da minha proposta, direto no arquivo): além de atualizar o
+  MEMORY.md, passa a incluir **verificar se algum dev server (localhost) ficou
+  aberto na sessão e encerrá-lo**, e **fazer commit e push** (antes só
+  commitava) — daqui pra frente as sessões neste projeto terminam com push
+  automático, não só commit local.
+
+**Decisão desta sessão:** o `PLANO_PROJETO.md` não foi descartado nem
+reescrito — continua valendo como spec técnica para os itens ainda pendentes
+do escopo original; só deixou de ser o roteiro que toda sessão precisa ler.
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
