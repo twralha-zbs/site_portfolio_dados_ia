@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Onest } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -37,6 +38,12 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <Script
+          strategy="afterInteractive"
+          src="https://cdn.wts.chat/scripts/widget/v2/h-widget-min.js"
+          data-companyid="3ddb8ffa-5ca3-40ac-9644-222dcaadfb42"
+          data-widgetid="4dae94ba-a742-44e7-baa2-9802342682ce"
+        />
       </body>
     </html>
   );
