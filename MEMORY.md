@@ -472,12 +472,137 @@ desta sessão) e implementar os elementos no site.
 `app/apple-icon.png` e `/manifest.webmanifest` testados via HTTP em dev server
 (conteúdo confirmado, servidor encerrado em seguida).
 
+## Sessão 2026-09-15 — Planejamento da reestruturação do site em torno de produtos (TWR Tech)
+
+Pedido do usuário: o site nasceu como portfólio de consultor independente, mas
+a estratégia real da empresa pivotou — TWR Tech agora é uma empresa de
+produtos (NexIAtend, um produto de SEO/AEO/GEO ainda sem nome, e consultoria
+de dados/processos como terceiro produto), com a consultoria deixando de ser
+"a oferta" pra virar um produto entre três. Pediu pra reestruturar o site
+pra refletir isso, mantendo os estudos de caso (não mais o centro) e criando
+uma seção "Projetos" separada pro Elas Jogam. Sessão só de planejamento —
+nenhum código de produção foi alterado, só documentos.
+
+**Pipeline rodado**: `/office-hours` (modo Startup) → `/plan-eng-review` →
+`/plan-design-review`, encadeados numa sessão só.
+
+### `/office-hours`
+
+- **Diagnóstico** (usuário já tem clientes pagantes em ambos NexIAtend e
+  SEO/AEO/GEO, rota inteligente pulou Q1-Q3): Q4 revelou pricing já fechado
+  (implantação variável + fee mensal recorrente pra ambos); Q5 revelou que a
+  entrega de ambos é hoje 100% operada pelo usuário, não self-serve (cliente
+  do NexIAtend só conversa, cliente do SEO/AEO/GEO só aprova entregáveis) —
+  "nada surpreendente até agora" foi honesto, não inflado; Q6 (future-fit),
+  depois de empurrado além de "aposta em tendência geral de IA", virou tese
+  específica: AEO/GEO como corrida de posicionamento antes da busca migrar
+  pra IA, e WhatsApp+IA como padrão mínimo de atendimento no Brasil.
+- **EUREKA registrado**: o pivô pra "produto" não precisa esperar self-serve
+  — NexIAtend e SEO/AEO/GEO já são *productized services* (preço fixo,
+  processo repetível) mesmo com entrega manual hoje. Self-serve é o próximo
+  degrau da escada, não pré-requisito pra reestruturar o site.
+- **Premissas confirmadas**: (1) copy nunca em primeira pessoa pra falar de
+  entrega, sempre atribuído à TWR Tech; (2) Elas Jogam sai de
+  `projetosProprios` (hoje misturado no portfólio) e ganha rota `/projetos`
+  própria; (3) consultoria de dados vira terceiro produto mantendo escopo
+  aberto como descrito pelo usuário (não reduzida a SKU fixo — confirmado
+  mesmo depois de um subagente desafiar essa decisão).
+- **Segunda opinião** (subagente Claude, modo Startup): achado mais forte foi
+  "nada surpreendente" na Q5 — sinal de que o empacotamento está à frente da
+  evidência de uso direto; sugeriu a arquitetura de rotas que virou a base da
+  Approach C.
+- **Abordagem escolhida**: C (Faseado) — Fase 1 reestrutura home/nav/portfólio
+  agora sem esperar naming dos 2 produtos sem nome; Fase 2 (páginas completas)
+  fica pra quando houver naming.
+- **Mockup** gerado com os tokens reais do `DESIGN.md` (não wireframe cinza
+  genérico) via `gstack-render.ts` — decisão registrada como aprendizado, útil
+  quando o projeto já tem design system maduro. Iterado 3x com feedback do
+  usuário: (1) header+footer ganharam o símbolo da marca
+  (`twr_brand/logo-mark.svg`, novo componente `LogoMark`); (2) disclaimer de
+  entrega acompanhada e citação do fundador reescritos sem primeira pessoa,
+  atribuídos à TWR Tech; (3) regra nova, sem travessão/em dash em nenhum texto
+  visível do site — **registrada em `CLAUDE.md` → Convenções**.
+
+### `/plan-eng-review`
+
+- Step 0 achou 8 arquivos tocados (gatilho de complexidade) e, investigando o
+  código, achou que a Premissa 1 (nunca primeira pessoa) só tinha sido
+  operacionalizada nos Success Criteria pra home — sobrava primeira pessoa em
+  `/portfolio`, `/sobre`, `/contato`, `/atendimento-whatsapp`. Usuário decidiu
+  incluir tudo na Fase 1.
+- Decisões: reaproveitar tipo `Case` existente pra `/projetos` (não criar tipo
+  `Projeto` dedicado ainda — virou TODO P3); extrair `LogoMark.tsx`
+  compartilhado em vez de duplicar SVG em `Header.tsx`/`Footer.tsx`.
+- **Voto externo** (subagente Claude, Codex não instalado) achou 4 problemas
+  reais que a revisão nativa perdeu: (1) o levantamento de primeira pessoa não
+  era sitewide de verdade — faltavam `lib/faq.ts` (7 respostas), `lib/cases.ts`,
+  `ProcessoTrabalho.tsx`, `ContactForm.tsx`, mais 4 dentro do próprio
+  `app/**/*.tsx` que o regex perdeu por conjugação verbal; (2) o H1 da home é
+  string hardcoded, independente de `site.headline` — editar `lib/site.ts` não
+  ia mudar o H1; (3) `Footer.tsx` tem nav própria hardcoded, sem "Projetos"
+  depois da Premissa 2; (4) observação de que a Fase 1 corrige a assimetria só
+  visualmente, a substância (evidência de produto real) só chega na Fase 2.
+  Todos os achados 1-3 foram aceitos e viraram parte do escopo.
+- **TODO candidata revertida**: rename de `/atendimento-whatsapp` →
+  `/nexiatend` com redirect 301, originalmente adiado por risco de SEO, foi
+  puxado de volta pra Fase 1 depois do usuário confirmar blast radius pequeno
+  (só `Footer.tsx` e `lib/servicos.ts` referenciam a rota em código).
+- Escopo final da Fase 1: **18 arquivos**. `TODOS.md` criado (não existia)
+  com 2 itens P3: split de tipo `Projeto` dedicado (gatilho: segundo projeto
+  próprio) e setup de framework de testes (projeto não tem nenhum hoje).
+- Revisão limpa: 0 pendências, 0 gaps críticos, 11 achados nativos + 4 aceitos
+  do voto externo, todos resolvidos.
+
+### `/plan-design-review`
+
+- Nota inicial 6/10 — faltava tratamento mobile (mockup só existia em
+  1280px) e estados de interação dos elementos novos.
+- Mobile verificado renderizando o mesmo HTML em 375px (em vez de gerar
+  variantes estéticas novas pelo `$D` — decisão registrada como aprendizado:
+  pra validar responsividade de um mockup já aprovado, re-renderizar é mais
+  preciso que gerar imagem nova). Achou 2 problemas reais na primeira versão
+  mobile: grade de 3 produtos e grade de 2 cases não empilhavam (ficavam
+  espremidas em 3/2 colunas até em tela de celular) — corrigido com
+  `grid-cols-1 sm:grid-cols-3`/`sm:grid-cols-2`, mesmo padrão já usado em
+  `app/page.tsx`.
+- 7 passadas completas, 6 decisões aplicadas: diagrama ASCII de navegação,
+  tabela de estados de interação (site estático, maioria N/A legítimo),
+  storyboard de jornada (achou que 2 dos 3 CTAs de produto terminam em
+  `/contato` genérico — copy do CTA já mitiga, confirmado que basta),
+  tabela de tokens formais do `DESIGN.md`, `LogoMark` do footer também como
+  link pra `/` (consistência com o header), layout de `/projetos` espelhando
+  o card já usado em `/portfolio`.
+- Revisão limpa: 8/10, 0 pendências. Nenhum gap fundamental de produto (não
+  justificou `/plan-ceo-review`) nem necessidade de exploração visual nova
+  (não justificou `/design-shotgun`).
+
+**Artefatos gerados**:
+- `docs/designs/reestruturacao-produtos-twr-tech.md` — design doc completo,
+  Status: APPROVED, com as duas revisões incorporadas.
+- `docs/designs/reestruturacao-produtos-twr-tech/sketch.png` (desktop) e
+  `sketch-mobile.png` (375px) — mockups aprovados.
+- `TODOS.md` — novo, 2 itens P3.
+- `CLAUDE.md` — regra nova de "sem em dash no site" + seção de skill routing
+  do gstack.
+
+**Verificação**: nenhuma — sessão só de planejamento, nenhum `npm run build`
+rodado (nada de código de produção mudou).
+
 ## Próximo passo
 
-**Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo
-a `especificacao_powerbi.md`, publicar via Publish to web e salvar os 4
-screenshots em `public/`. Lighthouse mobile validado em produção (2026-07-17):
-Performance 98, SEO 100, Acessibilidade 100, Best Practices 100 (LCP 1,8 s,
-CLS 0). Pendência única da Fase 3: usuário confirmar que o e-mail de teste do
-Formspree chegou em twralha@gmail.com (primeiro envio pode exigir ativação do
-form). Depois, **Fase 4** (página do case em MDX).
+**Implementação da Fase 1** da reestruturação em torno de produtos —
+`docs/designs/reestruturacao-produtos-twr-tech.md` tem as ~18 tasks
+detalhadas (T1-T18) prontas pra execução, já com 2 revisões limpas
+(`/plan-eng-review` e `/plan-design-review`). Começar por T1-T11 (P1: home,
+nav, refactor de dados, `LogoMark`, `/projetos`, rename de rota com redirect),
+depois T12-T17 (P2: correções de primeira pessoa em `/sobre`, `/contato`,
+`lib/faq.ts`, `lib/cases.ts`, `ProcessoTrabalho.tsx`, `ContactForm.tsx`),
+fechar com T18 (build + Lighthouse + checagem manual do test plan em
+`~/.gstack/projects/twralha-zbs-site_portfolio_dados_ia/`). Rodar `/ship`
+no final.
+
+Pendências à parte (não bloqueiam a Fase 1): nome de trabalho pro produto de
+SEO/AEO/GEO e pra consultoria de dados (Assignment do `/office-hours`, prazo
+de 2 semanas); domínio `nexiatend.com.br` e registro de marca no INPI
+(pendências antigas, ainda não resolvidas); Fase 2 (páginas completas dos 2
+produtos sem nome) depende do naming acima.

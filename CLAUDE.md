@@ -74,6 +74,10 @@ autovalida com asserts). Os CSVs gerados são commitados no repo.
 
 ## Convenções
 
+- **Nunca usar travessão/em dash (—) em nenhum texto visível do site**
+  (headlines, corpo, botões, badges, metadata). Preferir vírgula, ponto ou
+  reestruturar a frase. Regra do usuário (2026-09-15); não se aplica a
+  documentos internos de processo (MEMORY.md, design docs em `docs/designs/`).
 - `lab/` é excluída do deploy via `.vercelignore` — nada do site pode importar
   de lá.
 - Valores reais de contato, marca ou links (placeholders como
