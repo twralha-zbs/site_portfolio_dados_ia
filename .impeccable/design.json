@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15T00:00:00Z",
+  "title": "Design System: TWR Tech",
+  "extensions": {
+    "colorMeta": {
+      "fundo": { "role": "neutral", "displayName": "Fundo Quase-Preto", "canonical": "oklch(20.5% 0.008 260)", "tonalRamp": ["#0a0b0e", "#27292d", "#45484c", "#66696e", "#898c91", "#a8abb0", "#c8cbcf", "#eceff2"] },
+      "painel": { "role": "neutral", "displayName": "Painel", "canonical": "oklch(24% 0.012 255)", "tonalRamp": ["#080b0f", "#25292e", "#43484e", "#646970", "#878d93", "#a6abb2", "#c6cbd1", "#ebeff4"] },
+      "linha": { "role": "neutral", "displayName": "Linha", "canonical": "oklch(31% 0.01 255)" },
+      "texto": { "role": "neutral", "displayName": "Texto Primário", "canonical": "oklch(93% 0.006 250)", "tonalRamp": ["#0a0b0d", "#27292c", "#45484b", "#66696c", "#898c90", "#a8abae", "#c8cbce", "#eceff1"] },
+      "suave": { "role": "neutral", "displayName": "Texto Suave", "canonical": "oklch(72% 0.01 250)" },
+      "apagado": { "role": "neutral", "displayName": "Texto Apagado", "canonical": "oklch(64% 0.01 250)" },
+      "azul": { "role": "secondary", "displayName": "Azul Intermediário", "canonical": "oklch(46% 0.105 242)", "tonalRamp": ["#000a2c", "#002b54", "#004c7a", "#256fa0", "#4f93c5", "#72b2e3", "#97d2ff", "#c3f6ff"] },
+      "azul-profundo": { "role": "secondary", "displayName": "Azul Profundo", "canonical": "oklch(38% 0.09 244)", "tonalRamp": ["#000b27", "#002b4f", "#114c74", "#366e99", "#5c92be", "#7db1dc", "#a1d1f9", "#cbf4ff"] },
+      "azul-linha": { "role": "secondary", "displayName": "Azul Linha", "canonical": "oklch(55% 0.09 242)" },
+      "sobre-azul": { "role": "secondary", "displayName": "Sobre-Azul", "canonical": "oklch(96% 0.01 240)" },
+      "sobre-azul-suave": { "role": "secondary", "displayName": "Sobre-Azul Suave", "canonical": "oklch(85% 0.035 238)" },
+      "acento": { "role": "primary", "displayName": "Acento Ciano-Instrumento", "canonical": "oklch(72% 0.12 238)", "tonalRamp": ["#000a2f", "#002c58", "#004e7f", "#0071a5", "#3995ca", "#62b5e8", "#8ad4ff", "#b8f8ff"] },
+      "acento-contraste": { "role": "primary", "displayName": "Acento Contraste", "canonical": "oklch(18% 0.03 245)" },
+      "erro": { "role": "semantic", "displayName": "Erro (Vermelho-Instrumento)", "canonical": "oklch(70.4% 0.191 22.2)", "tonalRamp": ["#360000", "#670000", "#93000e", "#be2032", "#e75156", "#ff7777", "#ff9d9a", "#ffc9c5"] },
+      "sucesso": { "role": "semantic", "displayName": "Sucesso (Verde-Azulado)", "canonical": "oklch(62.6% 0.107 164)", "tonalRamp": ["#001402", "#00371b", "#005838", "#0f7c58", "#45a07b", "#6bbf9a", "#92ddbb", "#bfffe1"] },
+      "alerta": { "role": "semantic", "displayName": "Alerta (Âmbar Terroso)", "canonical": "oklch(76.5% 0.14 73)", "tonalRamp": ["#240000", "#4c1500", "#723600", "#985800", "#bd7d01", "#dc9d43", "#f9be70", "#ffe5a3"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 único por página. Bricolage Grotesque 800, tracking apertado." },
+      "headline": { "displayName": "Headline", "purpose": "H2 de abertura de seção." },
+      "title": { "displayName": "Title", "purpose": "H3 de card, oferta ou item de portfólio." },
+      "body": { "displayName": "Body", "purpose": "Parágrafo corrido em Onest, max 58-70ch." },
+      "label": { "displayName": "Label", "purpose": "Sobrescrita uppercase que abre toda seção, e texto de badges." },
+      "mono": { "displayName": "Mono (Dados)", "purpose": "JetBrains Mono para todo número/KPI — ainda não carregada no projeto." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "brightness-hover", "value": "filter 0.15s ease-out", "purpose": "Transição de brightness(1.1) em botões primários no hover, nunca troca de cor sólida." },
+      { "name": "color-hover", "value": "color 0.15s ease-out", "purpose": "Transição de cor em links de navegação e texto secundário." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal — pílula em Acento, texto em Acento-contraste, usado no header, hero e CTASection.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Agende uma conversa</a>",
+      "css": ".ds-btn-primary { display: inline-block; background: var(--color-acento); color: var(--color-acento-contraste); font-weight: 700; font-size: 0.95rem; padding: 12px 24px; border-radius: 9999px; text-decoration: none; transition: filter 0.15s ease-out; } .ds-btn-primary:hover { filter: brightness(1.1); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-acento); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão Secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "CTA de segunda prioridade — pílula outline, preenche com Painel no hover.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Fale comigo</a>",
+      "css": ".ds-btn-secondary { display: inline-block; background: transparent; color: var(--color-texto); font-weight: 600; font-size: 0.95rem; padding: 12px 24px; border-radius: 9999px; border: 1px solid var(--color-linha); text-decoration: none; transition: background-color 0.15s ease-out; } .ds-btn-secondary:hover { background: var(--color-painel); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-acento); outline-offset: 2px; }"
+    },
+    {
+      "name": "Card de Portfólio",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Card padrão do sistema — Painel sobre Fundo, borda 1px, sem sombra, badge de selo obrigatória.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-badge\">Estudo de caso demonstrativo</span><h3 class=\"ds-card-title\">Distribuidora Serra Azul</h3><p class=\"ds-card-text\">Vendas, margem e estoque unificados num painel único.</p></article>",
+      "css": ".ds-card { background: var(--color-painel); border: 1px solid var(--color-linha); border-radius: 16px; padding: 24px; font-family: var(--font-onest), ui-sans-serif, sans-serif; } .ds-badge { display: inline-block; border: 1px solid var(--color-linha); border-radius: 9999px; padding: 6px 16px; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.09em; color: var(--color-apagado); } .ds-card-title { margin-top: 16px; font-family: var(--font-bricolage), sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.015em; color: var(--color-texto); } .ds-card-text { margin-top: 8px; font-size: 0.875rem; line-height: 1.6; color: var(--color-suave); }"
+    },
+    {
+      "name": "Campo de Formulário",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Input/textarea do ContactForm — borda muda para Acento no foco, sem glow.",
+      "html": "<label class=\"ds-label\" for=\"ds-nome\">Nome</label><input class=\"ds-input\" id=\"ds-nome\" type=\"text\" placeholder=\"Seu nome\" />",
+      "css": ".ds-label { display: block; margin-bottom: 6px; font-size: 0.875rem; font-weight: 600; color: var(--color-texto); font-family: var(--font-onest), sans-serif; } .ds-input { width: 100%; background: var(--color-painel); color: var(--color-texto); border: 1px solid var(--color-linha); border-radius: 8px; padding: 12px 16px; font-family: var(--font-onest), sans-serif; } .ds-input::placeholder { color: var(--color-apagado); } .ds-input:focus { border-color: var(--color-acento); outline: none; }"
+    },
+    {
+      "name": "Acordeão FAQ",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Componente-assinatura: <details>/<summary> nativo, sem JS, resposta presente no HTML mesmo fechado (requisito AEO). Indicador '+' gira 45° no open.",
+      "html": "<details class=\"ds-faq\"><summary class=\"ds-faq-q\">Quanto tempo leva um diagnóstico?<span class=\"ds-faq-icon\" aria-hidden=\"true\">+</span></summary><p class=\"ds-faq-a\">Geralmente uma conversa de 30 minutos já indica se faz sentido seguir.</p></details>",
+      "css": ".ds-faq { border-bottom: 1px solid var(--color-linha); } .ds-faq-q { display: flex; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; font-family: var(--font-bricolage), sans-serif; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.015em; color: var(--color-texto); } .ds-faq-q::-webkit-details-marker { display: none; } .ds-faq-icon { flex-shrink: 0; color: var(--color-acento); transition: transform 0.15s ease-out; } .ds-faq[open] .ds-faq-icon { transform: rotate(45deg); } .ds-faq-a { max-width: 70ch; padding-bottom: 24px; line-height: 1.6; color: var(--color-suave); }"
+    },
+    {
+      "name": "Badge de Status",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Pílula outline usada para selos de honestidade ('dados sintéticos') e eyebrows de seção.",
+      "html": "<span class=\"ds-status-badge\">Dados sintéticos</span>",
+      "css": ".ds-status-badge { display: inline-block; border: 1px solid var(--color-linha); background: var(--color-painel); border-radius: 9999px; padding: 6px 16px; font-family: var(--font-onest), sans-serif; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.09em; color: var(--color-suave); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Cabine de Instrumentos",
+    "overview": "O site opera como o painel de um cockpit técnico, não como um dashboard de SaaS. Fundo quase-preto, respiro generoso, e cada seção lê como um instrumento único acendendo no escuro: uma cor por vez, um número por vez, uma decisão por vez. Isso não é estética emprestada de \"app de dados\" — é a tradução literal do princípio de negócio do Thiago (\"recuar da decisão até o dado, não o contrário\"): a interface também aponta para uma única coisa por tela. A disciplina cromática é o argumento de venda. O Acento ciano funciona como a luz de alerta de um instrumento: aparece no máximo uma vez por viewport. Sem sombra em lugar nenhum: profundidade vem de camadas tonais, nunca de box-shadow.",
+    "keyCharacteristics": [
+      "Dark-first quase-preto (#15171B), nunca #000 puro.",
+      "Uma única cor de ação por tela — o Acento é raro por design.",
+      "Zero box-shadow; profundidade por camadas tonais e bordas de 1px.",
+      "Cantos levemente arredondados em tudo, pílula só em CTAs e badges.",
+      "Tipografia faz o trabalho de hierarquia, sem efeitos.",
+      "Dados e números rodam em fonte monoespaçada."
+    ],
+    "rules": [
+      { "name": "A Regra da Cor Única", "body": "O Acento aparece no máximo uma vez por viewport — um H1, um CTA, uma palavra-chave. Sua raridade é o ponto.", "section": "colors" },
+      { "name": "A Regra Sem-Semáforo", "body": "Sucesso e Alerta nunca aparecem como verde/amarelo puros de dashboard genérico — sempre desaturados na mesma direção fria da família Azul.", "section": "colors" },
+      { "name": "A Regra do Dado Monoespaçado", "body": "Todo valor numérico — KPI, métrica de resultado, timestamp, código de proposta — usa JetBrains Mono, nunca Onest.", "section": "typography" },
+      { "name": "A Regra Sem Sombra", "body": "Nenhum box-shadow em nenhum componente. Destaque vem de cor de fundo ou borda de 1px.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar OKLCH para toda cor nova, reduzindo croma perto dos extremos de luminosidade.",
+      "Do manter o Acento a no máximo um elemento por viewport.",
+      "Do usar pílula total (rounded-full) em todo CTA e badge.",
+      "Do rodar todo número/KPI em JetBrains Mono assim que a fonte for carregada.",
+      "Do construir profundidade com camadas tonais e bordas de 1px, nunca com box-shadow.",
+      "Do manter o selo 'estudo de caso demonstrativo' / 'dados sintéticos' visível e nunca escondido."
+    ],
+    "donts": [
+      "Don't usar hero com gradiente roxo, grid de cards idênticos, 'trusted by' ou cara de site gerado por IA.",
+      "Don't adicionar animações pesadas, scroll-hijacking ou efeito competindo com o conteúdo.",
+      "Don't usar azul-marinho institucional combinado com foto de stock de aperto de mão.",
+      "Don't deixar a página parecer um currículo formatado em vez de vitrine de consultoria.",
+      "Don't usar border-left/border-right colorido como faixa de destaque.",
+      "Don't usar texto em gradiente (background-clip: text).",
+      "Don't usar Sucesso/Alerta em blocos grandes de fundo — só badges pequenas.",
+      "Don't misturar box-shadow em nenhum componente novo."
+    ]
+  }
+}

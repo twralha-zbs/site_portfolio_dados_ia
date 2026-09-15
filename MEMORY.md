@@ -423,6 +423,55 @@ Central" no repo não retorna nenhuma ocorrência fora de `NEXIATEND_PERFIL.md`
 (histórico do rename, intencional) e das entradas antigas deste próprio
 `MEMORY.md` (log, não reescrito).
 
+## Sessão 2026-09-15 — DESIGN.md e implementação da identidade visual TWR Tech
+
+Pedido do usuário: rodar `/impeccable teach`, revisar o projeto e, a partir
+daí, gerar o `DESIGN.md` do site incorporando o guia de marca que ele havia
+colocado em `twr_brand/` (ativos e `twr-tech-brand-guide_2.md`, gerados fora
+desta sessão) e implementar os elementos no site.
+
+- **PRODUCT.md já existia e ficou confirmado como atual** — bate com o código
+  em produção, nenhuma reescrita necessária.
+- **`DESIGN.md` criado** (formato Stitch: frontmatter YAML + 6 seções fixas),
+  extraindo os tokens reais do `globals.css` (variante "Prisma": fundo
+  quase-preto, azul comprometido, Bricolage Grotesque + Onest) e incorporando
+  o guia de marca do usuário. Norte Criativo cunhado para o sistema: **"A
+  Cabine de Instrumentos"** — cockpit técnico, uma cor de ação por tela (regra
+  do Acento único), zero `box-shadow`, profundidade só por camadas tonais.
+  Sidecar `.impeccable/design.json` gerado junto (tonal ramps, componentes
+  HTML/CSS, narrativa).
+- **Conversão hex→OKLCH validada**: os hex documentados no guia de marca
+  batem quase exatamente com os valores OKLCH já implementados no
+  `globals.css` (diferença ≤0,3%) — boa confirmação cruzada de que o guia foi
+  extraído corretamente do código real.
+- **Gap identificado e documentado** (não corrigido): o guia de marca descreve
+  botões com radius de `0.5rem`, mas o código usa pílula total (`rounded-full`)
+  em 100% dos CTAs — o `DESIGN.md` registra a realidade do código como regra
+  vigente, não o texto do guia.
+- **Implementação no site** (escopo escolhido pelo usuário via pergunta
+  estruturada — os 4 itens do guia foram aceitos):
+  - `app/icon.svg`: favicon trocado do quadrado genérico ("duas barras
+    cruzadas", lido como placeholder de framework) pelo símbolo "T" novo do
+    usuário (tile Acento/Azul Profundo).
+  - `app/apple-icon.png`: `twr_brand/icon-192.png` copiado como está —
+    usuário optou por não gerar um PNG de 180×180 dedicado.
+  - `app/manifest.ts` (novo): gera `/manifest.webmanifest` via convenção de
+    metadata do Next.js, referenciando `public/icon-192.png` e
+    `public/icon-512.png` (copiados de `twr_brand/`).
+  - `app/globals.css`: tokens `--color-sucesso` / `--color-alerta`
+    adicionados ao `@theme` (OKLCH calculado a partir do hex do guia,
+    desaturado na mesma temperatura fria da paleta azul — evita efeito
+    "semáforo" de BI genérico) e `--font-mono` apontando para JetBrains Mono.
+  - `app/layout.tsx`: carrega JetBrains Mono via `next/font/google`.
+- **Fora de escopo por ora, documentado como pendência**: nenhum componente
+  usa `font-mono` ainda — o site não tem nenhum KPI/número hoje (a página do
+  case, Fase 4, ainda não existe). Aplicar a fonte monoespaçada assim que essa
+  página for construída.
+
+**Verificação**: `npm run build` limpo (Turbopack), `app/icon.svg`,
+`app/apple-icon.png` e `/manifest.webmanifest` testados via HTTP em dev server
+(conteúdo confirmado, servidor encerrado em seguida).
+
 ## Próximo passo
 
 **Fase 2b (manual, usuário)** — montar o `.pbix` no Power BI Desktop seguindo

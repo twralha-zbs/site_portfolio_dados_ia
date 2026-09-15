@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Onest } from "next/font/google";
+import { Bricolage_Grotesque, JetBrains_Mono, Onest } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/Header";
@@ -14,6 +14,11 @@ const bricolage = Bricolage_Grotesque({
 
 const onest = Onest({
   variable: "--font-onest",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -33,7 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${bricolage.variable} ${onest.variable} font-sans antialiased`}>
+      <body
+        className={`${bricolage.variable} ${onest.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
         <Header />
         <main>{children}</main>
         <Footer />

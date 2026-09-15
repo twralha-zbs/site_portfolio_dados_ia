@@ -18,8 +18,15 @@
   --color-acento: oklch(72% 0.12 238);
   --color-acento-contraste: oklch(18% 0.03 245);
 
+  /* Estados semânticos: mesma temperatura fria da paleta azul, nunca
+     verde-neon/amarelo-canário genéricos de dashboard (ver DESIGN.md, Regra
+     Sem-Semáforo). Erro segue via text-red-400 do Tailwind, sem token custom. */
+  --color-sucesso: oklch(62.6% 0.107 164);
+  --color-alerta: oklch(76.5% 0.14 73);
+
   --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-onest), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
 body {
