@@ -19,7 +19,7 @@ export const casesDemonstrativos: Case[] = [
     resumo:
       "Atacadista de bebidas com 1.200 pontos de venda: da reposição no feeling a um cockpit de decisão em Power BI, com alerta diário de ruptura e resumo executivo gerado por IA.",
     contexto:
-      "Atacadista de bebidas com 1.200 pontos de venda, 250 SKUs e R$ 4 milhões por mês em faturamento simulado. O caso cobre as quatro camadas do meu trabalho: pipeline de dados em Python, dashboard Power BI de 4 páginas, alerta diário de ruptura via Power Automate e resumo executivo semanal gerado por IA.",
+      "Atacadista de bebidas com 1.200 pontos de venda, 250 SKUs e R$ 4 milhões por mês em faturamento simulado. O caso cobre as quatro camadas do trabalho da TWR Tech: pipeline de dados em Python, dashboard Power BI de 4 páginas, alerta diário de ruptura via Power Automate e resumo executivo semanal gerado por IA.",
     selo: "demonstrativo",
     status: "em-breve",
     stack: ["Python", "Power BI", "Power Automate", "IA"],

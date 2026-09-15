@@ -6,10 +6,10 @@ export const site = {
   razaoSocial:
     "THIAGO WALDOWSKI RALHA CONSULTORIA EM TECNOLOGIA DA INFORMACAO LTDA",
   cnpj: "68.666.679/0001-96",
-  titulo: "Análise de Dados | Automação de Fluxos de Trabalho | IA aplicada a negócios",
-  headline: "De dados dispersos a decisões claras",
+  titulo: "NexIAtend, SEO/AEO/GEO e Consultoria de Dados | TWR Tech",
+  headline: "Atendimento, presença e dados prontos pra escalar",
   subheadline:
-    "Dashboards Power BI, automações Power Platform e IA aplicada para operações que não podem esperar.",
+    "Três produtos pra PME: atendimento com IA no WhatsApp, presença otimizada pra busca (Google e IA) e organização de dados e processos.",
   email: "twralha@gmail.com",
   localizacao: "São Paulo, SP · atendimento remoto para todo o Brasil",
   links: {

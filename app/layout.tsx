@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.urlProducao),
   title: {
-    default: `${site.nome} · Dados, Automação e IA para negócios`,
+    default: site.titulo,
     template: `%s · ${site.marca}`,
   },
   description: `${site.headline}. ${site.subheadline}`,

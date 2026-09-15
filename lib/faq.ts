@@ -27,7 +27,7 @@ export const faqHome: ItemFaq[] = [
   {
     pergunta: "Onde você atende?",
     resposta:
-      "Atendo de São Paulo, remotamente, empresas de todo o Brasil — de capitais como São Paulo, Rio de Janeiro, Belo Horizonte e Curitiba ao interior. O trabalho com Power BI e Power Platform é feito na nuvem, então reuniões, entregas e suporte funcionam à distância sem perda. Faço trabalho presencial pontual em São Paulo quando o projeto pede.",
+      "A TWR Tech atende de São Paulo, remotamente, empresas de todo o Brasil, de capitais como São Paulo, Rio de Janeiro, Belo Horizonte e Curitiba ao interior. O trabalho com Power BI e Power Platform é feito na nuvem, então reuniões, entregas e suporte funcionam à distância sem perda. Trabalho presencial pontual em São Paulo acontece quando o projeto pede.",
   },
   {
     pergunta: "Meus relatórios ficam prontos para IA e Copilot?",
@@ -37,7 +37,7 @@ export const faqHome: ItemFaq[] = [
   {
     pergunta: "Como começa um projeto?",
     resposta:
-      "Começa por uma conversa de diagnóstico, sem compromisso: você descreve a dor de dados de hoje e eu aponto se e como dá para resolver. A partir daí, o primeiro passo costuma ser um diagnóstico de escopo fixo, que mapeia fontes, indicadores e prioridades antes de construir qualquer dashboard. Você pode agendar essa conversa direto pelo site.",
+      "Começa por uma conversa de diagnóstico, sem compromisso: você descreve a dor de dados de hoje e a TWR Tech aponta se e como dá para resolver. A partir daí, o primeiro passo costuma ser um diagnóstico de escopo fixo, que mapeia fontes, indicadores e prioridades antes de construir qualquer dashboard. Você pode agendar essa conversa direto pelo site.",
   },
 ];
 
@@ -55,12 +55,12 @@ export const faqWhatsapp: ItemFaq[] = [
   {
     pergunta: "Minha equipe precisa entender de tecnologia para usar?",
     resposta:
-      "Não precisa. A interface é pensada para quem atende clientes no dia a dia, não para quem programa: central de conversas, funil kanban e disparo de campanhas funcionam como um WhatsApp organizado. Eu cuido da configuração inicial — chatbot, automações e agentes de IA — e faço o onboarding assistido da equipe antes de ir ao ar.",
+      "Não precisa. A interface é pensada para quem atende clientes no dia a dia, não para quem programa: central de conversas, funil kanban e disparo de campanhas funcionam como um WhatsApp organizado. A TWR Tech cuida da configuração inicial (chatbot, automações e agentes de IA) e faz o onboarding assistido da equipe antes de ir ao ar.",
   },
   {
     pergunta: "O que está incluso ao contratar o NexIAtend?",
     resposta:
-      "A implantação completa da plataforma — central de atendimento, CRM, automações e, quando contratado, agentes de IA —, o treinamento da equipe para usar o sistema no dia a dia e suporte contínuo para dúvidas e ajustes. A operação diária, atender clientes e conduzir o funil, fica com a sua equipe: eu deixo tudo configurado, capacito o time e sigo por perto depois do onboarding.",
+      "A implantação completa da plataforma (central de atendimento, CRM, automações e, quando contratado, agentes de IA), o treinamento da equipe para usar o sistema no dia a dia e suporte contínuo para dúvidas e ajustes. A operação diária, atender clientes e conduzir o funil, fica com a sua equipe: a TWR Tech deixa tudo configurado, capacita o time e segue por perto depois do onboarding.",
   },
   {
     pergunta: "Quantos atendentes cabem na plataforma?",
@@ -75,6 +75,6 @@ export const faqWhatsapp: ItemFaq[] = [
   {
     pergunta: "Em quanto tempo a plataforma entra no ar?",
     resposta:
-      "O onboarding é assistido: eu configuro a central de atendimento, o CRM e as automações iniciais, e a equipe já consegue atender pela plataforma em poucos dias após a contratação. Chatbot, fluxos de automação e agentes de IA entram configurados nesse mesmo processo, sem exigir conhecimento técnico do seu lado.",
+      "O onboarding é assistido: a TWR Tech configura a central de atendimento, o CRM e as automações iniciais, e a equipe já consegue atender pela plataforma em poucos dias após a contratação. Chatbot, fluxos de automação e agentes de IA entram configurados nesse mesmo processo, sem exigir conhecimento técnico do seu lado.",
   },
 ];

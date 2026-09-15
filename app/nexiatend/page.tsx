@@ -291,7 +291,7 @@ export default function AtendimentoWhatsapp() {
 
       <CTASection
         titulo="Quer ver o NexIAtend no seu WhatsApp?"
-        texto="Conto como funciona o onboarding e qual plano faz sentido para o seu porte."
+        texto="A TWR Tech explica como funciona o onboarding e qual plano faz sentido para o seu porte."
       />
     </>
   );

@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
+import { LogoMark } from "@/components/LogoMark";
 
 const rotas = [
+  { href: "/#produtos", rotulo: "Produtos" },
   { href: "/portfolio", rotulo: "Portfólio" },
+  { href: "/projetos", rotulo: "Projetos" },
   { href: "/sobre", rotulo: "Sobre" },
 ];
 
@@ -19,9 +22,10 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-8">
         <Link
           href="/"
-          className="font-display text-2xl font-extrabold tracking-tight"
+          className="flex items-center gap-2.5 font-display text-2xl font-extrabold tracking-tight"
           aria-label={`${site.marca}, página inicial`}
         >
+          <LogoMark className="h-7 w-7" />
           {site.marca}
         </Link>
 

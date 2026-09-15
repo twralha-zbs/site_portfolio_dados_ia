@@ -6,8 +6,8 @@ import { ProcessoTrabalho } from "@/components/ProcessoTrabalho";
 import { FaqSection } from "@/components/FaqSection";
 import { faqHome } from "@/lib/faq";
 import { site } from "@/lib/site";
-import { ofertaEntrada, ofertas } from "@/lib/servicos";
-import { casesDemonstrativos, projetosProprios } from "@/lib/cases";
+import { produtos } from "@/lib/servicos";
+import { casesDemonstrativos } from "@/lib/cases";
 import fotoThiago from "@/public/thiago-ralha.jpg";
 
 const verticais = [
@@ -39,11 +39,16 @@ export default function Home() {
         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
           {site.nome} · São Paulo
         </p>
-        <h1 className="font-display mt-6 max-w-[14ch] text-5xl font-extrabold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          De dados dispersos a <span className="text-acento">decisões claras.</span>
+        <h1 className="font-display mt-6 max-w-[20ch] text-5xl font-extrabold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
+          Atendimento, presença e dados prontos pra{" "}
+          <span className="text-acento">escalar.</span>
         </h1>
         <p className="mt-8 max-w-[48ch] text-lg text-suave">{site.subheadline}</p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <p className="mt-6 inline-block rounded-full border border-linha bg-painel px-4 py-2 text-sm text-suave">
+          A implantação dos produtos é feita com acompanhamento da TWR Tech em
+          todas as etapas.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/portfolio"
             className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
@@ -54,7 +59,7 @@ export default function Home() {
             href="/contato"
             className="rounded-full border border-linha px-6 py-3 font-semibold transition-colors hover:bg-painel"
           >
-            Fale comigo
+            Fale conosco
           </Link>
         </div>
       </section>
@@ -93,68 +98,54 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="bg-azul text-sobre-azul">
+      <section id="produtos" className="bg-azul text-sobre-azul">
         <div className="mx-auto max-w-6xl px-6 py-18 md:px-8 md:py-20">
           <h2 className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
-            Como eu posso ajudar
+            Como ajudamos
           </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="flex flex-col rounded-2xl border border-azul-linha bg-azul-profundo p-6 md:col-span-2 md:flex-row md:items-center md:justify-between md:gap-8">
-              <div>
-                <p className="inline-block rounded-full bg-sobre-azul px-3 py-1 text-xs font-bold uppercase tracking-[0.09em] text-azul-profundo">
-                  Porta de entrada
+          <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {produtos.map((produto) => (
+              <li
+                key={produto.slug}
+                className="flex flex-col rounded-2xl border border-azul-linha bg-azul-profundo p-6"
+              >
+                <p className="inline-block self-start rounded-full bg-sobre-azul px-3 py-1 text-xs font-bold uppercase tracking-[0.09em] text-azul-profundo">
+                  {produto.modeloPreco}
                 </p>
                 <h3 className="font-display mt-4 text-2xl font-extrabold tracking-tight">
-                  {ofertaEntrada.titulo}
+                  {produto.nome}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-sobre-azul-suave">
-                  {ofertaEntrada.formato}
+                {produto.selo && (
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
+                    {produto.selo}
+                  </p>
+                )}
+                <p className="mt-2 text-sm font-medium text-sobre-azul-suave">
+                  {produto.tagline}
                 </p>
-                <p className="mt-4 max-w-[56ch] text-sobre-azul-suave">
-                  {ofertaEntrada.descricao}
+                <p className="mt-4 flex-1 text-sobre-azul-suave">
+                  {produto.descricao}
                 </p>
-              </div>
-              <Link
-                href={ofertaEntrada.href}
-                className="mt-6 inline-block shrink-0 rounded-full bg-sobre-azul px-6 py-3 font-bold text-azul-profundo transition-[filter] hover:brightness-95 md:mt-0"
-              >
-                {ofertaEntrada.ctaRotulo} {"→"}
-              </Link>
-            </div>
-            {ofertas.map((oferta) => (
-              <div
-                key={oferta.titulo}
-                className="flex flex-col rounded-2xl border border-azul-linha p-6"
-              >
-                <h3 className="font-display text-2xl font-extrabold tracking-tight">
-                  {oferta.titulo}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-sobre-azul-suave">
-                  {oferta.formato}
-                </p>
-                <p className="mt-4 max-w-[52ch] flex-1 text-sobre-azul-suave">
-                  {oferta.descricao}
-                </p>
-                {oferta.externo ? (
+                {produto.externo ? (
                   <a
-                    href={oferta.href}
+                    href={produto.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-6 inline-block font-bold text-sobre-azul hover:underline"
                   >
-                    {oferta.ctaRotulo} {"→"}
+                    {produto.ctaRotulo} {"→"}
                   </a>
                 ) : (
                   <Link
-                    href={oferta.href}
+                    href={produto.href}
                     className="mt-6 inline-block font-bold text-sobre-azul hover:underline"
                   >
-                    {oferta.ctaRotulo} {"→"}
+                    {produto.ctaRotulo} {"→"}
                   </Link>
                 )}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -165,24 +156,21 @@ export default function Home() {
           Portfólio
         </p>
         <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
-          Quatro casos, do diagnóstico ao dashboard.
+          Três casos, do diagnóstico ao dashboard.
         </h2>
         <p className="mt-5 max-w-[58ch] text-lg text-suave">
-          Estudos de caso demonstrativos com dados sintéticos e um projeto
-          próprio em produção — a mesma metodologia aplicada a operações
-          diferentes.
+          Estudos de caso demonstrativos com dados sintéticos, construídos com
+          o mesmo rigor de um projeto real.
         </p>
 
-        <ul className="mt-11 grid gap-4 border-t border-linha pt-10 sm:grid-cols-2">
-          {[...casesDemonstrativos, ...projetosProprios].map((item) => (
+        <ul className="mt-11 grid grid-cols-1 gap-4 border-t border-linha pt-10 sm:grid-cols-2">
+          {casesDemonstrativos.map((item) => (
             <li
               key={item.slug}
               className="rounded-2xl border border-linha bg-painel p-6"
             >
               <p className="inline-block rounded-full border border-linha px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.09em] text-apagado">
-                {item.selo === "demonstrativo"
-                  ? "Estudo de caso demonstrativo"
-                  : "Projeto próprio"}
+                Estudo de caso demonstrativo
               </p>
               <h3 className="font-display mt-4 text-xl font-extrabold tracking-tight">
                 {item.titulo}
@@ -211,13 +199,13 @@ export default function Home() {
           />
           <div>
             <blockquote className="font-display text-2xl font-extrabold leading-[1.25] tracking-tight md:text-3xl">
-              Minha missão é tornar seu negócio mais eficiente com{" "}
+              Cada produto é implantado com{" "}
               <span className="text-acento">
-                IA, análise de dados e automação de processos.
+                acompanhamento da TWR Tech em todas as etapas.
               </span>
             </blockquote>
             <figcaption className="mt-5 text-sm text-apagado">
-              {site.nome} · consultor de dados, automação e IA
+              {site.nome} · fundador, TWR Tech
             </figcaption>
           </div>
         </figure>
@@ -229,7 +217,7 @@ export default function Home() {
 
       <CTASection
         titulo="Sua operação tem uma dor parecida?"
-        texto="Uma conversa de 30 minutos costuma bastar para saber se posso ajudar."
+        texto="Uma conversa de 30 minutos costuma bastar para saber se a TWR Tech pode ajudar."
       />
     </>
   );

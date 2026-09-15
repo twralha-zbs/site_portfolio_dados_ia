@@ -1,63 +1,50 @@
-// Fonte única das ofertas de serviço. Home e (na oferta de entrada) a página
-// /atendimento-whatsapp consomem daqui — mesma disciplina de lib/faq.ts.
+// Fonte única dos 3 produtos da TWR Tech. Home consome os 3 cards simétricos
+// daqui — mesma disciplina de lib/faq.ts e lib/cases.ts.
 
-import { site } from "@/lib/site";
-
-export type Oferta = {
-  titulo: string;
-  formato: string;
+export type Produto = {
+  slug: string;
+  nome: string;
+  selo?: string;
+  tagline: string;
+  modeloPreco: string;
   descricao: string;
   ctaRotulo: string;
   href: string;
   externo: boolean;
-  destaque?: boolean;
 };
 
-export const ofertaEntrada: Oferta = {
-  titulo: "NexIAtend",
-  formato: "Porta de entrada · atendimento, CRM e IA no WhatsApp · by TWR Tech",
-  descricao:
-    "O nexo entre atendimento e IA: central de atendimento, funil de vendas em CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp.",
-  ctaRotulo: "Conhecer o NexIAtend",
-  href: "/atendimento-whatsapp",
-  externo: false,
-  destaque: true,
-};
-
-export const ofertas: Oferta[] = [
+export const produtos: Produto[] = [
   {
-    titulo: "Diagnóstico de Dados & BI",
-    formato: "Oferta de entrada · escopo fixo · valor sob consulta",
+    slug: "nexiatend",
+    nome: "NexIAtend",
+    selo: "by TWR Tech",
+    tagline: "O nexo entre atendimento e IA.",
+    modeloPreco: "Implantação + fee mensal",
     descricao:
-      "Um raio-x das suas fontes, indicadores e prioridades, com um plano do que construir primeiro. Poucos dias, e você já sai sabendo o caminho.",
-    ctaRotulo: "Agendar diagnóstico",
-    href: site.links.agenda,
-    externo: true,
+      "Central de atendimento, CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp e ao Instagram.",
+    ctaRotulo: "Conhecer o NexIAtend",
+    href: "/nexiatend",
+    externo: false,
   },
   {
-    titulo: "Construção de dashboards & relatórios",
-    formato: "Por projeto · valor sob consulta",
+    slug: "seo-aeo-geo",
+    nome: "SEO, AEO & GEO",
+    tagline: "Presença otimizada pra busca, incluindo IA.",
+    modeloPreco: "Implantação única + manutenção de blog (opcional)",
     descricao:
-      "Do dado disperso a um painel Power BI que a diretoria abre e confia: modelagem de dados, DAX e design pensado para leitura executiva.",
-    ctaRotulo: "Conversar sobre um projeto",
+      "Pesquisa de palavras-chave, engenharia reversa de concorrentes, páginas otimizadas e Google Business Profile: presença pronta para o Google e para a busca por IA.",
+    ctaRotulo: "Falar sobre o projeto",
     href: "/contato",
     externo: false,
   },
   {
-    titulo: "Automação de fluxos",
-    formato: "Por projeto · valor sob consulta",
+    slug: "organizacao-de-dados",
+    nome: "Organização de Dados & Processos",
+    tagline: "Dados dispersos viram decisão confiável.",
+    modeloPreco: "Escopo aberto, por projeto",
     descricao:
-      "Power Automate e Python eliminando o trabalho repetitivo entre sistemas, planilhas e e-mail. Rotinas e alertas que rodam sozinhos.",
-    ctaRotulo: "Conversar sobre um projeto",
-    href: "/contato",
-    externo: false,
-  },
-  {
-    titulo: "IA aplicada a negócios",
-    formato: "Por projeto · valor sob consulta",
-    descricao:
-      "Resumos executivos, alertas e análises em linguagem natural, gerados em cima dos seus dados reais e prontos para a decisão.",
-    ctaRotulo: "Conversar sobre um projeto",
+      "Mapeamos fontes, processos e fluxos de dados, propomos melhorias e construímos as ferramentas que automatizam e organizam a operação.",
+    ctaRotulo: "Falar sobre o projeto",
     href: "/contato",
     externo: false,
   },

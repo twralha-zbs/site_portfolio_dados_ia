@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { LogoMark } from "@/components/LogoMark";
 
 export function Footer() {
   return (
@@ -7,7 +8,14 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 md:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
           <div>
-            <p className="font-display text-xl font-extrabold">{site.marca}</p>
+            <Link
+              href="/"
+              className="flex items-center gap-2.5"
+              aria-label={`${site.marca}, página inicial`}
+            >
+              <LogoMark className="h-8 w-8" />
+              <p className="font-display text-xl font-extrabold">{site.marca}</p>
+            </Link>
             <p className="mt-1 text-sm text-apagado">{site.nome}</p>
             <p className="mt-1 text-sm text-apagado">{site.localizacao}</p>
           </div>
@@ -20,10 +28,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/atendimento-whatsapp"
-                  className="text-suave hover:text-texto"
-                >
+                <Link href="/projetos" className="text-suave hover:text-texto">
+                  Projetos
+                </Link>
+              </li>
+              <li>
+                <Link href="/nexiatend" className="text-suave hover:text-texto">
                   NexIAtend
                 </Link>
               </li>

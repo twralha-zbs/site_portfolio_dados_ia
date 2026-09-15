@@ -37,8 +37,8 @@ export default function Contato() {
       </h1>
       <p className="mt-6 max-w-[52ch] text-lg text-suave">
         Descreva o problema do seu jeito: relatório que demora, planilha que
-        ninguém confia, processo manual que engole horas. Eu respondo com uma
-        leitura honesta do que dá para resolver.
+        ninguém confia, processo manual que engole horas. A TWR Tech responde
+        com uma leitura honesta do que dá para resolver.
       </p>
 
       <div className="mt-14 grid gap-14 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
@@ -66,8 +66,8 @@ export default function Contato() {
             ))}
           </ul>
           <p className="mt-6 text-sm leading-relaxed text-apagado">
-            {site.localizacao}. Atendo empresas de qualquer lugar do Brasil e do
-            mundo.
+            {site.localizacao}. A TWR Tech atende empresas de qualquer lugar
+            do Brasil e do mundo.
           </p>
         </aside>
       </div>

@@ -39,14 +39,14 @@ const passos: Passo[] = [
   },
 ];
 
-// Seção de método ("Como eu trabalho"): prova visual do fluxo de trabalho, das
-// fontes cruas à camada de IA. Reutilizável na página do case (Fase 4), onde é
-// a "solução em 4 camadas" do PLANO_PROJETO.md §3.3.
+// Seção de método ("Como a TWR Tech trabalha"): prova visual do fluxo de
+// trabalho, das fontes cruas à camada de IA. Reutilizável na página do case
+// (Fase 4), onde é a "solução em 4 camadas" do PLANO_PROJETO.md §3.3.
 export function ProcessoTrabalho() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
       <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-        Como eu trabalho
+        Como a TWR Tech trabalha
       </p>
       <h2 className="font-display mt-5 max-w-[18ch] text-3xl font-extrabold tracking-tight md:text-4xl">
         Da fonte crua à decisão, em cinco passos.

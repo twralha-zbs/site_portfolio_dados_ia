@@ -37,8 +37,8 @@ export function ContactForm() {
       <div className="rounded-2xl border border-linha bg-painel p-8" role="status">
         <h3 className="font-display text-2xl font-extrabold">Mensagem enviada.</h3>
         <p className="mt-3 max-w-[48ch] text-suave">
-          Obrigado pelo contato. Respondo em até 1 dia útil. Se preferir
-          adiantar, é só{" "}
+          Obrigado pelo contato. A TWR Tech responde em até 1 dia útil. Se
+          preferir adiantar, é só{" "}
           <a
             href={site.links.agenda}
             target="_blank"
@@ -122,7 +122,8 @@ export function ContactForm() {
 
       {status === "erro" && (
         <p className="text-sm text-red-400" role="alert">
-          Não consegui enviar agora. Tente de novo em instantes ou me chame no{" "}
+          Não foi possível enviar agora. Tente de novo em instantes ou fale
+          pelo{" "}
           <a
             href={site.links.whatsapp}
             target="_blank"

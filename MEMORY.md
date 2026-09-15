@@ -588,21 +588,81 @@ nenhum código de produção foi alterado, só documentos.
 **Verificação**: nenhuma — sessão só de planejamento, nenhum `npm run build`
 rodado (nada de código de produção mudou).
 
+## Sessão 2026-09-15 (cont. 2) — Implementação da Fase 1: site em torno de produtos
+
+Execução completa das ~18 tasks (T1-T18) de
+`docs/designs/reestruturacao-produtos-twr-tech.md`, aprovado na sessão
+anterior no mesmo dia. Sem repetir o planejamento, só implementação + QA.
+
+- **`lib/site.ts`**: `headline` → "Atendimento, presença e dados prontos pra
+  escalar", `subheadline` → texto dos 3 produtos, `titulo` → "NexIAtend,
+  SEO/AEO/GEO e Consultoria de Dados | TWR Tech" (campo que era morto —
+  `app/layout.tsx` agora lê `site.titulo` em vez de string hardcoded).
+- **`lib/servicos.ts` refeito**: `ofertaEntrada` + `ofertas[]` (4 itens
+  assimétricos) viraram um único `produtos[]` com 3 entradas simétricas
+  (NexIAtend, SEO AEO & GEO, Organização de Dados & Processos), os 2 últimos
+  apontando para `/contato` (sem rota própria nesta fase).
+- **`components/LogoMark.tsx`** (novo): símbolo da marca (`twr_brand/logo-mark.svg`
+  embutido inline, `aria-hidden`), usado em `Header.tsx` (ao lado do wordmark)
+  e `Footer.tsx` (ao lado do bloco de nome, também como link pra `/`).
+- **`app/page.tsx` reescrito**: H1 direto no JSX trocado ("De dados dispersos"
+  → "Atendimento, presença e dados prontos pra escalar", já que editar
+  `lib/site.ts` não propagava pra ele), disclaimer de entrega acompanhada no
+  hero, seção de produtos com `id="produtos"` e os 3 cards simétricos, seção
+  de portfólio só com `casesDemonstrativos` (Elas Jogam saiu), citação do
+  fundador reescrita em voz de empresa, CTA final idem.
+- **Nav do Header**: `Produtos` (âncora `/#produtos`), `Portfólio`, `Projetos`,
+  `Sobre`. **Nav do Footer**: ganhou `Projetos`; link do NexIAtend atualizado
+  pra `/nexiatend`.
+- **Rota `/projetos` (nova)**: card do Elas Jogam movido de `projetosProprios`
+  (antes misturado em `/portfolio`), layout espelha o card de `/portfolio`
+  (mesmo tipo `Case`, sem tipo novo). `/portfolio` perdeu o bloco "Projeto
+  próprio" e teve a metadata corrigida (não cita mais Elas Jogam).
+- **Rename de rota `/atendimento-whatsapp` → `/nexiatend`**: `git mv` do
+  diretório, `next.config.ts` ganhou `redirects()` (301/308 permanente),
+  referências em `Footer.tsx` e `lib/servicos.ts` atualizadas.
+- **Primeira pessoa → voz de empresa, sitewide** (17 ocorrências, seguindo o
+  levantamento ampliado da sessão de planejamento): `app/page.tsx` (H1, "Fale
+  comigo"→"Fale conosco", "Como eu posso ajudar"→"Como ajudamos", CTA final),
+  `lib/faq.ts` (5 respostas, `faqHome` e `faqWhatsapp`), `lib/cases.ts`
+  (contexto do case Serra Azul), `components/ProcessoTrabalho.tsx` (H2),
+  `components/ContactForm.tsx` (mensagem de sucesso **e** de erro, "me chame"
+  achado nesta implementação, fora do levantamento original), `app/portfolio/page.tsx`,
+  `app/sobre/page.tsx`, `app/contato/page.tsx` (2 trechos), `app/nexiatend/page.tsx`
+  (CTA final, "Conto como funciona" → "A TWR Tech explica"). Em todos os casos
+  os em dash que apareciam junto do texto reescrito também foram removidos
+  (regra do `CLAUDE.md`); em dashes fora do escopo desta revisão (títulos e
+  textos não tocados, ex. `lib/cases.ts` outros títulos, `app/nexiatend/page.tsx`
+  corpo não tocado) foram deixados como estavam — não é limpeza retroativa
+  sitewide, só o texto reescrito nesta fase.
+
+**Verificação**: `npm run lint` e `npm run build` limpos (11 rotas estáticas,
+incluindo `/nexiatend` e `/projetos`, sem `/atendimento-whatsapp` como página).
+QA visual real no navegador (gstack `/browse`, driver headless `$B` já que
+Aside não roda em Windows): redirect 301 confirmado (`/atendimento-whatsapp`
+→ `/nexiatend`, 308 no Next dev, equivalente HTTP moderno de permanente),
+zero console errors em `/`, `/nexiatend` e `/projetos`, menu mobile em 375px
+abre com os 4 itens de nav, âncora `/#produtos` rola corretamente (seção no
+topo do viewport após o clique), grade de 3 produtos e de 2 cases empilham em
+coluna única no mobile (screenshots capturados), card do NexIAtend navega
+para `/nexiatend`, `/projetos` mostra o card do Elas Jogam. Dev server aberto
+na sessão foi encerrado ao final.
+
+**Não verificado nesta sessão**: Lighthouse mobile (Success Criteria #3 do
+design doc pedia manter os scores atuais) — não rodei a auditoria formal;
+risco avaliado como baixo (nenhuma rota existente mudou de URL fora do
+redirect já testado, build limpo, sem novos scripts/imagens pesados). Vale
+rodar antes do próximo deploy se quiser confirmar.
+
 ## Próximo passo
 
-**Implementação da Fase 1** da reestruturação em torno de produtos —
-`docs/designs/reestruturacao-produtos-twr-tech.md` tem as ~18 tasks
-detalhadas (T1-T18) prontas pra execução, já com 2 revisões limpas
-(`/plan-eng-review` e `/plan-design-review`). Começar por T1-T11 (P1: home,
-nav, refactor de dados, `LogoMark`, `/projetos`, rename de rota com redirect),
-depois T12-T17 (P2: correções de primeira pessoa em `/sobre`, `/contato`,
-`lib/faq.ts`, `lib/cases.ts`, `ProcessoTrabalho.tsx`, `ContactForm.tsx`),
-fechar com T18 (build + Lighthouse + checagem manual do test plan em
-`~/.gstack/projects/twralha-zbs-site_portfolio_dados_ia/`). Rodar `/ship`
-no final.
+Fase 1 da reestruturação em torno de produtos está implementada e verificada,
+falta só o commit/push desta sessão (regra de encerramento do `CLAUDE.md`).
 
-Pendências à parte (não bloqueiam a Fase 1): nome de trabalho pro produto de
-SEO/AEO/GEO e pra consultoria de dados (Assignment do `/office-hours`, prazo
-de 2 semanas); domínio `nexiatend.com.br` e registro de marca no INPI
-(pendências antigas, ainda não resolvidas); Fase 2 (páginas completas dos 2
-produtos sem nome) depende do naming acima.
+Pendências à parte (não bloqueiam a Fase 1, já registradas antes): nome de
+trabalho pro produto de SEO/AEO/GEO e pra consultoria de dados (Assignment do
+`/office-hours`, prazo de 2 semanas a partir de 2026-09-15); domínio
+`nexiatend.com.br` e registro de marca no INPI; **Fase 2** (páginas completas
+`/seo-aeo-geo` e `/organizacao-de-dados`) depende do naming acima, ver
+`docs/designs/reestruturacao-produtos-twr-tech.md` (Open Questions e The
+Assignment).

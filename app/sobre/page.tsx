@@ -95,8 +95,8 @@ export default function Sobre() {
                 alertas e análises que chegam prontos para a decisão.
               </p>
               <p>
-                Atendo de {site.localizacao.split(" · ")[0]}, remotamente, empresas
-                de qualquer lugar do Brasil e do mundo.
+                A TWR Tech atende de {site.localizacao.split(" · ")[0]},
+                remotamente, empresas de qualquer lugar do Brasil e do mundo.
               </p>
             </div>
           </div>
