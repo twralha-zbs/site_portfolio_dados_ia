@@ -654,6 +654,58 @@ risco avaliado como baixo (nenhuma rota existente mudou de URL fora do
 redirect já testado, build limpo, sem novos scripts/imagens pesados). Vale
 rodar antes do próximo deploy se quiser confirmar.
 
+## Sessão 2026-09-24 — Páginas "link in bio" em /bio/<slug>
+
+Páginas estilo Linktree, só mobile, para os produtos/projetos: `/bio/twr-tech`,
+`/bio/nexiatend`, `/bio/elas-jogam`. O usuário trouxe um guia pronto (Astro +
+React + framer-motion + JSON de links) que foi **adaptado ao stack real
+(Next.js)**, não copiado:
+
+- **Route groups**: `app/layout.tsx` ficou só com html/body/fontes/Analytics;
+  Header, Footer e o widget wts.chat foram para `app/(site)/layout.tsx`, e as
+  páginas existentes foram movidas com `git mv` para `app/(site)/` (URLs
+  inalteradas). `app/bio/layout.tsx` é uma coluna de 480px sem chrome do site.
+- **Dados em `lib/bios.ts`** (fonte única, com comentário no topo explicando o
+  fluxo de manutenção: editar o array `links`, push, deploy automático; bio
+  nova = copiar bloco). Contatos gerais reusam `site.links`.
+- **Rota `app/bio/[slug]/page.tsx`** com SSG (`generateStaticParams`,
+  `dynamicParams = false` → 404 para slug desconhecido), `noindex, follow`,
+  título absoluto (evita "TWR Tech · TWR Tech").
+- **`components/bio/BioLink.tsx`**: único JS da página, dispara
+  `track("Bio Link Click", { bio, rotulo, url })` do `@vercel/analytics`.
+- **UTM automático** (`comUtm`) só em links internos:
+  `utm_source=instagram&utm_medium=bio&utm_campaign=<slug>`.
+
+Decisões contra o guia (com o porquê):
+- **Sem skeleton loader**: o guia simulava 1,2s+ de carregamento com dados
+  estáticos; só atrasaria o clique e pioraria LCP.
+- **Sem framer-motion**: entrada em cascata em CSS (`.bio-entrada` em
+  `globals.css`, atraso por índice), desligada em `prefers-reduced-motion`.
+  Mesmo efeito, zero dependência nova; hover não existe no celular.
+- **Sem classes de cor no dado**: variantes `destaque`/`padrao` mapeadas para
+  tokens do DESIGN.md. Nada de verde WhatsApp (Regra Sem-Semáforo).
+
+**Verificação**: lint, `tsc` e build limpos (3 bios como SSG, rotas antigas
+nas mesmas URLs). QA headless em 375px (`$B`): bios sem Header/Footer/widget,
+sem scroll horizontal, 1 H1, `noindex` presente, UTM só nos internos, externos
+com `target=_blank`, `/bio/inexistente` → 404, console limpo; `/` e `/contato`
+continuam com Header/Footer/widget.
+
+**Pendências**:
+- O usuário revisou as descrições das 3 bios e incluiu no Elas Jogam o link
+  externo "Agenda da semana" (destaque do Instagram). O link de destaque leva
+  um token `stkn` de compartilhamento; se o destaque for recriado, a URL muda
+  e precisa ser atualizada em `lib/bios.ts`.
+- Instagram de cada produto, se existir, ainda não entrou.
+- Logo/imagem própria do NexIAtend e do Elas Jogam (hoje: logo TWR e iniciais
+  "EJ"; basta trocar `avatar` para `{ tipo: "imagem", src: "/bio/..." }`).
+- O WhatsApp da bio NexIAtend usa a mensagem padrão ("conversar sobre dados").
+- Eventos customizados do Vercel Analytics exigem plano Pro; no Hobby o
+  `track()` não registra, e a medição fica pelo UTM.
+- Conferir o evento no painel da Vercel após o deploy.
+- Armadilha observada: rodar `npm run build` com o dev server ligado
+  sobrescreve `.next` e o dev passa a responder 500; reiniciar o dev resolve.
+
 ## Próximo passo
 
 Fase 1 da reestruturação em torno de produtos está implementada e verificada,
