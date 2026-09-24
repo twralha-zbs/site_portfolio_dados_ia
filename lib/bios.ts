@@ -67,7 +67,7 @@ export const bios: Bio[] = [
     slug: "elas-jogam",
     nome: "ELAS JOGAM",
     descricao: "O guia do esporte feminino brasileiro.",
-    avatar: { tipo: "iniciais", texto: "EJ" },
+    avatar: { tipo: "imagem", src: "https://cdn.twralha.com/avatar.png", alt: "Letras E e J maiúsculas em verde limão sobre fundo preto." },
     links: [
       { rotulo: "Agenda da semana", href: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTA3MTI1MDAxNTE5ODI0?story_media_id=3993286353303460741_38927771697&stkn=M3M0cmk3bjVzcnEz", variante: "destaque" },
       { rotulo: "Sobre o projeto", href: "/projetos" },
