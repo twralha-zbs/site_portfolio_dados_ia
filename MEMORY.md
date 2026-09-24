@@ -697,8 +697,9 @@ continuam com Header/Footer/widget.
   um token `stkn` de compartilhamento; se o destaque for recriado, a URL muda
   e precisa ser atualizada em `lib/bios.ts`.
 - Instagram de cada produto, se existir, ainda não entrou.
-- Logo/imagem própria do NexIAtend e do Elas Jogam (hoje: logo TWR e iniciais
-  "EJ"; basta trocar `avatar` para `{ tipo: "imagem", src: "/bio/..." }`).
+- Logo/imagem própria do NexIAtend (hoje: logo TWR; basta trocar `avatar`
+  para `{ tipo: "imagem", src: "...", alt: "..." }`, como já feito na bio
+  Elas Jogam).
 - O WhatsApp da bio NexIAtend usa a mensagem padrão ("conversar sobre dados").
 - Eventos customizados do Vercel Analytics exigem plano Pro; no Hobby o
   `track()` não registra, e a medição fica pelo UTM.
@@ -706,10 +707,23 @@ continuam com Header/Footer/widget.
 - Armadilha observada: rodar `npm run build` com o dev server ligado
   sobrescreve `.next` e o dev passa a responder 500; reiniciar o dev resolve.
 
+## Sessão 2026-09-24 (cont.) — Avatar em imagem na bio Elas Jogam
+
+O usuário trocou o avatar da bio `elas-jogam` de iniciais ("EJ") para uma
+imagem real, hospedada em `https://cdn.twralha.com/avatar.png`
+(`lib/bios.ts`, tipo `imagem` já suportado desde a sessão anterior). Conferido
+antes do deploy: lint e build limpos, rota `/bio/elas-jogam` gerada em SSG, e
+a URL responde 200 com `image/png`. Commit `b62626b`, push feito.
+
+Pendência menor: o PNG tem ~975 KB para um avatar renderizado em 96px;
+comprimir se o LCP da página incomodar (não bloqueou o deploy).
+
 ## Próximo passo
 
-Fase 1 da reestruturação em torno de produtos está implementada e verificada,
-falta só o commit/push desta sessão (regra de encerramento do `CLAUDE.md`).
+Fase 1 da reestruturação em torno de produtos está implementada, verificada e
+com commit/push feitos. Avatar em imagem da bio Elas Jogam também já está em
+produção (ver sessão logo acima) — pendência restante das bios é só a imagem
+própria do NexIAtend, que ainda usa o logo da TWR.
 
 Pendências à parte (não bloqueiam a Fase 1, já registradas antes): nome de
 trabalho pro produto de SEO/AEO/GEO e pra consultoria de dados (Assignment do
