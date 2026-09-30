@@ -27,14 +27,15 @@ export const produtos: Produto[] = [
     externo: false,
   },
   {
-    slug: "seo-aeo-geo",
-    nome: "SEO, AEO & GEO",
-    tagline: "Presença otimizada pra busca, incluindo IA.",
-    modeloPreco: "Implantação única + manutenção de blog (opcional)",
+    slug: "maxialcance",
+    nome: "MaxIAlcance",
+    selo: "by TWR Tech",
+    tagline: "Presença no Google, no mapa e nas IAs.",
+    modeloPreco: "Implantação + acompanhamento mensal",
     descricao:
-      "Pesquisa de palavras-chave, engenharia reversa de concorrentes, páginas otimizadas e Google Business Profile: presença pronta para o Google e para a busca por IA.",
-    ctaRotulo: "Falar sobre o projeto",
-    href: "/contato",
+      "Pesquisa de palavras-chave, engenharia reversa de concorrentes, páginas otimizadas e perfil no Google: quem procura o seu serviço na sua cidade encontra você, inclusive no ChatGPT.",
+    ctaRotulo: "Conhecer o MaxIAlcance",
+    href: "/maxialcance",
     externo: false,
   },
   {

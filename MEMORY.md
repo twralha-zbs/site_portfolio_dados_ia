@@ -718,17 +718,43 @@ a URL responde 200 com `image/png`. Commit `b62626b`, push feito.
 Pendência menor: o PNG tem ~975 KB para um avatar renderizado em 96px;
 comprimir se o LCP da página incomodar (não bloqueou o deploy).
 
+## Sessão 2026-09-29: Fase 2, página do MaxIAlcance (ex "SEO, AEO & GEO")
+
+Sessão conduzida a partir da biblioteca (`Produtos/OptimumSites/Docs/`), onde
+ficaram persona, proposta de valor, naming e o kit de vendas. O produto de
+SEO/AEO/GEO ganhou nome: **MaxIAlcance** (grafia como NexIAtend, selo "by TWR
+Tech"; nome proposto pelo usuário).
+
+Feito no site:
+- `app/(site)/maxialcance/page.tsx`: página nova no padrão da `/nexiatend`
+  (hero, problema, números do eval de 6 negócios de Santo André, 4 etapas,
+  entregas, investimento, FAQ, CTA). CTA principal "Pedir avaliação gratuita"
+  vai para o WhatsApp com mensagem própria (`site.links.whatsappAvaliacao`),
+  porque o formulário de `/contato` pergunta "dor de dados" e não serve.
+- Primeiro JSON-LD do site: `Service` + `FAQPage` na página nova. O FAQPage
+  lê as mesmas strings de `faqMaxialcance` (`lib/faq.ts`) que a FaqSection
+  mostra.
+- `lib/servicos.ts`: card da home aponta para `/maxialcance` (antes `/contato`).
+- `lib/site.ts`: `titulo` padrão com o nome novo; link `whatsappAvaliacao`.
+- `components/Footer.tsx`: link MaxIAlcance.
+- `app/sitemap.ts`: novo (o site não tinha sitemap); /bio fica de fora.
+- Polimento com a skill `impeccable` (DESIGN.md): números das etapas saíram
+  do Acento (Regra da Cor Única) e duas grades de cards viraram listas com
+  divisória (anti-referência "grid de cards idênticos").
+
+Verificado: lint e build limpos; title com 52 caracteres, description com
+140; um H1; JSON-LD FAQ idêntico ao texto visível; sem em dash e sem primeira
+pessoa; sem rolagem horizontal em 375px; Lighthouse mobile local 96/100/96/100,
+igual ao da `/nexiatend` no mesmo ambiente (os pontos a menos vêm do script do
+Vercel Analytics, que dá 404 fora da Vercel).
+
+Decisões: preço público "a partir de R$ 3.000" + R$ 300/mês recomendado por
+6 a 12 meses; implantação em 3 a 6 semanas; nenhuma promessa de posição.
+
 ## Próximo passo
 
-Fase 1 da reestruturação em torno de produtos está implementada, verificada e
-com commit/push feitos. Avatar em imagem da bio Elas Jogam também já está em
-produção (ver sessão logo acima) — pendência restante das bios é só a imagem
-própria do NexIAtend, que ainda usa o logo da TWR.
-
-Pendências à parte (não bloqueiam a Fase 1, já registradas antes): nome de
-trabalho pro produto de SEO/AEO/GEO e pra consultoria de dados (Assignment do
-`/office-hours`, prazo de 2 semanas a partir de 2026-09-15); domínio
-`nexiatend.com.br` e registro de marca no INPI; **Fase 2** (páginas completas
-`/seo-aeo-geo` e `/organizacao-de-dados`) depende do naming acima, ver
-`docs/designs/reestruturacao-produtos-twr-tech.md` (Open Questions e The
-Assignment).
+Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`. Falta a
+página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de
+nome. Pendências antigas seguem: imagem própria do NexIAtend na bio, domínio
+`nexiatend.com.br` e INPI. Novas: registrar `maxialcance.com.br` e buscar a
+marca no INPI (classes 35 e 42).

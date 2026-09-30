@@ -78,3 +78,43 @@ export const faqWhatsapp: ItemFaq[] = [
       "O onboarding é assistido: a TWR Tech configura a central de atendimento, o CRM e as automações iniciais, e a equipe já consegue atender pela plataforma em poucos dias após a contratação. Chatbot, fluxos de automação e agentes de IA entram configurados nesse mesmo processo, sem exigir conhecimento técnico do seu lado.",
   },
 ];
+
+// FAQ da página /maxialcance. As mesmas strings alimentam o JSON-LD FAQPage da
+// página, então o texto visível e o estruturado nunca divergem.
+export const faqMaxialcance: ItemFaq[] = [
+  {
+    pergunta: "O que é o MaxIAlcance?",
+    resposta:
+      "O MaxIAlcance é o serviço da TWR Tech que faz negócios locais serem encontrados por quem procura o serviço na cidade: no Google, no mapa e nas respostas de IAs como ChatGPT e Gemini. Inclui avaliação gratuita, perfil no Google completo, páginas por serviço e por região, site rápido no celular e acompanhamento mensal.",
+  },
+  {
+    pergunta: "Qual a diferença entre SEO, AEO e GEO?",
+    resposta:
+      "SEO é aparecer nos resultados do Google. AEO é ter o site escolhido como resposta direta, como nas perguntas que o Google mostra em destaque. GEO é ser citado quando alguém pergunta a uma IA, como o ChatGPT, qual negócio ela recomenda. O MaxIAlcance trabalha os três juntos, porque as mesmas informações bem organizadas servem aos três.",
+  },
+  {
+    pergunta: "Quanto custa o MaxIAlcance?",
+    resposta:
+      "A implantação começa em R$ 3.000. O valor final depende do número de serviços, das regiões atendidas e de ser preciso criar o site ou só otimizar o que já existe. O acompanhamento mensal custa R$ 300 e é recomendado por 6 a 12 meses. A avaliação inicial é gratuita.",
+  },
+  {
+    pergunta: "Em quanto tempo aparecem resultados?",
+    resposta:
+      "Ajustes no perfil do Google, como categoria, telefone e horário, costumam ter efeito em semanas. Páginas novas e citações em IAs levam alguns meses para amadurecer, por isso o acompanhamento é recomendado por 6 a 12 meses. Nenhuma empresa séria garante posição no Google, e a TWR Tech também não garante.",
+  },
+  {
+    pergunta: "Preciso ter um site para contratar?",
+    resposta:
+      "Não. Para quem não tem site, a TWR Tech cria um site novo, rápido no celular e já com uma página para cada serviço. Para quem tem site em WordPress, o trabalho é otimizar o que já existe. Nos dois casos, o perfil no Google entra no pacote.",
+  },
+  {
+    pergunta: "Como funciona a avaliação gratuita?",
+    resposta:
+      "A TWR Tech avalia o perfil no Google, o site e as respostas do Google e do ChatGPT para a busca principal do seu serviço na sua cidade, com 15 critérios objetivos. Você recebe uma nota de 0 a 100 e os pontos que mais pesam, com a evidência de cada um. A avaliação é sua, contratando ou não.",
+  },
+  {
+    pergunta: "Para que tipo de negócio o MaxIAlcance serve?",
+    resposta:
+      "Para negócios locais de serviço que dependem de indicação: clínicas e consultórios, locação para eventos, escritórios de contabilidade, restaurantes, cafés e docerias, entre outros. Se os seus clientes procuram o seu serviço pelo nome da cidade ou do bairro, o MaxIAlcance se aplica.",
+  },
+];

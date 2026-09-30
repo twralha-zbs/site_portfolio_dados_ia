@@ -6,7 +6,7 @@ export const site = {
   razaoSocial:
     "THIAGO WALDOWSKI RALHA CONSULTORIA EM TECNOLOGIA DA INFORMACAO LTDA",
   cnpj: "68.666.679/0001-96",
-  titulo: "NexIAtend, SEO/AEO/GEO e Consultoria de Dados | TWR Tech",
+  titulo: "NexIAtend, MaxIAlcance e Consultoria de Dados | TWR Tech",
   headline: "Atendimento, presença e dados prontos pra escalar",
   subheadline:
     "Três produtos pra PME: atendimento com IA no WhatsApp, presença otimizada pra busca (Google e IA) e organização de dados e processos.",
@@ -20,6 +20,9 @@ export const site = {
     agenda: "https://cal.com/twralha",
     whatsapp:
       "https://wa.me/5511984836740?text=Ol%C3%A1%20Thiago%2C%20vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20dados.",
+    // CTA da página /maxialcance: mesmo número, mensagem de pedido de avaliação
+    whatsappAvaliacao:
+      "https://wa.me/5511984836740?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20a%20avalia%C3%A7%C3%A3o%20gratuita%20do%20MaxIAlcance%20para%20o%20meu%20neg%C3%B3cio.",
   },
   formspreeEndpoint: "https://formspree.io/f/xjgnyzqk",
   urlProducao: "https://twralha.com",

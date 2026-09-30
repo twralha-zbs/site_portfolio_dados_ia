@@ -38,6 +38,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/maxialcance" className="text-suave hover:text-texto">
+                  MaxIAlcance
+                </Link>
+              </li>
+              <li>
                 <Link href="/sobre" className="text-suave hover:text-texto">
                   Sobre
                 </Link>
