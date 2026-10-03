@@ -45,7 +45,7 @@ pedido maior precisa ser dividido em etapas.
 
 Ao final de cada sessão de trabalho:
 - **atualizar o MEMORY.md** com uma entrada datada (o que foi feito, decisões tomadas com o porquê, pendências abertas)
-- verificar se algum Dev server (localhost) foi aberto na sessão. se algum foi aberto, encerre
+- verificar se algum Dev server (localhost) foi aberto na sessão. se algum foi aberto, não encerre imediatamente após o uso, pois ele poderá ser usado novamente. Realize a verificação e o encerramento dos Dev Servers somente ao finalizar a sessão
 - fazer commit e push do trabalho da sessão
 
 ## Infraestrutura

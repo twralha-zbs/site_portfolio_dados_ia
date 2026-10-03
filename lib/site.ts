@@ -19,7 +19,10 @@ export const site = {
     substackFeed: "https://twralha.substack.com/feed",
     agenda: "https://cal.com/twralha",
     whatsapp:
-      "https://wa.me/551151234016?text=Ol%C3%A1%20Thiago%2C%20vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20dados.",
+      "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20a%20minha%20empresa.",
+    // Mesmo número, mensagem de quem vem pelas páginas /bio (Instagram)
+    whatsappBio:
+      "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20Instagram%20e%20quero%20conversar%20sobre%20a%20minha%20empresa.",
     // CTA da página /maxialcance: mesmo número comercial, mensagem de pedido de avaliação
     whatsappAvaliacao:
       "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20a%20avalia%C3%A7%C3%A3o%20gratuita%20do%20MaxIAlcance%20para%20o%20meu%20neg%C3%B3cio.",

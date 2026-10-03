@@ -767,11 +767,17 @@ Revisão das bios e da `/maxialcance` (lint e build limpos) e ajustes:
   que violavam a regra de texto visível.
 - `app/robots.ts` novo, com `allow: /` e link para o sitemap.
 
-Pendências: o número 5123-4016 tem formato de fixo; `wa.me` só abre conversa
-se o número estiver ativo no WhatsApp (Business), então testar os links após o
-deploy. A mensagem pré-preenchida de `whatsapp` ainda diz "Olá Thiago" e
-"conversar sobre dados"; avaliar se mantém agora que é o número da empresa.
-Avatar do `elas-jogam` segue em CDN externo (`cdn.twralha.com`).
+- Mensagens do WhatsApp: o usuário definiu "Olá, vim pelo seu Instagram e
+  quero conversar sobre a minha empresa." Como `site.links.whatsapp` também é
+  usado em /contato, /nexiatend e no formulário (onde "Instagram" estaria
+  errado), criei `site.links.whatsappBio` com essa mensagem, usado só nas
+  bios; `whatsapp` ficou com a mesma frase trocando Instagram por "site".
+- O 5123-4016 é WhatsApp Business via API oficial, operado dentro do
+  NexIAtend (confirmado pelo usuário), então o `wa.me` funciona.
+- CLAUDE.md: regra de encerramento dos dev servers commitada (alteração do
+  usuário).
+
+Pendência: avatar do `elas-jogam` segue em CDN externo (`cdn.twralha.com`).
 
 ## Próximo passo
 

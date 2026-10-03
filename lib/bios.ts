@@ -42,7 +42,7 @@ export const bios: Bio[] = [
     avatar: { tipo: "logo-twr" },
     links: [
       { rotulo: "Agende uma conversa", href: site.links.agenda, variante: "destaque" },
-      { rotulo: "Fale no WhatsApp", href: site.links.whatsapp },
+      { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio },
       { rotulo: "Conheça o NexIAtend", href: "/nexiatend" },
       { rotulo: "MaxIAlcance: Seja encontrado no Google e nas IAs", href: "/maxialcance" },
       { rotulo: "Portfólio de dados", href: "/portfolio" },
@@ -60,7 +60,7 @@ export const bios: Bio[] = [
     links: [
       { rotulo: "Conheça o NexIAtend", href: "/nexiatend", variante: "destaque" },
       { rotulo: "Agende uma demonstração", href: site.links.agenda },
-      { rotulo: "Fale no WhatsApp", href: site.links.whatsapp },
+      { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio },
       { rotulo: "Site da TWR Tech", href: "/" },
     ],
   },
