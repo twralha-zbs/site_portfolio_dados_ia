@@ -751,6 +751,28 @@ Vercel Analytics, que dá 404 fora da Vercel).
 Decisões: preço público "a partir de R$ 3.000" + R$ 300/mês recomendado por
 6 a 12 meses; implantação em 3 a 6 semanas; nenhuma promessa de posição.
 
+## Sessão 2026-10-03: revisão de bios e MaxIAlcance, número comercial
+
+Revisão das bios e da `/maxialcance` (lint e build limpos) e ajustes:
+- **WhatsApp trocado para o número comercial +55 11 5123-4016** em
+  `lib/site.ts` (`whatsapp` e `whatsappAvaliacao`; é o único lugar com o
+  número, o resto do site e das bios herda). Pedido do usuário. O +55 11
+  98483-6740 citado na Fase 3 acima é histórico.
+- Bio `twr-tech` ganhou o link "MaxIAlcance: Seja encontrado no Google e nas
+  IAs" (texto definido pelo usuário), antes do Portfólio. A bio `nexiatend`
+  ficou sem cross-sell de propósito (é focada no produto).
+- `/maxialcance`: números do eval com `dt` antes de `dd` no HTML (ordem
+  correta para leitor de tela), visual mantido com `flex-col-reverse`.
+- `lib/faq.ts`: 6 travessões removidos dos FAQs antigos (dados e NexIAtend),
+  que violavam a regra de texto visível.
+- `app/robots.ts` novo, com `allow: /` e link para o sitemap.
+
+Pendências: o número 5123-4016 tem formato de fixo; `wa.me` só abre conversa
+se o número estiver ativo no WhatsApp (Business), então testar os links após o
+deploy. A mensagem pré-preenchida de `whatsapp` ainda diz "Olá Thiago" e
+"conversar sobre dados"; avaliar se mantém agora que é o número da empresa.
+Avatar do `elas-jogam` segue em CDN externo (`cdn.twralha.com`).
+
 ## Próximo passo
 
 Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`. Falta a

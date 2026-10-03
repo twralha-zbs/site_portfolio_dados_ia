@@ -44,6 +44,7 @@ export const bios: Bio[] = [
       { rotulo: "Agende uma conversa", href: site.links.agenda, variante: "destaque" },
       { rotulo: "Fale no WhatsApp", href: site.links.whatsapp },
       { rotulo: "Conheça o NexIAtend", href: "/nexiatend" },
+      { rotulo: "MaxIAlcance: Seja encontrado no Google e nas IAs", href: "/maxialcance" },
       { rotulo: "Portfólio de dados", href: "/portfolio" },
       { rotulo: "Blog no Substack", href: site.links.substack },
       { rotulo: "LinkedIn", href: site.links.linkedin },

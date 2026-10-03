@@ -214,13 +214,13 @@ export default function Maxialcance() {
           </h2>
           <dl className="mt-8 grid gap-6 sm:grid-cols-3">
             {numeros.map((item) => (
-              <div key={item.descricao}>
-                <dd className="font-mono text-4xl font-bold tracking-tight">
-                  {item.valor}
-                </dd>
+              <div key={item.descricao} className="flex flex-col-reverse">
                 <dt className="mt-2 text-sm leading-relaxed text-sobre-azul-suave">
                   {item.descricao}
                 </dt>
+                <dd className="font-mono text-4xl font-bold tracking-tight">
+                  {item.valor}
+                </dd>
               </div>
             ))}
           </dl>
