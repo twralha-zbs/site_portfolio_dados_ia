@@ -760,7 +760,10 @@ Revisão das bios e da `/maxialcance` (lint e build limpos) e ajustes:
   98483-6740 citado na Fase 3 acima é histórico.
 - Bio `twr-tech` ganhou o link "MaxIAlcance: Seja encontrado no Google e nas
   IAs" (texto definido pelo usuário), antes do Portfólio. A bio `nexiatend`
-  ficou sem cross-sell de propósito (é focada no produto).
+  ficou sem cross-sell de propósito (é focada no produto). O card do NexIAtend
+  na bio `twr-tech` virou "NexIAtend: Organize seu atendimento no WhatsApp"
+  (texto do usuário, mesmo padrão "Produto: benefício" do MaxIAlcance); a bio
+  `nexiatend` manteve "Conheça o NexIAtend".
 - `/maxialcance`: números do eval com `dt` antes de `dd` no HTML (ordem
   correta para leitor de tela), visual mantido com `flex-col-reverse`.
 - `lib/faq.ts`: 6 travessões removidos dos FAQs antigos (dados e NexIAtend),
