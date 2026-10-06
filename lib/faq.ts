@@ -41,41 +41,48 @@ export const faqHome: ItemFaq[] = [
   },
 ];
 
-export const faqWhatsapp: ItemFaq[] = [
+// FAQ da página /nexiatend. As mesmas strings alimentam o JSON-LD FAQPage da
+// página, então o texto visível e o estruturado nunca divergem.
+export const faqNexiatend: ItemFaq[] = [
   {
-    pergunta: "Preciso trocar o número de WhatsApp da empresa?",
+    pergunta: "O que é o NexIAtend?",
     resposta:
-      "Não. A plataforma conecta ao número que você já usa: a linha existente passa a rodar dentro do sistema, sem trocar de contato nem perder o histórico que os clientes já têm salvo. Toda a equipe atende por esse mesmo número dentro da central, em vez de um WhatsApp de celular pessoal, com histórico centralizado e distribuição de conversas.",
+      "O NexIAtend é a central de atendimento da TWR Tech que reúne as conversas do WhatsApp e do Instagram da empresa num lugar só, com a equipe atendendo pelo mesmo número e o gestor vendo tudo. Conforme o plano, inclui funil de vendas, campanhas, divisão automática de conversas e assistente de IA. A TWR Tech implanta, configura e treina a equipe.",
   },
   {
-    pergunta: "Funciona com Instagram também?",
+    pergunta: "Quanto custa o NexIAtend?",
     resposta:
-      "Funciona. Além do WhatsApp, a central de atendimento conecta o Instagram Direct no mesmo ambiente, com o mesmo histórico e distribuição entre atendentes. Você responde os dois canais num único lugar, sem alternar de aplicativo, e mantém o mesmo funil de CRM para leads que chegam por qualquer um deles.",
+      "Os planos começam em R$ 437 por mês para até 3 pessoas atendendo em um canal. O plano Vendas custa R$ 717, o Equipe R$ 1.207 e o IA R$ 2.197. A implantação é paga uma vez, a partir de R$ 767, e sai pela metade no contrato de 12 meses. As mensagens cobradas pela Meta são pagas direto à Meta.",
   },
   {
-    pergunta: "Minha equipe precisa entender de tecnologia para usar?",
+    pergunta: "Preciso trocar o número ou parar de usar o WhatsApp no celular?",
     resposta:
-      "Não precisa. A interface é pensada para quem atende clientes no dia a dia, não para quem programa: central de conversas, funil kanban e disparo de campanhas funcionam como um WhatsApp organizado. A TWR Tech cuida da configuração inicial (chatbot, automações e agentes de IA) e faz o onboarding assistido da equipe antes de ir ao ar.",
+      "Não. A conexão oficial do WhatsApp pode manter o número atual e o aplicativo no celular funcionando junto com a central. A TWR Tech faz essa conexão na implantação. Para isso, a empresa precisa de CNPJ, de uma conta da Meta com cartão e de um site com o CNPJ no rodapé.",
   },
   {
-    pergunta: "O que está incluso ao contratar o NexIAtend?",
+    pergunta: "Quem paga as mensagens do WhatsApp?",
     resposta:
-      "A implantação completa da plataforma (central de atendimento, CRM, automações e, quando contratado, agentes de IA), o treinamento da equipe para usar o sistema no dia a dia e suporte contínuo para dúvidas e ajustes. A operação diária, atender clientes e conduzir o funil, fica com a sua equipe: a TWR Tech deixa tudo configurado, capacita o time e segue por perto depois do onboarding.",
+      "Responder quem chamou a empresa não tem custo da Meta dentro de 24 horas. A Meta cobra pelas mensagens que a empresa inicia, como campanhas e lembretes, e esse valor é pago pela empresa direto à Meta, no cartão cadastrado, sem intermediação da TWR Tech.",
   },
   {
-    pergunta: "Quantos atendentes cabem na plataforma?",
+    pergunta: "O que está incluso e o que fica com a minha equipe?",
     resposta:
-      "Depende do plano: o Essencial atende times de até 3 usuários, o Pro (mais vendido) de 5, o Plus+ de 10 e o Advanced de 20, todos com a opção de adicionar usuários extras como add-on. A diferença entre os planos não é só o número de atendentes: os planos maiores liberam distribuição automática, carteiras de clientes e integrações via API.",
+      "Incluso: a implantação com escopo escrito por plano (conexão do canal, mensagem automática de boas-vindas, equipe, horário, mensagens aprovadas pela Meta e, conforme o plano, funil e campanhas), o treinamento da equipe e o suporte pelo WhatsApp. O atendimento do dia a dia fica com a sua equipe: a TWR Tech não opera a central.",
   },
   {
     pergunta: "Tem fidelidade ou multa de cancelamento?",
     resposta:
-      "Não. O plano pode ser ajustado a qualquer momento conforme a operação cresce ou diminui, sem multa de cancelamento. Você contrata o porte que faz sentido hoje e muda de plano quando precisar, sem ficar preso a um contrato rígido pensado para uma operação maior do que a sua.",
+      "No contrato mensal, não há fidelidade nem multa, e a implantação é paga inteira. No contrato de 12 meses, a implantação sai pela metade. Nos dois casos dá para mudar de plano quando a operação crescer.",
   },
   {
-    pergunta: "Em quanto tempo a plataforma entra no ar?",
+    pergunta: "Como funciona o diagnóstico gratuito?",
     resposta:
-      "O onboarding é assistido: a TWR Tech configura a central de atendimento, o CRM e as automações iniciais, e a equipe já consegue atender pela plataforma em poucos dias após a contratação. Chatbot, fluxos de automação e agentes de IA entram configurados nesse mesmo processo, sem exigir conhecimento técnico do seu lado.",
+      "A TWR Tech faz o caminho de um cliente procurando a sua empresa no Google, no site e no Instagram e anota por onde dá para chamar. Você recebe uma página com o que mais pesa hoje e um ajuste simples que pode fazer sozinho. Não exige reunião nem acesso a nada, e é seu, contratando ou não.",
+  },
+  {
+    pergunta: "Para que tipo de negócio o NexIAtend serve?",
+    resposta:
+      "Para negócios de serviço que vendem pelo WhatsApp e têm de 2 a 20 pessoas falando com clientes: clínicas de estética e terapias, imobiliárias, escolas de idiomas e cursos, produtoras e eventos, entre outros. Se mais de uma pessoa responde clientes, ou se o cliente encontra mais de um número para chamar, o NexIAtend se aplica.",
   },
 ];
 

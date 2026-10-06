@@ -26,6 +26,12 @@ export const site = {
     // CTA da página /maxialcance: mesmo número comercial, mensagem de pedido de avaliação
     whatsappAvaliacao:
       "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20a%20avalia%C3%A7%C3%A3o%20gratuita%20do%20MaxIAlcance%20para%20o%20meu%20neg%C3%B3cio.",
+    // CTA da página /nexiatend: mesmo número comercial, pedido do diagnóstico de atendimento
+    whatsappDiagnostico:
+      "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20o%20diagn%C3%B3stico%20gratuito%20de%20atendimento%20do%20NexIAtend.",
+    // Mesmo pedido, para quem vem pela bio /bio/nexiatend (Instagram)
+    whatsappDiagnosticoBio:
+      "https://wa.me/551151234016?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20Instagram%20e%20quero%20o%20diagn%C3%B3stico%20gratuito%20de%20atendimento%20do%20NexIAtend.",
   },
   formspreeEndpoint: "https://formspree.io/f/xjgnyzqk",
   urlProducao: "https://twralha.com",

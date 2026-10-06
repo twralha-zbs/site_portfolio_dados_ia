@@ -19,9 +19,9 @@ export const produtos: Produto[] = [
     nome: "NexIAtend",
     selo: "by TWR Tech",
     tagline: "O nexo entre atendimento e IA.",
-    modeloPreco: "Implantação + fee mensal",
+    modeloPreco: "A partir de R$ 437/mês",
     descricao:
-      "Central de atendimento, CRM, automação e agentes de IA num único ambiente conectado ao WhatsApp e ao Instagram.",
+      "As conversas da sua empresa no WhatsApp e no Instagram num lugar só, com a equipe atendendo junto. A TWR Tech implanta, configura e treina.",
     ctaRotulo: "Conhecer o NexIAtend",
     href: "/nexiatend",
     externo: false,

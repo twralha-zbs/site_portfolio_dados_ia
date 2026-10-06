@@ -782,9 +782,39 @@ Revisão das bios e da `/maxialcance` (lint e build limpos) e ajustes:
 
 Pendência: avatar do `elas-jogam` segue em CDN externo (`cdn.twralha.com`).
 
+## Sessão 2026-10-05: nova oferta da /nexiatend (estratégia do produto)
+
+Reescrita da `/nexiatend` com a oferta aprovada na `/estrategia-produto`
+(documentos em `Produtos/NexIAtend/Docs/` na biblioteca TWR Tech:
+`oferta-e-planos.md`, `proposta-de-valor.md`, `2026-10-05_eval-diagnostico.md`).
+
+- Página: a tabela de 4 planos "sob consulta" virou 4 cards com preço
+  (Atendimento R$ 437, Vendas R$ 717, Equipe R$ 1.207, IA R$ 2.197, cada um
+  com a implantação); números de mercado do material da plataforma trocados
+  pelos do eval de 2026-10-05 (6 negócios de Santo André); "Como funciona" em
+  4 etapas; CTA principal "Pedir diagnóstico gratuito"; JSON-LD `Service`
+  (a partir de R$ 437/mês) + `FAQPage`.
+- `lib/faq.ts`: `faqWhatsapp` virou `faqNexiatend`, reescrito (8 perguntas;
+  saiu a promessa "em poucos dias").
+- `lib/site.ts`: links `whatsappDiagnostico` (site) e `whatsappDiagnosticoBio`
+  (Instagram), mesmo número comercial.
+- `lib/servicos.ts`: selo da home "A partir de R$ 437/mês" e descrição nova.
+- `lib/bios.ts`: bio do NexIAtend sem a promessa "não perder nenhuma venda";
+  botão "Peça o diagnóstico gratuito" no lugar de "Fale no WhatsApp".
+- Texto antigo tinha em dash e primeira pessoa ("que aplico em"); removidos.
+
+Verificado: lint e build limpos; title 60 caracteres, description 148; um H1;
+FAQ do schema igual ao visível (8/8, com scripts removidos da comparação);
+sem em dash e sem primeira pessoa; sem rolagem horizontal em 375 e 1280;
+Lighthouse mobile local 96/100/96/100, igual ao anterior (os pontos a menos
+são o 404 do Vercel Analytics fora da Vercel).
+
+Decisões: preço público "a partir de R$ 437/mês"; voz de empresa nas páginas
+de produto; nenhum número de cliente (não há resultado medido).
+
 ## Próximo passo
 
-Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`. Falta a
+Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
 página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de
 nome. Pendências antigas seguem: imagem própria do NexIAtend na bio, domínio
 `nexiatend.com.br` e INPI. Novas: registrar `maxialcance.com.br` e buscar a

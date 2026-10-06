@@ -55,12 +55,12 @@ export const bios: Bio[] = [
     slug: "nexiatend",
     nome: "NexIAtend",
     descricao:
-      "Atendimento Inteligente no seu WhatsApp, com CRM e automações para conquistar seus clientes e não perder nenhuma venda.",
+      "As conversas do seu WhatsApp e do seu Instagram num lugar só, com a equipe atendendo junto.",
     avatar: { tipo: "logo-twr" },
     links: [
       { rotulo: "Conheça o NexIAtend", href: "/nexiatend", variante: "destaque" },
+      { rotulo: "Peça o diagnóstico gratuito", href: site.links.whatsappDiagnosticoBio },
       { rotulo: "Agende uma demonstração", href: site.links.agenda },
-      { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio },
       { rotulo: "Site da TWR Tech", href: "/" },
     ],
   },

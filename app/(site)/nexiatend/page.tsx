@@ -2,107 +2,156 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { FaqSection } from "@/components/FaqSection";
-import { faqWhatsapp } from "@/lib/faq";
+import { faqNexiatend } from "@/lib/faq";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "NexIAtend — Atendimento, CRM e IA no WhatsApp",
+  title: "NexIAtend: atendimento no WhatsApp e no Instagram",
   description:
-    "NexIAtend é a plataforma de atendimento, CRM e IA no WhatsApp que organiza sua operação: central de atendimento, funil de vendas, automação e agentes de IA num único ambiente.",
+    "As conversas da sua empresa no WhatsApp e no Instagram num lugar só, implantadas pela TWR Tech. Diagnóstico gratuito; planos a partir de R$ 437/mês.",
+  alternates: { canonical: "/nexiatend" },
 };
 
+// Números do eval de 2026-10-05 (6 negócios de Santo André: estética,
+// imobiliária, escola de idiomas), sem nomes. Fonte interna:
+// Produtos/NexIAtend/Docs/2026-10-05_eval-diagnostico.md na biblioteca.
 const numeros = [
-  { valor: "97%", descricao: "dos usuários abrem o WhatsApp diariamente" },
+  { valor: "4 de 6", descricao: "publicavam mais de um número para o cliente chamar" },
+  { valor: "3 de 6", descricao: "mostravam no Google um telefone fixo que não era o WhatsApp do site" },
+  { valor: "4 de 6", descricao: "tinham links de WhatsApp que não diziam de onde o cliente veio" },
+];
+
+const hoje = [
   {
-    valor: "82%",
-    descricao: "dos consumidores se comunicam com marcas pelo WhatsApp",
-  },
-  { valor: "75%", descricao: "já compraram algo através do WhatsApp" },
-  {
-    valor: "67%",
+    titulo: "Cada um no seu celular",
     descricao:
-      "das empresas de varejo/serviços usam o WhatsApp como principal canal de vendas",
+      "A conversa fica no aparelho de quem atendeu. Quando a pessoa sai de férias ou da empresa, o histórico vai junto.",
+  },
+  {
+    titulo: "WhatsApp Web dividido",
+    descricao:
+      "Várias pessoas no mesmo número, sem saber quem respondeu o quê, e a conexão cai no meio do expediente.",
+  },
+  {
+    titulo: "Retorno de memória",
+    descricao:
+      "Mensagem nova empurra para baixo quem pediu preço ontem. O retorno depende de alguém lembrar.",
   },
 ];
 
-const modulos = [
+const etapas = [
   {
-    titulo: "Central de Atendimento",
+    titulo: "Diagnóstico gratuito",
     descricao:
-      "Toda a equipe conversa pelo mesmo número de WhatsApp/Instagram, com histórico centralizado e distribuição de conversas — fim do WhatsApp do celular pessoal.",
+      "O caminho de um cliente até você no Google, no site e no Instagram, com um ajuste que você mesmo pode fazer.",
   },
   {
-    titulo: "CRM completo",
+    titulo: "Demonstração",
     descricao:
-      "Funil de vendas em kanban, cadastro de contatos, campos personalizados e tarefas vinculadas a cada cliente: a jornada nunca se perde.",
+      "A central funcionando com o caso do seu negócio. Se quiser, 14 dias de teste com a sua equipe.",
   },
   {
-    titulo: "Chatbot e automação",
+    titulo: "Implantação",
     descricao:
-      "Fluxos automatizados qualificam leads, respondem perguntas frequentes e atendem fora do horário comercial, sem aumentar a equipe.",
+      "A TWR Tech conecta o canal, escreve a mensagem de boas-vindas com você e configura equipe e horário. Nada entra no ar sem a sua aprovação.",
   },
   {
-    titulo: "Disparo de mensagens",
+    titulo: "Acompanhamento",
     descricao:
-      "Campanhas e promoções para listas segmentadas de contatos, direto pela plataforma, sem depender de anúncios pagos.",
-  },
-  {
-    titulo: "Rastreabilidade de conversões",
-    descricao:
-      "Cada lead rastreado até a campanha, anúncio ou canal de origem — o retorno de cada ação de marketing fica visível, não é achismo.",
-  },
-  {
-    titulo: "Agentes de IA",
-    descricao:
-      "Atendimento automatizado por IA que conversa, responde dúvidas e qualifica leads em linguagem natural, mesmo em alto volume.",
-  },
-  {
-    titulo: "App mobile e web",
-    descricao:
-      "Acesso à central pelo celular ou navegador, de qualquer lugar — a equipe não fica presa a um computador ou local físico.",
-  },
-  {
-    titulo: "Distribuição, carteiras e integrações via API",
-    descricao:
-      "Distribuição automática de contatos, carteiras fixas por cliente e conexão com ERP, e-commerce e planilhas via webhook/API.",
-    planosSuperiores: true,
+      "Treinamento da equipe, check-ins no primeiro mês, revisão de 30 dias e suporte pelo WhatsApp.",
   },
 ];
 
 const planos = [
   {
-    nome: "Essencial",
-    paraQuem: "Negócios pequenos começando a organizar o atendimento",
-    usuarios: "3",
-    modulos: "App mobile, automação básica, chatbot",
+    nome: "Atendimento",
+    preco: "R$ 437",
+    capacidade: "3 pessoas · 1 canal",
+    resolve: "As conversas num lugar só.",
+    inclui:
+      "Central de atendimento, mensagem automática de boas-vindas e triagem, horário de atendimento, app no celular.",
+    implantacao: "R$ 767",
   },
   {
-    nome: "Pro",
-    destaque: "mais vendido",
-    paraQuem: "Negócios com equipe de atendimento/vendas ativa",
-    usuarios: "5",
-    modulos: "+ CRM completo, Central de Atendimento, Disparo de Mensagens",
+    nome: "Vendas",
+    preco: "R$ 717",
+    capacidade: "5 pessoas · 2 canais",
+    resolve: "Retorno para quem pediu preço.",
+    inclui:
+      "Tudo do Atendimento, com WhatsApp e Instagram juntos, mais funil de vendas, envio de campanhas, mensagens de retorno programadas e saber de onde veio cada cliente.",
+    implantacao: "R$ 1.647",
   },
   {
-    nome: "Plus+",
-    paraQuem: "Operações maiores, com múltiplos atendentes",
-    usuarios: "10",
-    modulos: "+ Distribuição automática, Carteiras de clientes, Integrações",
+    nome: "Equipe",
+    preco: "R$ 1.207",
+    capacidade: "10 pessoas · 3 canais",
+    resolve: "O time cresce sem bagunça.",
+    inclui:
+      "Tudo do Vendas, mais conversas divididas automaticamente, cada cliente com o seu atendente, pesquisa de satisfação, áudio transcrito e ligação com outros sistemas.",
+    implantacao: "R$ 2.197",
   },
   {
-    nome: "Advanced",
-    paraQuem: "Empresas com operação robusta e múltiplos canais",
-    usuarios: "20",
-    modulos: "Todos os módulos liberados",
+    nome: "IA",
+    preco: "R$ 2.197",
+    capacidade: "20 pessoas · 3 canais",
+    resolve: "Um assistente para as perguntas repetidas.",
+    inclui:
+      "Tudo do Equipe, mais um assistente de IA configurado pela TWR Tech, que responde as perguntas frequentes e passa para uma pessoa quando precisa.",
+    implantacao: "R$ 3.297",
   },
 ];
 
-export default function AtendimentoWhatsapp() {
+// Dados estruturados: Service + FAQPage. O FAQPage lê as mesmas strings de
+// faqNexiatend que a FaqSection renderiza (Question.name/Answer.text idênticos).
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "NexIAtend",
+    serviceType: "Central de atendimento no WhatsApp e no Instagram, com implantação",
+    description:
+      "Central que reúne as conversas do WhatsApp e do Instagram da empresa num lugar só, implantada, configurada e treinada pela TWR Tech.",
+    url: `${site.urlProducao}/nexiatend`,
+    areaServed: { "@type": "Country", name: "Brasil" },
+    provider: {
+      "@type": "Organization",
+      name: site.marca,
+      url: site.urlProducao,
+    },
+    offers: {
+      "@type": "Offer",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        minPrice: 437,
+        priceCurrency: "BRL",
+        unitText: "MONTH",
+      },
+      description:
+        "Planos a partir de R$ 437 por mês; implantação a partir de R$ 767, pela metade no contrato de 12 meses.",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqNexiatend.map((item) => ({
+      "@type": "Question",
+      name: item.pergunta,
+      acceptedAnswer: { "@type": "Answer", text: item.resposta },
+    })),
+  },
+];
+
+export default function Nexiatend() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className="mx-auto max-w-6xl px-6 pb-16 pt-16 md:px-8 md:pt-24">
         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Porta de entrada
+          Atendimento no WhatsApp e no Instagram
         </p>
         <h1 className="font-display mt-5 max-w-[18ch] text-4xl font-extrabold leading-[1.02] tracking-tight md:text-6xl">
           NexIAtend
@@ -111,19 +160,21 @@ export default function AtendimentoWhatsapp() {
           by TWR Tech
         </p>
         <p className="mt-6 max-w-[52ch] text-lg text-suave">
-          O nexo entre atendimento e IA.
+          As conversas da sua empresa no WhatsApp e no Instagram num lugar só,
+          com a equipe atendendo junto e você vendo tudo.
         </p>
         <p className="mt-3 max-w-[52ch] text-suave">
-          Atendimento, CRM e IA no WhatsApp e Instagram, num único ambiente.
+          A TWR Tech implanta, configura e treina; sua equipe atende. Começa
+          por um diagnóstico gratuito, e os planos partem de R$ 437 por mês.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <a
-            href={site.links.whatsapp}
+            href={site.links.whatsappDiagnostico}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
           >
-            Falar no WhatsApp
+            Pedir diagnóstico gratuito
           </a>
           <a
             href={site.links.agenda}
@@ -141,131 +192,135 @@ export default function AtendimentoWhatsapp() {
           O problema
         </p>
         <h2 className="font-display mt-5 max-w-[26ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
-          Atendimento manual custa venda{" "}
-          <span className="text-acento">e não deixa rastro.</span>
+          O cliente encontra vários números.{" "}
+          <span className="text-acento">A conversa fica espalhada.</span>
         </h2>
         <p className="mt-6 max-w-[58ch] text-lg text-suave">
-          Quem atende pelo WhatsApp de forma manual perde venda por demora na
-          resposta, não tem histórico organizado de conversas, não consegue
-          medir o que gera resultado e não escala sem contratar mais gente.
-          O NexIAtend une atendimento, CRM, automação e IA num único
-          ambiente conectado ao WhatsApp e ao Instagram Direct.
+          Quando duas ou mais pessoas atendem pelo WhatsApp, cada conversa
+          fica num lugar diferente. O dono não vê o todo, o histórico se perde
+          e ninguém sabe dizer de onde veio o cliente que fechou.
         </p>
+        <dl className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3">
+          {hoje.map((item) => (
+            <div key={item.titulo} className="border-t border-linha pt-5">
+              <dt className="font-display text-xl font-extrabold tracking-tight">
+                {item.titulo}
+              </dt>
+              <dd className="mt-2 text-sm leading-relaxed text-suave">
+                {item.descricao}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="bg-azul text-sobre-azul">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
           <h2 className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
-            Por que WhatsApp
+            O caminho de um cliente até a empresa
           </h2>
-          <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-8 grid gap-6 sm:grid-cols-3">
             {numeros.map((item) => (
-              <div key={item.descricao}>
-                <dd className="font-display text-4xl font-extrabold tracking-tight">
-                  {item.valor}
-                </dd>
+              <div key={item.descricao} className="flex flex-col-reverse">
                 <dt className="mt-2 text-sm leading-relaxed text-sobre-azul-suave">
                   {item.descricao}
                 </dt>
+                <dd className="font-mono text-4xl font-bold tracking-tight">
+                  {item.valor}
+                </dd>
               </div>
             ))}
           </dl>
           <p className="mt-8 text-xs text-sobre-azul-suave">
-            Fontes: Opinion Box, Hazlo, CNN Brasil — dados do material
-            comercial da plataforma.
+            Fonte: diagnóstico feito pela TWR Tech em 6 negócios de Santo André
+            (estética, imobiliária e escola de idiomas), outubro de 2026, só com
+            dados públicos.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          O que a plataforma faz
+          Como funciona
         </p>
-        <h2 className="font-display mt-5 max-w-[20ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Oito módulos, um único ambiente.
+        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+          Quatro etapas, e você aprova antes de ir ao ar.
         </h2>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {modulos.map((modulo) => (
+        <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {etapas.map((etapa, i) => (
             <li
-              key={modulo.titulo}
+              key={etapa.titulo}
               className="rounded-2xl border border-linha bg-painel p-5"
             >
-              <h3 className="font-display text-lg font-extrabold tracking-tight">
-                {modulo.titulo}
+              <p className="font-mono text-sm font-bold text-apagado">
+                {String(i + 1).padStart(2, "0")}
+              </p>
+              <h3 className="font-display mt-2 text-lg font-extrabold tracking-tight">
+                {etapa.titulo}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-suave">
-                {modulo.descricao}
+                {etapa.descricao}
               </p>
-              {modulo.planosSuperiores && (
-                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.09em] text-apagado">
-                  Planos superiores
-                </p>
-              )}
             </li>
           ))}
-        </ul>
+        </ol>
+        <p className="mt-8 max-w-[58ch] text-sm text-apagado">
+          A conexão é a oficial do WhatsApp, e o número e o aplicativo no
+          celular podem continuar funcionando. O atendimento do dia a dia fica
+          com a sua equipe: a TWR Tech implanta, treina e dá suporte, mas não
+          opera a central.
+        </p>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Planos por porte
+          Planos
         </p>
-        <h2 className="font-display mt-5 max-w-[20ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Do primeiro atendente à operação com múltiplos canais.
+        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+          Cada plano resolve uma dor a mais.
         </h2>
-        <div className="mt-10 overflow-x-auto rounded-2xl border border-linha">
-          <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-            <thead>
-              <tr className="border-b border-linha bg-painel">
-                <th className="p-4 font-display text-base font-extrabold">
-                  Plano
-                </th>
-                <th className="p-4 font-display text-base font-extrabold">
-                  Para quem serve
-                </th>
-                <th className="p-4 font-display text-base font-extrabold">
-                  Usuários
-                </th>
-                <th className="p-4 font-display text-base font-extrabold">
-                  Módulos-chave
-                </th>
-                <th className="p-4 font-display text-base font-extrabold">
-                  Valor
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {planos.map((plano, i) => (
-                <tr
-                  key={plano.nome}
-                  className={i > 0 ? "border-t border-linha" : ""}
-                >
-                  <td className="p-4 align-top">
-                    <span className="font-display font-extrabold">
-                      {plano.nome}
-                    </span>
-                    {plano.destaque && (
-                      <span className="ml-2 rounded-full bg-acento px-2.5 py-0.5 text-xs font-bold text-acento-contraste">
-                        {plano.destaque}
-                      </span>
-                    )}
-                  </td>
-                  <td className="p-4 align-top text-suave">{plano.paraQuem}</td>
-                  <td className="p-4 align-top text-suave">{plano.usuarios}</td>
-                  <td className="p-4 align-top text-suave">{plano.modulos}</td>
-                  <td className="p-4 align-top text-suave">
-                    Valor sob consulta
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {planos.map((plano) => (
+            <li
+              key={plano.nome}
+              className="flex flex-col rounded-2xl border border-linha bg-painel p-6"
+            >
+              <h3 className="font-display text-xl font-extrabold tracking-tight">
+                {plano.nome}
+              </h3>
+              <p className="mt-1 min-h-[2.5rem] text-sm font-semibold text-suave">
+                {plano.resolve}
+              </p>
+              <p className="font-mono mt-5 text-3xl font-bold">
+                {plano.preco}
+                <span className="text-base font-medium text-apagado">/mês</span>
+              </p>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.09em] text-apagado">
+                {plano.capacidade}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-suave">
+                {plano.inclui}
+              </p>
+              <p className="mt-auto pt-5 text-sm text-apagado">
+                Implantação: {plano.implantacao}
+              </p>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8 grid max-w-[70ch] gap-3 text-sm text-apagado">
+          <p>
+            Contrato mensal sem fidelidade, com a implantação inteira, ou
+            contrato de 12 meses com a implantação pela metade. Dá para mudar
+            de plano quando a operação crescer.
+          </p>
+          <p>
+            Adicionais: pessoa ou canal extra, assistente de IA nos planos
+            Vendas e Equipe, cobrança no chat e visita presencial no ABC
+            paulista. As mensagens que a Meta cobra são pagas pela empresa
+            direto à Meta, e o uso do assistente de IA roda na conta de IA da
+            própria empresa.
+          </p>
         </div>
-        <p className="mt-5 max-w-[58ch] text-sm text-apagado">
-          Agentes de IA, conexão de pagamentos e canais/usuários adicionais
-          são add-ons disponíveis em qualquer plano. Sem multa de
-          cancelamento — o plano se ajusta conforme a operação cresce.
-        </p>
       </section>
 
       <section className="bg-azul-profundo text-sobre-azul">
@@ -275,23 +330,23 @@ export default function AtendimentoWhatsapp() {
             <span className="text-acento">os dados vêm depois.</span>
           </h2>
           <p className="mt-5 max-w-[58ch] text-sobre-azul-suave">
-            O NexIAtend resolve a dor mais imediata: o atendimento
-            organizado, com histórico e métricas. A partir daí, o mesmo
-            trabalho de dados, BI e automação que aplico em{" "}
+            Com as conversas num lugar só, o atendimento passa a gerar
+            histórico e números. A mesma TWR Tech que implanta o NexIAtend faz
+            painéis de gestão, indicadores e automações sobre esses dados, como
+            nos{" "}
             <Link href="/portfolio" className="font-bold text-sobre-azul hover:underline">
-              outros estudos de caso
-            </Link>{" "}
-            passa a valer para a sua operação — funil de vendas, indicadores
-            de atendimento e IA em cima dos seus próprios números.
+              estudos de caso do portfólio
+            </Link>
+            , em projeto à parte.
           </p>
         </div>
       </section>
 
-      <FaqSection titulo="Perguntas frequentes" itens={faqWhatsapp} />
+      <FaqSection titulo="Perguntas frequentes" itens={faqNexiatend} />
 
       <CTASection
-        titulo="Quer ver o NexIAtend no seu WhatsApp?"
-        texto="A TWR Tech explica como funciona o onboarding e qual plano faz sentido para o seu porte."
+        titulo="Como um cliente chega até você hoje?"
+        texto="O diagnóstico é gratuito: o caminho de um cliente no Google, no site e no Instagram, com o que mais pesa no seu caso e um ajuste que você mesmo pode fazer."
       />
     </>
   );
