@@ -82,10 +82,12 @@ export function Hero({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[calc(100%-3rem)] -z-10 h-[52rem] w-[150%] max-w-[90rem] -translate-x-1/2 rounded-[50%] border border-eletrico/50"
+        className="pointer-events-none absolute left-1/2 top-[calc(100%-5rem)] -z-10 h-[52rem] w-[150%] max-w-[90rem] -translate-x-1/2 rounded-[50%] border border-eletrico/50"
         style={{
           background:
             "radial-gradient(ellipse 60% 22% at 50% 0%, color-mix(in oklab, var(--color-eletrico) 45%, transparent), transparent 100%)",
+          maskImage: "linear-gradient(to bottom, #000 0%, transparent 5rem)",
+          WebkitMaskImage: "linear-gradient(to bottom, #000 0%, transparent 5rem)",
         }}
       />
 

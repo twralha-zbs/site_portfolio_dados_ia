@@ -947,6 +947,30 @@ e ERP; CTA principal "Agendar conversa de 30 minutos" (cal.com).
 Verificado: 1 H1, sem rolagem horizontal em 375 e 1280, console limpo, FAQ do
 JSON-LD igual ao visível (6/6), sem travessão visível no código.
 
+**Revisão com /impeccable (critique, placar 27/40) e ajustes aplicados:**
+- Pílula "Estudo de caso demonstrativo" removida dos cards desta página (a
+  Home e o portfólio mantêm); a frase de "dados sintéticos" na introdução da
+  seção sustenta a regra de honestidade.
+- Página enxugada de 10 para 8 seções (cerca de 12% menos rolagem em 1280):
+  os dois processos de 3 passos viraram uma linha do tempo só (conversa,
+  diagnóstico, projeto); "Para quem é" virou uma linha no fim do problema; a
+  ponte com o NexIAtend virou uma frase ao lado do link do portfólio.
+- Camadas (Python, Power BI, Power Automate, IA) viraram lista sem cards e sem
+  numeração, com o resultado como título e a ferramenta como etiqueta mono.
+- "Como é cobrado" virou bloco Azul com o CTA de agenda (a página não tinha CTA
+  entre o hero e o final); espaçamentos das seções variados.
+- Copy: "Em qual número da sua empresa ninguém confia?" (regência corrigida) e
+  acento azul só em 3 H2.
+- Hero compartilhado: o arco azul agora dissolve em vez de cortar reto (vale
+  para Home, /nexiatend, /maxialcance e /organizacao-de-dados).
+- **Decisão do usuário:** sem artefato real dos estudos de caso por enquanto;
+  o gráfico decorativo (`VisualDados`) e os cards de caso ficam como estão.
+  Quando houver artefato (ex.: `lab/serra-azul/resumo_exemplo.md`), mostrá-lo
+  rotulado como dado sintético no lugar do gráfico.
+- Incidente de processo: o teste do modo live do impeccable criou
+  `.impeccable/live/roots.json`, que foi desfeito antes do commit; o
+  `.impeccable/design.json` (já versionado) foi preservado.
+
 **Pendências:**
 - Revisão visual do usuário e depois build, commit e push.
 - Checar INPI (classes 35 e 42) e domínio antes de tornar "DataConsult"

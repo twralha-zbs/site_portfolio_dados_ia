@@ -18,6 +18,8 @@ type Props = {
   visual: React.ReactNode;
   // Visual à esquerda no desktop
   invertido?: boolean;
+  // Espaçamento vertical da seção (padrão: py-16 md:py-20)
+  className?: string;
 };
 
 // Grupo de recursos da landing do NexIAtend, na estrutura da aldacrm.com:
@@ -31,11 +33,15 @@ export function GrupoRecursos({
   children,
   visual,
   invertido,
+  className,
 }: Props) {
   return (
     <section
       id={id}
-      className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:px-8 md:py-20"
+      className={cn(
+        "mx-auto max-w-6xl scroll-mt-20 px-6 md:px-8",
+        className ?? "py-16 md:py-20",
+      )}
     >
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
         <div className={cn(invertido && "lg:order-last")}>
