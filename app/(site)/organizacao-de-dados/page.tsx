@@ -321,10 +321,7 @@ export default function OrganizacaoDeDados() {
               key={item.slug}
               className="rounded-2xl border border-linha bg-painel p-6"
             >
-              <p className="inline-block rounded-full border border-linha px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.09em] text-apagado">
-                Estudo de caso demonstrativo
-              </p>
-              <h3 className="font-display mt-4 text-xl font-extrabold tracking-tight">
+              <h3 className="font-display text-xl font-extrabold tracking-tight">
                 {item.titulo}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-suave">
