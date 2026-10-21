@@ -265,8 +265,8 @@ export default function Nexiatend() {
           ))}
         </ol>
         <p className="mt-8 max-w-[58ch] text-sm text-apagado">
-          A conexão é a oficial do WhatsApp, e o número e o aplicativo no
-          celular podem continuar funcionando. O atendimento do dia a dia fica
+          A conexão é feita pela WhatsApp Business Platform (API), e o número e
+          o aplicativo no celular podem continuar funcionando. O atendimento do dia a dia fica
           com a sua equipe: a TWR Tech implanta, treina e dá suporte, mas não
           opera a central.
         </p>

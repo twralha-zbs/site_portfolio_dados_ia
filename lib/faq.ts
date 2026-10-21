@@ -57,7 +57,7 @@ export const faqNexiatend: ItemFaq[] = [
   {
     pergunta: "Preciso trocar o número ou parar de usar o WhatsApp no celular?",
     resposta:
-      "Não. A conexão oficial do WhatsApp pode manter o número atual e o aplicativo no celular funcionando junto com a central. A TWR Tech faz essa conexão na implantação. Para isso, a empresa precisa de CNPJ, de uma conta da Meta com cartão e de um site com o CNPJ no rodapé.",
+      "Não. A conexão pela WhatsApp Business Platform (API) pode manter o número atual e o aplicativo no celular funcionando junto com a central. A TWR Tech faz essa conexão na implantação. Para isso, a empresa precisa de CNPJ, de uma conta da Meta com cartão e de um site com o CNPJ no rodapé.",
   },
   {
     pergunta: "Quem paga as mensagens do WhatsApp?",
@@ -102,7 +102,7 @@ export const faqMaxialcance: ItemFaq[] = [
   {
     pergunta: "Quanto custa o MaxIAlcance?",
     resposta:
-      "A implantação começa em R$ 3.000. O valor final depende do número de serviços, das regiões atendidas e de ser preciso criar o site ou só otimizar o que já existe. O acompanhamento mensal custa R$ 300 e é recomendado por 6 a 12 meses. A avaliação inicial é gratuita.",
+      "A implantação começa em R$ 3.000. O valor final depende do número de serviços, das regiões atendidas e de ser preciso criar o site ou só otimizar o que já existe. O acompanhamento mensal custa R$ 400 e é recomendado por 6 a 12 meses. A avaliação inicial é gratuita.",
   },
   {
     pergunta: "Em quanto tempo aparecem resultados?",

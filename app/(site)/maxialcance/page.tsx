@@ -118,7 +118,7 @@ const jsonLd = [
         minPrice: 3000,
         priceCurrency: "BRL",
       },
-      description: "Implantação a partir de R$ 3.000; acompanhamento mensal de R$ 300.",
+      description: "Implantação a partir de R$ 3.000; acompanhamento mensal de R$ 400.",
     },
   },
   {
@@ -302,7 +302,7 @@ export default function Maxialcance() {
           </div>
           <div className="rounded-2xl border border-linha bg-painel p-6">
             <p className="text-sm font-semibold text-suave">Acompanhamento</p>
-            <p className="font-mono mt-2 text-3xl font-bold">R$ 300/mês</p>
+            <p className="font-mono mt-2 text-3xl font-bold">R$ 400/mês</p>
             <p className="mt-3 text-sm leading-relaxed text-suave">
               Recomendado por 6 a 12 meses: o resultado de busca amadurece com
               o tempo.
