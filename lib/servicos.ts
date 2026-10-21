@@ -66,13 +66,14 @@ export const produtos: Produto[] = [
       "Painéis e indicadores que as áreas usam para decidir",
       "Automações que tiram o trabalho manual do fechamento",
     ],
-    nome: "Organização de Dados & Processos",
+    nome: "DataConsult",
+    selo: "by TWR Tech",
     tagline: "Dados dispersos viram decisão confiável.",
     modeloPreco: "Escopo aberto, por projeto",
     descricao:
       "Mapeamos fontes, processos e fluxos de dados, propomos melhorias e construímos as ferramentas que automatizam e organizam a operação.",
-    ctaRotulo: "Falar sobre o projeto",
-    href: "/contato",
+    ctaRotulo: "Conhecer o DataConsult",
+    href: "/organizacao-de-dados",
     externo: false,
   },
 ];

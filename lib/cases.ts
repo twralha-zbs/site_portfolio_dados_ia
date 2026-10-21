@@ -26,7 +26,7 @@ export const casesDemonstrativos: Case[] = [
   },
   {
     slug: "colegios-simulados",
-    titulo: "Rede de colégios — desempenho em simulados",
+    titulo: "Rede de colégios: desempenho em simulados",
     resumo:
       "Acompanhamento de notas por aluno, turma, unidade e área de conhecimento entre simulados, com identificação dos tópicos de maior perda.",
     contexto:
@@ -37,7 +37,7 @@ export const casesDemonstrativos: Case[] = [
   },
   {
     slug: "forca-de-vendas",
-    titulo: "Força de vendas — gestão de carteira",
+    titulo: "Força de vendas: gestão de carteira",
     resumo:
       "Priorização das empresas a visitar por potencial, tempo desde a última visita e cobertura por vendedor, com roteirização da carteira.",
     contexto:
@@ -55,7 +55,7 @@ export const projetosProprios: Case[] = [
     resumo:
       "Perfil de referência em esporte feminino brasileiro (@elasjogambr), operado por uma pipeline de 8 agentes de IA em cron, com gate de aprovação humana obrigatório nos primeiros 90 dias.",
     contexto:
-      "Perfil de referência em esporte feminino brasileiro operado por uma pipeline de 8 agentes de IA (apuração, redação, design, checagem, publicação, plantão, análise). Tese: a imprensa dedica 2,7–4% da cobertura ao esporte feminino enquanto ele já ocupa 18,5% da conversa social — o público conversa 4 a 7x mais do que a imprensa cobre. Janela: Copa do Mundo Feminina no Brasil, jun–jul/2027.",
+      "Perfil de referência em esporte feminino brasileiro operado por uma pipeline de 8 agentes de IA (apuração, redação, design, checagem, publicação, plantão, análise). Tese: a imprensa dedica 2,7–4% da cobertura ao esporte feminino enquanto ele já ocupa 18,5% da conversa social: o público conversa 4 a 7x mais do que a imprensa cobre. Janela: Copa do Mundo Feminina no Brasil, jun–jul/2027.",
     selo: "projeto-proprio",
     status: "em-breve",
     stack: ["Agentes de IA", "Automação", "Instagram"],

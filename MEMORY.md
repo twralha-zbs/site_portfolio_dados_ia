@@ -922,10 +922,43 @@ Ajustes pedidos pelo usuário depois da publicação da revisão.
 - FAQ de custo e de fidelidade e a descrição do JSON-LD ajustados ao novo
   contrato.
 
+## Sessão 2026-10-21 (página /organizacao-de-dados, DataConsult)
+
+Plano em [docs/designs/pagina-dataconsult.md](docs/designs/pagina-dataconsult.md).
+
+**Decisões do usuário:** marca de trabalho **DataConsult** (provisória); rota
+descritiva `/organizacao-de-dados` (a URL não muda se o nome mudar); escopo
+aberto por projeto, **sem preço público**; público PME com dados em planilhas
+e ERP; CTA principal "Agendar conversa de 30 minutos" (cal.com).
+
+- Página nova: hero compartilhado, problema (4 sintomas), "como trabalhamos"
+  (mapear, propor, construir, com o `VisualDados` da Home), 4 camadas
+  (Python, Power BI, Power Automate, IA aplicada), "como começa" (conversa,
+  diagnóstico de escopo fixo, projeto), setores, 3 estudos de caso
+  demonstrativos rotulados, ponte com o NexIAtend, FAQ (`faqDataconsult`, 6
+  perguntas) e CTA. JSON-LD `Service` (sem `offers`) e `FAQPage`.
+- Ligações: `lib/servicos.ts` (nome DataConsult, selo "by TWR Tech", CTA
+  "Conhecer o DataConsult" apontando para a página, antes ia para `/contato`),
+  rodapé e `sitemap.ts`.
+- Correção de passagem: 3 travessões visíveis em `lib/cases.ts` (títulos de
+  dois cases e o contexto do ELAS JOGAM) viraram dois-pontos, por causa da
+  regra de não usar travessão em texto visível.
+
+Verificado: 1 H1, sem rolagem horizontal em 375 e 1280, console limpo, FAQ do
+JSON-LD igual ao visível (6/6), sem travessão visível no código.
+
+**Pendências:**
+- Revisão visual do usuário e depois build, commit e push.
+- Checar INPI (classes 35 e 42) e domínio antes de tornar "DataConsult"
+  definitivo; trocar o nome é editar texto, a rota não muda.
+- A página `/portfolio` e os cases continuam "em breve": a prova da página é
+  só o resumo dos 3 estudos de caso.
+
 ## Próximo passo
 
-Aprovar visualmente e publicar a revisão; depois seguir com a página de
-`/organizacao-de-dados`.
+Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
+definitivo do DataConsult (INPI e domínio) e publicar os estudos de caso do
+portfólio, hoje "em breve".
 
 Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
 página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de

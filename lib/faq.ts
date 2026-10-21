@@ -125,3 +125,39 @@ export const faqMaxialcance: ItemFaq[] = [
       "Para negócios locais de serviço que dependem de indicação: clínicas e consultórios, locação para eventos, escritórios de contabilidade, restaurantes, cafés e docerias, entre outros. Se os seus clientes procuram o seu serviço pelo nome da cidade ou do bairro, o MaxIAlcance se aplica.",
   },
 ];
+
+// FAQ da página /organizacao-de-dados (DataConsult). As mesmas strings alimentam
+// o JSON-LD FAQPage da página, então o texto visível e o estruturado nunca
+// divergem.
+export const faqDataconsult: ItemFaq[] = [
+  {
+    pergunta: "O que é o DataConsult?",
+    resposta:
+      "O DataConsult é a consultoria da TWR Tech para organizar os dados e os processos de uma empresa. A TWR Tech mapeia as fontes, os processos e os fluxos de dados, propõe o que melhorar e constrói as ferramentas que organizam e automatizam a operação: pipelines em Python, painéis em Power BI, rotinas em Power Automate e, quando faz sentido, IA aplicada.",
+  },
+  {
+    pergunta: "Como começa um projeto?",
+    resposta:
+      "Começa por uma conversa de 30 minutos, em que você descreve a dor de hoje e a TWR Tech aponta se e como dá para resolver. Se fizer sentido, o passo seguinte é um diagnóstico de escopo fixo, que costuma levar poucos dias e termina num plano do que construir primeiro. Só depois disso vem a proposta do projeto.",
+  },
+  {
+    pergunta: "Quanto custa?",
+    resposta:
+      "Não há tabela de preços, porque cada projeto é dimensionado pelo problema: número de fontes, de áreas e de rotinas envolvidas. O valor é informado depois da conversa ou do diagnóstico, por projeto, com o escopo escrito. Nada é cobrado pela conversa inicial.",
+  },
+  {
+    pergunta: "Funciona com o meu ERP e as minhas planilhas?",
+    resposta:
+      "Sim. O trabalho parte de onde a informação vive hoje: ERP, CRM, bancos SQL, APIs e planilhas de Excel. Onde não há conexão direta, um pipeline em Python trata e padroniza os dados antes de carregar. As licenças das ferramentas Microsoft, quando necessárias, são informadas na proposta.",
+  },
+  {
+    pergunta: "Quem mantém tudo depois que o projeto termina?",
+    resposta:
+      "A sua equipe. A TWR Tech implanta, documenta e ensina a usar, com ferramentas padrão de mercado (Power BI, Power Automate e Python), sem sistema proprietário que prenda a empresa a um fornecedor. Se quiser acompanhamento depois, ele é combinado à parte.",
+  },
+  {
+    pergunta: "Para que tipo de empresa serve?",
+    resposta:
+      "Para pequenas e médias empresas com dados espalhados entre ERP, planilhas e sistemas que não conversam, e números que mudam de uma área para outra: atacado e distribuição, varejo, indústria e serviços. Se o fechamento do mês vira discussão sobre qual número está certo, o DataConsult se aplica.",
+  },
+];

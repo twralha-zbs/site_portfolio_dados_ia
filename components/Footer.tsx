@@ -43,6 +43,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/organizacao-de-dados" className="text-suave hover:text-texto">
+                  DataConsult
+                </Link>
+              </li>
+              <li>
                 <Link href="/sobre" className="text-suave hover:text-texto">
                   Sobre
                 </Link>
