@@ -3,7 +3,6 @@
 import { useState } from "react";
 import NumberFlow from "@number-flow/react";
 import { Check, Minus } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
 import {
   comparativo,
   mesesGratis,
@@ -50,31 +49,34 @@ export function Planos() {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-        <span
+      <div
+        role="group"
+        aria-label="Tipo de contrato"
+        className="inline-flex flex-wrap rounded-full border border-linha bg-painel p-1"
+      >
+        <button
+          type="button"
+          aria-pressed={!doze}
+          onClick={() => setDoze(false)}
           className={cn(
-            "text-sm font-semibold transition-colors",
-            doze ? "text-apagado" : "text-texto",
+            "rounded-full px-5 py-3 text-sm font-semibold transition-colors",
+            !doze ? "bg-azul text-sobre-azul" : "text-suave hover:text-texto",
           )}
         >
           Mensal, sem fidelidade
-        </span>
-        <Switch
-          checked={doze}
-          onCheckedChange={setDoze}
-          aria-label="Contrato de 12 meses, com 1 mês de mensalidade grátis"
-        />
-        <span
+        </button>
+        <button
+          type="button"
+          aria-pressed={doze}
+          onClick={() => setDoze(true)}
           className={cn(
-            "text-sm font-semibold transition-colors",
-            doze ? "text-texto" : "text-apagado",
+            "flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors",
+            doze ? "bg-azul text-sobre-azul" : "text-suave hover:text-texto",
           )}
         >
           12 meses
-        </span>
-        <span className="rounded-full border border-linha bg-painel px-3 py-1 font-mono text-xs text-suave">
-          1 mês grátis
-        </span>
+          <span className="font-mono text-xs font-medium">1 mês grátis</span>
+        </button>
       </div>
 
       <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -91,7 +93,7 @@ export function Planos() {
             {/* Linha reservada para o rótulo, para o nome e o preço alinharem entre os cards */}
             <div className="min-h-6">
               {plano.rotulo && (
-                <span className="inline-block whitespace-nowrap rounded-full bg-sobre-azul px-2.5 py-1 text-[0.68rem] font-bold uppercase leading-none tracking-[0.09em] text-azul-profundo">
+                <span className="inline-block whitespace-nowrap rounded-full bg-sobre-azul px-2.5 py-1 text-[0.7rem] font-bold uppercase leading-none tracking-[0.09em] text-azul-profundo">
                   {plano.rotulo}
                 </span>
               )}
@@ -247,7 +249,7 @@ export function Planos() {
               <tr className="border-b border-linha">
                 <th
                   scope="col"
-                  className="sticky left-0 bg-painel px-6 py-3 font-semibold text-apagado"
+                  className="sticky left-0 bg-painel px-3 py-3 font-semibold text-apagado md:px-6"
                 >
                   Recurso
                 </th>
@@ -267,7 +269,7 @@ export function Planos() {
                 <tr key={linha.recurso} className="border-b border-linha last:border-b-0">
                   <th
                     scope="row"
-                    className="sticky left-0 bg-painel px-6 py-3 font-medium text-suave"
+                    className="sticky left-0 w-36 bg-painel px-3 py-3 text-xs font-medium text-suave md:w-auto md:px-6 md:text-sm"
                   >
                     {linha.recurso}
                   </th>

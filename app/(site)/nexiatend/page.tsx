@@ -21,16 +21,12 @@ import {
   precoMinimo,
 } from "@/lib/nexiatend";
 import { site } from "@/lib/site";
-import agentes from "@/public/nexiatend/agentes_inteligentes.webp";
-import aplicativos from "@/public/nexiatend/aplicativos.webp";
+import agentesDetalhe from "@/public/nexiatend/agentes_detalhe.webp";
 import atendimentoMobile from "@/public/nexiatend/atendimento_mobile.webp";
 import centralAtendimento from "@/public/nexiatend/central_atendimento.webp";
-import crmPipeline from "@/public/nexiatend/crm_pipeline_comercial.webp";
 import exemploWhatsappFlow from "@/public/nexiatend/exemplo_whatsapp_flow.webp";
 import fluxoChatbot from "@/public/nexiatend/fluxo_chatbot.webp";
-import horarioFuncionamento from "@/public/nexiatend/horario_funcionamento.webp";
-import integracoes from "@/public/nexiatend/integracoes.webp";
-import modelosMensagem from "@/public/nexiatend/modelos_mensagem.webp";
+import funilDetalhe from "@/public/nexiatend/funil_detalhe.webp";
 import rastreamento from "@/public/nexiatend/rastreamento.webp";
 
 const reais = (valor: number) => `R$ ${valor.toLocaleString("pt-BR")}`;
@@ -78,24 +74,6 @@ const rupturas = [
     titulo: "O cliente é esquecido depois da compra",
     descricao:
       "Sem um retorno programado, o relacionamento só recomeça quando o cliente chama de novo.",
-  },
-];
-
-const hoje = [
-  {
-    titulo: "Cada um no seu celular",
-    descricao:
-      "A conversa fica no aparelho de quem atendeu. Quando a pessoa sai de férias ou da empresa, o histórico vai junto.",
-  },
-  {
-    titulo: "WhatsApp Web dividido",
-    descricao:
-      "Várias pessoas no mesmo número, sem saber quem respondeu o quê, e a conexão cai no meio do expediente.",
-  },
-  {
-    titulo: "Retorno de memória",
-    descricao:
-      "Mensagem nova empurra para baixo quem pediu preço ontem. O retorno depende de alguém lembrar.",
   },
 ];
 
@@ -147,14 +125,14 @@ const fluxos = [
       "Cada cliente volta para o seu atendente, que conhece o histórico.",
   },
   {
-    titulo: "Departamentos e filas",
+    titulo: "Departamentos, filas e horário",
     descricao:
-      "Comercial, suporte e financeiro com equipes, filas e regras próprias.",
+      "Comercial, suporte e financeiro com regras próprias, e mensagem automática quando a empresa está fechada.",
   },
   {
-    titulo: "Horário e mensagem fora do expediente",
+    titulo: "Triagem e respostas rápidas",
     descricao:
-      "A empresa responde quando está fechada e o retorno entra na fila do dia seguinte.",
+      "O que se repete todo dia é resolvido antes de chegar a uma pessoa, e o áudio do cliente vira texto.",
   },
   {
     titulo: "Modelos de mensagem aprovados pela Meta",
@@ -162,13 +140,13 @@ const fluxos = [
       "Campanhas e lembretes com mensagens aprovadas, enviadas para quem aceitou receber.",
   },
   {
-    titulo: "Sequências e mensagens agendadas",
+    titulo: "Sequências e retornos programados",
     descricao:
-      "Retornos programados para quem pediu preço, para quem sumiu e para quem acabou de comprar.",
+      "Retorno para quem pediu preço, para quem sumiu e para quem acabou de comprar, sem depender da memória de ninguém.",
   },
 ];
 
-const dados = [
+const dadosEGestao = [
   {
     titulo: "CRM como fonte única",
     descricao:
@@ -180,65 +158,19 @@ const dados = [
       "Campanha, anúncio ou site: o cliente chega com a origem registrada na conversa.",
   },
   {
-    titulo: "Etiquetas e campos",
-    descricao:
-      "Classifique por interesse, estágio ou o que for útil para o seu negócio.",
-  },
-  {
     titulo: "Histórico completo",
     descricao:
       "O que foi dito fica com o cliente, mesmo quando o atendente sai da empresa.",
   },
-];
-
-const tempoDaEquipe = [
-  "Triagem automática antes de a conversa chegar a uma pessoa",
-  "Respostas rápidas para o que se repete todo dia",
-  "Transcrição de áudio, para ler em vez de ouvir",
-  "Retorno programado, sem depender da memória de ninguém",
-  "Perguntas repetidas respondidas pelo agente de IA",
-  "Tudo do cliente numa tela só",
-];
-
-const gestao = [
   {
     titulo: "Supervisão em tempo real",
-    descricao: "Quem está esperando, há quanto tempo e com quem.",
-  },
-  {
-    titulo: "Relatórios de volume, espera e duração",
-    descricao: "Para saber se a equipe dá conta e onde a fila trava.",
-  },
-  {
-    titulo: "Pesquisa de satisfação",
-    descricao: "O cliente avalia o atendimento ao fim da conversa.",
-  },
-  {
-    titulo: "Acompanhamento pelo celular",
-    descricao: "A gestão vê e atende de onde estiver, pelo aplicativo.",
-  },
-];
-
-const etapas = [
-  {
-    titulo: "Diagnóstico gratuito",
     descricao:
-      "O caminho de um cliente até você no Google, no site e no Instagram, com um ajuste que você mesmo pode fazer.",
+      "Quem está esperando, há quanto tempo e com quem, com relatórios de volume, espera e duração.",
   },
   {
-    titulo: "Demonstração",
+    titulo: "Satisfação e acompanhamento pelo celular",
     descricao:
-      "A central funcionando com o caso do seu negócio. Se quiser, 14 dias de teste com a sua equipe.",
-  },
-  {
-    titulo: "Implantação",
-    descricao:
-      "A TWR Tech conecta o canal, escreve a mensagem de boas-vindas com você e configura equipe e horário. Nada entra no ar sem a sua aprovação.",
-  },
-  {
-    titulo: "Acompanhamento",
-    descricao:
-      "Treinamento da equipe, check-ins no primeiro mês, revisão de 30 dias e suporte pelo WhatsApp.",
+      "O cliente avalia o atendimento ao fim da conversa, e a gestão acompanha de onde estiver, pelo aplicativo.",
   },
 ];
 
@@ -278,6 +210,29 @@ const adicionais = [
   {
     titulo: "Visita presencial no ABC paulista",
     descricao: "Início do projeto ou treinamento da equipe no local, a pedido.",
+  },
+];
+
+const etapas = [
+  {
+    titulo: "Diagnóstico gratuito",
+    descricao:
+      "O caminho de um cliente até você no Google, no site e no Instagram, com um ajuste que você mesmo pode fazer.",
+  },
+  {
+    titulo: "Demonstração",
+    descricao:
+      "A central funcionando com o caso do seu negócio. Se quiser, 14 dias de teste com a sua equipe.",
+  },
+  {
+    titulo: "Implantação",
+    descricao:
+      "A TWR Tech conecta o canal, escreve a mensagem de boas-vindas com você e configura equipe e horário. Nada entra no ar sem a sua aprovação.",
+  },
+  {
+    titulo: "Acompanhamento",
+    descricao:
+      "Treinamento da equipe, check-ins no primeiro mês, revisão de 30 dias e suporte pelo WhatsApp.",
   },
 ];
 
@@ -348,6 +303,7 @@ export default function Nexiatend() {
           },
           secundario: { rotulo: "Ver planos", href: "#planos" },
         }}
+        nota={`Planos a partir de ${reais(precoMinimo)}/mês`}
       >
         <div className="relative mx-auto max-w-5xl text-left">
           <PrintProduto
@@ -379,7 +335,7 @@ export default function Nexiatend() {
         </ul>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
+      <section className="mx-auto max-w-6xl px-6 pb-8 pt-20 md:px-8 md:pb-12 md:pt-28">
         <Rotulo>{"// o problema"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
           Digitalizamos a conversa,{" "}
@@ -418,25 +374,10 @@ export default function Nexiatend() {
             </div>
           ))}
         </dl>
-
-        <h3 className="mt-16 font-mono text-xs text-apagado md:text-sm">
-          {"// no dia a dia, aparece assim"}
-        </h3>
-        <dl className="mt-6 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3">
-          {hoje.map((item) => (
-            <div key={item.titulo} className="border-t border-linha pt-5">
-              <dt className="font-display text-xl font-extrabold tracking-tight">
-                {item.titulo}
-              </dt>
-              <dd className="mt-2 text-sm leading-relaxed text-suave">
-                {item.descricao}
-              </dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       <GrupoRecursos
+        className="py-12 md:py-16"
         rotulo="// 01 · conversas inteligentes"
         titulo={
           <>
@@ -454,7 +395,7 @@ export default function Nexiatend() {
               src={fluxoChatbot}
               alt="Editor de fluxo do NexIAtend: um gatilho abre a conversa e os blocos seguintes enviam mensagens, aguardam respostas, alteram campos do cliente e transferem para uma equipe"
               sizes="(min-width: 1024px) 560px, 100vw"
-              legenda="// fluxo no editor"
+              legenda="// o fluxo, no editor"
             />
             <div className="grid items-center gap-6 sm:grid-cols-[auto_1fr]">
               <PrintProduto
@@ -491,161 +432,78 @@ export default function Nexiatend() {
         </ul>
       </GrupoRecursos>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
         <Rotulo>{"// 02 · fluxos de atendimento e vendas"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Cada conversa no caminho certo,{" "}
-          <span className="text-acento">sem ninguém escalar.</span>
+          Cada conversa no caminho certo, sem ninguém escalar.
         </h2>
         <p className="mt-5 max-w-[58ch] text-lg text-suave">
           As regras ficam na plataforma, e não na cabeça de quem atende. A
           equipe responde, e o resto anda sozinho.
         </p>
 
-        <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {fluxos.map((item) => (
-            <li
-              key={item.titulo}
-              className="rounded-2xl border border-linha bg-painel p-6"
-            >
-              <h3 className="font-display text-lg font-extrabold tracking-tight">
-                {item.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-suave">
-                {item.descricao}
-              </p>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1fr_1.6fr] lg:gap-12">
-          <div>
-            <h3 className="font-display text-2xl font-extrabold tracking-tight">
-              Funil de vendas
-            </h3>
-            <p className="mt-3 text-suave">
-              Cada oportunidade numa coluna, com responsável, valor e atraso à
-              vista. Quem pediu preço e não recebeu retorno aparece em destaque.
-            </p>
-          </div>
-          <PrintProduto
-            src={crmPipeline}
-            alt="Funil de vendas do CRM em colunas (Prospecção, Contrato, Visita, Reclamação e Retenção), com cartões de clientes, responsáveis, valores e alertas de atraso"
-            sizes="(min-width: 1024px) 640px, 100vw"
-            legenda="// funil comercial"
-          />
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <figure>
-            <PrintProduto
-              src={horarioFuncionamento}
-              alt="Tela de horário de atendimento da empresa, com dias da semana, horário de início, almoço e fim, e fuso horário de Brasília"
-              sizes="(min-width: 768px) 480px, 100vw"
-              legenda="// horário de atendimento"
-            />
-            <figcaption className="mt-3 text-sm text-suave">
-              Horário da empresa, com intervalo de almoço e fuso.
-            </figcaption>
-          </figure>
-          <figure>
-            <PrintProduto
-              src={modelosMensagem}
-              alt="Lista de modelos de mensagem da plataforma, com o tipo (marketing) e o texto de cada modelo"
-              sizes="(min-width: 768px) 480px, 100vw"
-              legenda="// modelos de mensagem"
-            />
-            <figcaption className="mt-3 text-sm text-suave">
-              Modelos de mensagem prontos para campanhas e lembretes.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <GrupoRecursos
-        rotulo="// 03 · dados organizados e rastreados"
-        titulo={
-          <>
-            Cada conversa vira{" "}
-            <span className="text-acento">um dado que você usa.</span>
-          </>
-        }
-        texto="O CRM é a fonte única: quem é o cliente, de onde veio, com quem está e em que etapa. Quando a equipe muda, o histórico fica."
-        recursos={dados}
-        invertido
-        visual={
-          <PrintProduto
-            src={rastreamento}
-            alt="Conversa no NexIAtend com um cartão de rastreamento que registra a origem do cliente, a campanha, o título do anúncio e a página de acesso"
-            sizes="(min-width: 1024px) 560px, 100vw"
-            legenda="// origem registrada na conversa"
-          />
-        }
-      />
-
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-          <div>
-            <Rotulo>{"// 04 · tempo devolvido à equipe"}</Rotulo>
-            <h2 className="font-display mt-4 max-w-[22ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-              O que sai da mão de quem{" "}
-              <span className="text-acento">atende e vende.</span>
-            </h2>
-            <p className="mt-5 max-w-[52ch] text-lg text-suave">
-              A equipe volta a fazer o que só ela faz: conversar, entender e
-              fechar. O repetitivo fica com a plataforma.
-            </p>
-          </div>
-          <ul className="grid gap-3">
-            {tempoDaEquipe.map((item) => (
-              <li
-                key={item}
-                className="flex gap-3 rounded-2xl border border-linha bg-painel px-5 py-4 text-sm text-suave"
-              >
-                <span aria-hidden="true" className="text-acento">
-                  {"✓"}
-                </span>
-                {item}
-              </li>
+        <div className="mt-12 grid items-start gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
+          <dl className="divide-y divide-linha border-y border-linha">
+            {fluxos.map((item) => (
+              <div key={item.titulo} className="py-5">
+                <dt className="font-display text-lg font-extrabold tracking-tight">
+                  {item.titulo}
+                </dt>
+                <dd className="mt-1.5 text-sm leading-relaxed text-suave">
+                  {item.descricao}
+                </dd>
+              </div>
             ))}
-          </ul>
+          </dl>
+          <figure className="lg:sticky lg:top-24">
+            <PrintProduto
+              src={funilDetalhe}
+              alt="Três colunas do funil de vendas (Prospecção, Contrato e Visita), com cartões de clientes, responsáveis, valores e um cartão em atraso destacado em vermelho"
+              sizes="(min-width: 1024px) 520px, 100vw"
+              legenda="// funil de vendas"
+            />
+            <figcaption className="mt-3 text-sm text-suave">
+              Cada oportunidade numa coluna, com responsável, valor e atraso à
+              vista: quem pediu preço e não recebeu retorno aparece em destaque.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <GrupoRecursos
-        rotulo="// 05 · gestão e monitoramento"
-        titulo={
-          <>
-            Você vê a operação{" "}
-            <span className="text-acento">enquanto ela acontece.</span>
-          </>
-        }
-        texto="Quem está esperando, quem está atendendo e como a equipe está indo, sem pedir relatório para ninguém."
-        recursos={gestao}
+        rotulo="// 03 · dados e gestão"
+        titulo="Cada conversa vira um dado, e você vê a operação ao vivo."
+        texto="O CRM é a fonte única: quem é o cliente, de onde veio, com quem está e em que etapa. Quando a equipe muda, o histórico fica, e a gestão acompanha sem pedir relatório para ninguém."
+        recursos={dadosEGestao}
+        invertido
         visual={
-          <PrintProduto
-            src={atendimentoMobile}
-            alt="Lista de atendimentos no celular, com abas Novos, Meus e Outros, etiquetas dos clientes, equipe responsável e tempo de espera"
-            sizes="(min-width: 1024px) 272px, 70vw"
-            variante="aparelho"
-          />
+          <div className="relative">
+            <PrintProduto
+              src={rastreamento}
+              alt="Conversa no NexIAtend com um cartão de rastreamento que registra a origem do cliente, a campanha, o título do anúncio e a página de acesso"
+              sizes="(min-width: 1024px) 560px, 100vw"
+              legenda="// origem registrada na conversa"
+            />
+            <div className="absolute -bottom-10 -right-2 hidden w-28 sm:block lg:-right-6 lg:w-36">
+              <PrintProduto
+                src={atendimentoMobile}
+                alt="Lista de atendimentos no celular, com abas Novos, Meus e Outros, etiquetas dos clientes, equipe responsável e tempo de espera"
+                sizes="144px"
+                variante="aparelho"
+              />
+            </div>
+          </div>
         }
       />
 
       <GrupoRecursos
-        rotulo="// 06 · inteligência artificial"
-        titulo={
-          <>
-            Um agente que responde o repetido{" "}
-            <span className="text-acento">e chama uma pessoa.</span>
-          </>
-        }
+        rotulo="// 04 · inteligência artificial"
+        titulo="Um agente que responde o repetido e chama uma pessoa."
         texto="Agentes inteligentes usam a base de conhecimento da sua empresa para responder as perguntas frequentes. Quando o assunto pede uma pessoa, a conversa passa para a equipe."
-        invertido
         visual={
           <PrintProduto
-            src={agentes}
-            alt="Tela de agentes inteligentes do NexIAtend, com os agentes criados, o objetivo de cada um e as abas Agentes, Supervisores e Base de conhecimento"
+            src={agentesDetalhe}
+            alt="Tela de agentes inteligentes, com as abas Agentes, Supervisores e Base de conhecimento e dois agentes criados, com a função e o perfil de cada um"
             sizes="(min-width: 1024px) 560px, 100vw"
             legenda="// agentes inteligentes"
           />
@@ -665,42 +523,19 @@ export default function Nexiatend() {
             Incluso no plano IA e adicional nos planos Vendas e Equipe
           </li>
         </ul>
+        <a
+          href={site.links.whatsappDiagnostico}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-block py-1 text-lg font-bold text-acento hover:underline"
+        >
+          Pedir diagnóstico gratuito {"→"}
+        </a>
       </GrupoRecursos>
-
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <Rotulo>{"// como funciona"}</Rotulo>
-        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Quatro etapas, e você aprova antes de ir ao ar.
-        </h2>
-        <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {etapas.map((etapa, i) => (
-            <li
-              key={etapa.titulo}
-              className="rounded-2xl border border-linha bg-painel p-5"
-            >
-              <p className="font-mono text-sm font-bold text-apagado">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h3 className="font-display mt-2 text-lg font-extrabold tracking-tight">
-                {etapa.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-suave">
-                {etapa.descricao}
-              </p>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-8 max-w-[58ch] text-sm text-apagado">
-          A conexão é feita pela WhatsApp Business Platform (API), e o número e
-          o aplicativo no celular podem continuar funcionando. O atendimento do
-          dia a dia fica com a sua equipe: a TWR Tech implanta, treina e dá
-          suporte, mas não opera a central.
-        </p>
-      </section>
 
       <section
         id="planos"
-        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:px-8 md:py-20"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:px-8 md:py-24"
       >
         <Rotulo>{"// planos"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
@@ -717,8 +552,8 @@ export default function Nexiatend() {
           <p>
             Contrato mensal sem fidelidade, com a implantação à vista, ou
             contrato de 12 meses, com 1 mês de mensalidade grátis e a
-            implantação parcelada em até 3x. Dá para mudar
-            de plano quando a operação crescer.
+            implantação parcelada em até 3x. Dá para mudar de plano quando a
+            operação crescer.
           </p>
           <p>
             As mensagens que a Meta cobra são pagas pela empresa direto à Meta,
@@ -727,7 +562,7 @@ export default function Nexiatend() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-16">
         <Rotulo>{"// recursos adicionais"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
           O que mais pode entrar no seu plano.
@@ -749,34 +584,50 @@ export default function Nexiatend() {
             </li>
           ))}
         </ul>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <PrintProduto
-            src={aplicativos}
-            alt="Tela de aplicativos da plataforma, com cada recurso (classificação de atendimento, CRM, sequências, chat interno, entre outros) e o botão de habilitar ou configurar"
-            sizes="(min-width: 768px) 480px, 100vw"
-            legenda="// aplicativos"
-          />
-          <PrintProduto
-            src={integracoes}
-            alt="Tela de integrações da plataforma, com widget de atendimento, webhooks, API, Make e n8n"
-            sizes="(min-width: 768px) 480px, 100vw"
-            legenda="// integrações"
-          />
-        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+        <Rotulo>{"// como funciona"}</Rotulo>
+        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+          Quatro etapas, e você aprova antes de ir ao ar.
+        </h2>
+        <ol className="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          {etapas.map((etapa, i) => (
+            <li key={etapa.titulo} className="border-t border-azul-linha pt-5">
+              <p className="font-mono text-sm font-bold text-apagado">
+                {String(i + 1).padStart(2, "0")}
+              </p>
+              <h3 className="font-display mt-2 text-lg font-extrabold tracking-tight">
+                {etapa.titulo}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-suave">
+                {etapa.descricao}
+              </p>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-8 max-w-[58ch] text-sm text-apagado">
+          A conexão é feita pela WhatsApp Business Platform (API), e o número e
+          o aplicativo no celular podem continuar funcionando. O atendimento do
+          dia a dia fica com a sua equipe: a TWR Tech implanta, treina e dá
+          suporte, mas não opera a central.
+        </p>
       </section>
 
       <section className="bg-azul-profundo text-sobre-azul">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
           <h2 className="font-display max-w-[22ch] text-3xl font-extrabold leading-[1.1] tracking-tight md:text-4xl">
-            Organizado o atendimento,{" "}
-            <span className="text-acento">os dados vêm depois.</span>
+            Organizado o atendimento, os dados vêm depois.
           </h2>
           <p className="mt-5 max-w-[58ch] text-sobre-azul-suave">
             Com as conversas num lugar só, o atendimento passa a gerar
             histórico e números. A mesma TWR Tech que implanta o NexIAtend faz
             painéis de gestão, indicadores e automações sobre esses dados, como
             nos{" "}
-            <Link href="/portfolio" className="font-bold text-sobre-azul hover:underline">
+            <Link
+              href="/portfolio"
+              className="inline-block py-1 font-bold text-sobre-azul hover:underline"
+            >
               estudos de caso do portfólio
             </Link>
             , em projeto à parte.

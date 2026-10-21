@@ -18,6 +18,8 @@ type Props = {
   titulo: React.ReactNode;
   subtitulo: React.ReactNode;
   ctas: { primario: CtaHero; secundario?: CtaHero };
+  // Linha mono discreta sob os botões (ex.: preço de entrada)
+  nota?: string;
   // Visual abaixo dos botões (ex.: print do produto)
   children?: React.ReactNode;
   className?: string;
@@ -60,6 +62,7 @@ export function Hero({
   titulo,
   subtitulo,
   ctas,
+  nota,
   children,
   className,
 }: Props) {
@@ -131,6 +134,14 @@ export function Hero({
             <Botao cta={ctas.secundario} classe={classeSecundario} />
           )}
         </div>
+        {nota && (
+          <p
+            className="animate-fade-up mt-5 font-mono text-xs text-apagado md:text-sm"
+            style={{ animationDelay: "280ms" }}
+          >
+            {nota}
+          </p>
+        )}
         {children && (
           <div
             className="animate-fade-up mt-14 md:mt-16"

@@ -978,6 +978,39 @@ JSON-LD igual ao visível (6/6), sem travessão visível no código.
 - A página `/portfolio` e os cases continuam "em breve": a prova da página é
   só o resumo dos 3 estudos de caso.
 
+## Sessão 2026-10-21 (crítica e ajustes da /nexiatend)
+
+Rodada do /impeccable critique na `/nexiatend` (placar 29/40) e ajustes
+aplicados na íntegra.
+
+- **Menos repetição e menos rolagem:** de 15 para 13 blocos; 13.262 para 10.887
+  px em 1280 e 20.540 para 16.304 px em 375; os planos subiram de ~8.000 para
+  ~6.070 px. Saíram "tempo devolvido à equipe" (virou itens em "fluxos") e os
+  3 itens "no dia a dia" do problema; "dados" e "gestão" viraram um grupo só
+  ("// 03 · dados e gestão"); "como funciona" foi para depois dos planos, em
+  linha do tempo sem cards. Os 6 cards de "fluxos" viraram lista com o funil ao
+  lado.
+- **Prints legíveis:** recortes `funil_detalhe`, `agentes_detalhe` no lugar das
+  telas inteiras; `fluxo_chatbot` mantido (prova a estrutura do fluxo). Saíram
+  os prints de horário, modelos de mensagem, aplicativos e integrações (a
+  lista de adicionais fica sozinha) e os arquivos não usados foram apagados de
+  `public/nexiatend/`. Detalhe: o recorte do editor de fluxo mostrava "Teste"
+  de placeholder e o das integrações cortava a frase; por isso não entraram.
+- **Preço e CTA mais cedo:** nota mono no hero ("Planos a partir de R$ 437/mês",
+  prop `nota` do `<Hero>`) e link "Pedir diagnóstico gratuito" depois do bloco
+  de IA.
+- **Acento azul** só no hero, no problema e em "conversas inteligentes" (antes
+  em 9 H2).
+- **Planos:** o interruptor virou seletor segmentado de dois botões (alvo de
+  44 px, rótulos clicáveis, `aria-pressed`); `components/ui/switch.tsx` e a
+  dependência `@radix-ui/react-switch` foram removidos. Selo "Mais escolhido"
+  em 0.7rem (dentro da escala do DESIGN.md); primeira coluna da tabela mais
+  estreita no mobile.
+- **Pendências:** os prints seguem mostrando nomes completos de pessoas (funil
+  e app no celular); o usuário aprovou usar como estão, mas vale confirmar que
+  são dados de demonstração. O selo "Mais escolhido" segue sem dado de clientes
+  por trás.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
