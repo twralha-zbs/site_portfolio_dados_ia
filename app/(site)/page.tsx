@@ -5,26 +5,18 @@ import { SubstackFeed } from "@/components/SubstackFeed";
 import { FaqSection } from "@/components/FaqSection";
 import { ProdutoBloco } from "@/components/ProdutoBloco";
 import { VisualDados, VisualPresenca } from "@/components/VisuaisProduto";
+import { VisualNexiatend } from "@/components/VisualNexiatend";
 import { Hero } from "@/components/ui/hero";
-import { PrintProduto } from "@/components/ui/print-produto";
 import { Rotulo } from "@/components/ui/rotulo";
 import { faqHome } from "@/lib/faq";
 import { site } from "@/lib/site";
 import { produtos } from "@/lib/servicos";
 import { casesDemonstrativos } from "@/lib/cases";
 import fotoThiago from "@/public/thiago-ralha.jpg";
-import rastreamento from "@/public/nexiatend/rastreamento.webp";
 
 // Visual de cada produto, pelo slug de lib/servicos.ts.
 const visuais: Record<string, React.ReactNode> = {
-  nexiatend: (
-    <PrintProduto
-      src={rastreamento}
-      alt="Conversa no NexIAtend com um cartão de rastreamento que registra a origem do cliente, a campanha, o título do anúncio e a página de acesso"
-      sizes="(min-width: 768px) 560px, 100vw"
-      legenda="// origem registrada na conversa"
-    />
-  ),
+  nexiatend: <VisualNexiatend />,
   maxialcance: <VisualPresenca />,
   "organizacao-de-dados": <VisualDados />,
 };

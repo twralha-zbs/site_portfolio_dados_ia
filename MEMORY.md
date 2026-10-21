@@ -1061,6 +1061,10 @@ faixa do fundador decidida pelo usuário e os números do MaxIAlcance adiados.
   para texto claro com sublinhado, para o azul não competir com o H1 e o botão.
 - **DESIGN.md:** documentado o tamanho `label-sm` (0.7rem), que os selos já
   usavam e o detector acusava como fora da escala.
+- **Visual do NexIAtend na Home** (pedido do usuário, por parecer pouco
+  ilustrativo): `components/VisualNexiatend.tsx` junta três peças legíveis (origem
+  do lead, funil de vendas e celular da equipe); no mobile o celular sai e as
+  janelas empilham.
 - **Pendência:** números da avaliação do MaxIAlcance na Home (5 de 6, 3 de 6,
   4 de 6) ficaram para depois, a pedido do usuário.
 
