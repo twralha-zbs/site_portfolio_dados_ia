@@ -857,7 +857,9 @@ preço. Componentes hero-1 e growth-plans adaptados em `components/ui/`.
 ## Próximo passo
 
 Executar `docs/designs/revisao-home-nexiatend-maxialcance.md` (etapa 1 em
-diante). Antes disso: Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
+diante).
+
+Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
 página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de
 nome. Pendências antigas seguem: imagem própria do NexIAtend na bio, domínio
 `nexiatend.com.br` e INPI. Novas: registrar `maxialcance.com.br` e buscar a
