@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { FaqSection } from "@/components/FaqSection";
+import { Hero } from "@/components/ui/hero";
+import { Rotulo } from "@/components/ui/rotulo";
 import { faqMaxialcance } from "@/lib/faq";
 import { site } from "@/lib/site";
 
@@ -140,49 +142,30 @@ export default function Maxialcance() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="mx-auto max-w-6xl px-6 pb-16 pt-16 md:px-8 md:pt-24">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Presença no Google e nas IAs
-        </p>
-        <h1 className="font-display mt-5 max-w-[18ch] text-4xl font-extrabold leading-[1.02] tracking-tight md:text-6xl">
-          MaxIAlcance
-        </h1>
-        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.13em] text-apagado">
-          by TWR Tech
-        </p>
-        <p className="mt-6 max-w-[52ch] text-lg text-suave">
-          Quem procura o seu serviço na sua cidade encontra você: no Google,
-          no mapa e nas respostas das IAs.
-        </p>
-        <p className="mt-3 max-w-[52ch] text-suave">
-          Começa por uma avaliação gratuita da sua presença hoje. A TWR Tech
-          acompanha cada etapa, do plano ao relatório de todo mês.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href={site.links.whatsappAvaliacao}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
-          >
-            Pedir avaliação gratuita
-          </a>
-          <a
-            href={site.links.agenda}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-linha px-6 py-3 font-semibold transition-colors hover:bg-painel"
-          >
-            Agendar uma conversa
-          </a>
-        </div>
-      </section>
+      <Hero
+        eyebrow="Presença no Google e nas IAs"
+        marca="MaxIAlcance"
+        selo="by TWR Tech"
+        titulo={
+          <>
+            Seja encontrado no{" "}
+            <span className="text-acento">Google e nas IAs.</span>
+          </>
+        }
+        subtitulo="Quem procura o seu serviço na sua cidade encontra você: no Google, no mapa e nas respostas das IAs. Começa por uma avaliação gratuita, e a TWR Tech acompanha cada etapa, do plano ao relatório de todo mês."
+        ctas={{
+          primario: {
+            rotulo: "Pedir avaliação gratuita",
+            href: site.links.whatsappAvaliacao,
+            externo: true,
+          },
+          secundario: { rotulo: "Ver investimento", href: "#investimento" },
+        }}
+      />
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          O problema
-        </p>
-        <h2 className="font-display mt-5 max-w-[26ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+        <Rotulo>{"// o problema"}</Rotulo>
+        <h2 className="font-display mt-4 max-w-[26ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
           Seu negócio vive de indicação.{" "}
           <span className="text-acento">Quem não conhece você procura no Google.</span>
         </h2>
@@ -233,10 +216,8 @@ export default function Maxialcance() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Como funciona
-        </p>
-        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+        <Rotulo>{"// como funciona"}</Rotulo>
+        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
           Quatro etapas, e você aprova antes de publicar.
         </h2>
         <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -260,10 +241,8 @@ export default function Maxialcance() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          O que entregamos
-        </p>
-        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+        <Rotulo>{"// o que entregamos"}</Rotulo>
+        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
           Tudo o que o Google e as IAs precisam ler.
         </h2>
         <ul className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -284,11 +263,12 @@ export default function Maxialcance() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Investimento
-        </p>
-        <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
+      <section
+        id="investimento"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:px-8 md:py-20"
+      >
+        <Rotulo>{"// investimento"}</Rotulo>
+        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
           Preço de entrada claro, sem surpresa.
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
