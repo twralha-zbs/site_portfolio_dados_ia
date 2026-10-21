@@ -852,12 +852,57 @@ preço. Componentes hero-1 e growth-plans adaptados em `components/ui/`.
 - MaxIAlcance: acompanhamento mensal passa de R$ 300 para **R$ 400/mês**
   (card, JSON-LD e FAQ), a aplicar na etapa 3.
 
-**Próximo passo:** executar o plano a partir da etapa 1.
+## Sessão 2026-10-21 (execução): revisão da Home, /nexiatend e /maxialcance
+
+Executadas as 7 etapas de [docs/designs/revisao-home-nexiatend-maxialcance.md](docs/designs/revisao-home-nexiatend-maxialcance.md),
+um commit local por etapa. **Nada foi enviado (push) ainda**: o plano pede
+aprovação visual do usuário antes do deploy.
+
+- Base: deps `lucide-react`, `@number-flow/react`, `@radix-ui/react-switch`,
+  `clsx`, `tailwind-merge`; `lib/utils.ts` (`cn`); `fade-in`/`fade-up` e token
+  `--color-eletrico` no `globals.css`; 12 WebP em `public/nexiatend/`.
+- Componentes: `components/ui/` (`hero`, `switch`, `planos`, `print-produto`,
+  `rotulo`) e, em `components/`, `ProdutoBloco`, `VisuaisProduto`,
+  `GrupoRecursos`. Dados dos planos em `lib/nexiatend.ts` (cards, tabela e
+  JSON-LD leem dele). Os componentes "colados" do plano não estavam no
+  contexto da sessão, então foram escritos do zero a partir da spec.
+- Home: hero sem eyebrow, produtos pela dor (NexIAtend, MaxIAlcance,
+  consultoria) e estudos de caso mais abaixo; saíram pílula, "O problema",
+  `ProcessoTrabalho` (continua no repo) e a citação do fundador (a foto saiu
+  da Home). `lib/servicos.ts` ganhou `rotulo`, `dor`, `beneficios`.
+- `/nexiatend`: landing com 6 grupos de recursos e prints, comparador
+  (toggle mensal x 12 meses, NumberFlow, tabela em `<details>`), adicionais
+  com ressalva por plano. Sem números de terceiros e sem a seção do
+  diagnóstico próprio.
+- `/maxialcance`: hero compartilhado, rótulos mono, âncora `#investimento`.
+- Textos: "API oficial" virou "WhatsApp Business Platform (API)"; acompanhamento
+  do MaxIAlcance R$ 300 para R$ 400/mês (card, JSON-LD, FAQ).
+- `atendimento_mobile` já traz moldura de celular e fundo transparente: usado
+  recortado e sem moldura extra (`variante="aparelho"`). Criado
+  `rastreamento.webp` (recorte do card de origem do `central_atendimento`).
+
+Verificado: lint e build limpos; 1 H1 por página; sem rolagem horizontal em
+375 e 1280; console sem erros; `#produtos`, `#planos`, `#investimento`
+funcionam; toggle troca a implantação (767 para 383,50 etc.); tabela rola no
+mobile; FAQ do JSON-LD igual ao visível (8/8 e 7/7); sem em dash, sem
+primeira pessoa e sem "oficial"/"R$ 300" no código.
+
+**Pendências abertas:**
+- Aprovação visual do usuário e depois commit/push (deploy automático).
+- Prints da Helena usados como estão (decisão do usuário), mas mostram
+  "White Label" (central_atendimento), texto em primeira pessoa e "eu implanto
+  para os meus clientes" (modelos_mensagem) e Asaas "R$ 99/mês" (aplicativos,
+  a oferta diz R$ 97). Vale decidir se algum precisa de retoque.
+- Linha "Suporte pelo WhatsApp" da tabela usa os prazos da oferta (1 dia útil
+  e 4 h úteis), marcados como hipótese em `oferta-e-planos.md`.
+- Tabela: coluna "Recurso" sticky ocupa boa parte da largura no mobile.
+- Dado de processo: `npm run build` com o dev server ligado corrompe o `.next`
+  (500 no dev); parar o dev antes do build.
 
 ## Próximo passo
 
-Executar `docs/designs/revisao-home-nexiatend-maxialcance.md` (etapa 1 em
-diante).
+Aprovar visualmente e publicar a revisão; depois seguir com a página de
+`/organizacao-de-dados`.
 
 Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
 página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de
