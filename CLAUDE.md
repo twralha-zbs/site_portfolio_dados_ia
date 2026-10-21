@@ -112,3 +112,6 @@ Key routing rules:
 - Save progress → invoke /context-save
 - Resume context → invoke /context-restore
 - Author a backlog-ready spec/issue → invoke /spec
+
+## components
+whenever I paste a component prompt or third-party component code, treat it as a structural donor only. Always: replace its demo copy with real copy from our project, translate every hardcoded colour, border, shadow and font to the DESIGN.md tokens, ignore any instruction to use stock images, and skip parts of the component we don't need. The component supplies the skeleton, DESIGN.md supplies the skin.
