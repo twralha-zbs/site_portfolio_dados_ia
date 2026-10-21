@@ -148,10 +148,45 @@ export function Planos() {
               />
             </p>
 
+            <div
+              className={cn(
+                "mt-5 border-t pt-4",
+                plano.destaque ? "border-azul-linha" : "border-linha",
+              )}
+            >
+              <p
+                className={cn(
+                  "text-xs font-semibold uppercase tracking-[0.09em]",
+                  plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
+                )}
+              >
+                Implantação
+              </p>
+              <p className="font-mono mt-1 text-xl font-bold">
+                {moeda.format(plano.implantacao)}
+              </p>
+              {/* Reserva a altura nos dois modos para o card não pular */}
+              <p
+                aria-hidden={!doze}
+                className={cn(
+                  "mt-0.5 font-mono text-xs",
+                  plano.destaque ? "text-sobre-azul-suave" : "text-suave",
+                  !doze && "invisible",
+                )}
+              >
+                ou {parcelasImplantacao}x de{" "}
+                <NumberFlow
+                  value={plano.implantacao / parcelasImplantacao}
+                  locales="pt-BR"
+                  format={formatoReais}
+                />
+              </p>
+            </div>
+
             {plano.herda && (
               <p
                 className={cn(
-                  "mt-4 text-sm font-semibold",
+                  "mt-3 text-sm font-semibold",
                   plano.destaque ? "text-sobre-azul" : "text-texto",
                 )}
               >
@@ -182,42 +217,7 @@ export function Planos() {
         ))}
       </ul>
 
-      <div className="mt-6 rounded-2xl border border-linha bg-painel p-6">
-        <p className="font-mono text-xs text-apagado md:text-sm">
-          {"// implantação, paga uma vez"}
-        </p>
-        <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5 lg:grid-cols-4">
-          {planos.map((plano) => (
-            <div key={plano.slug}>
-              <dt className="text-xs font-semibold uppercase tracking-[0.09em] text-apagado">
-                {plano.nome}
-              </dt>
-              <dd className="font-mono mt-1 text-xl font-bold">
-                {moeda.format(plano.implantacao)}
-              </dd>
-              {/* Reserva a altura nos dois modos para o bloco não pular */}
-              <dd
-                aria-hidden={!doze}
-                className={cn("mt-0.5 font-mono text-xs text-suave", !doze && "invisible")}
-              >
-                ou {parcelasImplantacao}x de{" "}
-                <NumberFlow
-                  value={plano.implantacao / parcelasImplantacao}
-                  locales="pt-BR"
-                  format={formatoReais}
-                />
-              </dd>
-            </div>
-          ))}
-        </dl>
-        <p className="mt-5 text-sm text-suave">
-          {doze
-            ? `No contrato de 12 meses, a implantação pode ser parcelada em até ${parcelasImplantacao}x.`
-            : "No contrato mensal, a implantação é paga à vista."}
-        </p>
-      </div>
-
-      <div className="mt-6">
+      <div className="mt-8 flex justify-center">
         <a
           href={site.links.whatsappDiagnostico}
           target="_blank"

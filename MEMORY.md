@@ -907,9 +907,11 @@ Ajustes pedidos pelo usuário depois da publicação da revisão.
   gordura na implantação (6 a 28 h de trabalho) e parecia promoção. O custo
   do mês grátis fica perto do da metade antiga, exceto no plano IA (cerca de
   R$ 550 a mais). `mesesGratis` e `parcelasImplantacao` em `lib/nexiatend.ts`.
-- **Cards:** "Implantação, pagamento único" e o botão "Pedir diagnóstico
-  gratuito" saíram dos cards; a implantação virou um bloco abaixo (com o
-  parcelamento no modo 12 meses) e há um único botão depois dele.
+- **Cards:** a implantação voltou para dentro de cada card, só com o rótulo
+  curto "Implantação" (sem "pagamento único", que a introdução já diz) e, no
+  modo 12 meses, a linha "ou 3x de R$ X". Tentei um bloco de implantação fora
+  dos cards e o usuário não gostou. O botão "Pedir diagnóstico gratuito" saiu
+  dos cards e ficou um só, centralizado, abaixo deles.
 - **Pílula do plano Vendas:** "Atendimento + vendas" virou "Mais escolhido".
   É uma alegação sem dado de clientes por trás; trocar por "Mais indicado" se
   quiser algo defensável enquanto não houver base.
