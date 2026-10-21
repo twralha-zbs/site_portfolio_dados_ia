@@ -15,7 +15,10 @@ type Props = {
 // resposta, três benefícios e o CTA, ao lado de um visual.
 export function ProdutoBloco({ produto, visual, invertido }: Props) {
   return (
-    <article className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+    <article
+      id={produto.slug}
+      className="grid scroll-mt-24 items-center gap-10 md:grid-cols-2 md:gap-14"
+    >
       <div className={cn(invertido && "md:order-last")}>
         <Rotulo>{produto.rotulo}</Rotulo>
         <h3 className="font-display mt-4 max-w-[22ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
@@ -44,7 +47,7 @@ export function ProdutoBloco({ produto, visual, invertido }: Props) {
         <div className="mt-6">
           <Link
             href={produto.href}
-            className="text-lg font-bold text-acento hover:underline"
+            className="text-lg font-bold underline decoration-linha decoration-2 underline-offset-4 transition-colors hover:decoration-acento"
           >
             {produto.ctaRotulo} {"→"}
           </Link>

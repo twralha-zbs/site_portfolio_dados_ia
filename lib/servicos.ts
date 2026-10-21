@@ -7,6 +7,8 @@ export type Produto = {
   rotulo: string;
   // A dor do cliente, que vira o título do bloco
   dor: string;
+  // Dor em poucas palavras, para os atalhos do hero
+  atalho: string;
   beneficios: string[];
   nome: string;
   selo?: string;
@@ -23,6 +25,7 @@ export const produtos: Produto[] = [
     slug: "nexiatend",
     rotulo: "// 01 · atendimento",
     dor: "Seu WhatsApp tem conversa demais e registro de menos.",
+    atalho: "WhatsApp com conversa demais",
     beneficios: [
       "Conversas do WhatsApp e do Instagram numa tela só, com a equipe atendendo junto",
       "Cada cliente com histórico, responsável e origem registrados",
@@ -33,7 +36,7 @@ export const produtos: Produto[] = [
     tagline: "O nexo entre atendimento e IA.",
     modeloPreco: "A partir de R$ 437/mês",
     descricao:
-      "As conversas da sua empresa no WhatsApp e no Instagram num lugar só, com a equipe atendendo junto. A TWR Tech implanta, configura e treina.",
+      "Uma central de atendimento que a TWR Tech implanta, configura e treina.",
     ctaRotulo: "Conhecer o NexIAtend",
     href: "/nexiatend",
     externo: false,
@@ -42,6 +45,7 @@ export const produtos: Produto[] = [
     slug: "maxialcance",
     rotulo: "// 02 · presença",
     dor: "Quem não conhece você procura no Google e pergunta à IA.",
+    atalho: "Ninguém acha você no Google",
     beneficios: [
       "Perfil no Google completo e uma página para cada serviço e região",
       "Conteúdo escrito para as IAs, como o ChatGPT, poderem citar o seu negócio",
@@ -50,9 +54,9 @@ export const produtos: Produto[] = [
     nome: "MaxIAlcance",
     selo: "by TWR Tech",
     tagline: "Presença no Google, no mapa e nas IAs.",
-    modeloPreco: "Implantação + acompanhamento mensal",
+    modeloPreco: "Implantação a partir de R$ 3.000 + R$ 400/mês",
     descricao:
-      "Pesquisa de palavras-chave, engenharia reversa de concorrentes, páginas otimizadas e perfil no Google: quem procura o seu serviço na sua cidade encontra você, inclusive no ChatGPT.",
+      "Quem procura o seu serviço na sua cidade encontra você: no Google, no mapa e no ChatGPT.",
     ctaRotulo: "Conhecer o MaxIAlcance",
     href: "/maxialcance",
     externo: false,
@@ -61,6 +65,7 @@ export const produtos: Produto[] = [
     slug: "organizacao-de-dados",
     rotulo: "// 03 · dados",
     dor: "Cinco planilhas, nenhum número em que dá pra confiar.",
+    atalho: "Números que não batem",
     beneficios: [
       "Fontes e processos mapeados antes de qualquer painel",
       "Painéis e indicadores que as áreas usam para decidir",

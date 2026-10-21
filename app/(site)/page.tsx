@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { SubstackFeed } from "@/components/SubstackFeed";
 import { FaqSection } from "@/components/FaqSection";
@@ -11,17 +12,17 @@ import { faqHome } from "@/lib/faq";
 import { site } from "@/lib/site";
 import { produtos } from "@/lib/servicos";
 import { casesDemonstrativos } from "@/lib/cases";
-import centralAtendimento from "@/public/nexiatend/central_atendimento.webp";
+import fotoThiago from "@/public/thiago-ralha.jpg";
+import rastreamento from "@/public/nexiatend/rastreamento.webp";
 
-// Visual de cada produto, na ordem de lib/servicos.ts (NexIAtend,
-// MaxIAlcance, consultoria).
+// Visual de cada produto, pelo slug de lib/servicos.ts.
 const visuais: Record<string, React.ReactNode> = {
   nexiatend: (
     <PrintProduto
-      src={centralAtendimento}
-      alt="Central de atendimento do NexIAtend: lista de conversas à esquerda e a conversa aberta, com a origem do cliente, à direita"
+      src={rastreamento}
+      alt="Conversa no NexIAtend com um cartão de rastreamento que registra a origem do cliente, a campanha, o título do anúncio e a página de acesso"
       sizes="(min-width: 768px) 560px, 100vw"
-      legenda="// central de atendimento"
+      legenda="// origem registrada na conversa"
     />
   ),
   maxialcance: <VisualPresenca />,
@@ -43,7 +44,30 @@ export default function Home() {
           primario: { rotulo: "Conhecer os produtos", href: "#produtos" },
           secundario: { rotulo: "Fale conosco", href: "/contato" },
         }}
-      />
+      >
+        <nav aria-label="Atalhos por dor" className="mx-auto max-w-4xl text-left">
+          <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-3">
+            {produtos.map((produto, i) => (
+              <li key={produto.slug} className="border-t border-linha pt-4">
+                <a
+                  href={`#${produto.slug}`}
+                  className="group block py-1"
+                >
+                  <span className="font-mono text-xs text-apagado">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="mt-1 block font-display text-lg font-extrabold tracking-tight">
+                    {produto.atalho}
+                  </span>
+                  <span className="mt-1 block text-sm text-suave group-hover:text-texto">
+                    {produto.nome} {"→"}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Hero>
 
       <section
         id="produtos"
@@ -60,7 +84,34 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="mx-auto max-w-6xl border-t border-linha px-6 py-20 md:px-8 md:py-24">
+      <section className="mx-auto max-w-6xl px-6 pb-4 md:px-8">
+        <div className="grid items-center gap-6 border-y border-linha py-8 sm:grid-cols-[auto_1fr_auto] sm:gap-8">
+          <Image
+            src={fotoThiago}
+            alt="Retrato de Thiago Waldowski Ralha"
+            className="h-20 w-20 rounded-full border border-linha object-cover"
+            sizes="80px"
+          />
+          <div>
+            <p className="font-display text-xl font-extrabold tracking-tight">
+              {site.nome}, fundador da TWR Tech
+            </p>
+            <p className="mt-1 max-w-[58ch] text-sm leading-relaxed text-suave">
+              Engenheiro pela Poli-USP, ajuda empresas a estruturar a operação
+              com dados, automação e IA. Os três produtos partem da mesma ideia:
+              tirar a informação da empresa do improviso.
+            </p>
+          </div>
+          <Link
+            href="/sobre"
+            className="font-semibold underline decoration-linha decoration-2 underline-offset-4 transition-colors hover:decoration-acento"
+          >
+            Conheça a TWR Tech {"→"}
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
         <Rotulo>{"// estudos de caso"}</Rotulo>
         <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
           Três casos, do diagnóstico ao dashboard.
@@ -70,7 +121,7 @@ export default function Home() {
           o mesmo rigor de um projeto real.
         </p>
 
-        <ul className="mt-11 grid grid-cols-1 gap-4 border-t border-linha pt-10 sm:grid-cols-2">
+        <ul className="mt-11 grid grid-cols-1 gap-4 border-t border-linha pt-10 md:grid-cols-3">
           {casesDemonstrativos.map((item) => (
             <li
               key={item.slug}
@@ -90,7 +141,7 @@ export default function Home() {
         </ul>
         <Link
           href="/portfolio"
-          className="mt-8 inline-block text-lg font-bold text-acento hover:underline"
+          className="mt-8 inline-block py-1 text-lg font-bold underline decoration-linha decoration-2 underline-offset-4 transition-colors hover:decoration-acento"
         >
           Ver o portfólio completo →
         </Link>

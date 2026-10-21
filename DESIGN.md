@@ -47,6 +47,11 @@ typography:
     fontSize: "0.78rem"
     fontWeight: 600
     letterSpacing: "0.13em"
+  label-sm:
+    fontFamily: "Onest, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.7rem"
+    fontWeight: 500
+    letterSpacing: "0.09em"
   mono:
     fontFamily: "JetBrains Mono, ui-monospace, SFMono-Regular, monospace"
     fontSize: "1rem"

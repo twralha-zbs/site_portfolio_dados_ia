@@ -1036,6 +1036,34 @@ que não dependia de material do usuário.
   (nota e 3 critérios com evidência), que seria a melhor prova da página; e
   dizer o que cabe nos R$ 3.000 de entrada (quantos serviços e regiões).
 
+## Sessão 2026-10-21 (crítica e ajustes da Home)
+
+Rodada do /impeccable critique na Home (placar 29/40); aplicado tudo, com a
+faixa do fundador decidida pelo usuário e os números do MaxIAlcance adiados.
+
+- **FAQ reescrito** (`faqHome`): o antigo respondia só sobre "consultor de
+  dados e BI" e contradizia o hero. Agora: qual produto serve, preciso dos
+  três, quanto custa, como começa, onde atende, o que a TWR Tech não faz.
+- **Atalho por dor no hero:** três links (WhatsApp com conversa demais, Ninguém
+  acha você no Google, Números que não batem) levam às âncoras `#nexiatend`,
+  `#maxialcance` e `#organizacao-de-dados` (campo `atalho` em `lib/servicos.ts`,
+  `id` em cada `ProdutoBloco`).
+- **Faixa do fundador** (foto, nome, uma linha de credencial e link para
+  /sobre) entre os produtos e os estudos de caso. A credencial usa só o que o
+  site já publica (engenheiro pela Poli-USP); o "7 anos" do CLAUDE.md global
+  não entrou, por não estar em nenhuma página.
+- **Limpeza:** a seção "Últimos artigos" some quando não há posts (o link da
+  newsletter segue no menu e no rodapé); cards de caso em 3 colunas (acabou o
+  buraco 2 + 1); descrições dos produtos sem repetir o primeiro benefício; o
+  MaxIAlcance mostra o preço ("Implantação a partir de R$ 3.000 + R$ 400/mês");
+  print do NexIAtend trocado pelo recorte legível da origem do lead.
+- **Acento:** links "Conhecer o X →" e "Ver o portfólio completo →" passaram
+  para texto claro com sublinhado, para o azul não competir com o H1 e o botão.
+- **DESIGN.md:** documentado o tamanho `label-sm` (0.7rem), que os selos já
+  usavam e o detector acusava como fora da escala.
+- **Pendência:** números da avaliação do MaxIAlcance na Home (5 de 6, 3 de 6,
+  4 de 6) ficaram para depois, a pedido do usuário.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
