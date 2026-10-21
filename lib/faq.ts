@@ -52,7 +52,7 @@ export const faqNexiatend: ItemFaq[] = [
   {
     pergunta: "Quanto custa o NexIAtend?",
     resposta:
-      "Os planos começam em R$ 437 por mês para até 3 pessoas atendendo em um canal. O plano Vendas custa R$ 717, o Equipe R$ 1.207 e o IA R$ 2.197. A implantação é paga uma vez, a partir de R$ 767, e sai pela metade no contrato de 12 meses. As mensagens cobradas pela Meta são pagas direto à Meta.",
+      "Os planos começam em R$ 437 por mês para até 3 pessoas atendendo em um canal. O plano Vendas custa R$ 717, o Equipe R$ 1.207 e o IA R$ 2.197. A implantação é paga uma vez, a partir de R$ 767, e pode ser parcelada em até 3x no contrato de 12 meses, que tem 1 mês de mensalidade grátis. As mensagens cobradas pela Meta são pagas direto à Meta.",
   },
   {
     pergunta: "Preciso trocar o número ou parar de usar o WhatsApp no celular?",
@@ -72,7 +72,7 @@ export const faqNexiatend: ItemFaq[] = [
   {
     pergunta: "Tem fidelidade ou multa de cancelamento?",
     resposta:
-      "No contrato mensal, não há fidelidade nem multa, e a implantação é paga inteira. No contrato de 12 meses, a implantação sai pela metade. Nos dois casos dá para mudar de plano quando a operação crescer.",
+      "No contrato mensal, não há fidelidade nem multa, e a implantação é paga à vista. No contrato de 12 meses, há 1 mês de mensalidade grátis e a implantação pode ser parcelada em até 3x. Nos dois casos dá para mudar de plano quando a operação crescer.",
   },
   {
     pergunta: "Como funciona o diagnóstico gratuito?",

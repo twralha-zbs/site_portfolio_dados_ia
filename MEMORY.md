@@ -896,6 +896,30 @@ primeira pessoa e sem "oficial"/"R$ 300" no código.
 - Dado de processo: `npm run build` com o dev server ligado corrompe o `.next`
   (500 no dev); parar o dev antes do build.
 
+## Sessão 2026-10-21 (ajustes nos planos do /nexiatend)
+
+Ajustes pedidos pelo usuário depois da publicação da revisão.
+
+- **Contrato de 12 meses:** saiu a "implantação pela metade". Agora o anual
+  tem **1 mês de mensalidade grátis** (selo "1 mês grátis"; cada card mostra
+  "12 meses por R$ X", 11 mensalidades) e a **implantação pode ser parcelada
+  em até 3x**; no mensal a implantação é à vista. Por quê: a "metade" sugeria
+  gordura na implantação (6 a 28 h de trabalho) e parecia promoção. O custo
+  do mês grátis fica perto do da metade antiga, exceto no plano IA (cerca de
+  R$ 550 a mais). `mesesGratis` e `parcelasImplantacao` em `lib/nexiatend.ts`.
+- **Cards:** "Implantação, pagamento único" e o botão "Pedir diagnóstico
+  gratuito" saíram dos cards; a implantação virou um bloco abaixo (com o
+  parcelamento no modo 12 meses) e há um único botão depois dele.
+- **Pílula do plano Vendas:** "Atendimento + vendas" virou "Mais escolhido".
+  É uma alegação sem dado de clientes por trás; trocar por "Mais indicado" se
+  quiser algo defensável enquanto não houver base.
+- **Plano IA:** passa a incluir **3 agentes de IA** (card e tabela). A
+  `oferta-e-planos.md` (fora do repo) e a configuração da Helena
+  (`aiAgents`, hoje 1) precisam ser atualizadas pelo usuário, assim como o
+  escopo de implantação (hoje 1 agente).
+- FAQ de custo e de fidelidade e a descrição do JSON-LD ajustados ao novo
+  contrato.
+
 ## Próximo passo
 
 Aprovar visualmente e publicar a revisão; depois seguir com a página de

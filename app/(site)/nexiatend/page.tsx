@@ -14,7 +14,12 @@ import { Planos } from "@/components/ui/planos";
 import { PrintProduto } from "@/components/ui/print-produto";
 import { Rotulo } from "@/components/ui/rotulo";
 import { faqNexiatend } from "@/lib/faq";
-import { implantacaoMinima, precoMinimo } from "@/lib/nexiatend";
+import {
+  implantacaoMinima,
+  mesesGratis,
+  parcelasImplantacao,
+  precoMinimo,
+} from "@/lib/nexiatend";
 import { site } from "@/lib/site";
 import agentes from "@/public/nexiatend/agentes_inteligentes.webp";
 import aplicativos from "@/public/nexiatend/aplicativos.webp";
@@ -302,7 +307,7 @@ const jsonLd = [
         priceCurrency: "BRL",
         unitText: "MONTH",
       },
-      description: `Planos a partir de ${reais(precoMinimo)} por mês; implantação a partir de ${reais(implantacaoMinima)}, pela metade no contrato de 12 meses.`,
+      description: `Planos a partir de ${reais(precoMinimo)} por mês; implantação a partir de ${reais(implantacaoMinima)}, parcelável em até ${parcelasImplantacao}x no contrato de 12 meses, que tem ${mesesGratis} mês de mensalidade grátis.`,
     },
   },
   {
@@ -703,15 +708,16 @@ export default function Nexiatend() {
         </h2>
         <p className="mt-4 max-w-[58ch] text-suave">
           Mensalidade fixa e implantação paga uma vez. Escolha o contrato
-          abaixo para ver o valor da implantação.
+          abaixo para ver o que muda no pagamento.
         </p>
         <div className="mt-8">
           <Planos />
         </div>
         <div className="mt-8 grid max-w-[70ch] gap-3 text-sm text-apagado">
           <p>
-            Contrato mensal sem fidelidade, com a implantação inteira, ou
-            contrato de 12 meses com a implantação pela metade. Dá para mudar
+            Contrato mensal sem fidelidade, com a implantação à vista, ou
+            contrato de 12 meses, com 1 mês de mensalidade grátis e a
+            implantação parcelada em até 3x. Dá para mudar
             de plano quando a operação crescer.
           </p>
           <p>

@@ -5,11 +5,11 @@
 export type Plano = {
   slug: string;
   nome: string;
-  // Rótulo que acompanha o plano em destaque (sem alegar "mais vendido")
+  // Rótulo do plano em destaque
   rotulo?: string;
   destaque?: boolean;
   mensalidade: number;
-  // Implantação do contrato mensal; no contrato de 12 meses sai pela metade
+  // Implantação, paga uma vez; igual nos dois contratos
   implantacao: number;
   capacidade: string;
   resolve: string;
@@ -36,7 +36,7 @@ export const planos: Plano[] = [
   {
     slug: "vendas",
     nome: "Vendas",
-    rotulo: "Atendimento + vendas",
+    rotulo: "Mais escolhido",
     destaque: true,
     mensalidade: 717,
     implantacao: 1647,
@@ -75,12 +75,16 @@ export const planos: Plano[] = [
     resolve: "Um assistente para as perguntas repetidas.",
     herda: "Tudo do Equipe, mais:",
     inclui: [
-      "Agente de IA configurado pela TWR Tech",
+      "3 agentes de IA configurados pela TWR Tech",
       "Base de conhecimento da sua empresa",
       "Passagem para uma pessoa quando precisa",
     ],
   },
 ];
+
+// Contrato de 12 meses: mensalidades grátis e parcelamento da implantação
+export const mesesGratis = 1;
+export const parcelasImplantacao = 3;
 
 export const precoMinimo = Math.min(...planos.map((p) => p.mensalidade));
 export const implantacaoMinima = Math.min(...planos.map((p) => p.implantacao));
@@ -123,6 +127,6 @@ export const comparativo: LinhaComparativo[] = [
   { recurso: "API e webhooks", valores: [false, false, true, true] },
   {
     recurso: "Agente de IA",
-    valores: [false, "Adicional", "Adicional", "1 incluso, configurado pela TWR Tech"],
+    valores: [false, "Adicional", "Adicional", "3 inclusos, configurados pela TWR Tech"],
   },
 ];

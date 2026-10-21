@@ -4,11 +4,17 @@ import { useState } from "react";
 import NumberFlow from "@number-flow/react";
 import { Check, Minus } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { comparativo, planos, type ValorCelula } from "@/lib/nexiatend";
+import {
+  comparativo,
+  mesesGratis,
+  parcelasImplantacao,
+  planos,
+  type ValorCelula,
+} from "@/lib/nexiatend";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-// Mostra "R$ 767" para inteiros e "R$ 383,50" para o valor pela metade.
+// Mostra "R$ 767" para inteiros e "R$ 255,67" quando há centavos.
 const formatoReais = {
   style: "currency",
   currency: "BRL",
@@ -36,9 +42,9 @@ function Celula({ valor }: { valor: ValorCelula }) {
   return <span>{valor}</span>;
 }
 
-// Comparador de planos do NexIAtend: a mensalidade é fixa e a implantação
-// anima entre o contrato mensal (cheia) e o de 12 meses (pela metade). Dados
-// em lib/nexiatend.ts, a mesma fonte do JSON-LD da página.
+// Comparador de planos do NexIAtend. A mensalidade e a implantação são as
+// mesmas nos dois contratos; o de 12 meses tem 1 mensalidade grátis e permite
+// parcelar a implantação. Dados em lib/nexiatend.ts, a mesma fonte do JSON-LD.
 export function Planos() {
   const [doze, setDoze] = useState(false);
 
@@ -56,7 +62,7 @@ export function Planos() {
         <Switch
           checked={doze}
           onCheckedChange={setDoze}
-          aria-label="Contrato de 12 meses, com implantação pela metade"
+          aria-label="Contrato de 12 meses, com 1 mês de mensalidade grátis"
         />
         <span
           className={cn(
@@ -67,149 +73,160 @@ export function Planos() {
           12 meses
         </span>
         <span className="rounded-full border border-linha bg-painel px-3 py-1 font-mono text-xs text-suave">
-          implantação pela metade
+          1 mês grátis
         </span>
       </div>
 
       <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {planos.map((plano) => {
-          const implantacao = doze ? plano.implantacao / 2 : plano.implantacao;
-          return (
-            <li
-              key={plano.slug}
+        {planos.map((plano) => (
+          <li
+            key={plano.slug}
+            className={cn(
+              "flex flex-col rounded-2xl border p-6",
+              plano.destaque
+                ? "border-azul-linha bg-azul-profundo text-sobre-azul"
+                : "border-linha bg-painel",
+            )}
+          >
+            {/* Linha reservada para o rótulo, para o nome e o preço alinharem entre os cards */}
+            <div className="min-h-6">
+              {plano.rotulo && (
+                <span className="inline-block whitespace-nowrap rounded-full bg-sobre-azul px-2.5 py-1 text-[0.68rem] font-bold uppercase leading-none tracking-[0.09em] text-azul-profundo">
+                  {plano.rotulo}
+                </span>
+              )}
+            </div>
+            <h3 className="font-display mt-2 text-xl font-extrabold tracking-tight">
+              {plano.nome}
+            </h3>
+            <p
               className={cn(
-                "flex flex-col rounded-2xl border p-6",
-                plano.destaque
-                  ? "border-azul-linha bg-azul-profundo text-sobre-azul"
-                  : "border-linha bg-painel",
+                "mt-1 min-h-[2.5rem] text-sm font-semibold",
+                plano.destaque ? "text-sobre-azul-suave" : "text-suave",
               )}
             >
-              {/* Linha reservada para o rótulo, para o nome e o preço alinharem entre os cards */}
-              <div className="min-h-6">
-                {plano.rotulo && (
-                  <span className="inline-block whitespace-nowrap rounded-full bg-sobre-azul px-2.5 py-1 text-[0.68rem] font-bold uppercase leading-none tracking-[0.09em] text-azul-profundo">
-                    {plano.rotulo}
-                  </span>
-                )}
-              </div>
-              <h3 className="font-display mt-2 text-xl font-extrabold tracking-tight">
-                {plano.nome}
-              </h3>
-              <p
-                className={cn(
-                  "mt-1 min-h-[2.5rem] text-sm font-semibold",
-                  plano.destaque ? "text-sobre-azul-suave" : "text-suave",
-                )}
-              >
-                {plano.resolve}
-              </p>
+              {plano.resolve}
+            </p>
 
-              <p className="font-mono mt-5 text-3xl font-bold">
-                <NumberFlow
-                  value={plano.mensalidade}
-                  locales="pt-BR"
-                  format={formatoReais}
-                />
-                <span
-                  className={cn(
-                    "text-base font-medium",
-                    plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
-                  )}
-                >
-                  /mês
-                </span>
-              </p>
-              <p
+            <p className="font-mono mt-5 text-3xl font-bold">
+              <NumberFlow
+                value={plano.mensalidade}
+                locales="pt-BR"
+                format={formatoReais}
+              />
+              <span
                 className={cn(
-                  "mt-1 text-xs font-semibold uppercase tracking-[0.09em]",
+                  "text-base font-medium",
                   plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
                 )}
               >
-                {plano.capacidade}
-              </p>
-
-              <div
-                className={cn(
-                  "mt-5 border-t pt-4",
-                  plano.destaque ? "border-azul-linha" : "border-linha",
-                )}
-              >
-                <p
-                  className={cn(
-                    "text-xs font-semibold uppercase tracking-[0.09em]",
-                    plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
-                  )}
-                >
-                  Implantação, pagamento único
-                </p>
-                <p className="font-mono mt-1 text-xl font-bold">
-                  <NumberFlow
-                    value={implantacao}
-                    locales="pt-BR"
-                    format={formatoReais}
-                  />
-                </p>
-                {/* Reserva a altura nos dois modos para o card não pular */}
-                <p
-                  aria-hidden={!doze}
-                  className={cn(
-                    "mt-0.5 font-mono text-xs line-through",
-                    plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
-                    !doze && "invisible",
-                  )}
-                >
-                  {moeda.format(plano.implantacao)}
-                </p>
-              </div>
-
-              {plano.herda && (
-                <p
-                  className={cn(
-                    "mt-3 text-sm font-semibold",
-                    plano.destaque ? "text-sobre-azul" : "text-texto",
-                  )}
-                >
-                  {plano.herda}
-                </p>
+                /mês
+              </span>
+            </p>
+            <p
+              className={cn(
+                "mt-1 text-xs font-semibold uppercase tracking-[0.09em]",
+                plano.destaque ? "text-sobre-azul-suave" : "text-apagado",
               )}
-              <ul className={cn("flex-1 space-y-2.5 text-sm", plano.herda ? "mt-3" : "mt-4")}>
-                {plano.inclui.map((item) => (
-                  <li key={item} className="flex gap-2.5">
-                    <Check
-                      aria-hidden="true"
-                      className={cn(
-                        "mt-0.5 h-4 w-4 shrink-0",
-                        plano.destaque ? "text-sobre-azul" : "text-acento",
-                      )}
-                    />
-                    <span
-                      className={
-                        plano.destaque ? "text-sobre-azul-suave" : "text-suave"
-                      }
-                    >
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            >
+              {plano.capacidade}
+            </p>
+            {/* Reserva a altura nos dois modos para o card não pular */}
+            <p
+              aria-hidden={!doze}
+              className={cn(
+                "mt-2 font-mono text-xs",
+                plano.destaque ? "text-sobre-azul-suave" : "text-suave",
+                !doze && "invisible",
+              )}
+            >
+              12 meses por{" "}
+              <NumberFlow
+                value={plano.mensalidade * (12 - mesesGratis)}
+                locales="pt-BR"
+                format={formatoReais}
+              />
+            </p>
 
-              <a
-                href={site.links.whatsappDiagnostico}
-                target="_blank"
-                rel="noopener noreferrer"
+            {plano.herda && (
+              <p
                 className={cn(
-                  "mt-6 rounded-full px-3 py-2.5 text-center text-sm font-bold transition-[filter,background-color]",
-                  plano.destaque
-                    ? "bg-sobre-azul text-azul-profundo hover:brightness-95"
-                    : "border border-linha hover:bg-fundo",
+                  "mt-4 text-sm font-semibold",
+                  plano.destaque ? "text-sobre-azul" : "text-texto",
                 )}
               >
-                Pedir diagnóstico gratuito
-              </a>
-            </li>
-          );
-        })}
+                {plano.herda}
+              </p>
+            )}
+            <ul className={cn("space-y-2.5 text-sm", plano.herda ? "mt-3" : "mt-5")}>
+              {plano.inclui.map((item) => (
+                <li key={item} className="flex gap-2.5">
+                  <Check
+                    aria-hidden="true"
+                    className={cn(
+                      "mt-0.5 h-4 w-4 shrink-0",
+                      plano.destaque ? "text-sobre-azul" : "text-acento",
+                    )}
+                  />
+                  <span
+                    className={
+                      plano.destaque ? "text-sobre-azul-suave" : "text-suave"
+                    }
+                  >
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
       </ul>
+
+      <div className="mt-6 rounded-2xl border border-linha bg-painel p-6">
+        <p className="font-mono text-xs text-apagado md:text-sm">
+          {"// implantação, paga uma vez"}
+        </p>
+        <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-5 lg:grid-cols-4">
+          {planos.map((plano) => (
+            <div key={plano.slug}>
+              <dt className="text-xs font-semibold uppercase tracking-[0.09em] text-apagado">
+                {plano.nome}
+              </dt>
+              <dd className="font-mono mt-1 text-xl font-bold">
+                {moeda.format(plano.implantacao)}
+              </dd>
+              {/* Reserva a altura nos dois modos para o bloco não pular */}
+              <dd
+                aria-hidden={!doze}
+                className={cn("mt-0.5 font-mono text-xs text-suave", !doze && "invisible")}
+              >
+                ou {parcelasImplantacao}x de{" "}
+                <NumberFlow
+                  value={plano.implantacao / parcelasImplantacao}
+                  locales="pt-BR"
+                  format={formatoReais}
+                />
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-5 text-sm text-suave">
+          {doze
+            ? `No contrato de 12 meses, a implantação pode ser parcelada em até ${parcelasImplantacao}x.`
+            : "No contrato mensal, a implantação é paga à vista."}
+        </p>
+      </div>
+
+      <div className="mt-6">
+        <a
+          href={site.links.whatsappDiagnostico}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
+        >
+          Pedir diagnóstico gratuito
+        </a>
+      </div>
 
       <details className="group mt-6 rounded-2xl border border-linha bg-painel">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-4 font-display text-lg font-bold tracking-tight [&::-webkit-details-marker]:hidden">
