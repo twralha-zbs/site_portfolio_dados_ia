@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { paginaMeta } from "@/lib/metadata";
 import { CTASection } from "@/components/CTASection";
 import { casesDemonstrativos } from "@/lib/cases";
 
-export const metadata: Metadata = {
-  title: "Portfólio",
-  description:
-    "Estudos de caso de dados, automação e IA: Distribuidora Serra Azul, rede de colégios e força de vendas, com dados sintéticos.",
-};
+export const metadata: Metadata = paginaMeta(
+  "/portfolio",
+  "Portfólio",
+  "Estudos de caso de dados, automação e IA: Distribuidora Serra Azul, rede de colégios e força de vendas, com dados sintéticos.",
+);
 
 export default function Portfolio() {
   return (

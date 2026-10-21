@@ -1068,6 +1068,34 @@ faixa do fundador decidida pelo usuário e os números do MaxIAlcance adiados.
 - **Pendência:** números da avaliação do MaxIAlcance na Home (5 de 6, 3 de 6,
   4 de 6) ficaram para depois, a pedido do usuário.
 
+## Sessão 2026-10-21 (SEO/AEO: dados estruturados, OG e llms.txt)
+
+Fase 5 do plano original, só a parte técnica que não dependia do usuário.
+
+- **JSON-LD global** no layout raiz: Organization, Person e WebSite
+  (`lib/schema.ts`, componente `components/JsonLd.tsx`, que escapa "<").
+  `sameAs` aponta para LinkedIn, GitHub e Substack. Os `Service` das três
+  páginas de produto agora referenciam a Organization por `@id` em vez de
+  repetir o objeto; `/sobre` ganhou `ProfilePage` apontando para a Person.
+- **FAQPage da Home** ligado a `faqHome` (pendência da Fase 3.5): 6 de 6
+  perguntas idênticas ao texto visível.
+- **Canonical e Open Graph em todas as rotas** via `paginaMeta()` em
+  `lib/metadata.ts`. Motivo: o Next substitui o objeto `openGraph` inteiro, então
+  o `og:title`/`og:url` da Home vazavam para as páginas internas (bug achado na
+  verificação) e o `og:image` sumia quando a página declarava o seu; a imagem
+  agora entra de forma explícita (`imagemOg`).
+- **Imagem OG** gerada em `app/opengraph-image.tsx` (cores do DESIGN.md).
+- **`public/llms.txt`** com resumo, 3 produtos (com preços já publicados),
+  sobre e contato. Higiene, não estratégia (§6.1 do plano).
+- Verificado em build de produção: JSON-LD parseando em 9 rotas, canonical
+  correto, 1 imagem OG 1200x630, lint limpo.
+- **Decisão:** `sitemap.ts` segue sem `lastModified`. Inventar uma data seria
+  sinal falso para RAG; só entra quando houver data real por página.
+- **Pendências:** validar o JSON-LD no validator.schema.org e no Rich Results
+  Test depois do deploy (não dá para rodar daqui); bios `/bio/*` seguem sem
+  imagem OG (são noindex); Article/BreadcrumbList só fazem sentido quando os
+  cases forem publicados.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome

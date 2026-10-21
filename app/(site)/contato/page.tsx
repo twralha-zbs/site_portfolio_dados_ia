@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { paginaMeta } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contato",
-  description:
-    "Fale com Thiago Waldowski Ralha sobre dashboards Power BI, automação de fluxos e IA aplicada: formulário, WhatsApp, LinkedIn ou agenda direta.",
-};
+export const metadata: Metadata = paginaMeta(
+  "/contato",
+  "Contato",
+  "Fale com Thiago Waldowski Ralha sobre dashboards Power BI, automação de fluxos e IA aplicada: formulário, WhatsApp, LinkedIn ou agenda direta.",
+);
 
 const canaisDiretos = [
   {

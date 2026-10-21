@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono, Onest } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { JsonLd } from "@/components/JsonLd";
+import { imagemOg } from "@/lib/metadata";
+import { organizacao, pessoa, website } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -26,6 +29,8 @@ export const metadata: Metadata = {
     template: `%s · ${site.marca}`,
   },
   description: `${site.headline}. ${site.subheadline}`,
+  openGraph: { type: "website", siteName: site.marca, locale: "pt_BR" },
+  twitter: { card: "summary_large_image", images: imagemOg },
 };
 
 export default function RootLayout({
@@ -38,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${bricolage.variable} ${onest.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <JsonLd dados={[organizacao, pessoa, website]} />
         {children}
         <Analytics />
       </body>

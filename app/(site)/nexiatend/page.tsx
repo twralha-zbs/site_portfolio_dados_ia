@@ -20,6 +20,8 @@ import {
   parcelasImplantacao,
   precoMinimo,
 } from "@/lib/nexiatend";
+import { organizacao } from "@/lib/schema";
+import { paginaMeta } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import agentesDetalhe from "@/public/nexiatend/agentes_detalhe.webp";
 import atendimentoMobile from "@/public/nexiatend/atendimento_mobile.webp";
@@ -31,11 +33,11 @@ import rastreamento from "@/public/nexiatend/rastreamento.webp";
 
 const reais = (valor: number) => `R$ ${valor.toLocaleString("pt-BR")}`;
 
-export const metadata: Metadata = {
-  title: "NexIAtend: atendimento no WhatsApp e no Instagram",
-  description: `As conversas da sua empresa no WhatsApp e no Instagram num lugar só, implantadas pela TWR Tech. Diagnóstico gratuito; planos a partir de ${reais(precoMinimo)}/mês.`,
-  alternates: { canonical: "/nexiatend" },
-};
+export const metadata: Metadata = paginaMeta(
+  "/nexiatend",
+  "NexIAtend: atendimento no WhatsApp e no Instagram",
+  `As conversas da sua empresa no WhatsApp e no Instagram num lugar só, implantadas pela TWR Tech. Diagnóstico gratuito; planos a partir de ${reais(precoMinimo)}/mês.`,
+);
 
 const selos = [
   { icone: ShieldCheck, texto: "WhatsApp Business Platform (API)" },
@@ -249,11 +251,7 @@ const jsonLd = [
       "Central que reúne as conversas do WhatsApp e do Instagram da empresa num lugar só, implantada, configurada e treinada pela TWR Tech.",
     url: `${site.urlProducao}/nexiatend`,
     areaServed: { "@type": "Country", name: "Brasil" },
-    provider: {
-      "@type": "Organization",
-      name: site.marca,
-      url: site.urlProducao,
-    },
+    provider: { "@id": organizacao["@id"] },
     offers: {
       "@type": "Offer",
       priceSpecification: {

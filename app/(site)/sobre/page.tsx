@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
+import { JsonLd } from "@/components/JsonLd";
+import { pessoa } from "@/lib/schema";
+import { paginaMeta } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import fotoThiago from "@/public/thiago-ralha.jpg";
 
-export const metadata: Metadata = {
-  title: "Sobre",
-  description:
-    "Thiago Waldowski Ralha: engenheiro pela Poli-USP, consultor de dados com Power BI, Power Platform, Python e IA aplicada a negócios. São Paulo, atendimento remoto.",
-};
+export const metadata: Metadata = paginaMeta(
+  "/sobre",
+  "Sobre",
+  "Thiago Waldowski Ralha: engenheiro pela Poli-USP, consultor de dados com Power BI, Power Platform, Python e IA aplicada a negócios. São Paulo, atendimento remoto.",
+);
 
 const projetosReais = [
   {
@@ -61,6 +64,7 @@ const gruposStack = [
 export default function Sobre() {
   return (
     <>
+      <JsonLd dados={{ "@context": "https://schema.org", "@type": "ProfilePage", mainEntity: { "@id": pessoa["@id"] } }} />
       <section className="mx-auto max-w-6xl px-6 pb-16 pt-16 md:px-8 md:pt-24">
         <div className="grid items-start gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
           <div>

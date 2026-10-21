@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { paginaMeta } from "@/lib/metadata";
 import { CTASection } from "@/components/CTASection";
 import { projetosProprios } from "@/lib/cases";
 
-export const metadata: Metadata = {
-  title: "Projetos",
-  description:
-    "Projetos próprios da TWR Tech em produção, começando pelo ELAS JOGAM: automação e agentes de IA aplicados a um produto real, fora dos estudos de caso demonstrativos.",
-};
+export const metadata: Metadata = paginaMeta(
+  "/projetos",
+  "Projetos",
+  "Projetos próprios da TWR Tech em produção, começando pelo ELAS JOGAM: automação e agentes de IA aplicados a um produto real, fora dos estudos de caso demonstrativos.",
+);
 
 export default function Projetos() {
   return (

@@ -8,14 +8,15 @@ import { Hero } from "@/components/ui/hero";
 import { Rotulo } from "@/components/ui/rotulo";
 import { casesDemonstrativos } from "@/lib/cases";
 import { faqDataconsult } from "@/lib/faq";
+import { organizacao } from "@/lib/schema";
+import { paginaMeta } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "DataConsult: organização de dados e processos",
-  description:
-    "A TWR Tech mapeia as fontes e os processos da sua empresa, propõe melhorias e constrói painéis e automações em que dá pra confiar. Escopo por projeto.",
-  alternates: { canonical: "/organizacao-de-dados" },
-};
+export const metadata: Metadata = paginaMeta(
+  "/organizacao-de-dados",
+  "DataConsult: organização de dados e processos",
+  "A TWR Tech mapeia as fontes e os processos da sua empresa, propõe melhorias e constrói painéis e automações em que dá pra confiar. Escopo por projeto.",
+);
 
 const sintomas = [
   {
@@ -107,11 +108,7 @@ const jsonLd = [
       "Consultoria que mapeia as fontes, os processos e os fluxos de dados de uma empresa, propõe melhorias e constrói painéis e automações que organizam a operação.",
     url: `${site.urlProducao}/organizacao-de-dados`,
     areaServed: { "@type": "Country", name: "Brasil" },
-    provider: {
-      "@type": "Organization",
-      name: site.marca,
-      url: site.urlProducao,
-    },
+    provider: { "@id": organizacao["@id"] },
   },
   {
     "@context": "https://schema.org",

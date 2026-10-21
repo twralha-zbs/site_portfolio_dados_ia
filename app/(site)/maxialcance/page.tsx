@@ -7,14 +7,15 @@ import { VisualPresenca } from "@/components/VisuaisProduto";
 import { Hero } from "@/components/ui/hero";
 import { Rotulo } from "@/components/ui/rotulo";
 import { faqMaxialcance } from "@/lib/faq";
+import { organizacao } from "@/lib/schema";
+import { paginaMeta } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "MaxIAlcance: presença no Google e nas IAs",
-  description:
-    "Seu negócio local encontrado no Google, no mapa e nas respostas de IAs como o ChatGPT. Avaliação gratuita; implantação a partir de R$ 3.000.",
-  alternates: { canonical: "/maxialcance" },
-};
+export const metadata: Metadata = paginaMeta(
+  "/maxialcance",
+  "MaxIAlcance: presença no Google e nas IAs",
+  "Seu negócio local encontrado no Google, no mapa e nas respostas de IAs como o ChatGPT. Avaliação gratuita; implantação a partir de R$ 3.000.",
+);
 
 // Números do eval de 2026-09-29 (6 negócios de Santo André), sem nomes. Fonte
 // interna: Produtos/OptimumSites/Docs/2026-09-29_eval-rubrica.md na biblioteca.
@@ -124,11 +125,7 @@ const jsonLd = [
       "Serviço que faz negócios locais serem encontrados no Google, no mapa e nas respostas de IAs como ChatGPT e Gemini.",
     url: `${site.urlProducao}/maxialcance`,
     areaServed: { "@type": "Country", name: "Brasil" },
-    provider: {
-      "@type": "Organization",
-      name: site.marca,
-      url: site.urlProducao,
-    },
+    provider: { "@id": organizacao["@id"] },
     offers: {
       "@type": "Offer",
       priceSpecification: {

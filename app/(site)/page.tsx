@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
@@ -8,11 +9,28 @@ import { VisualDados, VisualPresenca } from "@/components/VisuaisProduto";
 import { VisualNexiatend } from "@/components/VisualNexiatend";
 import { Hero } from "@/components/ui/hero";
 import { Rotulo } from "@/components/ui/rotulo";
+import { imagemOg } from "@/lib/metadata";
+import { JsonLd } from "@/components/JsonLd";
 import { faqHome } from "@/lib/faq";
+import { faqPage } from "@/lib/schema";
 import { site } from "@/lib/site";
 import { produtos } from "@/lib/servicos";
 import { casesDemonstrativos } from "@/lib/cases";
 import fotoThiago from "@/public/thiago-ralha.jpg";
+
+const descricao = `${site.headline}. ${site.subheadline}`;
+
+// Sem `title`: a Home usa o title.default do layout (o template "%s · TWR Tech"
+// duplicaria a marca).
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    title: site.titulo,
+    description: descricao,
+    images: imagemOg,
+  },
+};
 
 // Visual de cada produto, pelo slug de lib/servicos.ts.
 const visuais: Record<string, React.ReactNode> = {
@@ -24,6 +42,7 @@ const visuais: Record<string, React.ReactNode> = {
 export default function Home() {
   return (
     <>
+      <JsonLd dados={faqPage(faqHome)} />
       <Hero
         titulo={
           <>
