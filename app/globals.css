@@ -18,6 +18,10 @@
   --color-acento: oklch(72% 0.12 238);
   --color-acento-contraste: oklch(18% 0.03 245);
 
+  /* Azul elétrico das artes do Instagram (#1087fe). Só para o brilho
+     decorativo do hero (components/ui/hero.tsx); ação continua no acento. */
+  --color-eletrico: oklch(63% 0.2 255);
+
   /* Estados semânticos: mesma temperatura fria da paleta azul, nunca
      verde-neon/amarelo-canário genéricos de dashboard (ver DESIGN.md, Regra
      Sem-Semáforo). Erro segue via text-red-400 do Tailwind, sem token custom. */
@@ -68,6 +72,43 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .bio-entrada {
+    animation: none;
+  }
+}
+
+/* Entrada suave do hero e dos blocos de produto. Mesma regra do bio-entrada:
+   `both` segura o estado inicial durante o atraso. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 600ms ease-out both;
+}
+
+.animate-fade-up {
+  animation: fade-up 600ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-up {
     animation: none;
   }
 }
