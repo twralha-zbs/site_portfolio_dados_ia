@@ -1,160 +1,67 @@
 import Link from "next/link";
-import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { SubstackFeed } from "@/components/SubstackFeed";
-import { ProcessoTrabalho } from "@/components/ProcessoTrabalho";
 import { FaqSection } from "@/components/FaqSection";
+import { ProdutoBloco } from "@/components/ProdutoBloco";
+import { VisualDados, VisualPresenca } from "@/components/VisuaisProduto";
+import { Hero } from "@/components/ui/hero";
+import { PrintProduto } from "@/components/ui/print-produto";
+import { Rotulo } from "@/components/ui/rotulo";
 import { faqHome } from "@/lib/faq";
 import { site } from "@/lib/site";
 import { produtos } from "@/lib/servicos";
 import { casesDemonstrativos } from "@/lib/cases";
-import fotoThiago from "@/public/thiago-ralha.jpg";
+import centralAtendimento from "@/public/nexiatend/central_atendimento.webp";
 
-const verticais = [
-  {
-    titulo: "Atacado & distribuição",
-    descricao:
-      "Vendas, margem e estoque num só lugar, em vez de cinco planilhas que não batem.",
-  },
-  {
-    titulo: "Varejo",
-    descricao:
-      "Giro, ruptura e desempenho de loja com números em que dá pra confiar.",
-  },
-  {
-    titulo: "Indústria",
-    descricao: "Produção, custo e estoque puxados direto do ERP.",
-  },
-  {
-    titulo: "Serviços",
-    descricao:
-      "Faturamento, produtividade e projetos num painel único e confiável.",
-  },
-];
+// Visual de cada produto, na ordem de lib/servicos.ts (NexIAtend,
+// MaxIAlcance, consultoria).
+const visuais: Record<string, React.ReactNode> = {
+  nexiatend: (
+    <PrintProduto
+      src={centralAtendimento}
+      alt="Central de atendimento do NexIAtend: lista de conversas à esquerda e a conversa aberta, com a origem do cliente, à direita"
+      sizes="(min-width: 768px) 560px, 100vw"
+      legenda="// central de atendimento"
+    />
+  ),
+  maxialcance: <VisualPresenca />,
+  "organizacao-de-dados": <VisualDados />,
+};
 
 export default function Home() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 pb-20 pt-20 md:px-8 md:pb-24 md:pt-28">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          {site.nome} · São Paulo
-        </p>
-        <h1 className="font-display mt-6 max-w-[20ch] text-5xl font-extrabold leading-[0.98] tracking-tight md:text-7xl lg:text-8xl">
-          Atendimento, presença e dados prontos pra{" "}
-          <span className="text-acento">escalar.</span>
-        </h1>
-        <p className="mt-8 max-w-[48ch] text-lg text-suave">{site.subheadline}</p>
-        <p className="mt-6 inline-block rounded-full border border-linha bg-painel px-4 py-2 text-sm text-suave">
-          A implantação dos produtos é feita com acompanhamento da TWR Tech em
-          todas as etapas.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/portfolio"
-            className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
-          >
-            Ver estudos de caso
-          </Link>
-          <Link
-            href="/contato"
-            className="rounded-full border border-linha px-6 py-3 font-semibold transition-colors hover:bg-painel"
-          >
-            Fale conosco
-          </Link>
-        </div>
+      <Hero
+        titulo={
+          <>
+            Conversas, presença e dados da sua empresa{" "}
+            <span className="text-acento">organizados.</span>
+          </>
+        }
+        subtitulo={site.subheadline}
+        ctas={{
+          primario: { rotulo: "Conhecer os produtos", href: "#produtos" },
+          secundario: { rotulo: "Fale conosco", href: "/contato" },
+        }}
+      />
+
+      <section
+        id="produtos"
+        className="mx-auto max-w-6xl scroll-mt-20 space-y-20 px-6 py-16 md:space-y-28 md:px-8 md:py-24"
+      >
+        <h2 className="sr-only">Produtos da TWR Tech</h2>
+        {produtos.map((produto, i) => (
+          <ProdutoBloco
+            key={produto.slug}
+            produto={produto}
+            visual={visuais[produto.slug]}
+            invertido={i % 2 === 1}
+          />
+        ))}
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          O problema
-        </p>
-        <h2 className="font-display mt-5 max-w-[20ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
-          Você não tem falta de relatórios. Tem falta de relatórios{" "}
-          <span className="text-acento">em que dá pra confiar.</span>
-        </h2>
-        <p className="mt-6 max-w-[58ch] text-lg text-suave">
-          Os dados existem, espalhados entre ERP, planilhas e sistemas que não
-          conversam. Cada área traz um número diferente, o fechamento do mês vira
-          discussão sobre qual está certo, e a decisão espera.
-        </p>
-
-        <h3 className="mt-14 text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Para quem é
-        </h3>
-        <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {verticais.map((vertical) => (
-            <li
-              key={vertical.titulo}
-              className="rounded-2xl border border-linha bg-painel p-5"
-            >
-              <h4 className="font-display text-lg font-extrabold tracking-tight">
-                {vertical.titulo}
-              </h4>
-              <p className="mt-2 text-sm leading-relaxed text-suave">
-                {vertical.descricao}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section id="produtos" className="bg-azul text-sobre-azul">
-        <div className="mx-auto max-w-6xl px-6 py-18 md:px-8 md:py-20">
-          <h2 className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
-            Como ajudamos
-          </h2>
-          <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {produtos.map((produto) => (
-              <li
-                key={produto.slug}
-                className="flex flex-col rounded-2xl border border-azul-linha bg-azul-profundo p-6"
-              >
-                <p className="inline-block self-start rounded-full bg-sobre-azul px-3 py-1 text-xs font-bold uppercase tracking-[0.09em] text-azul-profundo">
-                  {produto.modeloPreco}
-                </p>
-                <h3 className="font-display mt-4 text-2xl font-extrabold tracking-tight">
-                  {produto.nome}
-                </h3>
-                {produto.selo && (
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
-                    {produto.selo}
-                  </p>
-                )}
-                <p className="mt-2 text-sm font-medium text-sobre-azul-suave">
-                  {produto.tagline}
-                </p>
-                <p className="mt-4 flex-1 text-sobre-azul-suave">
-                  {produto.descricao}
-                </p>
-                {produto.externo ? (
-                  <a
-                    href={produto.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-block font-bold text-sobre-azul hover:underline"
-                  >
-                    {produto.ctaRotulo} {"→"}
-                  </a>
-                ) : (
-                  <Link
-                    href={produto.href}
-                    className="mt-6 inline-block font-bold text-sobre-azul hover:underline"
-                  >
-                    {produto.ctaRotulo} {"→"}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <ProcessoTrabalho />
-
-      <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
-        <p className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-apagado">
-          Portfólio
-        </p>
+      <section className="mx-auto max-w-6xl border-t border-linha px-6 py-20 md:px-8 md:py-24">
+        <Rotulo>{"// estudos de caso"}</Rotulo>
         <h2 className="font-display mt-5 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
           Três casos, do diagnóstico ao dashboard.
         </h2>
@@ -187,28 +94,6 @@ export default function Home() {
         >
           Ver o portfólio completo →
         </Link>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 pb-20 md:px-8 md:pb-24">
-        <figure className="grid items-center gap-8 rounded-3xl border border-linha bg-painel p-8 md:grid-cols-[auto_1fr] md:gap-12 md:p-12">
-          <Image
-            src={fotoThiago}
-            alt="Retrato de Thiago Waldowski Ralha"
-            className="h-28 w-28 rounded-full border border-linha object-cover md:h-36 md:w-36"
-            sizes="144px"
-          />
-          <div>
-            <blockquote className="font-display text-2xl font-extrabold leading-[1.25] tracking-tight md:text-3xl">
-              Cada produto é implantado com{" "}
-              <span className="text-acento">
-                acompanhamento da TWR Tech em todas as etapas.
-              </span>
-            </blockquote>
-            <figcaption className="mt-5 text-sm text-apagado">
-              {site.nome} · fundador, TWR Tech
-            </figcaption>
-          </div>
-        </figure>
       </section>
 
       <FaqSection itens={faqHome} />

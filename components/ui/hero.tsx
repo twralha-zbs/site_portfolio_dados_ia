@@ -82,14 +82,14 @@ export function Hero({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[38rem] left-1/2 -z-10 h-[52rem] w-[150%] max-w-[90rem] -translate-x-1/2 rounded-full border border-eletrico/40 md:-bottom-[44rem]"
+        className="pointer-events-none absolute left-1/2 top-[calc(100%-3rem)] -z-10 h-[52rem] w-[150%] max-w-[90rem] -translate-x-1/2 rounded-[50%] border border-eletrico/50"
         style={{
           background:
-            "radial-gradient(closest-side, color-mix(in oklab, var(--color-eletrico) 30%, transparent), transparent 75%)",
+            "radial-gradient(ellipse 60% 22% at 50% 0%, color-mix(in oklab, var(--color-eletrico) 45%, transparent), transparent 100%)",
         }}
       />
 
-      <div className="mx-auto max-w-6xl px-6 pb-16 pt-16 text-center md:px-8 md:pb-24 md:pt-24">
+      <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 text-center md:px-8 md:pb-24 md:pt-24">
         {eyebrow && (
           <p className="animate-fade-in mx-auto inline-flex items-center gap-1.5 rounded-full border border-linha bg-painel/70 px-4 py-1.5 font-mono text-xs text-suave">
             {eyebrow}

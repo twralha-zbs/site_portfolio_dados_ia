@@ -1,8 +1,13 @@
-// Fonte única dos 3 produtos da TWR Tech. Home consome os 3 cards simétricos
-// daqui — mesma disciplina de lib/faq.ts e lib/cases.ts.
+// Fonte única dos 3 produtos da TWR Tech. A Home monta um bloco por produto,
+// pela dor que ele resolve — mesma disciplina de lib/faq.ts e lib/cases.ts.
 
 export type Produto = {
   slug: string;
+  // Rótulo mono do bloco da Home (ex.: "// 01 · atendimento")
+  rotulo: string;
+  // A dor do cliente, que vira o título do bloco
+  dor: string;
+  beneficios: string[];
   nome: string;
   selo?: string;
   tagline: string;
@@ -16,6 +21,13 @@ export type Produto = {
 export const produtos: Produto[] = [
   {
     slug: "nexiatend",
+    rotulo: "// 01 · atendimento",
+    dor: "Seu WhatsApp tem conversa demais e registro de menos.",
+    beneficios: [
+      "Conversas do WhatsApp e do Instagram numa tela só, com a equipe atendendo junto",
+      "Cada cliente com histórico, responsável e origem registrados",
+      "Gestão vendo quem está esperando, em tempo real",
+    ],
     nome: "NexIAtend",
     selo: "by TWR Tech",
     tagline: "O nexo entre atendimento e IA.",
@@ -28,6 +40,13 @@ export const produtos: Produto[] = [
   },
   {
     slug: "maxialcance",
+    rotulo: "// 02 · presença",
+    dor: "Quem não conhece você procura no Google e pergunta à IA.",
+    beneficios: [
+      "Perfil no Google completo e uma página para cada serviço e região",
+      "Conteúdo escrito para as IAs, como o ChatGPT, poderem citar o seu negócio",
+      "Avaliação gratuita, com nota de 0 a 100 em 15 critérios",
+    ],
     nome: "MaxIAlcance",
     selo: "by TWR Tech",
     tagline: "Presença no Google, no mapa e nas IAs.",
@@ -40,6 +59,13 @@ export const produtos: Produto[] = [
   },
   {
     slug: "organizacao-de-dados",
+    rotulo: "// 03 · dados",
+    dor: "Cinco planilhas, nenhum número em que dá pra confiar.",
+    beneficios: [
+      "Fontes e processos mapeados antes de qualquer painel",
+      "Painéis e indicadores que as áreas usam para decidir",
+      "Automações que tiram o trabalho manual do fechamento",
+    ],
     nome: "Organização de Dados & Processos",
     tagline: "Dados dispersos viram decisão confiável.",
     modeloPreco: "Escopo aberto, por projeto",

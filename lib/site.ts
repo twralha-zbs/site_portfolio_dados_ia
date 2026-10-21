@@ -7,9 +7,9 @@ export const site = {
     "THIAGO WALDOWSKI RALHA CONSULTORIA EM TECNOLOGIA DA INFORMACAO LTDA",
   cnpj: "68.666.679/0001-96",
   titulo: "NexIAtend, MaxIAlcance e Consultoria de Dados | TWR Tech",
-  headline: "Atendimento, presença e dados prontos pra escalar",
+  headline: "Conversas, presença e dados da sua empresa organizados",
   subheadline:
-    "Três produtos pra PME: atendimento com IA no WhatsApp, presença otimizada pra busca (Google e IA) e organização de dados e processos.",
+    "A TWR Tech tem três produtos para a PME organizar o atendimento, ser encontrada no Google e nas IAs e decidir com dados.",
   email: "twralha@gmail.com",
   localizacao: "São Paulo, SP · atendimento remoto para todo o Brasil",
   links: {
