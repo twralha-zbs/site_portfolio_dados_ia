@@ -125,8 +125,4 @@ export const comparativo: LinhaComparativo[] = [
     recurso: "Agente de IA",
     valores: [false, "Adicional", "Adicional", "1 incluso, configurado pela TWR Tech"],
   },
-  {
-    recurso: "Suporte pelo WhatsApp",
-    valores: ["Até 1 dia útil", "Até 1 dia útil", "Até 4 horas úteis", "Até 4 horas úteis"],
-  },
 ];

@@ -888,13 +888,10 @@ mobile; FAQ do JSON-LD igual ao visível (8/8 e 7/7); sem em dash, sem
 primeira pessoa e sem "oficial"/"R$ 300" no código.
 
 **Pendências abertas:**
-- Aprovação visual do usuário e depois commit/push (deploy automático).
-- Prints da Helena usados como estão (decisão do usuário), mas mostram
-  "White Label" (central_atendimento), texto em primeira pessoa e "eu implanto
-  para os meus clientes" (modelos_mensagem) e Asaas "R$ 99/mês" (aplicativos,
-  a oferta diz R$ 97). Vale decidir se algum precisa de retoque.
-- Linha "Suporte pelo WhatsApp" da tabela usa os prazos da oferta (1 dia útil
-  e 4 h úteis), marcados como hipótese em `oferta-e-planos.md`.
+- Aprovação visual dada em 2026-10-21; prints da Helena ficam como estão
+  (decisão do usuário). Linha "Suporte pelo WhatsApp" removida da tabela por
+  enquanto (prazos ainda eram hipótese); voltar a incluí-la quando os prazos
+  forem confirmados.
 - Tabela: coluna "Recurso" sticky ocupa boa parte da largura no mobile.
 - Dado de processo: `npm run build` com o dev server ligado corrompe o `.next`
   (500 no dev); parar o dev antes do build.
