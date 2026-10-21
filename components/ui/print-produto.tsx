@@ -5,8 +5,9 @@ type Props = {
   src: StaticImageData;
   alt: string;
   sizes: string;
-  // "janela" para telas do computador, "celular" para prints do app
-  variante?: "janela" | "celular";
+  // "janela": tela do computador; "celular": print de tela moldurado num
+  // celular; "aparelho": imagem que já traz o próprio aparelho (sem moldura)
+  variante?: "janela" | "celular" | "aparelho";
   // Texto mono na barra da janela (ex.: "// central de atendimento")
   legenda?: string;
   priority?: boolean;
@@ -25,6 +26,18 @@ export function PrintProduto({
   priority,
   className,
 }: Props) {
+  if (variante === "aparelho") {
+    return (
+      <Image
+        src={src}
+        alt={alt}
+        sizes={sizes}
+        priority={priority}
+        className={cn("mx-auto h-auto w-full max-w-[17rem]", className)}
+      />
+    );
+  }
+
   if (variante === "celular") {
     return (
       <div

@@ -84,16 +84,17 @@ export function Planos() {
                   : "border-linha bg-painel",
               )}
             >
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="font-display text-xl font-extrabold tracking-tight">
-                  {plano.nome}
-                </h3>
+              {/* Linha reservada para o rótulo, para o nome e o preço alinharem entre os cards */}
+              <div className="min-h-6">
                 {plano.rotulo && (
-                  <span className="rounded-full bg-sobre-azul px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.09em] text-azul-profundo">
+                  <span className="inline-block whitespace-nowrap rounded-full bg-sobre-azul px-2.5 py-1 text-[0.68rem] font-bold uppercase leading-none tracking-[0.09em] text-azul-profundo">
                     {plano.rotulo}
                   </span>
                 )}
               </div>
+              <h3 className="font-display mt-2 text-xl font-extrabold tracking-tight">
+                {plano.nome}
+              </h3>
               <p
                 className={cn(
                   "mt-1 min-h-[2.5rem] text-sm font-semibold",
@@ -197,7 +198,7 @@ export function Planos() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "mt-6 rounded-full px-5 py-2.5 text-center text-sm font-bold transition-[filter,background-color]",
+                  "mt-6 rounded-full px-3 py-2.5 text-center text-sm font-bold transition-[filter,background-color]",
                   plano.destaque
                     ? "bg-sobre-azul text-azul-profundo hover:brightness-95"
                     : "border border-linha hover:bg-fundo",
