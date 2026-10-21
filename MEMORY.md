@@ -812,9 +812,52 @@ são o 404 do Vercel Analytics fora da Vercel).
 Decisões: preço público "a partir de R$ 437/mês"; voz de empresa nas páginas
 de produto; nenhum número de cliente (não há resultado medido).
 
+## Sessão 2026-10-21: planejamento da revisão da Home, /nexiatend e /maxialcance
+
+Sessão só de planejamento (plan mode), nenhum código do site alterado. Plano
+aprovado e registrado em
+[docs/designs/revisao-home-nexiatend-maxialcance.md](docs/designs/revisao-home-nexiatend-maxialcance.md),
+dividido em 7 etapas de execução (base técnica, componentes de UI, correções
+de texto, Home, /nexiatend, /maxialcance, verificação final).
+
+Fontes consultadas: notas do encontro Helena na Meta
+(`Fornecedores/HelenaCRM/Treinamentos/15102026_comunidade_helena_na_meta.md`),
+artes e posts do Instagram (`Marketing/Instagram/`), `oferta-e-planos.md` do
+NexIAtend, prints da Helena em `Downloads/Documento sem título/images-helena`
+(12 imagens, incluindo `exemplo_whatsapp_flow.png`) e a aldacrm.com como
+referência de estrutura (recursos agrupados por tema, cada grupo com print).
+
+Resumo do plano: Home com hero sobre o que a TWR Tech faz (sem eyebrow),
+produtos pela dor na ordem NexIAtend, MaxIAlcance, consultoria, e estudos de
+caso mais para o fim (saem pílula/citação de implantação, "O problema" e
+`ProcessoTrabalho`). `/nexiatend` vira landing estilo Alda: conversas
+inteligentes, fluxos de atendimento e vendas, dados rastreados, tempo da
+equipe, gestão e monitoramento, IA, comparador de planos (toggle mensal x 12
+meses animando a implantação + tabela completa) e recursos adicionais sem
+preço. Componentes hero-1 e growth-plans adaptados em `components/ui/`.
+
+**Decisões do usuário:**
+- Componentes colados entram adaptados ao Prisma (deps mínimas: lucide-react,
+  @number-flow/react, @radix-ui/react-switch, clsx, tailwind-merge), sem
+  shadcn init, motion ou cva.
+- Sem números de terceiros (80%/31%/70% da Helena) e sem a seção do
+  diagnóstico próprio ("4 de 6") na `/nexiatend`; problema fica qualitativo.
+  A seção equivalente da `/maxialcance` permanece.
+- Terminologia por orientação da Meta: nunca "API oficial"; usar "WhatsApp
+  Business Platform (API)". Corrigir `lib/faq.ts` e a nota de "Como funciona".
+- Adicionais: "podem ser agregados ao seu plano" + ressalva de que a
+  disponibilidade varia por plano (a oferta aprovada restringe alguns).
+- Prints da Helena usados como estão (só recorte da faixa do Chrome).
+- Hero da `/nexiatend` sem a frase de implantação.
+- MaxIAlcance: acompanhamento mensal passa de R$ 300 para **R$ 400/mês**
+  (card, JSON-LD e FAQ), a aplicar na etapa 3.
+
+**Próximo passo:** executar o plano a partir da etapa 1.
+
 ## Próximo passo
 
-Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
+Executar `docs/designs/revisao-home-nexiatend-maxialcance.md` (etapa 1 em
+diante). Antes disso: Fase 2 da reestruturação: MaxIAlcance publicado em `/maxialcance`; `/nexiatend` com oferta e preços desde 2026-10-05. Falta a
 página de `/organizacao-de-dados` (produto DataConsult), que ainda depende de
 nome. Pendências antigas seguem: imagem própria do NexIAtend na bio, domínio
 `nexiatend.com.br` e INPI. Novas: registrar `maxialcance.com.br` e buscar a
