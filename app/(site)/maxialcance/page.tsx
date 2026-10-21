@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Check } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { FaqSection } from "@/components/FaqSection";
+import { VisualPresenca } from "@/components/VisuaisProduto";
 import { Hero } from "@/components/ui/hero";
 import { Rotulo } from "@/components/ui/rotulo";
 import { faqMaxialcance } from "@/lib/faq";
@@ -39,53 +42,66 @@ const lugares = [
   },
 ];
 
+// Uma linha do tempo só: cada etapa traz o que entrega.
 const etapas = [
   {
     titulo: "Avaliação gratuita",
     descricao:
       "Nota de 0 a 100 em 15 critérios, com a evidência de cada ponto, antes de qualquer proposta.",
+    entregas: [],
   },
   {
     titulo: "Plano aprovado por você",
     descricao:
-      "As buscas reais do seu setor na sua cidade, os concorrentes que aparecem na frente e as páginas a criar.",
+      "O caminho a seguir, definido a partir do que as pessoas buscam de verdade na sua cidade.",
+    entregas: [
+      {
+        titulo: "Pesquisa de palavras-chave",
+        descricao: "O que as pessoas digitam para achar o seu serviço na sua região.",
+      },
+      {
+        titulo: "Análise de quem aparece na sua frente",
+        descricao: "O que esses negócios fazem e onde deixam espaço.",
+      },
+    ],
   },
   {
     titulo: "Implantação",
     descricao:
-      "Perfil no Google completo, páginas por serviço e região e site rápido no celular. Nada vai ao ar sem a sua aprovação.",
+      "Tudo o que o Google e as IAs precisam ler. Nada vai ao ar sem a sua aprovação.",
+    entregas: [
+      {
+        titulo: "Perfil no Google completo",
+        descricao: "Categoria certa, serviços, descrição, fotos e perguntas respondidas.",
+      },
+      {
+        titulo: "Uma página por serviço e região",
+        descricao: "Escrita para quem procura e para ser citada pelas IAs, com perguntas frequentes.",
+      },
+      {
+        titulo: "Informações organizadas para o Google",
+        descricao: "Nome, endereço, telefone e serviços marcados do jeito que buscadores e IAs leem.",
+      },
+      {
+        titulo: "Site rápido no celular",
+        descricao: "Site novo para quem não tem. Para quem já tem em WordPress, ajustes no que existe.",
+      },
+    ],
   },
   {
     titulo: "Acompanhamento mensal",
     descricao:
-      "Reunião de pauta, artigos com as perguntas reais dos seus clientes, perfil ativo e um relatório simples.",
-  },
-];
-
-const entregas = [
-  {
-    titulo: "Pesquisa de palavras-chave",
-    descricao: "O que as pessoas digitam de verdade para achar o seu serviço na sua região.",
-  },
-  {
-    titulo: "Engenharia reversa de concorrentes",
-    descricao: "O que os negócios que aparecem na sua frente fazem, e onde deixam espaço.",
-  },
-  {
-    titulo: "Perfil no Google completo",
-    descricao: "Categoria certa, serviços, descrição, fotos e perguntas respondidas.",
-  },
-  {
-    titulo: "Uma página por serviço e região",
-    descricao: "Escrita para quem procura e para ser citada pelas IAs, com perguntas frequentes.",
-  },
-  {
-    titulo: "Informações organizadas para o Google",
-    descricao: "Nome, endereço, telefone e serviços marcados do jeito que buscadores e IAs leem.",
-  },
-  {
-    titulo: "Site rápido no celular",
-    descricao: "Site novo para quem não tem. Para quem já tem site em WordPress, ajustes no que existe.",
+      "O resultado de busca amadurece com o tempo, e o trabalho continua todo mês.",
+    entregas: [
+      {
+        titulo: "Reunião de pauta e artigos",
+        descricao: "Escritos a partir das perguntas reais dos seus clientes.",
+      },
+      {
+        titulo: "Perfil ativo e relatório simples",
+        descricao: "Para você ver o que mudou, sem planilha nem jargão.",
+      },
+    ],
   },
 ];
 
@@ -161,22 +177,28 @@ export default function Maxialcance() {
           },
           secundario: { rotulo: "Ver investimento", href: "#investimento" },
         }}
+        nota="Implantação a partir de R$ 3.000 e R$ 400/mês"
       />
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <Rotulo>{"// o problema"}</Rotulo>
-        <h2 className="font-display mt-4 max-w-[26ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
-          Seu negócio vive de indicação.{" "}
-          <span className="text-acento">Quem não conhece você procura no Google.</span>
-        </h2>
-        <p className="mt-6 max-w-[58ch] text-lg text-suave">
-          A indicação traz o melhor cliente, mas não escala e não tem ritmo.
-          Quem ainda não conhece o negócio procura o serviço no Google, olha o
-          mapa e, cada vez mais, pergunta a uma IA. Se o seu negócio não está
-          nesses lugares, aparece um concorrente, um diretório ou uma lista de
-          &quot;melhores&quot; no lugar.
-        </p>
-        <dl className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3">
+      <section className="mx-auto max-w-6xl px-6 pb-12 pt-20 md:px-8 md:pb-16 md:pt-28">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+          <div>
+            <Rotulo>{"// o problema"}</Rotulo>
+            <h2 className="font-display mt-4 max-w-[22ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+              Seu negócio vive de indicação. Quem não conhece você{" "}
+              <span className="text-acento">procura no Google.</span>
+            </h2>
+            <p className="mt-6 max-w-[58ch] text-lg text-suave">
+              A indicação traz o melhor cliente, mas não escala e não tem
+              ritmo. Quem ainda não conhece o negócio procura o serviço no
+              Google, olha o mapa e, cada vez mais, pergunta a uma IA. Se o seu
+              negócio não está nesses lugares, aparece um concorrente, um
+              diretório ou uma lista de &quot;melhores&quot; no lugar.
+            </p>
+          </div>
+          <VisualPresenca />
+        </div>
+        <dl className="mt-14 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-3">
           {lugares.map((lugar) => (
             <div key={lugar.titulo} className="border-t border-linha pt-5">
               <dt className="font-display text-xl font-extrabold tracking-tight">
@@ -188,20 +210,28 @@ export default function Maxialcance() {
             </div>
           ))}
         </dl>
+        <p className="mt-10 max-w-[62ch] text-suave">
+          <span className="font-semibold text-texto">Para quem é:</span>{" "}
+          negócios locais de serviço que dependem de indicação, como{" "}
+          {setores.join(", ").toLowerCase()}.
+        </p>
       </section>
 
       <section className="bg-azul text-sobre-azul">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-          <h2 className="text-[0.78rem] font-semibold uppercase tracking-[0.13em] text-sobre-azul-suave">
-            Estar no mapa não basta
+          <p className="font-mono text-xs text-sobre-azul-suave md:text-sm">
+            {"// o que a avaliação encontrou"}
+          </p>
+          <h2 className="font-display mt-4 max-w-[22ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
+            Estar no mapa não basta.
           </h2>
-          <dl className="mt-8 grid gap-6 sm:grid-cols-3">
+          <dl className="mt-10 grid gap-8 sm:grid-cols-3">
             {numeros.map((item) => (
               <div key={item.descricao} className="flex flex-col-reverse">
                 <dt className="mt-2 text-sm leading-relaxed text-sobre-azul-suave">
                   {item.descricao}
                 </dt>
-                <dd className="font-mono text-4xl font-bold tracking-tight">
+                <dd className="font-mono text-5xl font-bold tracking-tight">
                   {item.valor}
                 </dd>
               </div>
@@ -215,61 +245,58 @@ export default function Maxialcance() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
         <Rotulo>{"// como funciona"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
           Quatro etapas, e você aprova antes de publicar.
         </h2>
-        <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-12 divide-y divide-linha border-y border-linha">
           {etapas.map((etapa, i) => (
             <li
               key={etapa.titulo}
-              className="rounded-2xl border border-linha bg-painel p-5"
+              className="grid gap-x-10 gap-y-5 py-8 md:grid-cols-[3rem_1fr_1.3fr]"
             >
               <p className="font-mono text-sm font-bold text-apagado">
                 {String(i + 1).padStart(2, "0")}
               </p>
-              <h3 className="font-display mt-2 text-lg font-extrabold tracking-tight">
-                {etapa.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-suave">
-                {etapa.descricao}
-              </p>
+              <div>
+                <h3 className="font-display text-xl font-extrabold tracking-tight">
+                  {etapa.titulo}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-suave">
+                  {etapa.descricao}
+                </p>
+              </div>
+              {etapa.entregas.length > 0 && (
+                <ul className="space-y-3">
+                  {etapa.entregas.map((entrega) => (
+                    <li key={entrega.titulo} className="flex gap-3 text-sm">
+                      <Check
+                        aria-hidden="true"
+                        className="mt-0.5 h-4 w-4 shrink-0 text-acento"
+                      />
+                      <span className="text-suave">
+                        <span className="font-semibold text-texto">
+                          {entrega.titulo}.
+                        </span>{" "}
+                        {entrega.descricao}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ol>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <Rotulo>{"// o que entregamos"}</Rotulo>
-        <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Tudo o que o Google e as IAs precisam ler.
-        </h2>
-        <ul className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {entregas.map((entrega) => (
-            <li key={entrega.titulo} className="border-t border-linha pt-5">
-              <h3 className="font-display text-lg font-extrabold tracking-tight">
-                {entrega.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-suave">
-                {entrega.descricao}
-              </p>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-12 max-w-[58ch] text-sm text-apagado">
-          Para quem é: negócios locais de serviço que dependem de indicação,
-          como {setores.join(", ").toLowerCase()}.
-        </p>
-      </section>
-
       <section
         id="investimento"
-        className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 md:px-8 md:py-20"
+        className="mx-auto max-w-6xl scroll-mt-20 px-6 pb-16 pt-8 md:px-8 md:pb-24 md:pt-12"
       >
         <Rotulo>{"// investimento"}</Rotulo>
         <h2 className="font-display mt-4 max-w-[24ch] text-3xl font-extrabold leading-[1.05] tracking-tight md:text-4xl">
-          Preço de entrada claro, sem surpresa.
+          Quanto custa o MaxIAlcance.
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="rounded-2xl bg-azul-profundo p-6 text-sobre-azul">
@@ -289,10 +316,26 @@ export default function Maxialcance() {
             </p>
           </div>
         </div>
-        <p className="mt-6 max-w-[58ch] text-sm text-apagado">
+        <p className="mt-8 max-w-[58ch] text-lg text-texto">
           O que a TWR Tech não promete: posição garantida no Google. Ninguém
           controla o Google, e quem garante está vendendo outra coisa.
         </p>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href={site.links.whatsappAvaliacao}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
+          >
+            Pedir avaliação gratuita
+          </a>
+          <Link
+            href="/contato"
+            className="rounded-full border border-linha px-6 py-3 font-semibold transition-colors hover:bg-painel"
+          >
+            Enviar mensagem
+          </Link>
+        </div>
       </section>
 
       <FaqSection titulo="Perguntas frequentes" itens={faqMaxialcance} />

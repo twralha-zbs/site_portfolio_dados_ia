@@ -136,7 +136,7 @@ export function Hero({
         </div>
         {nota && (
           <p
-            className="animate-fade-up mt-5 font-mono text-xs text-apagado md:text-sm"
+            className="animate-fade-up mx-auto mt-5 max-w-[34ch] text-balance font-mono text-xs text-apagado md:max-w-none md:text-sm"
             style={{ animationDelay: "280ms" }}
           >
             {nota}

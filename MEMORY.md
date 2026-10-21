@@ -1011,6 +1011,31 @@ aplicados na íntegra.
   são dados de demonstração. O selo "Mais escolhido" segue sem dado de clientes
   por trás.
 
+## Sessão 2026-10-21 (crítica e ajustes da /maxialcance)
+
+Rodada do /impeccable critique na `/maxialcance` (placar 30/40). Aplicado o
+que não dependia de material do usuário.
+
+- **Visual:** o `VisualPresenca` (busca, Google, Mapa, IAs) da Home entrou ao
+  lado do problema; a página era só texto.
+- **Preço e CTA:** nota mono no hero ("Implantação a partir de R$ 3.000 e
+  R$ 400/mês", prop `nota` do `<Hero>`, agora com quebra balanceada no
+  mobile) e botões "Pedir avaliação gratuita" e "Enviar mensagem" dentro da
+  seção de investimento (antes só havia CTA no hero e no fim).
+- **Números da avaliação** (5 de 6, 3 de 6, 4 de 6) viraram o destaque:
+  "Estar no mapa não basta." é H2 de verdade, em vez de legenda minúscula em
+  caixa alta.
+- **"Como funciona" e "O que entregamos" fundidos** numa linha do tempo, com os
+  entregáveis dentro de cada etapa; "engenharia reversa de concorrentes" virou
+  "análise de quem aparece na sua frente".
+- **Copy:** H2 do preço virou "Quanto custa o MaxIAlcance."; acento do H2 do
+  problema reduzido a "procura no Google."; "Para quem é" subiu para o fim do
+  problema, em tamanho de leitura; a frase "o que a TWR Tech não promete" ganhou
+  destaque.
+- **Pendências (dependem do usuário):** exemplo anonimizado de avaliação
+  (nota e 3 critérios com evidência), que seria a melhor prova da página; e
+  dizer o que cabe nos R$ 3.000 de entrada (quantos serviços e regiões).
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
