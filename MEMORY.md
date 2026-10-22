@@ -1097,8 +1097,9 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   2026-09-15 (os travessões trocados em 10-21 não contam). Removidos
   `changeFrequency` e `priority`, que o Google ignora. A regra de atualizar as
   datas entrou na regra de encerramento do CLAUDE.md.
-- **Pendências:** validar o JSON-LD no validator.schema.org e no Rich Results
-  Test depois do deploy (não dá para rodar daqui); bios `/bio/*` seguem sem
+- **Validação pós-deploy feita pelo usuário (2026-10-21):** JSON-LD aprovado no
+  validator.schema.org e no Rich Results Test.
+- **Pendências:** bios `/bio/*` seguem sem
   imagem OG (são noindex); Article/BreadcrumbList só fazem sentido quando os
   cases forem publicados.
 
