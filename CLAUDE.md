@@ -45,6 +45,7 @@ pedido maior precisa ser dividido em etapas.
 
 Ao final de cada sessão de trabalho:
 - **atualizar o MEMORY.md** com uma entrada datada (o que foi feito, decisões tomadas com o porquê, pendências abertas)
+- **atualizar as datas do `app/sitemap.ts`** das rotas cujo texto, preço ou contato mudou na sessão (ajuste visual e refatoração não contam)
 - verificar se algum Dev server (localhost) foi aberto na sessão. se algum foi aberto, não encerre imediatamente após o uso, pois ele poderá ser usado novamente. Realize a verificação e o encerramento dos Dev Servers somente ao finalizar a sessão
 - fazer commit e push do trabalho da sessão
 

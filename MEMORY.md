@@ -1089,8 +1089,14 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   sobre e contato. Higiene, não estratégia (§6.1 do plano).
 - Verificado em build de produção: JSON-LD parseando em 9 rotas, canonical
   correto, 1 imagem OG 1200x630, lint limpo.
-- **Decisão:** `sitemap.ts` segue sem `lastModified`. Inventar uma data seria
-  sinal falso para RAG; só entra quando houver data real por página.
+- **`lastModified` no sitemap (decisão do usuário: datas mantidas à mão, preenchidas
+  pelo histórico do git):** mapa rota → data em `app/sitemap.ts`. Critério: só
+  mudança de conteúdo conta (texto, preço, contato); renomear pasta (7afdec7) e
+  metadados (65483f7) não. Datas: Home e 3 produtos 2026-10-21; contato
+  2026-10-03 (número comercial do WhatsApp); sobre, portfólio e projetos
+  2026-09-15 (os travessões trocados em 10-21 não contam). Removidos
+  `changeFrequency` e `priority`, que o Google ignora. A regra de atualizar as
+  datas entrou na regra de encerramento do CLAUDE.md.
 - **Pendências:** validar o JSON-LD no validator.schema.org e no Rich Results
   Test depois do deploy (não dá para rodar daqui); bios `/bio/*` seguem sem
   imagem OG (são noindex); Article/BreadcrumbList só fazem sentido quando os
