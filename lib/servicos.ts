@@ -54,7 +54,7 @@ export const produtos: Produto[] = [
     nome: "MaxIAlcance",
     selo: "by TWR Tech",
     tagline: "Presença no Google, no mapa e nas IAs.",
-    modeloPreco: "Implantação a partir de R$ 3.000 + R$ 400/mês",
+    modeloPreco: "Implantação a partir de R$ 3.500 + R$ 500/mês",
     descricao:
       "Quem procura o seu serviço na sua cidade encontra você: no Google, no mapa e no ChatGPT.",
     ctaRotulo: "Conhecer o MaxIAlcance",

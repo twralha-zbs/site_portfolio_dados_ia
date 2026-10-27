@@ -22,7 +22,7 @@ export const faqHome: ItemFaq[] = [
   {
     pergunta: "Quanto custa?",
     resposta:
-      "O NexIAtend tem planos a partir de R$ 437 por mês, mais a implantação. No MaxIAlcance, a implantação começa em R$ 3.000, com acompanhamento de R$ 400 por mês. O DataConsult é por projeto, com valor informado depois da conversa ou do diagnóstico. Os três começam sem custo: diagnóstico, avaliação ou conversa.",
+      "O NexIAtend tem planos a partir de R$ 437 por mês, mais a implantação. No MaxIAlcance, a implantação começa em R$ 3.500, com acompanhamento de R$ 500 por mês. O DataConsult é por projeto, com valor informado depois da conversa ou do diagnóstico. Os três começam sem custo: diagnóstico, avaliação ou conversa.",
   },
   {
     pergunta: "Como começa um projeto?",
@@ -102,7 +102,7 @@ export const faqMaxialcance: ItemFaq[] = [
   {
     pergunta: "Quanto custa o MaxIAlcance?",
     resposta:
-      "A implantação começa em R$ 3.000. O valor final depende do número de serviços, das regiões atendidas e de ser preciso criar o site ou só otimizar o que já existe. O acompanhamento mensal custa R$ 400 e é recomendado por 6 a 12 meses. A avaliação inicial é gratuita.",
+      "A implantação começa em R$ 3.500. O valor final depende do número de serviços, das regiões atendidas e de ser preciso criar o site ou só otimizar o que já existe. O acompanhamento mensal custa R$ 500 e é recomendado por 6 a 12 meses. A avaliação inicial é gratuita.",
   },
   {
     pergunta: "Em quanto tempo aparecem resultados?",

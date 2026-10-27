@@ -1103,6 +1103,19 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   imagem OG (são noindex); Article/BreadcrumbList só fazem sentido quando os
   cases forem publicados.
 
+## Sessão 2026-10-27: novo preço do MaxIAlcance
+
+- Implantação passa de "a partir de R$ 3.000" para **a partir de R$ 3.500** e o
+  acompanhamento mensal de R$ 400 para **R$ 500/mês** (pedido do usuário).
+- Atualizado em todos os pontos onde o preço aparece: `/maxialcance` (metadata,
+  hero, card de preço, JSON-LD `minPrice` 3500 e descrição da oferta),
+  `lib/servicos.ts` (card da Home), `lib/faq.ts` (FAQ geral e FAQ do produto,
+  que alimentam o FAQPage em JSON-LD) e `public/llms.txt`.
+- Datas do `app/sitemap.ts` de Home e `/maxialcance` foram para 2026-10-27
+  (preço mudou). `/nexiatend` não mudou.
+- Pendência: as entradas anteriores deste diário citam os valores antigos; são
+  histórico e não foram alteradas.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome

@@ -14,7 +14,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = paginaMeta(
   "/maxialcance",
   "MaxIAlcance: presença no Google e nas IAs",
-  "Seu negócio local encontrado no Google, no mapa e nas respostas de IAs como o ChatGPT. Avaliação gratuita; implantação a partir de R$ 3.000.",
+  "Seu negócio local encontrado no Google, no mapa e nas respostas de IAs como o ChatGPT. Avaliação gratuita; implantação a partir de R$ 3.500.",
 );
 
 // Números do eval de 2026-09-29 (6 negócios de Santo André), sem nomes. Fonte
@@ -130,10 +130,10 @@ const jsonLd = [
       "@type": "Offer",
       priceSpecification: {
         "@type": "PriceSpecification",
-        minPrice: 3000,
+        minPrice: 3500,
         priceCurrency: "BRL",
       },
-      description: "Implantação a partir de R$ 3.000; acompanhamento mensal de R$ 400.",
+      description: "Implantação a partir de R$ 3.500; acompanhamento mensal de R$ 500.",
     },
   },
   {
@@ -174,7 +174,7 @@ export default function Maxialcance() {
           },
           secundario: { rotulo: "Ver investimento", href: "#investimento" },
         }}
-        nota="Implantação a partir de R$ 3.000 e R$ 400/mês"
+        nota="Implantação a partir de R$ 3.500 e R$ 500/mês"
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-12 pt-20 md:px-8 md:pb-16 md:pt-28">
@@ -298,7 +298,7 @@ export default function Maxialcance() {
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="rounded-2xl bg-azul-profundo p-6 text-sobre-azul">
             <p className="text-sm font-semibold text-sobre-azul-suave">Implantação</p>
-            <p className="font-mono mt-2 text-3xl font-bold">a partir de R$ 3.000</p>
+            <p className="font-mono mt-2 text-3xl font-bold">a partir de R$ 3.500</p>
             <p className="mt-3 text-sm leading-relaxed text-sobre-azul-suave">
               O valor final depende do número de serviços, das regiões e de
               criar ou otimizar o site.
@@ -306,7 +306,7 @@ export default function Maxialcance() {
           </div>
           <div className="rounded-2xl border border-linha bg-painel p-6">
             <p className="text-sm font-semibold text-suave">Acompanhamento</p>
-            <p className="font-mono mt-2 text-3xl font-bold">R$ 400/mês</p>
+            <p className="font-mono mt-2 text-3xl font-bold">R$ 500/mês</p>
             <p className="mt-3 text-sm leading-relaxed text-suave">
               Recomendado por 6 a 12 meses: o resultado de busca amadurece com
               o tempo.
