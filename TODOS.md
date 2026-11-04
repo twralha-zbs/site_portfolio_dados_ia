@@ -2,6 +2,18 @@
 
 ## Site
 
+### Botão de inscrição da ClareIA na bio /bio/twr-tech
+
+**What:** Adicionar o segundo botão principal (`variante: "destaque"`) da bio `twr-tech` em `lib/bios.ts`: a inscrição na newsletter ClareIA, logo abaixo de "Fale no WhatsApp". O link de inscrição entra em `site.links` (fonte única), só quando o usuário fornecer a URL real.
+
+**Why:** A estratégia de canais (`Marketing/Estrategia/canais.md`, biblioteca TWR Tech, aprovada em 2026-11-01) define dois botões principais na bio: a porta única no WhatsApp ("Vim pelo Instagram") e a inscrição na ClareIA. Em 2026-11-04 só o WhatsApp entrou, porque a ClareIA ainda não tem página de inscrição.
+
+**Context:** A ClareIA vai rodar no Beehiiv (checklist em `Marketing/Newsletter/README.md`, item "Embed ou link do formulário no site, na bio do Instagram e no LinkedIn"). Quando o formulário existir, também vale trocar a última linha da bio do Instagram para "Newsletter ClareIA toda quinta ↓" (ver `canais.md`).
+
+**Effort:** S
+**Priority:** P2
+**Depends on:** Página de inscrição da ClareIA no Beehiiv publicada
+
 ### Separar tipo Projeto dedicado de lib/cases.ts
 
 **What:** Criar um tipo `Projeto` próprio (sem `selo`, com `status` mais adequado como `ativo`/`em-breve`/`encerrado`) em vez de reaproveitar o tipo `Case` (pensado para estudos de caso) na rota `/projetos`.

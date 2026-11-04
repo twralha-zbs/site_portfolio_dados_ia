@@ -40,13 +40,15 @@ export const bios: Bio[] = [
     descricao:
       "Atendimento inteligente com IA, seu site otimizado pra aparecer nas buscas e conversas com a IA e organização de dados e processos para PMEs.",
     avatar: { tipo: "logo-twr" },
+    // Estratégia de canais (2026-11-01): dois botões principais, a porta no
+    // WhatsApp e a inscrição na ClareIA. A ClareIA ainda não tem página de
+    // inscrição, então por ora só o WhatsApp é destaque (pendência no TODOS.md).
     links: [
-      { rotulo: "Agende uma conversa", href: site.links.agenda, variante: "destaque" },
-      { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio },
+      { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio, variante: "destaque" },
       { rotulo: "NexIAtend: Organize seu atendimento no WhatsApp", href: "/nexiatend" },
       { rotulo: "MaxIAlcance: Seja encontrado no Google e nas IAs", href: "/maxialcance" },
       { rotulo: "Portfólio de dados", href: "/portfolio" },
-      { rotulo: "Blog no Substack", href: site.links.substack },
+      { rotulo: "Agende uma conversa", href: site.links.agenda },
       { rotulo: "LinkedIn", href: site.links.linkedin },
       { rotulo: "Site da TWR Tech", href: "/" },
     ],

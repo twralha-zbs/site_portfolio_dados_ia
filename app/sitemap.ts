@@ -9,13 +9,13 @@ import { site } from "@/lib/site";
 // conteúdo para busca.
 const rotas: { rota: string; atualizadoEm: string }[] = [
   { rota: "", atualizadoEm: "2026-10-27" },
-  { rota: "/nexiatend", atualizadoEm: "2026-10-21" },
-  { rota: "/maxialcance", atualizadoEm: "2026-10-27" },
+  { rota: "/nexiatend", atualizadoEm: "2026-11-04" },
+  { rota: "/maxialcance", atualizadoEm: "2026-11-04" },
   { rota: "/organizacao-de-dados", atualizadoEm: "2026-10-21" },
   { rota: "/portfolio", atualizadoEm: "2026-09-15" },
   { rota: "/projetos", atualizadoEm: "2026-09-15" },
   { rota: "/sobre", atualizadoEm: "2026-09-15" },
-  { rota: "/contato", atualizadoEm: "2026-10-03" },
+  { rota: "/contato", atualizadoEm: "2026-11-04" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1116,6 +1116,36 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
 - Pendência: as entradas anteriores deste diário citam os valores antigos; são
   histórico e não foram alteradas.
 
+## Sessão 2026-11-04: porta única no WhatsApp
+
+- **Contexto:** a TWR Tech passou a ter uma "porta única" no WhatsApp (Helena).
+  A mensagem pronta do `wa.me` é o gatilho do chatbot, que envia o Flow
+  "Responder em 2 minutos" e registra a origem; a frase tem que ser exata.
+  Padrão por canal em `Marketing/WhatsApp_Flows/2026-11_flow-porta-unica/README.md`
+  (seção 3) da biblioteca TWR Tech.
+- **`lib/site.ts`:** os 5 links trocados, chaves mantidas. `whatsapp`,
+  `whatsappAvaliacao` e `whatsappDiagnostico` → "Oi, Thiago! Vim pelo site.";
+  `whatsappBio` e `whatsappDiagnosticoBio` → "Oi, Thiago! Vim pelo Instagram.".
+  Os pedidos específicos (avaliação, diagnóstico) saíram da mensagem; a isca
+  agora sai da dor que a pessoa marca no Flow. Comentário no código avisa para
+  não mexer na frase sem mudar o gatilho na Helena.
+- **Conferido:** não existe `wa.me` fora de `lib/site.ts` no código (só um
+  comentário em `lib/bios.ts`). Textos de botão ("Pedir diagnóstico gratuito",
+  "Pedir avaliação gratuita", "Peça o diagnóstico gratuito") ficaram: não
+  prometem que a mensagem pede algo específico.
+- **Bio `/bio/twr-tech`** (segue `Marketing/Estrategia/canais.md`): "Fale no
+  WhatsApp" virou o único destaque e subiu para o topo; "Agende uma conversa"
+  perdeu o destaque e desceu para depois dos cards de produto e do portfólio;
+  o card "Blog no Substack" saiu (a estratégia reserva o lugar para a ClareIA).
+  A ClareIA ainda não tem página de inscrição (checklist do Beehiiv em
+  aberto), então o segundo destaque ficou como pendência no `TODOS.md`.
+- Datas do `app/sitemap.ts` de `/contato`, `/nexiatend` e `/maxialcance` foram
+  para 2026-11-04 (contato mudou).
+- **Pendências:** teste no celular pelo usuário (cada botão abre o WhatsApp
+  com a frase exata e, ao enviar, chega o Flow); botão da ClareIA na bio;
+  marcar o site como feito no README do Flow (linha "site pendente", fora
+  deste repo).
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
