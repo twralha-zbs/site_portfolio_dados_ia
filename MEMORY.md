@@ -1141,8 +1141,10 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   aberto), então o segundo destaque ficou como pendência no `TODOS.md`.
 - Datas do `app/sitemap.ts` de `/contato`, `/nexiatend` e `/maxialcance` foram
   para 2026-11-04 (contato mudou).
-- **Pendências:** teste no celular pelo usuário (cada botão abre o WhatsApp
-  com a frase exata e, ao enviar, chega o Flow); botão da ClareIA na bio;
+- **Teste no celular feito pelo usuário (2026-11-04):** os botões abrem o
+  WhatsApp com a frase exata e, ao enviar, chega o Flow. Porta única do site
+  validada.
+- **Pendências:** botão da ClareIA na bio;
   marcar o site como feito no README do Flow (linha "site pendente", fora
   deste repo).
 
