@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Check } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { FaqSection } from "@/components/FaqSection";
@@ -326,12 +325,6 @@ export default function Maxialcance() {
           >
             Pedir avaliação gratuita
           </a>
-          <Link
-            href="/contato"
-            className="rounded-full border border-linha px-6 py-3 font-semibold transition-colors hover:bg-painel"
-          >
-            Enviar mensagem
-          </Link>
         </div>
       </section>
 

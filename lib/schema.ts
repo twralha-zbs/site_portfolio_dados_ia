@@ -4,10 +4,12 @@
 import { site } from "@/lib/site";
 import type { ItemFaq } from "@/lib/faq";
 
-const idOrganizacao = `${site.urlProducao}/#organizacao`;
-const idPessoa = `${site.urlProducao}/#thiago`;
+export const idOrganizacao = `${site.urlProducao}/#organizacao`;
+export const idPessoa = `${site.urlProducao}/#thiago`;
 
-const sameAs = [site.links.linkedin, site.links.github, site.links.substack];
+const sameAs = [site.links.linkedin, site.links.github];
+// O Instagram @twrtech é perfil da empresa: só na Organization.
+const sameAsOrganizacao = [...sameAs, site.links.instagram];
 
 export const organizacao = {
   "@context": "https://schema.org",
@@ -20,7 +22,7 @@ export const organizacao = {
   email: site.email,
   founder: { "@id": idPessoa },
   areaServed: { "@type": "Country", name: "Brasil" },
-  sameAs,
+  sameAs: sameAsOrganizacao,
 };
 
 export const pessoa = {
@@ -63,6 +65,74 @@ export function faqPage(itens: ItemFaq[]) {
       "@type": "Question",
       name: item.pergunta,
       acceptedAnswer: { "@type": "Answer", text: item.resposta },
+    })),
+  };
+}
+
+// Trilha de navegação. `itens` em ordem, com rota relativa ("/blog").
+export function breadcrumb(itens: { nome: string; rota: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: itens.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.nome,
+      item: `${site.urlProducao}${item.rota}`,
+    })),
+  };
+}
+
+type DadosPost = {
+  titulo: string;
+  descricao: string;
+  slug: string;
+  publicado: string;
+  atualizado: string;
+};
+
+const urlPost = (slug: string) => `${site.urlProducao}/blog/${slug}`;
+
+// Artigo do blog. Autor e publisher referenciam Person e Organization do
+// layout raiz por @id, sem duplicar os objetos.
+export function blogPosting(post: DadosPost) {
+  const url = urlPost(post.slug);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.titulo,
+    description: post.descricao,
+    datePublished: post.publicado,
+    dateModified: post.atualizado,
+    author: { "@id": idPessoa },
+    publisher: { "@id": idOrganizacao },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    image: `${url}/imagem-og`,
+    inLanguage: "pt-BR",
+    isPartOf: { "@id": `${site.urlProducao}/blog#blog` },
+  };
+}
+
+// Listagem /blog.
+export function blogLista(posts: DadosPost[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${site.urlProducao}/blog#blog`,
+    name: `Blog da ${site.marca}`,
+    url: `${site.urlProducao}/blog`,
+    inLanguage: "pt-BR",
+    author: { "@id": idPessoa },
+    publisher: { "@id": idOrganizacao },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.titulo,
+      description: post.descricao,
+      url: urlPost(post.slug),
+      datePublished: post.publicado,
+      dateModified: post.atualizado,
+      author: { "@id": idPessoa },
     })),
   };
 }

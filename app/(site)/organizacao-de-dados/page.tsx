@@ -142,8 +142,8 @@ export default function OrganizacaoDeDados() {
         subtitulo="A TWR Tech mapeia as fontes e os processos da sua empresa, propõe o que melhorar e constrói as ferramentas que organizam e automatizam a operação."
         ctas={{
           primario: {
-            rotulo: "Agendar conversa de 30 minutos",
-            href: site.links.agenda,
+            rotulo: "Pedir uma conversa de 30 minutos",
+            href: site.links.whatsapp,
             externo: true,
           },
           secundario: { rotulo: "Ver estudos de caso", href: "/portfolio" },
@@ -244,19 +244,13 @@ export default function OrganizacaoDeDados() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href={site.links.agenda}
+                href={site.links.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-sobre-azul px-6 py-3 font-bold text-azul-profundo transition-[filter] hover:brightness-95"
               >
-                Agendar conversa de 30 minutos
+                Pedir uma conversa de 30 minutos
               </a>
-              <Link
-                href="/contato"
-                className="rounded-full border border-azul-linha px-6 py-3 font-semibold text-sobre-azul transition-colors hover:bg-azul-profundo"
-              >
-                Enviar mensagem
-              </Link>
             </div>
           </div>
           <ul className="space-y-4 self-center">

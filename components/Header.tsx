@@ -11,7 +11,20 @@ const rotas = [
   { href: "/portfolio", rotulo: "Portfólio" },
   { href: "/projetos", rotulo: "Projetos" },
   { href: "/sobre", rotulo: "Sobre" },
+  { href: "/blog", rotulo: "Blog" },
+  { href: "/clareia", rotulo: "ClareIA" },
 ];
+
+// Botão do header: a porta única no WhatsApp. No blog usa a origem "blog"
+// (todo CTA do blog usa essa frase pronta); no resto do site, a origem "site".
+const linkWhatsapp = (pathname: string) =>
+  pathname === "/blog" || pathname.startsWith("/blog/")
+    ? site.links.whatsappBlog
+    : site.links.whatsapp;
+
+// Rota ativa também nas subpáginas (um artigo marca "Blog").
+const ativa = (pathname: string, href: string) =>
+  pathname === href || pathname.startsWith(`${href}/`);
 
 export function Header() {
   const [aberto, setAberto] = useState(false);
@@ -29,40 +42,32 @@ export function Header() {
           {site.marca}
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Navegação principal">
           {rotas.map((rota) => (
             <Link
               key={rota.href}
               href={rota.href}
-              aria-current={pathname === rota.href ? "page" : undefined}
+              aria-current={ativa(pathname, rota.href) ? "page" : undefined}
               className={`text-[0.95rem] transition-colors hover:text-texto ${
-                pathname === rota.href ? "text-texto" : "text-suave"
+                ativa(pathname, rota.href) ? "text-texto" : "text-suave"
               }`}
             >
               {rota.rotulo}
             </Link>
           ))}
           <a
-            href={site.links.substack}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[0.95rem] text-suave transition-colors hover:text-texto"
-          >
-            Blog {"↗︎"}
-          </a>
-          <a
-            href={site.links.agenda}
+            href={linkWhatsapp(pathname)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste transition-[filter] hover:brightness-110"
           >
-            Agende uma conversa
+            Fale no WhatsApp
           </a>
         </nav>
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-linha md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-linha lg:hidden"
           aria-expanded={aberto}
           aria-controls="menu-mobile"
           aria-label={aberto ? "Fechar menu" : "Abrir menu"}
@@ -78,7 +83,7 @@ export function Header() {
         <nav
           id="menu-mobile"
           aria-label="Navegação principal"
-          className="border-t border-linha px-6 py-4 md:hidden"
+          className="border-t border-linha px-6 py-4 lg:hidden"
         >
           <ul className="flex flex-col gap-4">
             {rotas.map((rota) => (
@@ -94,22 +99,12 @@ export function Header() {
             ))}
             <li>
               <a
-                href={site.links.substack}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-suave hover:text-texto"
-              >
-                Blog {"↗︎"}
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.links.agenda}
+                href={linkWhatsapp(pathname)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste"
               >
-                Agende uma conversa
+                Fale no WhatsApp
               </a>
             </li>
           </ul>

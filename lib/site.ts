@@ -11,13 +11,14 @@ export const site = {
   subheadline:
     "A TWR Tech tem três produtos para a PME organizar o atendimento, ser encontrada no Google e nas IAs e decidir com dados.",
   email: "twralha@gmail.com",
+  // Email da empresa (domínio próprio). Por ora só na página /privacidade;
+  // o resto do site segue com `email`.
+  emailEmpresa: "twr@twralha.com",
   localizacao: "São Paulo, SP · atendimento remoto para todo o Brasil",
   links: {
     linkedin: "https://linkedin.com/in/twralha",
     github: "https://github.com/twralha",
-    substack: "https://twralha.substack.com",
-    substackFeed: "https://twralha.substack.com/feed",
-    agenda: "https://cal.com/twralha",
+    instagram: "https://www.instagram.com/twrtech",
     // Porta única no WhatsApp (Helena). A mensagem pronta é o GATILHO do
     // chatbot, que envia o Flow e registra a origem: a frase tem que ser
     // exatamente esta, senão o Flow não dispara. Não editar sem mudar o
@@ -27,8 +28,10 @@ export const site = {
     // diagnóstico) saíram dela, e a isca passa a sair da dor que a pessoa
     // marca no Flow. As chaves separadas ficam para não mexer nas páginas.
     //
-    // Origem "site": botões de WhatsApp de twralha.com (contato, /nexiatend,
-    // /maxialcance).
+    // Origem "site": todo botão de WhatsApp de twralha.com fora do blog
+    // (header, contato, CTAs das páginas). O WhatsApp é o meio principal de
+    // contato: não há formulário nem agenda pública; o link para marcar uma
+    // conversa é enviado pelo próprio WhatsApp.
     whatsapp: "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pelo%20site.",
     whatsappAvaliacao:
       "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pelo%20site.",
@@ -39,7 +42,14 @@ export const site = {
       "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pelo%20Instagram.",
     whatsappDiagnosticoBio:
       "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pelo%20Instagram.",
+    // Origem "blog": CTA de todo artigo e da listagem /blog. Mesmo link para
+    // qualquer `cta` do frontmatter (só o texto do botão muda).
+    whatsappBlog:
+      "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pelo%20blog.",
+    // Página de inscrição da ClareIA no Beehiiv. Fica null até o usuário
+    // fornecer a URL real (conta em criação): enquanto for null, o bloco de
+    // inscrição mostra "inscrições abrem em breve", sem formulário.
+    clareiaInscricao: null as string | null,
   },
-  formspreeEndpoint: "https://formspree.io/f/xjgnyzqk",
   urlProducao: "https://twralha.com",
 } as const;

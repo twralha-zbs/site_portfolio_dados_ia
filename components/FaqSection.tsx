@@ -3,14 +3,21 @@ import type { ItemFaq } from "@/lib/faq";
 type Props = {
   titulo?: string;
   itens: ItemFaq[];
+  // Container da seção. O padrão é a largura das páginas institucionais; o
+  // artigo do blog passa o seu (coluna de leitura).
+  className?: string;
 };
 
 // Acordeão de FAQ com <details>/<summary> nativo: acessível, sem JavaScript, e
 // o texto da resposta fica no HTML renderizado mesmo fechado (requisito de AEO —
 // bots leem a resposta). Reutilizado na Home e, na Fase 4, na página do case.
-export function FaqSection({ titulo = "Perguntas frequentes", itens }: Props) {
+export function FaqSection({
+  titulo = "Perguntas frequentes",
+  itens,
+  className = "mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24",
+}: Props) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
+    <section className={className}>
       <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-4xl">
         {titulo}
       </h2>

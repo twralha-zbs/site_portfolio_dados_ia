@@ -2,17 +2,17 @@
 
 ## Site
 
-### Botão de inscrição da ClareIA na bio /bio/twr-tech
+### URL do Beehiiv da ClareIA em lib/site.ts
 
-**What:** Adicionar o segundo botão principal (`variante: "destaque"`) da bio `twr-tech` em `lib/bios.ts`: a inscrição na newsletter ClareIA, logo abaixo de "Fale no WhatsApp". O link de inscrição entra em `site.links` (fonte única), só quando o usuário fornecer a URL real.
+**What:** Preencher `site.links.clareiaInscricao` (hoje `null`) com a URL da página de inscrição da ClareIA no Beehiiv e conferir se ela aceita `?email=` para pré-preencher o campo.
 
-**Why:** A estratégia de canais (`Marketing/Estrategia/canais.md`, biblioteca TWR Tech, aprovada em 2026-11-01) define dois botões principais na bio: a porta única no WhatsApp ("Vim pelo Instagram") e a inscrição na ClareIA. Em 2026-11-04 só o WhatsApp entrou, porque a ClareIA ainda não tem página de inscrição.
+**Why:** O bloco `components/InscricaoClareia.tsx` (em `/clareia`, nos artigos, no `/blog` vazio e na Home) mostra "As inscrições abrem em breve" enquanto a URL for `null`. Com a URL, aparece o formulário (email + consentimento) que dispara o evento "ClareIA Inscricao" e abre o Beehiiv. O botão da ClareIA na bio `/bio/twr-tech` já aponta para `/clareia` (2026-11-04).
 
-**Context:** A ClareIA vai rodar no Beehiiv (checklist em `Marketing/Newsletter/README.md`, item "Embed ou link do formulário no site, na bio do Instagram e no LinkedIn"). Quando o formulário existir, também vale trocar a última linha da bio do Instagram para "Newsletter ClareIA toda quinta ↓" (ver `canais.md`).
+**Context:** Checklist do Beehiiv em `Marketing/Newsletter/README.md`. Se o Beehiiv não aceitar `?email=`, a pessoa digita o email de novo lá; o evento continua medido.
 
 **Effort:** S
-**Priority:** P2
-**Depends on:** Página de inscrição da ClareIA no Beehiiv publicada
+**Priority:** P1
+**Depends on:** Conta do Beehiiv criada pelo usuário
 
 ### Separar tipo Projeto dedicado de lib/cases.ts
 

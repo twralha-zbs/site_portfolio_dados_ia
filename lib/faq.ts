@@ -27,7 +27,7 @@ export const faqHome: ItemFaq[] = [
   {
     pergunta: "Como começa um projeto?",
     resposta:
-      "Começa de graça: um diagnóstico de atendimento no NexIAtend, uma avaliação da presença no MaxIAlcance ou uma conversa de 30 minutos no DataConsult. Você descreve a dor, a TWR Tech aponta se e como dá para resolver, e só depois vem a proposta. Você pode agendar direto pelo site.",
+      "Começa de graça: um diagnóstico de atendimento no NexIAtend, uma avaliação da presença no MaxIAlcance ou uma conversa de 30 minutos no DataConsult. Você descreve a dor, a TWR Tech aponta se e como dá para resolver, e só depois vem a proposta. Tudo começa por uma mensagem no WhatsApp.",
   },
   {
     pergunta: "Onde vocês atendem?",

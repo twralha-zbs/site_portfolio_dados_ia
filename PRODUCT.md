@@ -10,7 +10,7 @@ Decisores de PMEs brasileiras (donos, diretores, gerentes de operação/comercia
 
 ## Product Purpose
 
-Site portfólio de Thiago Waldowski Ralha (marca TWR) — consultoria em análise de dados, automação de fluxos de trabalho e IA aplicada a negócios (Power BI, Power Platform, Python, Gemini). Sem clientes públicos no lançamento, a prova vem de um estudo de caso demonstrativo (Distribuidora Serra Azul, dados sintéticos rotulados) e de projetos reais verificáveis (ZBS Educa, ferramenta de vistorias CRQ, painel ENAMED). Sucesso = lead qualificado: agendamento no Cal.com ou formulário respondendo "qual é a sua dor de dados hoje?".
+Site portfólio de Thiago Waldowski Ralha (marca TWR) — consultoria em análise de dados, automação de fluxos de trabalho e IA aplicada a negócios (Power BI, Power Platform, Python, Gemini). Sem clientes públicos no lançamento, a prova vem de um estudo de caso demonstrativo (Distribuidora Serra Azul, dados sintéticos rotulados) e de projetos reais verificáveis (ZBS Educa, ferramenta de vistorias CRQ, painel ENAMED). Sucesso = lead qualificado: conversa iniciada na porta única do WhatsApp (o Flow pergunta a dor e registra a origem; o link para marcar a conversa sai por lá). Desde 2026-11-04 o site não tem formulário nem agenda pública.
 
 ## Brand Personality
 

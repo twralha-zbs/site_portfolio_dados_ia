@@ -2,6 +2,35 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { LogoMark } from "@/components/LogoMark";
 
+type ItemRodape = { rotulo: string; href: string; externo?: boolean };
+
+// Três colunas: produtos; conteúdo e navegação; perfis externos e institucional.
+// Cada coluna tem a largura do próprio conteúdo e o espaço entre elas é fixo
+// (colunas de largura igual deixavam vãos desiguais entre os textos). No
+// celular, "Organização de dados" quebra em duas linhas: a 1ª coluna fica com
+// a largura da palavra maior (min-content) para o espaço não sobrar à direita.
+const colunas: ItemRodape[][] = [
+  [
+    { rotulo: "NexIAtend", href: "/nexiatend" },
+    { rotulo: "MaxIAlcance", href: "/maxialcance" },
+    { rotulo: "Organização de dados", href: "/organizacao-de-dados" },
+  ],
+  [
+    { rotulo: "Blog", href: "/blog" },
+    { rotulo: "ClareIA", href: "/clareia" },
+    { rotulo: "Portfólio", href: "/portfolio" },
+    { rotulo: "Projetos", href: "/projetos" },
+    { rotulo: "Contato", href: "/contato" },
+  ],
+  [
+    { rotulo: "Instagram", href: site.links.instagram, externo: true },
+    { rotulo: "LinkedIn", href: site.links.linkedin, externo: true },
+    { rotulo: "GitHub", href: site.links.github, externo: true },
+    { rotulo: "Sobre", href: "/sobre" },
+    { rotulo: "Privacidade", href: "/privacidade" },
+  ],
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-linha">
@@ -20,76 +49,32 @@ export function Footer() {
             <p className="mt-1 text-sm text-apagado">{site.localizacao}</p>
           </div>
 
-          <nav aria-label="Navegação do rodapé" className="flex gap-8">
-            <ul className="flex flex-col gap-2 text-sm">
-              <li>
-                <Link href="/portfolio" className="text-suave hover:text-texto">
-                  Portfólio
-                </Link>
-              </li>
-              <li>
-                <Link href="/projetos" className="text-suave hover:text-texto">
-                  Projetos
-                </Link>
-              </li>
-              <li>
-                <Link href="/nexiatend" className="text-suave hover:text-texto">
-                  NexIAtend
-                </Link>
-              </li>
-              <li>
-                <Link href="/maxialcance" className="text-suave hover:text-texto">
-                  MaxIAlcance
-                </Link>
-              </li>
-              <li>
-                <Link href="/organizacao-de-dados" className="text-suave hover:text-texto">
-                  DataConsult
-                </Link>
-              </li>
-              <li>
-                <Link href="/sobre" className="text-suave hover:text-texto">
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <Link href="/contato" className="text-suave hover:text-texto">
-                  Contato
-                </Link>
-              </li>
-            </ul>
-            <ul className="flex flex-col gap-2 text-sm">
-              <li>
-                <a
-                  href={site.links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-suave hover:text-texto"
-                >
-                  LinkedIn {"↗︎"}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-suave hover:text-texto"
-                >
-                  GitHub {"↗︎"}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.links.substack}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-suave hover:text-texto"
-                >
-                  Substack {"↗︎"}
-                </a>
-              </li>
-            </ul>
+          <nav
+            aria-label="Navegação do rodapé"
+            className="grid grid-cols-[min-content_auto_auto] justify-start gap-x-8 text-sm sm:grid-cols-[repeat(3,auto)] sm:gap-x-14"
+          >
+            {colunas.map((coluna, i) => (
+              <ul key={i} className="flex flex-col gap-2">
+                {coluna.map((item) => (
+                  <li key={item.href} className="sm:whitespace-nowrap">
+                    {item.externo ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-suave hover:text-texto"
+                      >
+                        {item.rotulo} {"↗︎"}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className="text-suave hover:text-texto">
+                        {item.rotulo}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ))}
           </nav>
         </div>
 

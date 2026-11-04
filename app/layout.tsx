@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono, Onest } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { JsonLd } from "@/components/JsonLd";
+import { RastreioWhatsapp } from "@/components/RastreioWhatsapp";
 import { imagemOg } from "@/lib/metadata";
 import { organizacao, pessoa, website } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -46,6 +47,7 @@ export default function RootLayout({
         <JsonLd dados={[organizacao, pessoa, website]} />
         {children}
         <Analytics />
+        <RastreioWhatsapp />
       </body>
     </html>
   );

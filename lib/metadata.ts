@@ -23,3 +23,41 @@ export function paginaMeta(
     openGraph: { url: rota, title, description, images: imagemOg },
   };
 }
+
+// Metadata do artigo do blog. O title é `absolute`: o template "%s · TWR Tech"
+// do layout estouraria o limite de 60 caracteres. A imagem OG vem do
+// app/(site)/blog/[slug]/imagem-og/route.tsx.
+export function artigoMeta(artigo: {
+  slug: string;
+  titulo: string;
+  descricao: string;
+  publicado: string;
+  atualizado: string;
+}): Metadata {
+  const rota = `/blog/${artigo.slug}`;
+  const imagens = [
+    { url: `${rota}/imagem-og`, width: 1200, height: 630, alt: artigo.titulo },
+  ];
+  return {
+    title: { absolute: artigo.titulo },
+    description: artigo.descricao,
+    alternates: { canonical: rota },
+    authors: [{ name: "Thiago Waldowski Ralha", url: "/sobre" }],
+    openGraph: {
+      type: "article",
+      url: rota,
+      title: artigo.titulo,
+      description: artigo.descricao,
+      publishedTime: artigo.publicado,
+      modifiedTime: artigo.atualizado,
+      authors: ["Thiago Waldowski Ralha"],
+      images: imagens,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: artigo.titulo,
+      description: artigo.descricao,
+      images: imagens,
+    },
+  };
+}

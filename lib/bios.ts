@@ -6,7 +6,7 @@
 //   array é a ordem na tela. Commit + push na main publica sozinho.
 // - Nova bio: copiar um bloco inteiro e trocar slug/nome/descricao/links. A
 //   rota /bio/<slug> é gerada no build, sem criar página.
-// - Contatos gerais (WhatsApp, agenda, LinkedIn...) usam site.links, então uma
+// - Contatos gerais (WhatsApp, LinkedIn, Instagram...) usam site.links, então uma
 //   mudança em lib/site.ts vale para o site e para todas as bios.
 // - Links internos ("/algo") ganham UTM automaticamente; o clique de qualquer
 //   link vira o evento "Bio Link Click" no Vercel Analytics.
@@ -41,14 +41,15 @@ export const bios: Bio[] = [
       "Atendimento inteligente com IA, seu site otimizado pra aparecer nas buscas e conversas com a IA e organização de dados e processos para PMEs.",
     avatar: { tipo: "logo-twr" },
     // Estratégia de canais (2026-11-01): dois botões principais, a porta no
-    // WhatsApp e a inscrição na ClareIA. A ClareIA ainda não tem página de
-    // inscrição, então por ora só o WhatsApp é destaque (pendência no TODOS.md).
+    // WhatsApp e a inscrição na ClareIA (página /clareia do site, que leva ao
+    // formulário do Beehiiv).
     links: [
       { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio, variante: "destaque" },
+      { rotulo: "ClareIA, a newsletter da TWR Tech", href: "/clareia", variante: "destaque" },
       { rotulo: "NexIAtend: Organize seu atendimento no WhatsApp", href: "/nexiatend" },
       { rotulo: "MaxIAlcance: Seja encontrado no Google e nas IAs", href: "/maxialcance" },
       { rotulo: "Portfólio de dados", href: "/portfolio" },
-      { rotulo: "Agende uma conversa", href: site.links.agenda },
+      { rotulo: "Blog", href: "/blog" },
       { rotulo: "LinkedIn", href: site.links.linkedin },
       { rotulo: "Site da TWR Tech", href: "/" },
     ],
@@ -62,7 +63,6 @@ export const bios: Bio[] = [
     links: [
       { rotulo: "Conheça o NexIAtend", href: "/nexiatend", variante: "destaque" },
       { rotulo: "Peça o diagnóstico gratuito", href: site.links.whatsappDiagnosticoBio },
-      { rotulo: "Agende uma demonstração", href: site.links.agenda },
       { rotulo: "Site da TWR Tech", href: "/" },
     ],
   },

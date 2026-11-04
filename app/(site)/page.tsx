@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
-import { SubstackFeed } from "@/components/SubstackFeed";
+import { UltimosArtigos } from "@/components/blog/UltimosArtigos";
 import { FaqSection } from "@/components/FaqSection";
 import { ProdutoBloco } from "@/components/ProdutoBloco";
 import { VisualDados, VisualPresenca } from "@/components/VisuaisProduto";
@@ -160,7 +160,7 @@ export default function Home() {
 
       <FaqSection itens={faqHome} />
 
-      <SubstackFeed />
+      <UltimosArtigos />
 
       <CTASection
         titulo="Sua operação tem uma dor parecida?"

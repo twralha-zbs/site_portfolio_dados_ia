@@ -1148,6 +1148,112 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   marcar o site como feito no README do Flow (linha "site pendente", fora
   deste repo).
 
+## Sessão 2026-11-04: estrutura do blog
+
+- **Pedido:** briefing do Marketing (`Marketing/Blog/2026-11-04_briefing-site-blog.md`
+  na biblioteca TWR Tech): `/blog` no ar até 2026-11-06, primeiro artigo na
+  semana de 2026-11-09. Esta sessão entregou só a estrutura; nenhum artigo real.
+- **Conteúdo:** um Markdown por artigo em `content/blog/<slug>.md`, frontmatter
+  do pipeline editorial. `lib/blog.ts` lê, valida e renderiza (gray-matter +
+  unified/remark/rehype). **Frontmatter inválido quebra o build** (campo
+  ausente, titulo > 60, descricao > 155, tema/cta/produto_linkado/semana fora da
+  lista, slug diferente do arquivo, travessão, "DataConsult"). Artigo com
+  `publicado` futuro (fuso de SP) fica fora de tudo; como o site é estático,
+  ele só aparece no primeiro build a partir da data (o push do dia publica).
+- **FAQ:** a seção `## Perguntas frequentes` sai do corpo e vira itens
+  (`###` = pergunta, texto puro = resposta) que alimentam a `FaqSection` e o
+  FAQPage com as mesmas strings.
+- **Rotas:** `/blog` (filtro `?tema=` no cliente; HTML estático com a lista
+  toda), `/blog/[slug]`, `/blog/[slug]/imagem-og` (route handler, e não
+  `opengraph-image.tsx`, porque a convenção põe hash no caminho em rota
+  dinâmica e o JSON-LD precisa da URL exata), `/blog/feed.xml`, `/clareia`,
+  `/privacidade`. `public/llms.txt` virou `app/llms.txt/route.ts` e lista os
+  artigos.
+- **JSON-LD:** BlogPosting (autor e publisher por `@id`), FAQPage,
+  BreadcrumbList; `Blog` na listagem. Substack saiu do `sameAs`.
+- **Substack aposentado:** `SubstackFeed` e `lib/substack.ts` removidos; Home
+  mostra os 3 últimos artigos (`components/blog/UltimosArtigos.tsx`) ou a
+  inscrição na ClareIA sem artigos. Header ganhou Blog e ClareIA (o menu
+  desktop passou a abrir só a partir de `lg`, 7 itens não cabiam em `md`).
+  Footer: Blog, ClareIA, Privacidade; "DataConsult" virou "Organização de
+  dados" (decisão do usuário: o nome interno não pode aparecer no blog).
+- **ClareIA (decisão do usuário):** formulário próprio (email + consentimento
+  + link da política) em `components/InscricaoClareia.tsx`, que dispara
+  "ClareIA Inscricao" e abre o Beehiiv com `?email=`. `site.links.clareiaInscricao`
+  está `null` até o usuário passar a URL; até lá o bloco diz "inscrições abrem
+  em breve". Bio `/bio/twr-tech` ganhou o 2º destaque (ClareIA → `/clareia`) e
+  o item Blog.
+- **Medição:** `components/RastreioWhatsapp.tsx` no layout raiz mede todo clique
+  em `wa.me` ("WhatsApp Click", origem lida da frase pronta do link, página, e
+  `data-slug`/`data-cta` nos artigos). Um ouvinte só cobre site, bios e blog
+  sem trocar cada `<a>`.
+- **`/privacidade` (decisão do usuário: criar):** texto curto escrito nesta
+  sessão (Formspree, WhatsApp/chat, Beehiiv, Cal.com, Vercel Analytics, LGPD).
+  **Precisa da revisão do usuário antes do push.**
+- **Verificação:** lint e build limpos com 0 artigos; build falha com
+  frontmatter inválido; com `BLOG_EXEMPLO=1` (exemplos em
+  `content/blog-exemplo/`, nunca lidos em produção) o artigo renderiza
+  completo, FAQ do JSON-LD idêntica à visível, imagem OG 200, artigo futuro
+  fora de `/blog`, sitemap, feed e llms.txt; 375px e 1280px sem rolagem
+  horizontal (tabela rola dentro da caixa); console limpo (só o 404 do script
+  do Vercel Analytics, que só existe na Vercel).
+- **Achado:** o título de exemplo do briefing ("Dá para várias pessoas
+  atenderem o mesmo WhatsApp da empresa?") tem 61 caracteres e quebra o build.
+  O primeiro artigo precisa de título com até 60.
+- Datas do sitemap: Home 2026-11-04 (seção do Substack virou blog/ClareIA);
+  `/blog`, `/clareia` e `/privacidade` entram com 2026-11-04.
+- **Pendências:** URL do Beehiiv (TODOS.md); revisar `/privacidade`; depois do
+  deploy, Rich Results Test num artigo real, eventos no Vercel Analytics e
+  sitemap no Search Console; a meta description da Home tem 176 caracteres
+  (anterior a esta sessão, acima de 155).
+- **Email da privacidade (pedido do usuário):** `/privacidade` usa
+  `site.emailEmpresa` (twr@twralha.com), chave nova em `lib/site.ts`. O resto
+  do site segue com `site.email`.
+- **Auditoria `/impeccable audit` (16/20) e correções:** `/blog` trocou a grade
+  de cards por lista editorial com divisores (padrão da FAQ e da Home), com
+  contador "N artigos em Tema" em `aria-live`; filtros com 44px de altura;
+  links isolados (tema do artigo, "Sobre o Thiago") com 44px; datas em mono
+  (Regra do Dado Monoespaçado); links do corpo do artigo em Texto com
+  sublinhado em Acento (Regra da Cor Única); `/clareia` com subtítulo em Texto
+  (o Acento é do botão), seção "O que chega toda quinta" tirada do template da
+  newsletter e "em breve" sem caixa vazia; formulário avisa que abre outra aba
+  e cai para a mesma aba se o navegador bloquear. Contraste AA em todos os
+  pares (mínimo 4,89:1).
+- **WhatsApp como único meio de contato (pedido do usuário, coerência com a
+  porta única):** Cal.com e formulário saíram do site. `site.links.agenda` e
+  `site.formspreeEndpoint` removidos, `components/ContactForm.tsx` apagado;
+  `site.links.instagram` (@twrtech) entrou. O link para marcar a conversa de
+  30 minutos passa a ser enviado pelo WhatsApp.
+  - Header: "Agende uma conversa" virou "Fale no WhatsApp" (origem "blog"
+    dentro de `/blog`, "site" no resto).
+  - `CTASection`: um botão só, "Fale no WhatsApp" (saiu "Enviar mensagem").
+  - `/contato` refeita: WhatsApp como ação principal, "Como funciona" em 3
+    passos (mensagem pronta, 3 perguntas, próximo passo) e perfis LinkedIn e
+    Instagram.
+  - `/organizacao-de-dados`: "Agendar conversa de 30 minutos" virou "Pedir uma
+    conversa de 30 minutos" no WhatsApp; `/maxialcance` perdeu o "Enviar
+    mensagem".
+  - Bios: saíram "Agende uma conversa" e "Agende uma demonstração".
+  - FAQ da Home: "Você pode agendar direto pelo site" virou "Tudo começa por uma
+    mensagem no WhatsApp".
+  - `/privacidade`: saíram Formspree e Cal.com.
+  - Footer: entrou Instagram.
+  - JSON-LD: Instagram no `sameAs` só da Organization (é perfil da empresa).
+  - `llms.txt` e PRODUCT.md (definição de sucesso) atualizados.
+  - Sitemap: todas as rotas com 2026-11-04 (o contato mudou em todas, via
+    Header e CTA).
+- **Footer em 3 colunas (pedido do usuário):** produtos (NexIAtend,
+  MaxIAlcance, Organização de dados); conteúdo e navegação (Blog, ClareIA,
+  Portfólio, Projetos, Contato); perfis e institucional (Instagram, LinkedIn,
+  GitHub, Sobre, Privacidade). Links num array `colunas` em
+  `components/Footer.tsx`; 3 colunas também no celular, sem rolagem lateral.
+  Colunas na largura do conteúdo com espaço fixo entre elas (32px no celular,
+  56px a partir de `sm`); no celular a 1ª coluna usa `min-content` porque
+  "Organização de dados" quebra em duas linhas.
+- **Dev server no Windows:** iniciado pelo Git Bash, o Next não detectava
+  edições e servia HTML antigo (o usuário não via o footer novo). Pelo
+  PowerShell recompila normalmente.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome

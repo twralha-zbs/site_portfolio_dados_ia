@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { listarArtigos } from "@/lib/blog";
 import { site } from "@/lib/site";
 
 // Rotas públicas do site com a data da última mudança de CONTEÚDO da página
@@ -8,19 +9,29 @@ import { site } from "@/lib/site";
 // As páginas /bio/<slug> ficam de fora: são links de bio de redes sociais, não
 // conteúdo para busca.
 const rotas: { rota: string; atualizadoEm: string }[] = [
-  { rota: "", atualizadoEm: "2026-10-27" },
+  { rota: "", atualizadoEm: "2026-11-04" },
   { rota: "/nexiatend", atualizadoEm: "2026-11-04" },
   { rota: "/maxialcance", atualizadoEm: "2026-11-04" },
-  { rota: "/organizacao-de-dados", atualizadoEm: "2026-10-21" },
-  { rota: "/portfolio", atualizadoEm: "2026-09-15" },
-  { rota: "/projetos", atualizadoEm: "2026-09-15" },
-  { rota: "/sobre", atualizadoEm: "2026-09-15" },
+  { rota: "/organizacao-de-dados", atualizadoEm: "2026-11-04" },
+  { rota: "/portfolio", atualizadoEm: "2026-11-04" },
+  { rota: "/projetos", atualizadoEm: "2026-11-04" },
+  { rota: "/sobre", atualizadoEm: "2026-11-04" },
   { rota: "/contato", atualizadoEm: "2026-11-04" },
+  { rota: "/blog", atualizadoEm: "2026-11-04" },
+  { rota: "/clareia", atualizadoEm: "2026-11-04" },
+  { rota: "/privacidade", atualizadoEm: "2026-11-04" },
 ];
 
+// Artigos do blog entram sozinhos, com a data `atualizado` do frontmatter;
+// os de data futura ficam de fora (listarArtigos já filtra).
 export default function sitemap(): MetadataRoute.Sitemap {
-  return rotas.map(({ rota, atualizadoEm }) => ({
+  const paginas = rotas.map(({ rota, atualizadoEm }) => ({
     url: `${site.urlProducao}${rota}`,
     lastModified: atualizadoEm,
   }));
+  const artigos = listarArtigos().map((artigo) => ({
+    url: `${site.urlProducao}/blog/${artigo.slug}`,
+    lastModified: artigo.atualizado,
+  }));
+  return [...paginas, ...artigos];
 }
