@@ -2,13 +2,13 @@
 
 ## Site
 
-### Fechar o ciclo da ClareIA no Beehiiv (2026-11-05)
+### Boas-vindas e nome da ClareIA no Beehiiv (2026-11-05)
 
-**What:** (1) No Beehiiv, criar a chave de API (Settings > API) e copiar o id da publicação (`pub_...`). (2) Na Vercel, cadastrar `BEEHIIV_API_KEY` e `BEEHIIV_PUBLICATION_ID` (Production) e fazer um redeploy: as páginas são estáticas e só passam a mostrar o formulário no build seguinte (sem as variáveis, o bloco mostra "inscrições abrem em breve"). (3) No Beehiiv, definir a "Opt in redirect URL" como `https://twralha.com/clareia/obrigado`. (4) Inscrição de teste a partir de `twralha.com/clareia?utm_source=teste`: mensagem "Quase lá!", email de confirmação, clique leva a `/clareia/obrigado`, boas-vindas chega só depois da confirmação, inscrito aparece no Beehiiv com origem `teste` e `referring_site` da página. (5) Reenviar o mesmo email: mesma mensagem de sucesso.
+**What:** (1) Descobrir por que o email de boas-vindas não chegou depois da confirmação: conferir se o Welcome email está configurado e ligado na publicação, olhar Promoções/Spam e, se preciso, testar com um alias novo (`twralha+clareia@gmail.com`), já que inscrito antigo não recebe boas-vindas de novo. (2) Trocar o nome da publicação de "Thiago's Newsletter" para ClareIA e, se o Beehiiv permitir, pôr o email de confirmação em português.
 
-**Why:** O formulário próprio (`components/FormularioClareia.tsx` + rota `app/api/clareia/route.ts`) está pronto e testado com chave falsa (validações, honeypot, limite por IP, chave fora do bundle), mas a chave real e o redirecionamento se configuram nas contas do Beehiiv e da Vercel, e o teste ponta a ponta depende de uma caixa de email real.
+**Why:** O teste ponta a ponta de 2026-11-05 passou em tudo que depende do site (formulário, dupla confirmação, redirect para `/clareia/obrigado`, origem `teste`/`formulario`, referring site, reinscrição com a mesma mensagem). O site já manda `send_welcome_email: true`; o que falta é configuração da conta do Beehiiv.
 
-**Context:** Se der erro em produção, o log da Vercel (Functions) mostra `[clareia] Beehiiv respondeu <status>` com o email mascarado. 401 = chave errada; 404 = id da publicação errado.
+**Context:** O email de confirmação chega como "Confirm your Thiago's Newsletter subscription", em inglês, de `clareia@mail.beehiiv.com`.
 
 **Effort:** S
 **Priority:** P1

@@ -1341,8 +1341,16 @@ substitui a seção do embed do briefing anterior.
   `api.beehiiv.com`. Sem as variáveis, `/clareia`, `/blog` e Home mostram
   "em breve".
 - Sitemap: `/blog` para 2026-11-05.
-- **Pendências (TODOS.md):** chave no Beehiiv, variáveis na Vercel +
-  redeploy, Opt in redirect URL e o teste ponta a ponta com email real.
+- **No ar e testado em produção (mesmo dia):** o Thiago cadastrou as
+  variáveis na Vercel e a Opt in redirect URL antes do push (o push foi
+  segurado para a produção não cair no "em breve"). Teste com email real:
+  "Quase lá!", email de confirmação, redirect para `/clareia/obrigado`,
+  inscrito no Beehiiv com canal `api`, origem `teste`, meio `formulario` e
+  referring site `https://twralha.com/clareia`; reinscrição mostra a mesma
+  mensagem.
+- **Pendências (TODOS.md):** o email de boas-vindas não chegou (configuração
+  do Beehiiv, não do site); a publicação se chama "Thiago's Newsletter" e o
+  email de confirmação está em inglês.
 
 ## Próximo passo
 
