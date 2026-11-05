@@ -1348,9 +1348,11 @@ substitui a seção do embed do briefing anterior.
   inscrito no Beehiiv com canal `api`, origem `teste`, meio `formulario` e
   referring site `https://twralha.com/clareia`; reinscrição mostra a mesma
   mensagem.
-- **Pendências (TODOS.md):** o email de boas-vindas não chegou (configuração
-  do Beehiiv, não do site); a publicação se chama "Thiago's Newsletter" e o
-  email de confirmação está em inglês.
+- **Boas-vindas:** não chegaram no teste porque o Welcome email estava
+  desligado no Beehiiv; o Thiago religou e também configurou o email de
+  confirmação (nome e idioma) no mesmo dia.
+- **Pendência (TODOS.md):** ver as boas-vindas chegarem numa inscrição com
+  email novo (alias), já que inscrito existente não recebe de novo.
 
 ## Próximo passo
 

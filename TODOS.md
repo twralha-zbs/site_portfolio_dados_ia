@@ -2,13 +2,13 @@
 
 ## Site
 
-### Boas-vindas e nome da ClareIA no Beehiiv (2026-11-05)
+### Confirmar o email de boas-vindas da ClareIA (2026-11-05)
 
-**What:** (1) Descobrir por que o email de boas-vindas não chegou depois da confirmação: conferir se o Welcome email está configurado e ligado na publicação, olhar Promoções/Spam e, se preciso, testar com um alias novo (`twralha+clareia@gmail.com`), já que inscrito antigo não recebe boas-vindas de novo. (2) Trocar o nome da publicação de "Thiago's Newsletter" para ClareIA e, se o Beehiiv permitir, pôr o email de confirmação em português.
+**What:** Fazer uma inscrição nova em `twralha.com/clareia` com um email que nunca esteve na lista (por exemplo, o alias `twralha+clareia@gmail.com`), confirmar e ver se o email de boas-vindas chega depois da confirmação (olhar também Promoções/Spam).
 
-**Why:** O teste ponta a ponta de 2026-11-05 passou em tudo que depende do site (formulário, dupla confirmação, redirect para `/clareia/obrigado`, origem `teste`/`formulario`, referring site, reinscrição com a mesma mensagem). O site já manda `send_welcome_email: true`; o que falta é configuração da conta do Beehiiv.
+**Why:** No teste de 2026-11-05 as boas-vindas não chegaram porque o Welcome email estava desligado no Beehiiv. O Thiago religou no mesmo dia, mas ainda falta ver chegar. O email de confirmação (nome e idioma) já foi configurado.
 
-**Context:** O email de confirmação chega como "Confirm your Thiago's Newsletter subscription", em inglês, de `clareia@mail.beehiiv.com`.
+**Context:** Precisa ser um email novo: inscrito que já está na lista não recebe as boas-vindas de novo (o site manda `reactivate_existing: false`). Se ainda não chegar, o site não é a causa: ele já manda `send_welcome_email: true`.
 
 **Effort:** S
 **Priority:** P1
