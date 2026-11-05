@@ -12,7 +12,7 @@ export const metadata: Metadata = paginaMeta(
 // Texto revisado pelo usuário antes da publicação. Ao mudar um serviço que
 // recebe dados (WhatsApp, chat, analytics, newsletter), atualizar aqui e a
 // data abaixo.
-const atualizadoEm = "4 de novembro de 2026";
+const atualizadoEm = "5 de novembro de 2026";
 
 const secoes: { titulo: string; paragrafos: React.ReactNode[] }[] = [
   {
@@ -33,7 +33,7 @@ const secoes: { titulo: string; paragrafos: React.ReactNode[] }[] = [
     titulo: "Que dados coletamos e para quê",
     paragrafos: [
       "WhatsApp e chat do site: o número, o nome do perfil e as mensagens que você enviar, para atender o seu pedido e registrar por onde você chegou (site, blog, Instagram ou newsletter). As conversas ficam na plataforma de atendimento da TWR Tech.",
-      "Newsletter ClareIA: o email que você informar, só com o seu consentimento, para enviar a newsletter. O envio é feito pelo Beehiiv, e todo email tem um link para sair da lista.",
+      "Newsletter ClareIA: o email que você informar, só com o seu consentimento, para enviar a newsletter. O envio é feito pelo Beehiiv, e todo email tem um link para sair da lista. O Beehiiv é uma empresa dos Estados Unidos e guarda os emails lá: é uma transferência internacional de dados (LGPD, art. 33), feita só para essa mesma finalidade.",
       "Estatísticas de uso: o Vercel Analytics conta visitas e cliques (por exemplo, em botões de WhatsApp) de forma agregada, sem cookies e sem identificar você.",
     ],
   },

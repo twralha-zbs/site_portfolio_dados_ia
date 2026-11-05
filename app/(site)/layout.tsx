@@ -20,6 +20,12 @@ export default function SiteLayout({
         data-companyid="3ddb8ffa-5ca3-40ac-9644-222dcaadfb42"
         data-widgetid="4dae94ba-a742-44e7-baa2-9802342682ce"
       />
+      {/* Atribuição do Beehiiv: repassa os UTMs da página para a inscrição
+          na ClareIA feita pelo embed (components/InscricaoClareia.tsx). */}
+      <Script
+        strategy="afterInteractive"
+        src="https://subscribe-forms.beehiiv.com/attribution.js"
+      />
     </>
   );
 }

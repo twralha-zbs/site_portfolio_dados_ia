@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useState } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { track } from "@vercel/analytics";
 import { site } from "@/lib/site";
 
 type Props = {
@@ -11,42 +10,21 @@ type Props = {
   semTitulo?: boolean;
 };
 
-const estiloCampo =
-  "w-full rounded-lg border border-linha bg-fundo px-4 py-3 text-texto placeholder:text-apagado focus:border-acento focus:outline-none";
+const LOADER_BEEHIIV = "https://subscribe-forms.beehiiv.com/v3/loader.js";
 
 // Inscrição na ClareIA, o mesmo componente em /clareia, no fim dos artigos, no
-// /blog vazio e na Home. Formulário próprio (e não o iframe do Beehiiv) para
-// medir o envio: dispara "ClareIA Inscricao" no Vercel Analytics e abre a
-// página de inscrição do Beehiiv com o email preenchido, onde a pessoa
-// confirma. Sem a URL do Beehiiv em lib/site.ts, mostra "em breve".
-// Consentimento explícito e link da política de privacidade (LGPD).
+// /blog e na Home (um por página). Usa o formulário oficial do Beehiiv
+// (embed), que já traz o campo de email, a caixa de consentimento com link
+// para /privacidade e a dupla confirmação: o site não repete esse texto.
+// A origem da inscrição (UTMs) vai pelo attribution.js do layout
+// app/(site)/layout.tsx. Sem `site.clareiaFormId`, mostra "em breve".
 export function InscricaoClareia({ semTitulo = false }: Props) {
   const pagina = usePathname();
-  const idEmail = useId();
-  const [enviado, setEnviado] = useState(false);
-  const urlInscricao = site.links.clareiaInscricao;
+  const formId = site.clareiaFormId;
 
-  function enviar(evento: React.FormEvent<HTMLFormElement>) {
-    evento.preventDefault();
-    if (!urlInscricao) return;
-    const dados = new FormData(evento.currentTarget);
-    const email = String(dados.get("email") ?? "").trim();
-    track("ClareIA Inscricao", { pagina });
-    const destino = new URL(urlInscricao);
-    destino.searchParams.set("email", email);
-    // Navegador que bloqueia a aba nova: segue na mesma aba, para a pessoa
-    // nunca ficar sem destino.
-    const aba = window.open(destino.toString(), "_blank", "noopener,noreferrer");
-    if (!aba) {
-      window.location.assign(destino.toString());
-      return;
-    }
-    setEnviado(true);
-  }
-
-  // Na /clareia, com inscrições fechadas: só a frase, sem caixa em volta de
-  // uma linha (a página já explica o que é a newsletter).
-  if (semTitulo && !urlInscricao) {
+  if (semTitulo && !formId) {
+    // Na /clareia, com inscrições fechadas: só a frase, sem caixa em volta de
+    // uma linha (a página já explica o que é a newsletter).
     return (
       <p className="font-mono text-sm text-apagado">
         {"// as inscrições abrem em breve"}
@@ -65,8 +43,10 @@ export function InscricaoClareia({ semTitulo = false }: Props) {
         </>
       )}
 
-      {!urlInscricao ? (
-        <p className={semTitulo ? "text-suave" : "mt-5 text-suave"}>
+      {formId ? (
+        <EmbedBeehiiv formId={formId} className={semTitulo ? "" : "mt-5"} />
+      ) : (
+        <p className="mt-5 text-suave">
           As inscrições abrem em breve.{" "}
           {pagina !== "/clareia" && (
             <Link href="/clareia" className="font-semibold text-acento hover:underline">
@@ -74,55 +54,40 @@ export function InscricaoClareia({ semTitulo = false }: Props) {
             </Link>
           )}
         </p>
-      ) : enviado ? (
-        <p role="status" className={semTitulo ? "text-texto" : "mt-5 text-texto"}>
-          Falta um passo: confirme a inscrição na página da ClareIA que abriu
-          em outra aba.
-        </p>
-      ) : (
-        <form onSubmit={enviar} className={semTitulo ? "flex flex-col gap-4" : "mt-5 flex flex-col gap-4"}>
-          <div>
-            <label htmlFor={idEmail} className="mb-1.5 block text-sm font-semibold">
-              Seu email
-            </label>
-            <input
-              id={idEmail}
-              name="email"
-              type="email"
-              required
-              autoComplete="email"
-              placeholder="voce@empresa.com.br"
-              className={estiloCampo}
-            />
-          </div>
-          <label className="flex items-start gap-3 text-sm text-suave">
-            <input
-              type="checkbox"
-              name="consentimento"
-              required
-              className="mt-0.5 h-5 w-5 shrink-0 accent-[var(--color-acento)]"
-            />
-            <span>
-              Quero receber a ClareIA por email e li a{" "}
-              <Link href="/privacidade" className="font-semibold text-acento hover:underline">
-                política de privacidade
-              </Link>
-              . Dá para sair a qualquer momento.
-            </span>
-          </label>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <button
-              type="submit"
-              className="rounded-full bg-acento px-6 py-3 font-bold text-acento-contraste transition-[filter] hover:brightness-110"
-            >
-              Quero receber a ClareIA
-            </button>
-            <span className="text-xs text-apagado">
-              Abre a página da ClareIA em outra aba para você confirmar.
-            </span>
-          </div>
-        </form>
       )}
     </div>
   );
+}
+
+// O loader do Beehiiv desenha o formulário no lugar onde o <script> está, por
+// isso o script é criado aqui dentro do div (next/script não serve: ele
+// injeta o script no fim do documento). O cleanup esvazia o div, o que tira o
+// script e o formulário desenhado: cobre o efeito duplo do Strict Mode em dev
+// e a navegação client-side entre páginas que usam o componente.
+// A altura mínima reserva o espaço do formulário para a página não pular
+// quando ele carregar.
+function EmbedBeehiiv({ formId, className }: { formId: string; className: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const alvo = ref.current;
+    if (!alvo) return;
+    const script = document.createElement("script");
+    script.src = LOADER_BEEHIIV;
+    script.async = true;
+    script.dataset.beehiivForm = formId;
+    alvo.appendChild(script);
+    return () => {
+      // destroy() do loader tira os ouvintes que ele pôs na window; o
+      // innerHTML vazio garante a limpeza mesmo se o registro não existir.
+      const registro = (window as { __bhv_embeds?: Record<string, { destroy?: () => void }> })
+        .__bhv_embeds;
+      registro?.[formId]?.destroy?.();
+      alvo.innerHTML = "";
+    };
+  }, [formId]);
+
+  // Altura medida em 2026-11-05 com o design do formulário no Beehiiv (com
+  // título e subtítulo próprios): ~420px. Mudou o design lá, medir de novo.
+  return <div ref={ref} className={`min-h-[380px] md:min-h-[420px] ${className}`} />;
 }

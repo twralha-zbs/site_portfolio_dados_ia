@@ -2,8 +2,8 @@ import Link from "next/link";
 import { InscricaoClareia } from "@/components/InscricaoClareia";
 import { formatarData, listarArtigos } from "@/lib/blog";
 
-// Seção da Home: os 3 artigos mais recentes do blog. Enquanto não houver
-// artigo publicado, mostra a inscrição na ClareIA no lugar.
+// Seção da Home: os 3 artigos mais recentes do blog e a inscrição na ClareIA.
+// Enquanto não houver artigo publicado, só a inscrição.
 export function UltimosArtigos() {
   const artigos = listarArtigos().slice(0, 3);
 
@@ -43,6 +43,12 @@ export function UltimosArtigos() {
           </li>
         ))}
       </ul>
+
+      {/* A inscrição na ClareIA fica na Home com ou sem artigos (briefing
+          2026-11-05): aqui, logo abaixo da lista. */}
+      <div className="mt-12 max-w-3xl">
+        <InscricaoClareia />
+      </div>
     </section>
   );
 }

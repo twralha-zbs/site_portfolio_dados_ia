@@ -2,17 +2,17 @@
 
 ## Site
 
-### URL do Beehiiv da ClareIA em lib/site.ts
+### Fechar o ciclo da ClareIA no Beehiiv (2026-11-05)
 
-**What:** Preencher `site.links.clareiaInscricao` (hoje `null`) com a URL da página de inscrição da ClareIA no Beehiiv e conferir se ela aceita `?email=` para pré-preencher o campo.
+**What:** (1) No Beehiiv, definir a "Opt in redirect URL" como `https://twralha.com/clareia/obrigado`. (2) Inscrição de teste do começo ao fim (formulário no site, email de confirmação, clique, página de obrigado, email de boas-vindas). (3) Inscrição feita de `twralha.com/clareia?utm_source=teste` aparecendo no Beehiiv com origem `teste`. (4) Ajustar o design do formulário no editor do Beehiiv para o tema escuro do site: fundo transparente ou Painel `#1B2025`, texto `#E5E8EC`, botão `#52AFE7` com texto `#06131E`, cantos em pílula, sem título próprio (o painel do site já tem). Hoje ele vem num cartão branco dentro do painel escuro.
 
-**Why:** O bloco `components/InscricaoClareia.tsx` (em `/clareia`, nos artigos, no `/blog` vazio e na Home) mostra "As inscrições abrem em breve" enquanto a URL for `null`. Com a URL, aparece o formulário (email + consentimento) que dispara o evento "ClareIA Inscricao" e abre o Beehiiv. O botão da ClareIA na bio `/bio/twr-tech` já aponta para `/clareia` (2026-11-04).
+**Why:** O embed (`components/InscricaoClareia.tsx`, id em `site.clareiaFormId`) e a página de obrigado estão no ar, mas o redirecionamento e o visual do formulário se configuram na conta do Beehiiv, e o teste depende de uma caixa de email real. O navegador headless não serve para esse teste: o Beehiiv tem desafio anti-bot (PerimeterX) que às vezes segura o formulário.
 
-**Context:** Checklist do Beehiiv em `Marketing/Newsletter/README.md`. Se o Beehiiv não aceitar `?email=`, a pessoa digita o email de novo lá; o evento continua medido.
+**Context:** Se o design no Beehiiv mudar a altura do formulário, medir de novo e ajustar o `min-h` do `EmbedBeehiiv` (hoje 380px/420px).
 
 **Effort:** S
 **Priority:** P1
-**Depends on:** Conta do Beehiiv criada pelo usuário
+**Depends on:** Conta do Beehiiv (usuário)
 
 ### Separar tipo Projeto dedicado de lib/cases.ts
 

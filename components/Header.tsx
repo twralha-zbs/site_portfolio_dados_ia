@@ -22,6 +22,11 @@ const linkWhatsapp = (pathname: string) =>
     ? site.links.whatsappBlog
     : site.links.whatsapp;
 
+// Rotas sem a pílula do WhatsApp no header. /clareia/obrigado: o Acento da
+// tela é "Ler o blog" e o WhatsApp fica numa linha discreta no fim, com a
+// origem "clareia" (briefing 2026-11-05, auditoria /impeccable).
+const semCtaWhatsapp = (pathname: string) => pathname === "/clareia/obrigado";
+
 // Rota ativa também nas subpáginas (um artigo marca "Blog").
 const ativa = (pathname: string, href: string) =>
   pathname === href || pathname.startsWith(`${href}/`);
@@ -55,14 +60,16 @@ export function Header() {
               {rota.rotulo}
             </Link>
           ))}
-          <a
-            href={linkWhatsapp(pathname)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste transition-[filter] hover:brightness-110"
-          >
-            Fale no WhatsApp
-          </a>
+          {!semCtaWhatsapp(pathname) && (
+            <a
+              href={linkWhatsapp(pathname)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste transition-[filter] hover:brightness-110"
+            >
+              Fale no WhatsApp
+            </a>
+          )}
         </nav>
 
         <button
@@ -97,16 +104,18 @@ export function Header() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={linkWhatsapp(pathname)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste"
-              >
-                Fale no WhatsApp
-              </a>
-            </li>
+            {!semCtaWhatsapp(pathname) && (
+              <li>
+                <a
+                  href={linkWhatsapp(pathname)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full bg-acento px-5 py-2.5 text-sm font-bold text-acento-contraste"
+                >
+                  Fale no WhatsApp
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       )}

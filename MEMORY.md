@@ -1254,6 +1254,49 @@ Fase 5 do plano original, só a parte técnica que não dependia do usuário.
   edições e servia HTML antigo (o usuário não via o footer novo). Pelo
   PowerShell recompila normalmente.
 
+## Sessão 2026-11-05: inscrições da ClareIA (briefing do Marketing)
+
+Briefing: `2026-11-05_briefing-site-obrigado.md` (Marketing da TWR Tech).
+
+- **Página `/clareia/obrigado`** (Opt in redirect URL do Beehiiv): textos do
+  briefing, `noindex, nofollow`, fora do sitemap e do llms.txt, não lê
+  `searchParams` (testado com `?email=...&foo=...`: nada aparece). Acento só
+  em "Ler o blog"; WhatsApp numa linha discreta com a origem nova
+  `site.links.whatsappClareia` ("Vim pela ClareIA.").
+- **Embed do Beehiiv no lugar do formulário próprio:** `site.clareiaFormId`
+  (substitui `links.clareiaInscricao`). `InscricaoClareia` cria o `<script>`
+  do `v3/loader.js` dentro de um `div` com ref num `useEffect`; o cleanup
+  chama o `destroy()` do registro do loader (`window.__bhv_embeds`) e esvazia
+  o `div`. O loader escaneia todo `script[data-beehiiv-form]` não
+  inicializado, por isso o efeito duplo do Strict Mode não quebra.
+  `attribution.js` no `app/(site)/layout.tsx` (afterInteractive). Sem CSP no
+  projeto, nada a liberar.
+  - **Decisão:** saiu o evento "ClareIA Inscricao" do Vercel Analytics (o envio
+    acontece dentro do iframe). A conversão passa a ser medida no Beehiiv, com
+    a origem pelos UTMs (o iframe já recebe `utm_source` e `referrer`).
+  - **Home:** a inscrição aparecia só quando não havia artigos. Agora fica
+    também abaixo dos "Últimos artigos" (briefing pede o formulário na Home).
+  - Altura reservada: `min-h` 380px/420px (o formulário renderizado mediu
+    423px em 1280px, com o título próprio do Beehiiv).
+- **Privacidade:** Beehiiv nos EUA, transferência internacional (LGPD art.
+  33); data da política para 5 de novembro de 2026.
+- **Auditoria `/impeccable audit` de `/clareia/obrigado` (17/20) e
+  correções:** (1) a pílula "Fale no WhatsApp" do header somava um 2º Acento
+  no desktop e destacava o WhatsApp que o briefing quer discreto: o header
+  esconde a pílula nesta rota (`semCtaWhatsapp` em `components/Header.tsx`);
+  (2) email `clareia@mail.beehiiv.com` quebrava no meio (`break-all` virou
+  `whitespace-nowrap`); (3) link do WhatsApp com 44px de altura e sem quebrar
+  no celular. Nenhuma sugestão conflitou com o briefing.
+- **Achado de verificação:** o Beehiiv tem desafio anti-bot (PerimeterX/
+  Cloudflare). No navegador headless o formulário às vezes fica colapsado;
+  numa rodada ele renderizou completo em `/clareia`. O teste real é com o
+  navegador do usuário.
+- Sitemap: Home, `/clareia` e `/privacidade` com 2026-11-05.
+- **Pendências (TODOS.md, "Fechar o ciclo da ClareIA no Beehiiv"):** Opt in
+  redirect URL no Beehiiv; inscrição de teste do começo ao fim; teste do
+  `utm_source=teste`; ajustar o design do formulário no Beehiiv ao tema escuro
+  (hoje vem num cartão branco com título próprio) e remedir o `min-h`.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome
