@@ -4,11 +4,11 @@
 
 ### Fechar o ciclo da ClareIA no Beehiiv (2026-11-05)
 
-**What:** (1) No Beehiiv, definir a "Opt in redirect URL" como `https://twralha.com/clareia/obrigado`. (2) Inscrição de teste do começo ao fim (formulário no site, email de confirmação, clique, página de obrigado, email de boas-vindas). (3) Inscrição feita de `twralha.com/clareia?utm_source=teste` aparecendo no Beehiiv com origem `teste`. (4) Ajustar o design do formulário no editor do Beehiiv para o tema escuro do site: fundo transparente ou Painel `#1B2025`, texto `#E5E8EC`, botão `#52AFE7` com texto `#06131E`, cantos em pílula, sem título próprio (o painel do site já tem). Hoje ele vem num cartão branco dentro do painel escuro.
+**What:** (1) No Beehiiv, criar a chave de API (Settings > API) e copiar o id da publicação (`pub_...`). (2) Na Vercel, cadastrar `BEEHIIV_API_KEY` e `BEEHIIV_PUBLICATION_ID` (Production) e fazer um redeploy: as páginas são estáticas e só passam a mostrar o formulário no build seguinte (sem as variáveis, o bloco mostra "inscrições abrem em breve"). (3) No Beehiiv, definir a "Opt in redirect URL" como `https://twralha.com/clareia/obrigado`. (4) Inscrição de teste a partir de `twralha.com/clareia?utm_source=teste`: mensagem "Quase lá!", email de confirmação, clique leva a `/clareia/obrigado`, boas-vindas chega só depois da confirmação, inscrito aparece no Beehiiv com origem `teste` e `referring_site` da página. (5) Reenviar o mesmo email: mesma mensagem de sucesso.
 
-**Why:** O embed (`components/InscricaoClareia.tsx`, id em `site.clareiaFormId`) e a página de obrigado estão no ar, mas o redirecionamento e o visual do formulário se configuram na conta do Beehiiv, e o teste depende de uma caixa de email real. O navegador headless não serve para esse teste: o Beehiiv tem desafio anti-bot (PerimeterX) que às vezes segura o formulário.
+**Why:** O formulário próprio (`components/FormularioClareia.tsx` + rota `app/api/clareia/route.ts`) está pronto e testado com chave falsa (validações, honeypot, limite por IP, chave fora do bundle), mas a chave real e o redirecionamento se configuram nas contas do Beehiiv e da Vercel, e o teste ponta a ponta depende de uma caixa de email real.
 
-**Context:** Se o design no Beehiiv mudar a altura do formulário, medir de novo e ajustar o `min-h` do `EmbedBeehiiv` (hoje 380px/420px).
+**Context:** Se der erro em produção, o log da Vercel (Functions) mostra `[clareia] Beehiiv respondeu <status>` com o email mascarado. 401 = chave errada; 404 = id da publicação errado.
 
 **Effort:** S
 **Priority:** P1

@@ -1297,6 +1297,53 @@ Briefing: `2026-11-05_briefing-site-obrigado.md` (Marketing da TWR Tech).
   `utm_source=teste`; ajustar o design do formulário no Beehiiv ao tema escuro
   (hoje vem num cartão branco com título próprio) e remedir o `min-h`.
 
+## Sessão 2026-11-05: formulário próprio da ClareIA via API do Beehiiv
+
+Briefing: `2026-11-05_briefing-site-formulario-api.md` (Marketing), que
+substitui a seção do embed do briefing anterior.
+
+- **Saiu o embed** (`v3/loader.js`, `attribution.js` do layout,
+  `site.clareiaFormId`, o `min-h` 380/420px). Entrou o formulário do site
+  nos mesmos quatro lugares, sem mexer nas páginas: `InscricaoClareia` virou
+  componente de servidor e renderiza o cliente `FormularioClareia`.
+- **Rota `app/api/clareia/route.ts`:** valida JSON, honeypot (`site`
+  preenchido responde ok sem chamar o Beehiiv), `consentimento === true`,
+  email até 254; limite de 5 envios/10 min por IP em memória; chama
+  `POST /v2/publications/{id}/subscriptions` com `double_opt_override: "on"`,
+  `send_welcome_email: true`, `reactivate_existing: false`, UTMs e
+  `referring_site` sem query; timeout 10 s; qualquer 2xx vira `{ok:true}`
+  (novo e já inscrito iguais); erro vira 502 e log com email mascarado.
+- **Decisões:**
+  - Ativação pela presença de `BEEHIIV_API_KEY` e `BEEHIIV_PUBLICATION_ID`
+    no servidor (o briefing permitia), não por flag em `lib/site.ts`. Só o
+    booleano vai ao navegador. Como as páginas são estáticas, o valor fica
+    fixo no build: **cadastrou as variáveis, precisa de redeploy**.
+  - Limite por IP em memória é melhor esforço (cada instância serverless
+    tem o seu mapa); basta para a cota de 30 req/min.
+  - UTMs capturados em todas as páginas por `components/CapturaUtm.tsx`
+    (no layout, no lugar do `attribution.js`), em `sessionStorage`
+    `clareia_utm`; a primeira página da visita com UTM vence
+    (`lib/origemClareia.ts`).
+  - Consentimento sem `required` nativo: o envio sem marcar mostra "Marque a
+    caixa para continuar." e foca a caixa (o briefing pede o aviso na caixa).
+  - Volta o evento "ClareIA Inscricao" do Vercel Analytics no sucesso (tinha
+    saído só porque o envio ficava dentro do iframe).
+  - `.gitignore` tinha `.env*`: entrou `!.env.example` para versionar o
+    arquivo com os nomes das variáveis.
+- **Verificação:** lint e build limpos; com chave falsa, a rota devolveu 400
+  (JSON inválido, sem consentimento, email inválido, 255 caracteres), 200 no
+  honeypot, 502 com 401 real do Beehiiv no log (`th***@exemplo.com`) e 429 no
+  6º envio. Navegador headless em 375px e 1280px: campo e botão empilhados no
+  celular e lado a lado no computador, aviso do consentimento sem requisição,
+  erro mantém o email, sucesso troca o cartão, UTM guardado, nenhuma
+  requisição a `beehiiv.com`. Varredura do `.next/static` com a chave
+  presente: zero ocorrências da chave, dos nomes das variáveis e de
+  `api.beehiiv.com`. Sem as variáveis, `/clareia`, `/blog` e Home mostram
+  "em breve".
+- Sitemap: `/blog` para 2026-11-05.
+- **Pendências (TODOS.md):** chave no Beehiiv, variáveis na Vercel +
+  redeploy, Opt in redirect URL e o teste ponta a ponta com email real.
+
 ## Próximo passo
 
 Revisar e publicar a página `/organizacao-de-dados`. Depois, definir o nome

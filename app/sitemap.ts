@@ -17,7 +17,7 @@ const rotas: { rota: string; atualizadoEm: string }[] = [
   { rota: "/projetos", atualizadoEm: "2026-11-04" },
   { rota: "/sobre", atualizadoEm: "2026-11-04" },
   { rota: "/contato", atualizadoEm: "2026-11-04" },
-  { rota: "/blog", atualizadoEm: "2026-11-04" },
+  { rota: "/blog", atualizadoEm: "2026-11-05" },
   { rota: "/clareia", atualizadoEm: "2026-11-05" },
   { rota: "/privacidade", atualizadoEm: "2026-11-05" },
 ];

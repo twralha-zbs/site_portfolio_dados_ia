@@ -51,10 +51,5 @@ export const site = {
     whatsappClareia:
       "https://wa.me/551151234016?text=Oi%2C%20Thiago!%20Vim%20pela%20ClareIA.",
   },
-  // Id do formulário de inscrição da ClareIA no Beehiiv (criado em
-  // 2026-11-05, layout Regular + Inline). O componente InscricaoClareia
-  // desenha o embed com ele; com null, o bloco volta a mostrar "inscrições
-  // abrem em breve", sem formulário.
-  clareiaFormId: "a3657f0f-b250-4a8f-bfdd-ba87aa74fa06" as string | null,
   urlProducao: "https://twralha.com",
 } as const;

@@ -42,7 +42,7 @@ export const bios: Bio[] = [
     avatar: { tipo: "logo-twr" },
     // Estratégia de canais (2026-11-01): dois botões principais, a porta no
     // WhatsApp e a inscrição na ClareIA (página /clareia do site, que leva ao
-    // formulário do Beehiiv).
+    // formulário de inscrição).
     links: [
       { rotulo: "Fale no WhatsApp", href: site.links.whatsappBio, variante: "destaque" },
       { rotulo: "ClareIA, a newsletter da TWR Tech", href: "/clareia", variante: "destaque" },
